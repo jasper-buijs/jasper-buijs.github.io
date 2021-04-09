@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Heilige Maagden</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-column">
+        <div class="icon-wrapper">
+          <img src="images/icons/heiligemaagden512x512.png" alt="Heilige Maagden Logo" width="70px" height="70px">
+        </div>
+        <div class="nav-link-wrapper">
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="brand">
+          <div>Heilige Maagden</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="section-header">
+        📝 Patch Notes
+      </div>
+      <div class="elements-wrapper">
+        <a href="http://rainbow6.com/crimsonheist">
+          <div class="element-wrapper">
+            <div class="element-img-background" style="background-image: url(images/rss-grid/updates/heros/y6s1.gif);"></div>
+            <div class="img-text-wrapper">
+              <div class="title">
+                OPERATION CRIMSON HEIST
+              </div>
+              <div class="subtitle">
+                Y6S1
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="sub-link" href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/DxDeyDzzW11lK12ikVPWN">
+          <div class="sub-element-wrapper">
+            <div class="sub-element-img-background" style="background-image: url(https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iKoGngda7z0LyYpTT25zM/2ba16741ffa8a7d8b4629ed870d8a870/r6s-seasons-y6s1.jpg);"></div>
+            <div class="img-text-wrapper">
+              <div class="title">
+                OPERATION CRIMSON HEIST | PATCH 1
+              </div>
+              <div class="subtitle">
+                Y6S1.1
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-wrapper">
+      <p>© Jasper Buijs - Heilige Maagden 2021</p>
+    </div>
+  </footer>
+</body>
+<script>
+  const elementItems = document.querySelectorAll('.element-wrapper');
+  elementItems.forEach(elementItem => {
+    elementItem.addEventListener('mouseover', () => {
+      elementItem.childNodes[1].classList.add('img-darken');
+      if (elementItem.childNodes[1].classList.contains('img-lighten')) elementItem.childNodes[1].classList.remove('img-lighten');
+    })
+    elementItem.addEventListener('mouseout', () => {
+      elementItem.childNodes[1].classList.remove('img-darken');
+      elementItem.childNodes[1].classList.add('img-lighten');
+    })
+  })
+</script>
+</html>

@@ -1,0 +1,327 @@
+/* Matser */
+
+body {
+    height: 100%;
+    font-family: "Archivo", sans-serif;
+    margin: 24px;
+    background-color: #252525;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.text {
+    color: white;
+}
+
+footer {
+    margin-left: 24px;
+    margin-right: 24px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: calc(100% - 48px);
+    background-color: #191919;
+    color: #cfb53b;
+    text-align: center;
+}
+
+a {
+    color: #cfb53b;
+}
+
+a:hover {
+    color: #8a8a8a;
+}
+
+/* Navigation Bar */
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #191919;
+    margin-bottom: 20px;
+}
+
+.left-column {
+    display: flex;
+}
+
+.icon-wrapper {
+    margin: 0px;
+    padding: 0px;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.nav-link-wrapper {
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid #cfb53b;
+}
+
+.nav-link-wrapper a:hover {
+    color: #cfb53b;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid #cfb53b;
+}
+
+.active-nav-link a {
+    color: #cfb53b !important;
+}
+
+.brand {
+    color: #cfb53b;
+    padding: 24px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.section-header {
+    color: #cfb53b;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding-top: 0.7em;
+    padding-bottom: 0.3em;
+}
+
+/* Grid */
+
+.game-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.game-item-wrapper {
+    position: relative;
+}
+
+.game-img-background {
+    height: 310px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img {
+    max-height: 200px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.game-item-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.game-item-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+.img-lighten {
+    transition: 1s;
+    filter: brightness(100%);
+}
+
+/* RSS + GTAV*/
+
+.elements-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #191919;
+}
+
+.element-wrapper {
+    position: relative;
+}
+
+.sub-element-wrapper {
+    position: relative;
+}
+
+.element-img-background {
+    height: 465px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sub-link {
+    width: 50%;
+}
+
+.sub-element-img-background {
+    height: 155px;
+    width: 100%;
+    background-size: cover;
+    background-position: center -150px;
+    background-repeat: no-repeat;
+}
+
+.element-wrapper .title {
+    transition: 1s;
+    font-weight: 600;
+    font-size: 4em;
+    color: white;
+}
+
+.sub-element-wrapper .title {
+    transition: 1s;
+    font-weight: 600;
+    font-size: 2em;
+    color: white;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+}
+
+/* MC */
+
+.comming-soon-wrapper {
+    background-color: #191919;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.comming-soon-title {
+    color: white;
+    font-size: 3em;
+}
+
+.comming-soon-description {
+    color: white;
+    font-size: 1em;
+}
+
+/* F12020 */
+
+.league-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.league-item-wrapper {
+    position: relative;
+}
+
+.league-title {
+    color: white;
+    font-size: 3em;
+}
+
+.league-img-background {
+    height: 310px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.league-item-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.league-item-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+.img-lighten {
+    transition: 1s;
+    filter: brightness(100%);
+}
+
+.section-wrapper {
+    color: white;
+    background-color: #191919;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.section-wrapper table, th, td {
+    padding: 5px;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.flag {
+    height: 20px;
+}

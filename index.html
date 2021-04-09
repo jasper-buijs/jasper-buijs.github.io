@@ -1,9 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Heilige Maagden</title>
-  </head>
-  <body>
-    <h1>Heilige Maagden</h1>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Heilige Maagden</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-column">
+        <div class="icon-wrapper">
+          <img src="images/icons/heiligemaagden512x512.png" alt="Heilige Maagden Logo" width="70px" height="70px">
+        </div>
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="brand">
+          <div>Heilige Maagden</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="section-header">
+        🎮 Gaming
+      </div>
+      <div class="game-items-wrapper">
+        <a href="rainbow6siege.html">
+          <div class="game-item-wrapper">
+            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/rss.jpg);"></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="images/home-grid/games/logos/rsslogo.png" alt="Rainbow Six Siege Logo">
+              </div>
+              <div class="subtitle">
+                by Ubisoft Montreal
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="f1-2020.html">
+          <div class="game-item-wrapper">
+            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/fone.jpg);"></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="images/home-grid/games/logos/fonelogo.png" alt="F1 2020® Logo">
+              </div>
+              <div class="subtitle">
+                by EA and Codemasters
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="gtav.html">
+          <div class="game-item-wrapper">
+            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/gta.png);"></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="images/home-grid/games/logos/gta5logo.png" alt="Grand Theft Auto V Logo">
+              </div>
+              <div class="subtitle">
+                by Rockstar Games
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="minecraft.html">
+          <div class="game-item-wrapper">
+            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/mcjava.png);">
+            </div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="images/home-grid/games/logos/mcjavalogo.png" alt="Minecraft Java Edition Logo">
+              </div>
+              <div class="subtitle">
+                by Mojang Studios and Microsoft
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-wrapper">
+      <p>© Jasper Buijs - Heilige Maagden 2021</p>
+    </div>
+  </footer>
+</body>
+<script>
+  const gameItems = document.querySelectorAll('.game-item-wrapper');
+  gameItems.forEach(gameItem => {
+    gameItem.addEventListener('mouseover', () => {
+      gameItem.childNodes[1].classList.add('img-darken');
+      if (gameItem.childNodes[1].classList.contains('img-lighten')) gameItem.childNodes[1].classList.remove('img-lighten');
+    })
+    gameItem.addEventListener('mouseout', () => {
+      gameItem.childNodes[1].classList.remove('img-darken');
+      gameItem.childNodes[1].classList.add('img-lighten');
+    })
+  })
+</script>
+
 </html>
