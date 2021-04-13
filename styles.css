@@ -116,6 +116,12 @@ a:hover {
     grid-template-columns: 1fr 1fr;
 }
 
+@media only screen and (max-device-width: 1000px) {
+    .game-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+}}
+
 .game-item-wrapper {
     position: relative;
 }
@@ -142,9 +148,25 @@ a:hover {
 }
 
 .logo-wrapper img {
-    max-height: 200px;
-    max-width: 500px;
-    margin-bottom: 20px;
+    max-height: 20vh;
+    max-width: 20vw;
+    margin-bottom: 1em;
+}
+
+@media only screen and (max-device-width: 1000px) and (orientation: portrait) {
+    .logo-wrapper img {
+        max-height: 10vh;
+        max-width: 40vw;
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (max-device-width: 1000px) and (orientation: landscape) {
+    .logo-wrapper img {
+        max-height: 30vh;
+        max-width: 40vw;
+        margin-bottom: 2em;
+    }
 }
 
 .game-item-wrapper .subtitle {
@@ -171,13 +193,18 @@ a:hover {
 /* RSS + GTAV*/
 
 .elements-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;*/
     background-color: #191919;
 }
 
 .element-wrapper {
     position: relative;
+}
+
+.sub-elements-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .sub-element-wrapper {
@@ -192,9 +219,15 @@ a:hover {
     background-repeat: no-repeat;
 }
 
-.sub-link {
+/*.sub-link {
     width: 50%;
 }
+
+@media only screen and (max-device-width: 1000px) and (orientation: portrait) {
+    .sub-link {
+        width: 100%;
+    }
+}*/
 
 .sub-element-img-background {
     height: 155px;
@@ -202,6 +235,16 @@ a:hover {
     background-size: cover;
     background-position: center -150px;
     background-repeat: no-repeat;
+}
+
+@media only screen and (max-device-width: 1000px) {
+    .sub-element-img-background {
+        height: 155px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 }
 
 .element-wrapper .title {
@@ -216,6 +259,15 @@ a:hover {
     font-weight: 600;
     font-size: 2em;
     color: white;
+}
+
+@media only screen and (max-device-width: 1000px) and (orientation: landscape) {
+    .sub-element-wrapper .title {
+        transition: 1s;
+        font-weight: 600;
+        font-size: 1em;
+        color: white;
+    }
 }
 
 .img-text-wrapper .subtitle {
@@ -254,6 +306,13 @@ a:hover {
 .league-items-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-device-width: 1000px) {
+    .league-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 .league-item-wrapper {
@@ -314,12 +373,14 @@ a:hover {
     padding-right: 50px;
     padding-bottom: 50px;
     padding-top: 50px;
+    font-size: 1em;
 }
 
 .section-wrapper table, th, td {
     padding: 5px;
     border: 1px solid white;
     border-collapse: collapse;
+    font-size: 1em;
 }
 
 .flag {
