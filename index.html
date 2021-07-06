@@ -5,14 +5,14 @@
   <meta charset="utf-8" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="Heilige Maagden" />
-  <meta property="og:description" content="The official website. Come take a look!" />
+  <meta property="og:description" content="The official website of Heilige Maagden. Come take a look!" />
   <meta property="og:url" content="https://heiligemaagden.com/" />
   <meta property="og:image" content="https://heiligemaagden.com/images/icons/heiligemaagden512x512.png" />
   <meta content="#CFB53B" data-react-helmet="true" name="theme-color" />
   <title>Heilige Maagden</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 
@@ -92,6 +92,16 @@
           </div>
         </a>
       </div>
+      <a href="status.html">
+        <div class="service-item-wrapper">
+          <div class="service-img-background" style="background-image: url(images/home-grid/services/hero.jpg);"></div>
+          <div class="img-text-wrapper">
+            <div class="subtitle">
+              SERVICE STATUS
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
   <footer>
@@ -111,6 +121,15 @@
       gameItem.childNodes[1].classList.remove('img-darken');
       gameItem.childNodes[1].classList.add('img-lighten');
     })
+  })
+  const serviceItem = document.querySelector('.service-item-wrapper');
+  serviceItem.addEventListener('mouseover', () => {
+    serviceItem.childNodes[1].classList.add('img-darken');
+    if (serviceItem.childNodes[1].classList.contains('img-lighten')) serviceItem.childNodes[1].classList.remove('img-lighten');
+  })
+  serviceItem.addEventListener('mouseout', () => {
+    serviceItem.childNodes[1].classList.add('img-lighten');
+    if (serviceItem.childNodes[1].classList.contains('img-darken')) serviceItem.childNodes[1].classList.remove('img-darken');
   })
 </script>
 

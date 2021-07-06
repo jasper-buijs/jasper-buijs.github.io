@@ -5,7 +5,9 @@
   <title>Heilige Maagden</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="games.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
   <div class="container">
@@ -25,17 +27,25 @@
       </div>
     </div>
     <div class="content-wrapper">
-      <div class="comming-soon-wrapper">
-          <div class="comming-soon-title">
-              Server comming back soon!
-          </div>
-          <div class="comming-soon-description">
-              <p>
-                  We are awaiting the Minecraft: Java Edition 1.17: Caves & Cliffs update before restarting our server. Come back soon for more information, or read the 
-                  <a href="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w14a">latest snapshot patch notes</a> here!
-              </p>
-              <p>We are still deciding wehter to reintroduce data packs and/or mandatory resource packs. More info will follow soon!</p>
-          </div>
+      <div class="section-header">
+        🖥️ Servers
+      </div>
+      <div class="mc-wrapper">
+        <div class="mctitle">Heilige Maagden Server (Hardcore)</div>
+        <div class="mcdescription">
+          <p>Our server is currently hosting a 1.17.1 hardcore world whilst we await the 1.18 update. 
+            You can join at <a onclick="copySURL()">server.heiligemaagden.com</a>. On this 
+            server, we're also testing our data- and resource packs for the 1.18 world, 
+            so bugs are possible.</p>
+        </div>
+      </div>
+      <div class="mc-wrapper">
+        <div class="mctitle">Heilige Maagden Creative Server</div>
+        <div class="mcdescription">
+          <p>Our creative server is currently online in the 1.17.1 version of the game, 
+            but will be updated along when the 1.18 version drops. 
+            You can join at <a onclick="copyCURL()">creative.heiligemaagden.com</a>.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -44,5 +54,23 @@
       <p>© Jasper Buijs - Heilige Maagden 2021</p>
     </div>
   </footer>
+  <script>
+    function copySURL() {
+      var inputc = document.body.appendChild(document.createElement("input"));
+      inputc.value = "server.heiligemaagden.com";
+      inputc.focus();
+      inputc.select();
+      document.execCommand('copy');
+      inputc.parentNode.removeChild(inputc);
+    }
+    function copyCURL() {
+      var inputc = document.body.appendChild(document.createElement("input"));
+      inputc.value = "creative.heiligemaagden.com";
+      inputc.focus();
+      inputc.select();
+      document.execCommand('copy');
+      inputc.parentNode.removeChild(inputc);
+    }
+  </script>
 </body>
 </html>

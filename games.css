@@ -1,0 +1,162 @@
+/* RSS + GTAV*/
+
+.elements-wrapper {
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;*/
+    background-color: #191919;
+}
+
+.element-wrapper {
+    position: relative;
+}
+
+.element-img-background {
+    height: 465px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.element-wrapper .title {
+    transition: 1s;
+    font-weight: 600;
+    font-size: 4em;
+    color: white;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+}
+
+/* MC */
+
+.mctitle {
+    font-size: 2em;
+    color: white
+}
+
+.mcdescription {
+    font-size: 1em;
+    color: white;
+}
+
+.mc-wrapper {
+    background-color: #191919;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+/* F12020 */
+
+.comming-soon-wrapper {
+    background-color: #191919;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.comming-soon-title {
+    color: white;
+    font-size: 3em;
+}
+
+.comming-soon-description {
+    color: white;
+    font-size: 1em;
+}
+
+.league-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-device-width: 1000px) {
+    .league-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.league-item-wrapper {
+    position: relative;
+}
+
+.league-title {
+    color: white;
+    font-size: 3em;
+}
+
+.league-img-background {
+    height: 310px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.league-item-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.league-item-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+.img-lighten {
+    transition: 1s;
+    filter: brightness(100%);
+}
+
+.section-wrapper {
+    color: white;
+    background-color: #191919;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    font-size: 1em;
+}
+
+.section-wrapper table, th, td {
+    padding: 5px;
+    border: 1px solid white;
+    border-collapse: collapse;
+    font-size: 1em;
+}
+
+.flag {
+    height: 20px;
+}
