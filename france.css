@@ -13,3 +13,12 @@ table, th, td {
     border-collapse: collapse;
     padding: 10px;
 }
+
+.switch {
+    border-bottom: 5px solid white;
+    border-collapse: collapse;
+}
+
+.bold {
+    font-weight: bold;
+}
