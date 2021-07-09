@@ -133,7 +133,24 @@ a:hover {
     width: 2fr;
 }
 
+.travel-item-wrapper {
+    position: relative;
+    width: 2fr;
+}
+
 .service-item-wrapper .subtitle {
+    font-weight: 600;
+    font-size: 2em;
+    color: white;
+}
+
+.travel-item-wrapper .title {
+    font-weight: 600;
+    font-size: 4em;
+    color:white;
+}
+
+.travel-item-wrapper .subtitle {
     font-weight: 600;
     font-size: 2em;
     color: white;
@@ -149,6 +166,14 @@ a:hover {
 
 .service-img-background {
     height: 155px;
+    width: 2fr;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.travel-img-background {
+    height: 310px;
     width: 2fr;
     background-size: cover;
     background-position: center;

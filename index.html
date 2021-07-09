@@ -26,6 +26,9 @@
         <div class="nav-link-wrapper active-nav-link">
           <a href="index.html">Home</a>
         </div>
+        <div class="nav-link-wrapper">
+          <a href="france.html">France '21</a>
+        </div>
       </div>
       <div class="right-column">
         <div class="brand">
@@ -102,6 +105,18 @@
           </div>
         </div>
       </a>
+      <div class="section-header">
+        ✈️ Trips & Travel
+      </div>
+      <a href="france.html">
+        <div class="travel-item-wrapper">
+          <div class="travel-img-background" style="background-image: url(images/travels/beziers.jpg);"></div>
+          <div class="img-text-wrapper">
+            <div class="title">FRANCE</div>
+            <div class="subtitle">11/08/2021 - 17/08/2021</div>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
   <footer>
@@ -122,6 +137,7 @@
       gameItem.childNodes[1].classList.add('img-lighten');
     })
   })
+
   const serviceItem = document.querySelector('.service-item-wrapper');
   serviceItem.addEventListener('mouseover', () => {
     serviceItem.childNodes[1].classList.add('img-darken');
@@ -130,6 +146,16 @@
   serviceItem.addEventListener('mouseout', () => {
     serviceItem.childNodes[1].classList.add('img-lighten');
     if (serviceItem.childNodes[1].classList.contains('img-darken')) serviceItem.childNodes[1].classList.remove('img-darken');
+  })
+
+  const travelItem = document.querySelector('.travel-item-wrapper');
+  travelItem.addEventListener('mouseover', () => {
+    travelItem.childNodes[1].classList.add('img-darken');
+    if (travelItem.childNodes[1].classList.contains('img-lighten')) travelItem.childNodes[1].classList.remove('img-lighten');
+  })
+  travelItem.addEventListener('mouseout', () => {
+    travelItem.childNodes[1].classList.add('img-lighten');
+    if (travelItem.childNodes[1].classList.contains('img-darken')) travelItem.childNodes[1].classList.remove('img-darken');
   })
 </script>
 
