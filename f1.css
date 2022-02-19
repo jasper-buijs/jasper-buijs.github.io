@@ -1,0 +1,15 @@
+.f1-item-wrapper {
+    position: relative;
+}
+
+.f1-section {
+    background-color: #191919;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.f1-discord-image img {
+    width: 100%;
+}
