@@ -159,7 +159,7 @@ body {
     }
 }
 
-@media only screen and (max-device-width: 992px) and (min-device-width: 768px) {
+@media only screen and (max-device-width: 992px) and (min-device-width: 480px) {
     #iphz {
         top: 15%;
         width: 150px;
