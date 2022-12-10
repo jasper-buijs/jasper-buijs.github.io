@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Heilige Maagden" />
   <meta property="og:description" content="The official website of Heilige Maagden. Come take a look!" />
@@ -10,153 +10,36 @@
   <meta property="og:image" content="https://heiligemaagden.com/images/icons/heiligemaagden512x512.png" />
   <meta content="#CFB53B" data-react-helmet="true" name="theme-color" />
   <title>Heilige Maagden</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="nav-wrapper">
-      <div class="left-column">
-        <div class="icon-wrapper">
-          <img src="images/icons/heiligemaagden512x512.png" alt="Heilige Maagden Logo" width="70px" height="70px">
+
+  <body id="irg9">
+    <div class="gjs-row" id="igir">
+      <div class="content-wrapper">
+        <div class="gjs-cell" id="ignk">
+          <img id="iphz" src="logo.png" />
+          <div id="ihan">
+            Our website is<br />getting a new look...
+          </div>
+          <div id="i5ims">
+            We&#039;re working really hard to get this website to the next level..<br />Please check back later!
+          </div>
         </div>
-        <div class="nav-link-wrapper active-nav-link">
-          <a href="index.html">Home</a>
-        </div>
-        <div class="nav-link-wrapper">
-          <a href="france.html">France '21</a>
-        </div>
+        <!--<div class="gjs-cell" id="izsn"></div>-->
       </div>
-      <div class="right-column">
-        <div class="brand">
-          <div>Heilige Maagden</div>
+      <img id="ipx4o" src="image.svg" />
+    </div>
+    <div class="gjs-row" id="iaetl">
+      <div class="gjs-cell" id="iz7tr">
+        <div id="ievj6">
+          © Jasper Buijs, Heilige Maagden, 2022
         </div>
       </div>
     </div>
-    <div class="content-wrapper">
-      <div class="section-header">
-        🎮 Gaming
-      </div>
-      <div class="game-items-wrapper">
-        <a href="rainbow6siege.html">
-          <div class="game-item-wrapper">
-            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/rss.jpg);"></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/home-grid/games/logos/rsslogo.png" alt="Rainbow Six Siege Logo">
-              </div>
-              <div class="subtitle">
-                by Ubisoft Montreal
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="f1-2020.html">
-          <div class="game-item-wrapper">
-            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/fone.jpg);"></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/home-grid/games/logos/fonelogo.png" alt="F1 2020® Logo">
-              </div>
-              <div class="subtitle">
-                by EA and Codemasters
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="gtav.html">
-          <div class="game-item-wrapper">
-            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/gta.png);"></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/home-grid/games/logos/gta5logo.png" alt="Grand Theft Auto V Logo">
-              </div>
-              <div class="subtitle">
-                by Rockstar Games
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="minecraft.html">
-          <div class="game-item-wrapper">
-            <div class="game-img-background" style="background-image: url(images/home-grid/games/heros/mcjava.png);">
-            </div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/home-grid/games/logos/mcjavalogo.png" alt="Minecraft Java Edition Logo">
-              </div>
-              <div class="subtitle">
-                by Mojang Studios and Microsoft
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <a href="status.html">
-        <div class="service-item-wrapper">
-          <div class="service-img-background" style="background-image: url(images/home-grid/services/hero.jpg);"></div>
-          <div class="img-text-wrapper">
-            <div class="subtitle">
-              SERVICE STATUS
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="section-header">
-        ✈️ Trips & Travel
-      </div>
-      <a href="france.html">
-        <div class="travel-item-wrapper">
-          <div class="travel-img-background" style="background-image: url(images/travels/beziers.jpg);"></div>
-          <div class="img-text-wrapper">
-            <div class="title">FRANCE</div>
-            <div class="subtitle">11/08/2021 - 17/08/2021</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-wrapper">
-      <p>© Jasper Buijs - Heilige Maagden 2021</p>
-    </div>
-  </footer>
+  </body>
 </body>
-<script>
-  const gameItems = document.querySelectorAll('.game-item-wrapper');
-  gameItems.forEach(gameItem => {
-    gameItem.addEventListener('mouseover', () => {
-      gameItem.childNodes[1].classList.add('img-darken');
-      if (gameItem.childNodes[1].classList.contains('img-lighten')) gameItem.childNodes[1].classList.remove('img-lighten');
-    })
-    gameItem.addEventListener('mouseout', () => {
-      gameItem.childNodes[1].classList.remove('img-darken');
-      gameItem.childNodes[1].classList.add('img-lighten');
-    })
-  })
-
-  const serviceItem = document.querySelector('.service-item-wrapper');
-  serviceItem.addEventListener('mouseover', () => {
-    serviceItem.childNodes[1].classList.add('img-darken');
-    if (serviceItem.childNodes[1].classList.contains('img-lighten')) serviceItem.childNodes[1].classList.remove('img-lighten');
-  })
-  serviceItem.addEventListener('mouseout', () => {
-    serviceItem.childNodes[1].classList.add('img-lighten');
-    if (serviceItem.childNodes[1].classList.contains('img-darken')) serviceItem.childNodes[1].classList.remove('img-darken');
-  })
-
-  const travelItem = document.querySelector('.travel-item-wrapper');
-  travelItem.addEventListener('mouseover', () => {
-    travelItem.childNodes[1].classList.add('img-darken');
-    if (travelItem.childNodes[1].classList.contains('img-lighten')) travelItem.childNodes[1].classList.remove('img-lighten');
-  })
-  travelItem.addEventListener('mouseout', () => {
-    travelItem.childNodes[1].classList.add('img-lighten');
-    if (travelItem.childNodes[1].classList.contains('img-darken')) travelItem.childNodes[1].classList.remove('img-darken');
-  })
-</script>
 
 </html>
