@@ -38,7 +38,7 @@ body {
     color: black;
     display: block;
     position: relative;
-    top: 25%;
+    top: 15vh;
     height: auto;
     width: auto;
     max-height: 30vh;
@@ -49,10 +49,10 @@ body {
 #ihan {
     padding: 10px;
     font-family: Verdana, Geneva, sans-serif;
-    font-size: 69px;
+    font-size: 7vh;
     color: white;
     position: relative;
-    top: 30%;
+    top: 20vh;
     left: 50px;
     display: block;
 }
@@ -60,11 +60,11 @@ body {
 #i5ims {
     padding: 10px;
     position: relative;
-    top: 30%;
+    top: 20vh;
     left: 50px;
     font-family: Verdana, Geneva, sans-serif;
     color: white;
-    font-size: 22px;
+    font-size: 3vh;
 }
 
 #ipx4o {
@@ -183,16 +183,16 @@ body {
 
 @media only screen and (max-device-width: 992px) and (min-device-width: 480px) {
     #iphz {
-        top: 15%;
+        top: 15vh;
         width: auto;
         height: auto;
-        max-width: 150px;
+        max-width: 200px;
         max-height: 20vh;
     }
 
     #ihan {
-        top: 20%;
-        font-size: 49px;
+        top: 20vh;
+        font-size: 4vh;
     }
 
     #ipx4o {
@@ -203,7 +203,7 @@ body {
     }
 
     #i5ims {
-        top: 20%;
-        font-size: 19px;
+        top: 20vh;
+        font-size: 1.5vh;
     }
 }
