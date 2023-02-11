@@ -40,6 +40,7 @@
         float: left;
         display: block;
         padding: 0 0 0 0;
+        filter: grayscale(100%);
     }
 
     .navigation-bar .active{   
@@ -80,7 +81,7 @@
 
     @media (prefers-color-scheme: light) {
         .navigation-bar .active{
-            color: #BA9C0D;
+            color: #FF1801;
         }
 
         .navigation-bar{
@@ -92,7 +93,7 @@
         }
 
         .navigation-bar a:hover{
-            color: #BA9C0D;
+            color: #FF1801;
         }
 
         .footer-bar{
@@ -106,7 +107,7 @@
 
     @media (prefers-color-scheme: dark) {
         .navigation-bar .active{
-            color: #CFB53B;
+            color: #FF1801;
         }
 
         .navigation-bar{
@@ -118,7 +119,7 @@
         }
 
         .navigation-bar a:hover{
-            color: #CFB53B;
+            color: #FF1801;
         }
 
         .footer-bar{
@@ -162,6 +163,7 @@
         float: left;
         display: block;
         padding: 0 0 0 0;
+        filter: grayscale(100%);
     }
 
     .navigation-bar .active{   
@@ -214,7 +216,7 @@
         }
 
         .navigation-bar a:hover{
-            color: #BA9C0D;
+            color: #FF1801;
         }
 
         .footer-bar{
@@ -228,7 +230,7 @@
 
     @media (prefers-color-scheme: dark) {
         .navigation-bar .active{
-            color: #CFB53B;
+            color: #FF1801;
         }
 
         .navigation-bar{
@@ -240,7 +242,7 @@
         }
 
         .navigation-bar a:hover{
-            color: #CFB53B;
+            color: #FF1801;
         }
 
         .footer-bar{
@@ -283,6 +285,7 @@
         float: left;
         display: block;
         padding: 0 0 0 0;
+        filter: grayscale(100%);
     }
 
     .navigation-bar a{
@@ -327,7 +330,7 @@
 
     @media (prefers-color-scheme: light) {
         .navigation-bar .active{
-            text-shadow: 0 0 15px #BA9C0D, 0 0 15px #BA9C0D;
+            text-shadow: 0 0 15px #FF1801, 0 0 15px #FF1801;
         }
 
         .navigation-bar{
@@ -339,7 +342,7 @@
         }
 
         .navigation-bar a:hover{
-            text-shadow: 0 0 15px #BA9C0D, 0 0 15px #BA9C0D;
+            text-shadow: 0 0 15px #FF1801, 0 0 15px #FF1801;
         }
 
         .footer-bar{
@@ -357,7 +360,7 @@
 
     @media (prefers-color-scheme: dark) {
         .navigation-bar .active{
-            text-shadow: 0 0 15px #CFB53B, 0 0 15px #CFB53B;
+            text-shadow: 0 0 15px #FF1801, 0 0 15px #FF1801;
         }
 
         .navigation-bar{
@@ -369,7 +372,7 @@
         }
 
         .navigation-bar a:hover{
-            text-shadow: 0 0 15px #CFB53B, 0 0 15px #CFB53B;
+            text-shadow: 0 0 15px #FF1801, 0 0 15px #FF1801;
         }
 
         .footer-bar{

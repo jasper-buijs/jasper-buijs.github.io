@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Heilige Maagden" />
+  <meta property="og:description" content="The official website of Heilige Maagden. Come take a look!" />
+  <meta property="og:url" content="https://heiligemaagden.com/" />
+  <meta property="og:image" content="https://heiligemaagden.com/images/icons/heiligemaagden512x512.png" />
+  <meta content="#CFB53B" data-react-helmet="true" name="theme-color" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Heilige Maagden</title>
+  <link rel="stylesheet" href="../css/style-formula1.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+</head>
+
+<body>
+  <div class="navigation-bar desktop tablet">
+    <div class="logo">
+      <img src="../logo.png" alt="Heilige Maagden, Logo" width="70px" height="70px">
+    </div>
+    <div class="navigation-bar-link">
+      <a href="../index.html">Heilige Maagden</a>
+    </div>
+    <div class="navigation-bar-link">
+      <a href="formula1.html" class="active">Formula 1</a>
+    </div>
+  </div>
+  <div class="navigation-bar phone">
+    <div class="logo">
+      <img src="../logo.png" alt="Heilige Maagden, Logo", width="50px" height="50px">
+    </div>
+    <div class="navigation-bar-link">
+      <a href="../index.html">🏠</a>
+    </div>
+    <div class="navigation-bar-link">
+      <a href="formula1.html" class="active">🏎️</a>
+    </div>
+    <div class="navigation-bar-footer-link" id="phone-0">©</div>
+  </div>
+  <div class="footer-bar desktop tablet">
+    <div class="footer">
+      © Jasper Buijs, Heilige Maagden, 2023
+    </div>
+  </div>
+  <div class="footer-bar-wrapper phone">
+    <div class="footer-bar" id="phone-1">
+      <div class="footer">
+        © Jasper Buijs, Heilige Maagden, 2023
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+  var button = document.getElementById("phone-0");
+  button.addEventListener("click", function (event) {
+    var footer = document.getElementById("phone-1");
+    if (footer.style.visibility == "hidden") footer.style.visibility = "visible";
+    else footer.style.visibility = "hidden";
+  })
+</script>
+
+</html>
