@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta property="og:type" content="website">
@@ -9,37 +8,61 @@
   <meta property="og:url" content="https://heiligemaagden.com/" />
   <meta property="og:image" content="https://heiligemaagden.com/images/icons/heiligemaagden512x512.png" />
   <meta content="#CFB53B" data-react-helmet="true" name="theme-color" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Heilige Maagden</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 
 <body>
+  <div class="navigation-bar desktop tablet">
+    <div class="logo">
+      <img src="logo.png" alt="Heilige Maagden, Logo" width="70px" height="70px">
+    </div>
+    <div class="navigation-bar-link">
+      <a href="index.html" class="active">Heilige Maagden</a>
+    </div>
+    <div class="navigation-bar-link">
+      <a href="f1/formula1.html">Formula 1</a>
+    </div>
+  </div>
+  <div class="navigation-bar phone">
+    <div class="logo">
+      <img src="logo.png" alt="Heilige Maagden, Logo", width="50px" height="50px">
+    </div>
+    <div class="navigation-bar-link">
+      <a href="index.html" class="active">🏠</a>
+    </div>
+    <div class="navigation-bar-link">
+      <a href="f1/formula1.html">🏎️</a>
+    </div>
+    <div class="navigation-bar-footer-link" id="phone-0">©</div>
+  </div>
 
-  <body id="irg9">
-    <div class="gjs-row" id="igir">
-      <div class="content-wrapper">
-        <div class="gjs-cell" id="ignk">
-          <img id="iphz" src="logo.png" />
-          <div id="ihan">
-            Our website is<br />getting a new look...
-          </div>
-          <div id="i5ims">
-            We&#039;re working really hard to get this website to the next level..<br />Please check back later!
-          </div>
-        </div>
-        <!--<div class="gjs-cell" id="izsn"></div>-->
-      </div>
-      <img id="ipx4o" src="image.svg" />
+  
+
+  <div class="footer-bar desktop tablet">
+    <div class="footer">
+      © Jasper Buijs, Heilige Maagden, 2023
     </div>
-    <div class="gjs-row" id="iaetl">
-      <div class="gjs-cell" id="iz7tr">
-        <div id="ievj6">
-          © Jasper Buijs, Heilige Maagden, 2022
-        </div>
+  </div>
+  <div class="footer-bar-wrapper phone">
+    <div class="footer-bar" id="phone-1">
+      <div class="footer">
+        © Jasper Buijs, Heilige Maagden, 2023
       </div>
     </div>
-  </body>
+  </div>
 </body>
+
+<script type="text/javascript">
+  var button = document.getElementById("phone-0");
+  button.addEventListener("click", function (event) {
+    var footer = document.getElementById("phone-1");
+    if (footer.style.visibility == "hidden") footer.style.visibility = "visible";
+    else footer.style.visibility = "hidden";
+  })
+</script>
 
 </html>
