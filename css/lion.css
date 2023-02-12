@@ -1,0 +1,120 @@
+/* DESKTOP */
+@media screen and (min-width: 780px) {
+
+    .lion-image img{
+        display: block;
+        left: 0;
+        right: 0;
+        width: 96vw;
+    }
+
+    .lion-text{
+        font-family: 'Archivo', sans-serif;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .scroll{
+        height: 10vh;
+    }
+
+    @media (prefers-color-scheme: light) {
+        .lion-text{
+            color: #1E1E1E;
+            background-color: #D6D6D6;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .lion-text{
+            color: #FFFFFF;
+            background-color: #1E1E1E;
+        }
+    }
+}
+
+
+
+
+
+
+
+/* TABLET */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .lion-image img{
+        display: block;
+        left: 0;
+        right: 0;
+        width: 96vw;
+    }
+
+    .lion-text{
+        font-family: 'Archivo', sans-serif;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .scroll{
+        height: 10vh;
+    }
+
+    @media (prefers-color-scheme: light) {
+        .lion-text{
+            color: #1E1E1E;
+            background-color: #D6D6D6;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .lion-text{
+            color: #FFFFFF;
+            background-color: #1E1E1E;
+        }
+    }
+}
+
+
+
+
+
+
+
+/* PHONE */
+@media screen and (max-width: 540px) {
+    .lion-image img{
+        display: block;
+        left: 0;
+        right: 0;
+        width: calc(96vw - 50px);
+    }
+
+    .lion-text{
+        font-family: 'Archivo', sans-serif;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .scroll{
+        height: 10vh;
+    }
+
+    @media (prefers-color-scheme: light) {
+        .lion-text{
+            color: #1E1E1E;
+            background-color: #D6D6D6;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .lion-text{
+            color: #FFFFFF;
+            background-color: #1E1E1E;
+        }
+    }
+}
