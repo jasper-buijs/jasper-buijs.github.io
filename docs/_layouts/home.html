@@ -55,16 +55,35 @@
             margin-right: auto;
             padding: 10vh;
         }
+        footer {
+            bottom: 0;
+            height: 7vh;
+            width: 95vw;
+            background-color: #1E1E1E;
+            position: fixed;
+            z-index: 9;
+        }
+        footer div{
+            width: 95vw;
+            max-width: 95vw;
+            height: 7vh;
+            line-height: 7vh;
+            color: white;
+            text-align: center;
+            font-family: 'Archivo', sans-serif;
+        }
     </style>
     <header>
         <img src="../images/logo.png" alt="Heilige Maagden logo">
         <div class="navbarlinks">
             <a href="/" class="active">Heilige Maagden</a>
-            <a href="/about/">About</a>
             <a href="/minecraft/">Minecraft</a>
         </div>
     </header>
     <main>
         {{content}}
     </main>
+    <footer>
+       <div>© Jasper Buijs, Heilige Maagden, 2023</div>
+    </footer>
 </html>
