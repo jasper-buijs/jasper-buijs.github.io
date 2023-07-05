@@ -25,5 +25,5 @@ In Discord, we've created a "server-coords" channel where you can share and/or s
 This is a top-down view of the overworld. This map will be updated once every day around 7 am. You can also open a fullscreen version of this map [here](/minecraft-map/unmined.index.html).
 <iframe
     src="/minecraft-map/unmined.index.html"
-    style="height: 100vh; width: 95vw; display: block; border: none !important; background-color:white;">
+    style="height: 86vh; width: 95vw; display: block; border: none !important; background-color:white;">
 </iframe>
