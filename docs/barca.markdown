@@ -1,7 +1,7 @@
 ---
 layout: postpage
 title: Barça
-permalink: barca
+permalink: /barca/
 topic: Spanje
 ---
 # Barcelona 2023
