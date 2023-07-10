@@ -48,13 +48,34 @@
             top: 10vh;
             display: block;
         }
-        main img {
-            max-width: 50vw;
-            max-height: 50vh;
+        main .page-heading h1 {
+            text-align: center;
+            margin: 0.33em;
+        }
+        main .page-heading p {
+            text-align: center;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 10vh;
+            font-size: 1.5em;
+            width: 95vw;
+        }
+        main a {
+            font-size: 2em;
+            text-decoration: none;
+            color: #cfb53b;
+            margin-top: 2em;
+        }
+        main a:hover {
+            text-decoration: underline;
+        }
+        main .date {
+            color: gray;
+            font-size: 0.85em;
+            margin-top: 0pt;
+        }
+        main hr {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            color: gray;
         }
         footer {
             bottom: 0;
@@ -77,15 +98,31 @@
     <header>
         <img src="../images/logo.png" alt="Heilige Maagden logo">
         <div class="navbarlinks">
-            <a href="/" class="active">Heilige Maagden</a>
+            <a href="/">Heilige Maagden</a>
             <a href="/minecraft/">Minecraft</a>
-            <a href="/barca/">Barça</a>
+            {% if page.topic == "Spanje" %}
+                <a href="/barca/" class="active">Barça</a>
+            {% else %}
+                <a href="/barca/">Barça</a>
+            {% endif %}
         </div>
     </header>
     <main>
-        {{content}}
+        <div class="page-heading">
+            {{content}}
+        </div>
+        {% for post in site.posts %}
+            {% if post.topic == page.topic %}
+                <hr>
+                <a href={{post.url}}>
+                    {{post.title}}
+                </a>
+                <p class="date">Posted on {{post.date|date: "%d/%m/%Y"}}</p>
+                <p>{{post.excerpt}}</p>
+            {% endif %}
+        {% endfor %}
     </main>
     <footer>
-       <div>© Jasper Buijs, Heilige Maagden, 2023</div>
-    </footer>
+        <div>© Jasper Buijs, Heilige Maagden, 2023</div>
+     </footer>
 </html>

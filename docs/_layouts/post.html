@@ -48,13 +48,16 @@
             top: 10vh;
             display: block;
         }
-        main img {
-            max-width: 50vw;
-            max-height: 50vh;
+        main .page-heading h1 {
+            text-align: center;
+            margin: 0.33em;
+        }
+        main .page-heading p {
+            text-align: center;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 10vh;
+            font-size: 0.85em;
+            width: 95vw;
+            margin-top: 0pt;
         }
         footer {
             bottom: 0;
@@ -75,17 +78,25 @@
         }
     </style>
     <header>
-        <img src="../images/logo.png" alt="Heilige Maagden logo">
+        <img src="/images/logo.png" alt="Heilige Maagden logo">
         <div class="navbarlinks">
-            <a href="/" class="active">Heilige Maagden</a>
+            <a href="/">Heilige Maagden</a>
             <a href="/minecraft/">Minecraft</a>
-            <a href="/barca/">Barça</a>
+            {% if page.topic == "Spanje" %}
+                <a href="/barca/" class="active">Barça</a>
+            {% else %}
+                <a href="/barca/">Barça</a>
+            {% endif %}
         </div>
     </header>
     <main>
+        <div class="page-heading">
+            <h1>{{page.title}}</h1>
+            <p>Posted on {{page.date|date: "%d/%m/%Y"}}</p>
+        </div>
         {{content}}
     </main>
     <footer>
-       <div>© Jasper Buijs, Heilige Maagden, 2023</div>
-    </footer>
+        <div>© Jasper Buijs, Heilige Maagden, 2023</div>
+     </footer>
 </html>
