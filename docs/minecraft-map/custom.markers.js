@@ -38,19 +38,40 @@ Use the imageScale property if the pin image is too large.
 
 UnminedCustomMarkers = {
 
-    isEnabled: false,
+    isEnabled: true,
 
     markers: [
-
+        /*{
+            x: 112,
+            z: 206,
+            image: "./playerimages/Chappe67.png",
+            imageAnchor: [0.5, 0.7],
+            imageScale: 0.25,
+            text: "Spawn Village",
+            textColor: "white",
+            offsetX: 0,
+            offsetY: 20,
+            font: "bold 10px sans serif",
+        },
+        {
+            x: 5471,
+            z: 1117,
+            text: "B&E",
+            textColor: "white",
+            offsetX: 0,
+            offsetY: 20,
+            font: "bold 10px sans serif"
+        },*/
+        /*
         // Example 1: Simple marker
         {
             x: -200,
             z: -200,
-            image: "custom.pin.png",
+            image: "./custom.pin.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.5,
         },
-
+        
         // Example 2: Marker with text
         {
             x: 0,
@@ -80,7 +101,7 @@ UnminedCustomMarkers = {
 
 
 
-
+        */
         // do not delete the following two closing brackets
     ]
 }
