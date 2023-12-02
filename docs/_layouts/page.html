@@ -38,7 +38,7 @@
         header .active {
             color: #cfb53b;
         }
-        a, p, ul li, ol li, h1, h2, h3, h4, h5, h6 {
+        a, p, ul li, ol li, h1, h2, h3, h4, h5, h6, div {
             font-family: 'Archivo', sans-serif;
             color: white;
         }
@@ -72,6 +72,16 @@
             display: block;
             font-size: 1.5em;
         }
+        main .warning{
+            border-left: thick solid #ECE81A;
+            padding-left: 1vw;
+            margin-top: 1em;
+            margin-bottom: 3em;
+            display: inline-block;
+        }
+        main .warning b{
+            color: #ECE81A !important;
+        }
         footer {
             bottom: 0;
             height: 7vh;
@@ -91,7 +101,7 @@
         }
     </style>
     <header>
-        <img src="../images/logo.png" alt="Heilige Maagden logo">
+        <img src="../images/logo-xmas.png" alt="Heilige Maagden logo">
         <div class="navbarlinks">
             <a href="/">Heilige Maagden</a>
             {% if page.title == "Minecraft" %}
@@ -99,7 +109,7 @@
             {% else %}
                 <a href="/minecraft/">Minecraft</a>
             {% endif %}
-            <a href="/barca/">Barça</a>
+            <!-- <a href="/barca/">Barça</a> -->
         </div>
     </header>
     <main>

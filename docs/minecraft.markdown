@@ -3,6 +3,15 @@ layout: page
 title: Minecraft
 permalink: /minecraft/
 ---
+
+<div class="warning">
+    <b>WARNING</b><br>
+    Our server is currently offline because of low demand.
+    It may return after the exam period, with or without a new world.<br>
+    Untill then, if you want to play, ping me in Discord!
+    See you soon!
+</div>
+
 ![header](/images/server-icon-web.png)
 
 # Heilige Maagden Minecraft Server
@@ -18,8 +27,10 @@ Our server is back! New start, new world, same concept. We play in hard-difficul
 ### Daily Blackout Period
 Every day, our server will go offline between 6 am and 7:30 am. If you're still actively playing, you will be warned and should probably disconnect. If you're AFK you'll be kicked. The server will begin to start up at 7:30 am, though it can take some time for it to get back online. You should really only be connecting starting around 7:40 am if possible.
 
+<!-->
 ### Useful Resources
 In Discord, we've created a "server-coords" channel where you can share and/or save important coordinates from our server. Also, if you want to know weather the server is up, you can check the status page on <a href="https://admin.minecraft.heiligemaagden.com/status">https://admin.minecraft.heiligemaagden.com/status</a>. It may warn you of being unsafe; it's not, though I won't oblige you to continue. If that page is down as well, not only our server but also it's host have been turned off or disconnected, meanning the server will be offline for sure.
+-->
 
 ### World Map
 This is a top-down view of the overworld. This map will be updated once every day around 7 am. You can also open a fullscreen version of this map [here](/minecraft-map/unmined.index.html).
