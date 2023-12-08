@@ -9,9 +9,9 @@ const Home = () => {
         <h1 className="font-semibold text-2xl mt-8 mb-4">We're back!</h1>
         <p className="my-4">
           As you can see, our website is back - sort of.
-          I’m still working to get more pages online, and to add support for mobile devices and devices in light mode.
-          And while we’re at it, this page should probably get a revamp soon too.
-          In the mean time, feel free to browse through what’s here already, or find us in Discord.
+          I&apos;m still working to get more pages online, and to add support for mobile devices and devices in light mode.
+          And while we&apos;re at it, this page should probably get a revamp soon too.
+          In the mean time, feel free to browse through what&apos;s here already, or find us in Discord.
         </p>
       </div>
       <FooterBar />
