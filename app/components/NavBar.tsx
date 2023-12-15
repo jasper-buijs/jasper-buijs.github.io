@@ -8,7 +8,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
   return (
     <>
       {/*<!-- Actual NavBar -->*/}
-      <div className="h-16 px-12 w-full fixed">
+      <div className="h-16 px-12 w-full fixed z-50">
         <div className="bg-[#D6D6D6] dark:bg-[#1E1E1E]">
           <img src="/logo-xmas.png" alt="Heilige Maagden Logo" className="inline-block h-16 w-16 mr-8" />
           <Link href="/" className={"m-4 " + linkClassFilter("home")}>Heilige Maagden</Link>
