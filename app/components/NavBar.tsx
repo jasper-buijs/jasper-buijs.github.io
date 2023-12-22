@@ -13,6 +13,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
           <img src="/logo-xmas.png" alt="Heilige Maagden Logo" className="inline-block h-16 w-16 mr-8" />
           <Link href="/" className={"m-4 " + linkClassFilter("home")}>Heilige Maagden</Link>
           <Link href="/minecraft" className={"m-4 " + linkClassFilter("minecraft")}>Minecraft</Link>
+          <Link href="/formulaone" className={"m-4 " + linkClassFilter("formulaone")}>Formula 1</Link>
         </div>
       </div>
       {/*<!-- NavBar Spacer underneath -->*/}

@@ -7,10 +7,6 @@ import Link from "next/link";
 import Paragraph from "../components/Paragraph";
 
 const MinecraftPage = () => {
-  const copyIpToClipboard = () => {
-    navigator.clipboard.writeText("server.heiligemaagden.com");
-    console.log("clipboard updated");
-  };
   return (
     <>
       <NavBar activePage="minecraft" />
