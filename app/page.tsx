@@ -17,8 +17,8 @@ const Home = () => {
           In the mean time, feel free to browse through what&apos;s here already, or find us in Discord.
         </p>
       </Paragraph>*/}
-      <Alert type="info" text="As you can see, our website is back - sort of. I&apos;m still working to get more pages online, and to add support for mobile devices and devices in light mode. And while we&apos;re at it, this page should probably get a revamp soon too. In the mean time, feel free to browse through what&apos;s here already, or find us in Discord." />
-      <GridMenu topSpacing="11rem">
+      <Alert type="info" text="As you can see, our website is back - sort of. In the mean time, feel free to browse through what&apos;s here already, or find us in Discord." />
+      <GridMenu topSpacing="9.5rem">
         <GridMenuElement bgImage="/menu/minecraft.png" title="Minecraft" href="/minecraft" columns={[1, 1]} rows={[1, 1]} />
         <GridMenuElement bgImage="/menu/formulaone.jpg" title="Formula 1" href="/formulaone" columns={[2, 1]} rows={[1, 1]} />
       </GridMenu>
