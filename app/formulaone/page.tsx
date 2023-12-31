@@ -35,6 +35,10 @@ const FormulaOnePage = () => {
     <>
       <NavBar activePage="formulaone" />
       <Alert type="info" text="This page is still work in progress. It will be updated with more information and additional pages before the start of the Formula 1 2024 season." />
+      <div className="bg-[#D6D6D6] dark:bg-[#1E1E1E] text-[#1E1E1E] dark:text-inherit py-1 px-4 pt-2 mx-12 my-4 grid">
+        <p className="row-start-1 row-span-1 col-start-1 col-span-1 align-middle py-2">Car launch season is starting soon! Find more information on all announced car launches on our Car Launches page.</p>
+        <a href="/formulaone/car-launches" className="rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min row-start-1 row-span-1 col-start-2 col-span-1 mx-4 align-middle mb-1 justify-self-end">Take me there!</a>
+      </div>
       <Paragraph emoji="📅" title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR">
         <table className="table-fixed">
           <tbody>
