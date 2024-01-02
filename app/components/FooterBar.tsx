@@ -4,7 +4,7 @@ const FooterBar = () => {
       {/*<!-- Actual FooterBar -->*/}
       <div className="h-16 px-12 w-full fixed bottom-0 z-50">
         <div className="bg-[#D6D6D6] dark:bg-[#1E1E1E] h-full">
-          <p className="leading-[4rem] w-full text-center text-[#1E1E1E] dark:text-[#FFFFFF]">© Jasper Buijs, Heilige Maagden, 2023</p>
+          <p className="leading-[4rem] w-full text-center text-[#1E1E1E] dark:text-[#FFFFFF]">© Jasper Buijs, Heilige Maagden, 2024</p>
         </div>
       </div>
       {/*<!-- FooterBar Spacer underneath -->*/}
