@@ -11,6 +11,7 @@ type dataType = {
   williams: dataChildrenType;
   sauber: dataChildrenType;
   alpine: dataChildrenType;
+  aston: dataChildrenType;
   ferrari: dataChildrenType;
   mercedes: dataChildrenType;
   mclaren: dataChildrenType;
@@ -49,6 +50,15 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
       time: "The time of the event is yet to be announced.",
       description: "BWT Alpine has announced they will launch their 2024 car - the A524 - on Wednesday February 7. They will also reveal their A424 LMDh with which they will compete in FIA WEC.",
       eventUrl: "https://discord.com/events/585896430380777503/1190758568295682228"
+    },
+    aston: {
+      imgPath: "/formulaone/car-launches/AstonMartin24.png",
+      title: "Aston Martin AMR24 Car Launch",
+      link: undefined,
+      date: "Monday February 12 2024",
+      time: "The time of the event is yet to be announced.",
+      description: "Aston Martin Aramco has announced they will launch their 2024 car - the AMR24 - on Monday February 12.",
+      eventUrl: "https://discord.com/events/585896430380777503/1192192200184963173"
     },
     ferrari: {
       imgPath: "/formulaone/car-launches/Ferrari24.png",
