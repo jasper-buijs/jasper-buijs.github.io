@@ -23,13 +23,13 @@ const CarLaunchFormulaOnePage = () => {
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Ferrari24.png" setModalFunction={setModal} name="ferrari" row={3} column={1} />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Mercedes24.png" setModalFunction={setModal} name="mercedes" row={3} column={2} />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/McLaren24.png" setModalFunction={setModal} name="mclaren" row={4} column={1} />
+          <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/RedBull24.png" setModalFunction={setModal} name="redbull" row={4} column={2} />
         </AnnouncementHeaderGrid>
       </Paragraph>
       <Paragraph emoji="❓" title="Unannounced Car Launches">
-        <div className="grid grid-rows-1 auto-cols-fr w-100 h-auto">
-          <img src="/formulaone/team-logos/AlphaTauri.png" className="row-start-1 row-span-1 col-start-1 col-span-1" />
-          <img src="/formulaone/team-logos/Haas.png" className="row-start-1 row-span-1 col-start-2 col-span-1" />
-          <img src="/formulaone/team-logos/RedBullAlt.png" className="row-start-1 row-span-1 col-start-3 col-span-1" />
+        <div className="">
+          <img src="/formulaone/team-logos/AlphaTauri.png" className="w-32 inline-block" />
+          <img src="/formulaone/team-logos/Haas.png" className="w-32 inline-block" />
         </div>
       </Paragraph>
       <FooterBar />

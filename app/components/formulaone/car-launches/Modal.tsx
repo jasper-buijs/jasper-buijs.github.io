@@ -15,6 +15,7 @@ type dataType = {
   ferrari: dataChildrenType;
   mercedes: dataChildrenType;
   mclaren: dataChildrenType;
+  redbull: dataChildrenType;
   none: dataChildrenType;
 }
 
@@ -75,7 +76,7 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
       link: undefined,
       date: "Wednesday February 14 2024",
       time: "The time of the event is yet to be announced.",
-      description: "Mercedes-AMG Petronas has announced they will launch their 2024 car - the W15 - on Wednesday February 15.",
+      description: "Mercedes-AMG Petronas has announced they will launch their 2024 car - the W15 - on Wednesday February 14.",
       eventUrl: "https://discord.com/events/585896430380777503/1190759009477730375"
     },
     mclaren: {
@@ -86,6 +87,15 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
       time: "The time of the event is yet to be announced.",
       description: "McLaren has announced they will launch their 2024 car on Wednesday February 14.",
       eventUrl: "https://discord.com/events/585896430380777503/1190759249064759397"
+    },
+    redbull: {
+      imgPath: "/formulaone/car-launches/RedBull24.png",
+      title: "Red Bull RB20 Car Launch",
+      link: undefined,
+      date: "Thursday February 15 2024",
+      time: "The time of the event is yet to be announced.",
+      description: "Red Bull has announced they will launch their 2024 car - the RB20 - on Thursday February 15",
+      eventUrl: "https://discord.com/events/585896430380777503/1197210064528883825"
     },
     none: {
       imgPath: "",
