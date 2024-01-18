@@ -26,10 +26,17 @@ const FormulaOnePage = () => {
     } else if (name == "f3") {
       return (<td><div className="mr-4 h-[1rem] inline-block"><img src={"/formulaone/f3.png"} className="h-[1rem]" /></div></td>);
     } else if (name == "f1a") {
-      return (<td><div className="h-[1rem] inline-block"><img src={"/formulaone/f1a.png"} className="h-[1rem]" /></div></td>);
+      return (<td><div className="mr-8 h-[1rem] inline-block"><img src={"/formulaone/f1a.png"} className="h-[1rem]" /></div></td>);
     } else {
       return (<td><div>Image not found.</div></td>);
     }
+  }
+  const timestamp = (time: string) => {
+    const convertedTime = new Date(time).toLocaleString(undefined, {
+      timeStyle: "medium",
+      dateStyle: "full"
+    });
+    return (<td><div className="text-center">{convertedTime}</div></td>)
   }
   return (
     <>
@@ -50,6 +57,7 @@ const FormulaOnePage = () => {
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               {number(1)}
@@ -58,6 +66,8 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-03-02T15:00:00+00:00")}
             </tr>
             <tr>
               {number(2)}
@@ -67,6 +77,7 @@ const FormulaOnePage = () => {
               {image("f2")}
               <td></td>
               {image("f1a")}
+              {timestamp("2024-03-09T17:00:00+00:00")}
             </tr>
             <tr>
               {number(3)}
@@ -75,18 +86,28 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-03-24T04:00:00+00:00")}
             </tr>
             <tr>
               {number(4)}
               {flag("japan")}
               {name("FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2024")}
               {image("f1")}
+              <td></td>
+              <td></td>
+              <td></td>
+              {timestamp("2024-04-07T05:00:00+00:00")}
             </tr>
             <tr>
               {number(5)}
               {flag("china")}
               {name("FORMULA 1 LENOVO CHINESE GRAND PRIX 2024")}
               {image("f1s")}
+              <td></td>
+              <td></td>
+              <td></td>
+              {timestamp("2024-04-21T07:00:00+00:00")}
             </tr>
             <tr>
               {number(6)}
@@ -96,6 +117,7 @@ const FormulaOnePage = () => {
               <td></td>
               <td></td>
               {image("f1a")}
+              {timestamp("2024-05-05T20:00:00+00:00")}
             </tr>
             <tr>
               {number(7)}
@@ -104,6 +126,8 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-05-19T13:00:00+00:00")}
             </tr>
             <tr>
               {number(8)}
@@ -112,12 +136,18 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-05-26T13:00:00+00:00")}
             </tr>
             <tr>
               {number(9)}
               {flag("canada")}
               {name("FORMULA 1 GRAND PRIX DU CANADA 2024")}
               {image("f1")}
+              <td></td>
+              <td></td>
+              <td></td>
+              {timestamp("2024-06-09T18:00:00+00:00")}
             </tr>
             <tr>
               {number(10)}
@@ -127,6 +157,7 @@ const FormulaOnePage = () => {
               {image("f2")}
               {image("f3")}
               {image("f1a")}
+              {timestamp("2024-06-23T13:00:00+00:00")}
             </tr>
             <tr>
               {number(11)}
@@ -135,6 +166,8 @@ const FormulaOnePage = () => {
               {image("f1s")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-06-30T13:00:00+00:00")}
             </tr>
             <tr>
               {number(12)}
@@ -143,6 +176,8 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-07-07T14:00:00+00:00")}
             </tr>
             <tr>
               {number(13)}
@@ -151,6 +186,8 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-07-21T13:00:00+00:00")}
             </tr>
             <tr>
               {number(14)}
@@ -159,6 +196,8 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-07-28T13:00:00+00:00")}
             </tr>
             <tr>
               {number(15)}
@@ -168,6 +207,7 @@ const FormulaOnePage = () => {
               <td></td>
               <td></td>
               {image("f1a")}
+              {timestamp("2024-08-25T13:00:00+00:00")}
             </tr>
             <tr>
               {number(16)}
@@ -176,6 +216,8 @@ const FormulaOnePage = () => {
               {image("f1")}
               {image("f2")}
               {image("f3")}
+              <td></td>
+              {timestamp("2024-09-01T13:00:00+00:00")}
             </tr>
             <tr>
               {number(17)}
@@ -183,6 +225,9 @@ const FormulaOnePage = () => {
               {name("FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024")}
               {image("f1")}
               {image("f2")}
+              <td></td>
+              <td></td>
+              {timestamp("2024-09-15T11:00:00+00:00")}
             </tr>
             <tr>
               {number(18)}
@@ -192,30 +237,47 @@ const FormulaOnePage = () => {
               <td></td>
               <td></td>
               {image("f1a")}
+              {timestamp("2024-09-22T12:00:00+00:00")}
             </tr>
             <tr>
               {number(19)}
               {flag("usa")}
               {name("FORMULA 1 PIRELLI UNITED STATES GRAND PRIX 2024")}
               {image("f1s")}
+              <td></td>
+              <td></td>
+              <td></td>
+              {timestamp("2024-10-20T19:00:00+00:00")}
             </tr>
             <tr>
               {number(20)}
               {flag("mexico")}
               {name("FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2024")}
               {image("f1")}
+              <td></td>
+              <td></td>
+              <td></td>
+              {timestamp("2024-10-27T20:00:00+00:00")}
             </tr>
             <tr>
               {number(21)}
               {flag("brazil")}
               {name("FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2024")}
               {image("f1s")}
+              <td></td>
+              <td></td>
+              <td></td>
+              {timestamp("2024-11-03T17:00:00+00:00")}
             </tr>
             <tr>
               {number(22)}
               {flag("usa")}
               {name("FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024")}
               {image("f1")}
+              <td></td>
+              <td></td>
+              <td></td>
+              {timestamp("2024-11-23T06:00:00+00:00")}
             </tr>
             <tr>
               {number(23)}
@@ -225,6 +287,7 @@ const FormulaOnePage = () => {
               {image("f2")}
               <td></td>
               {image("f1a")}
+              {timestamp("2024-12-01T17:00:00+00:00")}
             </tr>
             <tr>
               {number(24)}
@@ -234,6 +297,7 @@ const FormulaOnePage = () => {
               {image("f2")}
               <td></td>
               {image("f1a")}
+              {timestamp("2024-12-08T13:00:00+00:00")}
             </tr>
           </tbody>
         </table>
