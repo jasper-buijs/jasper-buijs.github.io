@@ -8,9 +8,11 @@ type dataChildrenType = {
   eventUrl: string;
 }
 type dataType = {
+  haas: dataChildrenType;
   williams: dataChildrenType;
-  sauber: dataChildrenType;
+  kick: dataChildrenType;
   alpine: dataChildrenType;
+  racingbulls: dataChildrenType;
   aston: dataChildrenType;
   ferrari: dataChildrenType;
   mercedes: dataChildrenType;
@@ -25,22 +27,31 @@ interface ModalProps {
 }
 const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
   const data: dataType = {
+    haas: {
+      imgPath: "/formulaone/car-launches/Haas24.png",
+      title: "Haas VF24 Car Launch",
+      link: undefined,
+      date: "Friday February 2 2024",
+      time: "15:00 CET",
+      description: "Moneygram Haas has announced they will launch their 2024 car - the VF24 - on Friday February 2 2024 at 15:00 CEST.",
+      eventUrl: "https://discord.com/events/585896430380777503/1201869090655064094"
+    },
     williams: {
       imgPath: "/formulaone/car-launches/Williams24.png",
       title: "Williams FW46 Car Launch",
       link: undefined,
       date: "Monday February 5 2024",
-      time: "The time of the event is yet to be announced.",
-      description: "Williams Racing has announced they will launch their 2024 car - the FW46 - on Monday February 5 in New York City.",
+      time: "15:40 CEST",
+      description: "Williams Racing has announced they will launch their 2024 car - the FW46 - on Monday February 5 at 15:40 CEST in New York City.",
       eventUrl: "https://discord.com/events/585896430380777503/1190757961086279834"
     },
-    sauber: {
-      imgPath: "/formulaone/car-launches/Sauber24.png",
-      title: "Sauber C44 Car Launch",
+    kick: {
+      imgPath: "/formulaone/car-launches/Kick24.png",
+      title: "Kick C44 Car Launch",
       link: undefined,
       date: "Monday February 5 2024",
       time: "The time of the event is yet to be announced.",
-      description: "Stake Kick Sauber has announced they will launch their 2024 car - the C44 - on Monday February 5 in the United Kingdom.",
+      description: "Kick Sauber (what used to be Alfa Romeo Racing) has announced they will launch their 2024 car - the C44 - on Monday February 5 in the United Kingdom.",
       eventUrl: "https://discord.com/events/585896430380777503/1190758263013253303"
     },
     alpine: {
@@ -51,6 +62,15 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
       time: "The time of the event is yet to be announced.",
       description: "BWT Alpine has announced they will launch their 2024 car - the A524 - on Wednesday February 7. They will also reveal their A424 LMDh with which they will compete in FIA WEC.",
       eventUrl: "https://discord.com/events/585896430380777503/1190758568295682228"
+    },
+    racingbulls: {
+      imgPath: "/formulaone/car-launches/RacingBulls24.png",
+      title: "Racing Bulls 2024 Car Launch",
+      link: undefined,
+      date: "Thurday February 8 2024",
+      time: "Visa CashApp The time of the event is yet to be announed.",
+      description: "Racing Bulls (what used to be Scuderia AlphaTauri) has announced they will launch their 2024 car on Thursday February 8 in Las Vegas.",
+      eventUrl: "https://discord.com/events/585896430380777503/1201868256332218368"
     },
     aston: {
       imgPath: "/formulaone/car-launches/AstonMartin24.png",
@@ -94,7 +114,7 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
       link: undefined,
       date: "Thursday February 15 2024",
       time: "The time of the event is yet to be announced.",
-      description: "Red Bull has announced they will launch their 2024 car - the RB20 - on Thursday February 15",
+      description: "Oracle Red Bull has announced they will launch their 2024 car - the RB20 - on Thursday February 15",
       eventUrl: "https://discord.com/events/585896430380777503/1197210064528883825"
     },
     none: {
