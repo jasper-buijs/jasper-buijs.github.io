@@ -132,7 +132,7 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
   };
   return (
     <div className="w-[40vw] h-[75vh] fixed z-50 bg-[#D6D6D6] dark:bg-[#1E1E1E] left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] grid grid-rows-[auto_1fr]">
-      <button onClick={setModal} className="fixed right-4 top-2 text-xl">
+      <button onClick={setModal} className="fixed right-4 top-2 text-xl text-gray-400">
         ✕
       </button>
       <img src={data[activeModal]["imgPath"]} className="row-start-1 row-span-1 col-start-1 col-span-1" />

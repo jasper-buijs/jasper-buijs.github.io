@@ -1,50 +1,104 @@
+"use client";
+
 import FooterBar from "../components/FooterBar";
 import NavBar from "../components/NavBar";
 import Paragraph from "../components/Paragraph";
 import Alert from "../components/Alert";
+import redirect from "../components/redirect";
 
 const FormulaOnePage = () => {
+  redirect("/formulaone", false);
   const number = (number: number) => {
-    return (<td><div className="mr-2">{String(number)}</div></td>);
-  }
+    return (
+      <td>
+        <div className="mr-2">{String(number)}</div>
+      </td>
+    );
+  };
   const flag = (country: string) => {
-    return (<td><img src={"/formulaone/twemoji-flags/" + country + ".png"} className="h-[1rem] mr-2" /></td>);
-  }
+    return (
+      <td>
+        <img src={"/formulaone/twemoji-flags/" + country + ".png"} className="h-[1rem] mr-2" />
+      </td>
+    );
+  };
   const name = (name: string) => {
-    return (<td><div className="mr-8">{name}</div></td>);
-  }
+    return (
+      <td>
+        <div className="mr-8">{name}</div>
+      </td>
+    );
+  };
   const image = (name: string) => {
     if (name == "f1") {
-      return (<td><div className="mr-4 h-[1rem] inline-block"><img src={"/formulaone/f1web.png"} className="h-[1rem]" /></div></td>);
+      return (
+        <td>
+          <div className="mr-4 h-[1rem] inline-block">
+            <img src={"/formulaone/f1web.png"} className="h-[1rem]" />
+          </div>
+        </td>
+      );
     } else if (name == "f1s") {
-      return (<td><div className="mr-4 h-[1rem] inline-block">
-        <img src={"/formulaone/f1-sprint-text-black.png"} className="h-[1rem] dark:hidden" />
-        <img src={"/formulaone/f1-sprint-text-white.png"} className="h-[1rem] dark:!inline-block hidden" />
-      </div></td>);
+      return (
+        <td>
+          <div className="mr-4 h-[1rem] inline-block">
+            <img src={"/formulaone/f1-sprint-text-black.png"} className="h-[1rem] dark:hidden" />
+            <img src={"/formulaone/f1-sprint-text-white.png"} className="h-[1rem] dark:!inline-block hidden" />
+          </div>
+        </td>
+      );
     } else if (name == "f2") {
-      return (<td><div className="mr-4 h-[1rem] inline-block"><img src={"/formulaone/f2.png"} className="h-[1rem]" /></div></td>);
+      return (
+        <td>
+          <div className="mr-4 h-[1rem] inline-block">
+            <img src={"/formulaone/f2.png"} className="h-[1rem]" />
+          </div>
+        </td>
+      );
     } else if (name == "f3") {
-      return (<td><div className="mr-4 h-[1rem] inline-block"><img src={"/formulaone/f3.png"} className="h-[1rem]" /></div></td>);
+      return (
+        <td>
+          <div className="mr-4 h-[1rem] inline-block">
+            <img src={"/formulaone/f3.png"} className="h-[1rem]" />
+          </div>
+        </td>
+      );
     } else if (name == "f1a") {
-      return (<td><div className="mr-8 h-[1rem] inline-block"><img src={"/formulaone/f1a.png"} className="h-[1rem]" /></div></td>);
+      return (
+        <td>
+          <div className="mr-8 h-[1rem] inline-block">
+            <img src={"/formulaone/f1a.png"} className="h-[1rem]" />
+          </div>
+        </td>
+      );
     } else {
-      return (<td><div>Image not found.</div></td>);
+      return (
+        <td>
+          <div>Image not found.</div>
+        </td>
+      );
     }
-  }
+  };
   const timestamp = (time: string) => {
     const convertedTime = new Date(time).toLocaleString(undefined, {
       timeStyle: "medium",
-      dateStyle: "full"
+      dateStyle: "full",
     });
-    return (<td><div className="text-center">{convertedTime}</div></td>)
-  }
+    return (
+      <td>
+        <div className="text-center">{convertedTime}</div>
+      </td>
+    );
+  };
   return (
     <>
       <NavBar activePage="formulaone" />
       <Alert type="info" text="This page is still work in progress. It will be updated with more information and additional pages before the start of the Formula 1 2024 season." />
       <div className="bg-[#D6D6D6] dark:bg-[#1E1E1E] text-[#1E1E1E] dark:text-inherit py-1 px-4 pt-2 mx-12 my-4 grid">
         <p className="row-start-1 row-span-1 col-start-1 col-span-1 align-middle py-2">Car launch season is starting soon! Find more information on all announced car launches on our Car Launches page.</p>
-        <a href="/formulaone/car-launches" className="rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min row-start-1 row-span-1 col-start-2 col-span-1 mx-4 align-middle mb-1 justify-self-end">Take me there!</a>
+        <a href="/formulaone/car-launches" className="rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min row-start-1 row-span-1 col-start-2 col-span-1 mx-4 align-middle mb-1 justify-self-end">
+          Take me there!
+        </a>
       </div>
       <Paragraph emoji="📅" title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR">
         <table className="table-fixed">
@@ -305,6 +359,6 @@ const FormulaOnePage = () => {
       <FooterBar />
     </>
   );
-}
+};
 
 export default FormulaOnePage;

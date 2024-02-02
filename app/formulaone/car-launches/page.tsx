@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
@@ -7,8 +7,10 @@ import { AnnouncementHeaderGrid, AnnouncementHeaderGridElement } from "@/app/com
 import Modal from "@/app/components/formulaone/car-launches/Modal";
 import { useState } from "react";
 import { dataType as modalObjectDataType } from "@/app/components/formulaone/car-launches/Modal";
+import redirect from "../../components/redirect";
 
 const CarLaunchFormulaOnePage = () => {
+  redirect("/formulaone/car-launches", false);
   const [modal, setModal] = useState<keyof modalObjectDataType>("none");
   return (
     <>
@@ -16,7 +18,7 @@ const CarLaunchFormulaOnePage = () => {
       {modal != "none" && <Modal activeModal={modal} setModalFunction={setModal} />}
       <Paragraph emoji="📅" title="Announced Car Launches">
         <AnnouncementHeaderGrid>
-          <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Haas24.png" setModalFunction={setModal} name="haas" row={1} column={1} />
+          <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Haas24.png" setModalFunction={setModal} name="haas" row={1} column={1} past />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Williams24.png" setModalFunction={setModal} name="williams" row={1} column={2} />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Kick24.png" setModalFunction={setModal} name="kick" row={2} column={1} />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Alpine24.png" setModalFunction={setModal} name="alpine" row={2} column={2} />
@@ -30,6 +32,6 @@ const CarLaunchFormulaOnePage = () => {
       </Paragraph>
     </>
   );
-}
+};
 
 export default CarLaunchFormulaOnePage;
