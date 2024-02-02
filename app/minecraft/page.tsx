@@ -38,12 +38,6 @@ const MinecraftPage = () => {
         It may warn you of being unsafe; it's not, though I won't oblige you to continue.
         If that page is down as well, not only our server but also it's host have been turned off or disconnected, meanning the server will be offline for sure.
       </Paragraph>
-      <Paragraph emoji="🗺️" title="World Map">
-        This is a top-down view of the overworld.
-        This map will be updated once every day around 7 am.
-        You can also open a fullscreen version of this map <a href="/minecraft-map/unmined.index.html" className="underline">here</a>.
-        <iframe src="/minecraft-map/unmined.index.html" className="w-full h-[75vh]">The map is still loading. Wait a while or try again later.</iframe>
-      </Paragraph>
       <FooterBar />
     </>
   );
