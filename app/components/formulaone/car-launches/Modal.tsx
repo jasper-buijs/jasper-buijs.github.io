@@ -57,10 +57,10 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
     alpine: {
       imgPath: "/formulaone/car-launches/Alpine24.png",
       title: "Alpine A524 Car Launch",
-      link: undefined,
+      link: "https://www.youtube.com/watch?v=u-Qvvyj8n1I",
       date: "Wednesday February 7 2024",
-      time: "The time of the event is yet to be announced.",
-      description: "BWT Alpine has announced they will launch their 2024 car - the A524 - on Wednesday February 7. They will also reveal their A424 LMDh with which they will compete in FIA WEC.",
+      time: "14:30 CET",
+      description: "BWT Alpine has announced they will launch their 2024 car - the A524 - on Wednesday February 7 at 14:30 CET. They will also reveal their A424 LMDh with which they will compete in FIA WEC.",
       eventUrl: "https://discord.com/events/585896430380777503/1190758568295682228",
     },
     racingbulls: {
