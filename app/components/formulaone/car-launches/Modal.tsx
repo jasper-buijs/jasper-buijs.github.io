@@ -67,9 +67,9 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
       imgPath: "/formulaone/car-launches/RacingBulls24.png",
       title: "Racing Bulls 2024 Car Launch",
       link: undefined,
-      date: "Thurday February 8 2024",
-      time: "Visa CashApp The time of the event is yet to be announed.",
-      description: "Racing Bulls (what used to be Scuderia AlphaTauri) has announced they will launch their 2024 car on Thursday February 8 in Las Vegas.",
+      date: "Friday February 9 2024",
+      time: "07:15 CET",
+      description: "Racing Bulls (what used to be Scuderia AlphaTauri) has announced they will launch their 2024 car on Friday February 9 at 07:15 CET in Las Vegas.",
       eventUrl: "https://discord.com/events/585896430380777503/1201868256332218368",
     },
     aston: {
