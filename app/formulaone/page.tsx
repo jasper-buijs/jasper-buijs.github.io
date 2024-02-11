@@ -5,91 +5,10 @@ import NavBar from "../components/NavBar";
 import Paragraph from "../components/Paragraph";
 import Alert from "../components/Alert";
 import redirect from "../components/redirect";
+import { CalendarGrid, CalendarEmblems } from "../components/formulaone/CalendarGrid";
 
 const FormulaOnePage = () => {
   redirect("/formulaone", false);
-  const number = (number: number) => {
-    return (
-      <td>
-        <div className="mr-2">{String(number)}</div>
-      </td>
-    );
-  };
-  const flag = (country: string) => {
-    return (
-      <td>
-        <img src={"/formulaone/twemoji-flags/" + country + ".png"} className="h-[1rem] mr-2" />
-      </td>
-    );
-  };
-  const name = (name: string) => {
-    return (
-      <td>
-        <div className="mr-8">{name}</div>
-      </td>
-    );
-  };
-  const image = (name: string) => {
-    if (name == "f1") {
-      return (
-        <td>
-          <div className="mr-4 h-[1rem] inline-block">
-            <img src={"/formulaone/f1web.png"} className="h-[1rem]" />
-          </div>
-        </td>
-      );
-    } else if (name == "f1s") {
-      return (
-        <td>
-          <div className="mr-4 h-[1rem] inline-block">
-            <img src={"/formulaone/f1-sprint-text-black.png"} className="h-[1rem] dark:hidden" />
-            <img src={"/formulaone/f1-sprint-text-white.png"} className="h-[1rem] dark:!inline-block hidden" />
-          </div>
-        </td>
-      );
-    } else if (name == "f2") {
-      return (
-        <td>
-          <div className="mr-4 h-[1rem] inline-block">
-            <img src={"/formulaone/f2.png"} className="h-[1rem]" />
-          </div>
-        </td>
-      );
-    } else if (name == "f3") {
-      return (
-        <td>
-          <div className="mr-4 h-[1rem] inline-block">
-            <img src={"/formulaone/f3.png"} className="h-[1rem]" />
-          </div>
-        </td>
-      );
-    } else if (name == "f1a") {
-      return (
-        <td>
-          <div className="mr-8 h-[1rem] inline-block">
-            <img src={"/formulaone/f1a.png"} className="h-[1rem]" />
-          </div>
-        </td>
-      );
-    } else {
-      return (
-        <td>
-          <div>Image not found.</div>
-        </td>
-      );
-    }
-  };
-  const timestamp = (time: string) => {
-    const convertedTime = new Date(time).toLocaleString(undefined, {
-      timeStyle: "medium",
-      dateStyle: "full",
-    });
-    return (
-      <td>
-        <div className="text-center">{convertedTime}</div>
-      </td>
-    );
-  };
   return (
     <>
       <NavBar activePage="formulaone" />
@@ -100,261 +19,278 @@ const FormulaOnePage = () => {
           Take me there!
         </a>
       </div>
-      <Paragraph emoji="📅" title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR">
-        <table className="table-fixed">
-          <tbody>
-            <tr>
-              {number(0)}
-              {flag("bahrain")}
-              {name("FORMULA 1 ARAMCO PRE-SEASON TESTING 2024")}
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              {number(1)}
-              {flag("bahrain")}
-              {name("FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-03-02T15:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(2)}
-              {flag("saudi")}
-              {name("FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              <td></td>
-              {image("f1a")}
-              {timestamp("2024-03-09T17:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(3)}
-              {flag("australia")}
-              {name("FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-03-24T04:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(4)}
-              {flag("japan")}
-              {name("FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2024")}
-              {image("f1")}
-              <td></td>
-              <td></td>
-              <td></td>
-              {timestamp("2024-04-07T05:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(5)}
-              {flag("china")}
-              {name("FORMULA 1 LENOVO CHINESE GRAND PRIX 2024")}
-              {image("f1s")}
-              <td></td>
-              <td></td>
-              <td></td>
-              {timestamp("2024-04-21T07:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(6)}
-              {flag("usa")}
-              {name("FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2024")}
-              {image("f1s")}
-              <td></td>
-              <td></td>
-              {image("f1a")}
-              {timestamp("2024-05-05T20:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(7)}
-              {flag("italy")}
-              {name("FORMULA 1 MSC CRUISES GRAN PREMIO DELL'EMILIA-ROMAGNA 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-05-19T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(8)}
-              {flag("monaco")}
-              {name("FORMULA 1 GRAND PRIX DE MONACO 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-05-26T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(9)}
-              {flag("canada")}
-              {name("FORMULA 1 GRAND PRIX DU CANADA 2024")}
-              {image("f1")}
-              <td></td>
-              <td></td>
-              <td></td>
-              {timestamp("2024-06-09T18:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(10)}
-              {flag("spain")}
-              {name("FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              {image("f1a")}
-              {timestamp("2024-06-23T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(11)}
-              {flag("austria")}
-              {name("FORMULA 1 QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024")}
-              {image("f1s")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-06-30T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(12)}
-              {flag("uk")}
-              {name("FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-07-07T14:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(13)}
-              {flag("hungary")}
-              {name("FORMULA 1 HUNGARIAN GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-07-21T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(14)}
-              {flag("belgium")}
-              {name("FORMULA 1 ROLEX BELGIAN GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-07-28T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(15)}
-              {flag("netherlands")}
-              {name("FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2024")}
-              {image("f1")}
-              <td></td>
-              <td></td>
-              {image("f1a")}
-              {timestamp("2024-08-25T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(16)}
-              {flag("italy")}
-              {name("FORMULA 1 PIRELLI GRAN PREMIO D'ITALIA 2024")}
-              {image("f1")}
-              {image("f2")}
-              {image("f3")}
-              <td></td>
-              {timestamp("2024-09-01T13:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(17)}
-              {flag("azerbaijan")}
-              {name("FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              <td></td>
-              <td></td>
-              {timestamp("2024-09-15T11:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(18)}
-              {flag("singapore")}
-              {name("FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2024")}
-              {image("f1")}
-              <td></td>
-              <td></td>
-              {image("f1a")}
-              {timestamp("2024-09-22T12:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(19)}
-              {flag("usa")}
-              {name("FORMULA 1 PIRELLI UNITED STATES GRAND PRIX 2024")}
-              {image("f1s")}
-              <td></td>
-              <td></td>
-              <td></td>
-              {timestamp("2024-10-20T19:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(20)}
-              {flag("mexico")}
-              {name("FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2024")}
-              {image("f1")}
-              <td></td>
-              <td></td>
-              <td></td>
-              {timestamp("2024-10-27T20:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(21)}
-              {flag("brazil")}
-              {name("FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2024")}
-              {image("f1s")}
-              <td></td>
-              <td></td>
-              <td></td>
-              {timestamp("2024-11-03T17:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(22)}
-              {flag("usa")}
-              {name("FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024")}
-              {image("f1")}
-              <td></td>
-              <td></td>
-              <td></td>
-              {timestamp("2024-11-23T06:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(23)}
-              {flag("qatar")}
-              {name("FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2024")}
-              {image("f1s")}
-              {image("f2")}
-              <td></td>
-              {image("f1a")}
-              {timestamp("2024-12-01T17:00:00+00:00")}
-            </tr>
-            <tr>
-              {number(24)}
-              {flag("uae")}
-              {name("FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2024")}
-              {image("f1")}
-              {image("f2")}
-              <td></td>
-              {image("f1a")}
-              {timestamp("2024-12-08T13:00:00+00:00")}
-            </tr>
-          </tbody>
-        </table>
+      <Paragraph title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR" emoji="📅">
+        <CalendarGrid>
+          {/*PRE-SEASON TESTING*/}
+          <div className="w-full h-32 relative row-start-1 row-span-1 col-start-1 col-span-2">
+            <div className={`bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 pl-5 rounded-lg`}>
+              <p className="block text-white font-semibold text-lg">FORMULA 1 ARAMCO PRE-SEASON TESTING 2024</p>
+              <p className="block text-white">Bahrain International Circuit, Sakhir, Bahrain</p>
+              <p className="inline-block text-white mr-3">Feb 21 - 23</p>
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png" />
+          </div>
+          {/*BAHRAIN GP*/}
+          <div className="w-full h-32 relative row-start-2 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#E40A18] to-[#FDC2C8] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 1</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2024</p>
+              <p className="block text-white">Bahrain International Circuit, Sakhir, Bahrain</p>
+              <p className="inline-block text-white mr-3">Feb 29 - Mar 2</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png" />
+          </div>
+          {/*SAUDI ARABIA GP*/}
+          <div className="w-full h-32 relative row-start-2 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#016C36] to-[#66C698] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 2</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2024</p>
+              <p className="block text-white">Jeddah Corniche Circuit, Jeddah, Saudi Arabia</p>
+              <p className="inline-block text-white mr-3">Mar 7 - 9</p>
+              <CalendarEmblems f2 f1a />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245030/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Saudi%20Arabia%20carbon.png" />
+          </div>
+          {/*AUSTAILIA GP*/}
+          <div className="w-full h-32 relative row-start-3 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#023874] to-[#7CAADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 3</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2024</p>
+              <p className="block text-white">Albert Park Circuit, Melbourne, Australia</p>
+              <p className="inline-block text-white mr-3">Mar 22 - 24</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245032/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Australia%20carbon.png" />
+          </div>
+          {/*JAPAN GP*/}
+          <div className="w-full h-32 relative row-start-3 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#BD022F] to-[#FF5782] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 4</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2024</p>
+              <p className="block text-white">Suzuka International Racing Course, Suzuka, Japan</p>
+              <p className="inline-block text-white mr-3">Apr 5 - 7</p>
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Japan%20carbon.png" />
+          </div>
+          {/*CHINESE GP*/}
+          <div className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#EE1C25] to-[#FFFF00] from-50% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 5</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 LENOVO CHINESE GRAND PRIX 2024</p>
+              <p className="block text-white">Shanghai International Circuit, Shanghai, China</p>
+              <p className="inline-block text-white mr-3">Apr 19 - 21</p>
+              <CalendarEmblems sprint />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/China%20carbon.png" />
+          </div>
+          {/*MIAMI GP*/}
+          <div className="w-full h-32 relative row-start-4 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 6</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2024</p>
+              <p className="block text-white">Miami International Autodrome, Florida, United States</p>
+              <p className="inline-block text-white mr-3">May 3 - 5</p>
+              <CalendarEmblems sprint f1a />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Miami%20carbon.png" />
+          </div>
+          {/*IMOLA GP*/}
+          <div className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#37AC37] to-[#175C19] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 7</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 MSC CRUISES GRAN PREMIO DELL'EMILIA-ROMAGNA 2024</p>
+              <p className="block text-white">Autodromo Enzo e Dino Ferrari, Emilia-Romagna, Italy</p>
+              <p className="inline-block text-white mr-3">May 17 - 19</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1684338005/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Emilia%20Romagna%20carbon.png" />
+          </div>
+          {/*MONACO GP*/}
+          <div className="w-full h-32 relative row-start-5 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#E50915] to-[#FEDADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 8</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GRAND PRIX DE MONACO 2024</p>
+              <p className="block text-white">Circuit de Monaco, Monte-Carlo, Monaco (Street)</p>
+              <p className="inline-block text-white mr-3">May 24 - 26</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245032/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Monte%20Carlo%20carbon.png" />
+          </div>
+          {/*CANADA GP*/}
+          <div className="w-full h-32 relative row-start-6 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#EA2C36] to-[#010101] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 10</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GRAND PRIX DU CANADA 2024</p>
+              <p className="block text-white">Circuit Gilles-Villeneuve, Montreal, Canada</p>
+              <p className="inline-block text-white mr-3">Jun 7 - 9</p>
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Canada%20carbon.png" />
+          </div>
+          {/*SPAIN GP*/}
+          <div className="w-full h-32 relative row-start-6 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#E20612] to-[#FFD403] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 11</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2024</p>
+              <p className="block text-white">Circuit de Barcelona-Catalunya, Catalonia, Spain</p>
+              <p className="inline-block text-white mr-3">Jun 21 - 23</p>
+              <CalendarEmblems f2 f3 f1a />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1680529432/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Spain%20carbon.png" />
+          </div>
+          {/*AUSTRIA GP*/}
+          <div className="w-full h-32 relative row-start-7 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 12</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024</p>
+              <p className="block text-white">Red Bull Ring, Styria, Austria</p>
+              <p className="inline-block text-white mr-3">Jun 28 - 30</p>
+              <CalendarEmblems sprint f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Austria%20carbon.png" />
+          </div>
+          {/*UK GP*/}
+          <div className="w-full h-32 relative row-start-7 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#C7102E] to-[#032169] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 13</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2024</p>
+              <p className="block text-white">Silverstone Circuit, Northamptonshire, United Kingdom</p>
+              <p className="inline-block text-white mr-3">Jul 5 - 7</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Great%20Britain%20carbon.png" />
+          </div>
+          {/*HUNGARY GP*/}
+          <div className="w-full h-32 relative row-start-8 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#E10813] to-[#2E8C2C] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 14</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 HUNGARIAN GRAND PRIX 2024</p>
+              <p className="block text-white">Hungaroring, Mogyoród, Hungary</p>
+              <p className="inline-block text-white mr-3">Jul 19 - 21</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Hungar%20carbon.png" />
+          </div>
+          {/*BELGIUM GP*/}
+          <div className="w-full h-32 relative row-start-8 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#030301] to-[#EF343F] via-[#C7AB1C] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 15</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ROLEX BELGIAN GRAND PRIX 2024</p>
+              <p className="block text-white">Circuit de Spa-Francorchamps, Stavelot, Belgium</p>
+              <p className="inline-block text-white mr-3">Jul 26 - 28</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Belgium%20carbon.png" />
+          </div>
+          {/*NETHERLANDS GP*/}
+          <div className="w-full h-32 relative row-start-9 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#F89629] to-[#04529A] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 16</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2024</p>
+              <p className="block text-white">Circuit Zandvoort, North Holland, Netherlands</p>
+              <p className="inline-block text-white mr-3">Aug 23 - 25</p>
+              <CalendarEmblems f1a />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245033/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Netherlands%20carbon.png" />
+          </div>
+          {/*ITALY GP*/}
+          <div className="w-full h-32 relative row-start-9 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#048B46] to-[#CC222B] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 17</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 PIRELLI GRAN PREMIO D'ITALIA 2024</p>
+              <p className="block text-white">Autodromo Nazionale Monza, Monza, Italy</p>
+              <p className="inline-block text-white mr-3">Aug 30 - Sep 1</p>
+              <CalendarEmblems f2 f3 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Italy%20carbon.png" />
+          </div>
+          {/*AZERBAIJAN GP*/}
+          <div className="w-full h-32 relative row-start-10 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#00B5E2] to-[#4F9F30] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 18</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024</p>
+              <p className="block text-white">Baku City Circuit, Baku, Azerbaijan (Street)</p>
+              <p className="inline-block text-white mr-3">Sep 13 - 15</p>
+              <CalendarEmblems f2 />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245030/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Azerbaijan%20carbon.png" />
+          </div>
+          {/*SINGAPORE GP*/}
+          <div className="w-full h-32 relative row-start-10 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#F02739] to-[#FEAFB5] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 19</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2024</p>
+              <p className="block text-white">Marina Bay Street Circuit, Singapore (Street)</p>
+              <p className="inline-block text-white mr-3">Sep 20 - 22</p>
+              <CalendarEmblems f1a />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1683639275/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Singapore%20carbon.png" />
+          </div>
+          {/*USA GP*/}
+          <div className="w-full h-32 relative row-start-11 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#3F3B6E] to-[#B12234] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 20</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 PIRELLI UNITED STATES GRAND PRIX 2024</p>
+              <p className="block text-white">Circuit of The Americas, Texas, United States</p>
+              <p className="inline-block text-white mr-3">Oct 18 - 20</p>
+              <CalendarEmblems sprint />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/USA%20carbon.png" />
+          </div>
+          {/*MEXICO GP*/}
+          <div className="w-full h-32 relative row-start-11 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#039542] to-[#E10813] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 21</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2024</p>
+              <p className="block text-white">Autódromo Hermanos Rodríguez, Mexico City, Mexico</p>
+              <p className="inline-block text-white mr-3">Oct 25 - 27</p>
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Mexico%20carbon.png" />
+          </div>
+          {/*BRAZIL GP*/}
+          <div className="w-full h-32 relative row-start-12 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#029739] to-[#FCDC00] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 22</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2024</p>
+              <p className="block text-white">Autódromo de Interlagos, São Paulo, Brazil</p>
+              <p className="inline-block text-white mr-3">Nov 1 - 3</p>
+              <CalendarEmblems sprint />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Brazil%20carbon.png" />
+          </div>
+          {/*VEGAS GP*/}
+          <div className="w-full h-32 relative row-start-12 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#0198A3] via-[#22142B] via-65 to-[#571060] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 23</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024</p>
+              <p className="block text-white">Las Vegas Strip Circuit, Nevada, United States (Street)</p>
+              <p className="inline-block text-white mr-3">Nov 22 - 24</p>
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677249931/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Las%20Vegas%20carbon.png" />
+          </div>
+          {/*QATAR GP*/}
+          <div className="w-full h-32 relative row-start-13 row-span-1 col-start-1 col-span-1">
+            <div className={`bg-gradient-to-r from-[#8A1639] to-[#A29376] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 23</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2024</p>
+              <p className="block text-white">Lusail International Circuit, Lusail, Qatar</p>
+              <p className="inline-block text-white mr-3">Nov 29 - Dec 1</p>
+              <CalendarEmblems sprint f2 f1a />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Qatar%20carbon.png" />
+          </div>
+          {/*UAE GP*/}
+          <div className="w-full h-32 relative row-start-13 row-span-1 col-start-2 col-span-1">
+            <div className={`bg-gradient-to-r from-[#FD0002] to-[#01823F] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+              <p className="block text-white text-sm italic">ROUND 24</p>
+              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2024</p>
+              <p className="block text-white">Yas Marina Circuit, Abu Dhabi, United Arab Emirates</p>
+              <p className="inline-block text-white mr-3">Dec 6 - 8</p>
+              <CalendarEmblems f2 f1a />
+            </div>
+            <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Abu%20Dhab%20carbon.png" />
+          </div>
+        </CalendarGrid>
       </Paragraph>
       <FooterBar />
     </>
