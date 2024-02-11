@@ -34,8 +34,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-2 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E40A18] to-[#FDC2C8] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 1</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2024</p>
-              <p className="block text-white">Bahrain International Circuit, Sakhir, Bahrain</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Bahrain International Circuit, Sakhir, Bahrain</p>
               <p className="inline-block text-white mr-3">Feb 29 - Mar 2</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -45,8 +45,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-2 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#016C36] to-[#66C698] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 2</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2024</p>
-              <p className="block text-white">Jeddah Corniche Circuit, Jeddah, Saudi Arabia</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Jeddah Corniche Circuit, Jeddah, Saudi Arabia</p>
               <p className="inline-block text-white mr-3">Mar 7 - 9</p>
               <CalendarEmblems f2 f1a />
             </div>
@@ -56,8 +56,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-3 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#023874] to-[#7CAADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 3</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2024</p>
-              <p className="block text-white">Albert Park Circuit, Melbourne, Australia</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Albert Park Circuit, Melbourne, Australia</p>
               <p className="inline-block text-white mr-3">Mar 22 - 24</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -67,8 +67,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-3 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#BD022F] to-[#FF5782] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 4</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2024</p>
-              <p className="block text-white">Suzuka International Racing Course, Suzuka, Japan</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Suzuka International Racing Course, Suzuka, Japan</p>
               <p className="inline-block text-white mr-3">Apr 5 - 7</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Japan%20carbon.png" />
@@ -77,8 +77,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EE1C25] to-[#FFFF00] from-50% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 5</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 LENOVO CHINESE GRAND PRIX 2024</p>
-              <p className="block text-white">Shanghai International Circuit, Shanghai, China</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LENOVO CHINESE GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Shanghai International Circuit, Shanghai, China</p>
               <p className="inline-block text-white mr-3">Apr 19 - 21</p>
               <CalendarEmblems sprint />
             </div>
@@ -88,8 +88,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-4 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 6</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2024</p>
-              <p className="block text-white">Miami International Autodrome, Florida, United States</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Miami International Autodrome, Florida, United States</p>
               <p className="inline-block text-white mr-3">May 3 - 5</p>
               <CalendarEmblems sprint f1a />
             </div>
@@ -99,8 +99,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#37AC37] to-[#175C19] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 7</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 MSC CRUISES GRAN PREMIO DELL'EMILIA-ROMAGNA 2024</p>
-              <p className="block text-white">Autodromo Enzo e Dino Ferrari, Emilia-Romagna, Italy</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES GRAN PREMIO DELL'EMILIA-ROMAGNA 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Autodromo Enzo e Dino Ferrari, Emilia-Romagna, Italy</p>
               <p className="inline-block text-white mr-3">May 17 - 19</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -110,8 +110,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-5 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#E50915] to-[#FEDADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 8</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GRAND PRIX DE MONACO 2024</p>
-              <p className="block text-white">Circuit de Monaco, Monte-Carlo, Monaco (Street)</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GRAND PRIX DE MONACO 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit de Monaco, Monte-Carlo, Monaco (Street)</p>
               <p className="inline-block text-white mr-3">May 24 - 26</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -121,8 +121,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-6 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EA2C36] to-[#010101] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 10</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GRAND PRIX DU CANADA 2024</p>
-              <p className="block text-white">Circuit Gilles-Villeneuve, Montreal, Canada</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GRAND PRIX DU CANADA 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit Gilles-Villeneuve, Montreal, Canada</p>
               <p className="inline-block text-white mr-3">Jun 7 - 9</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Canada%20carbon.png" />
@@ -131,8 +131,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-6 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#E20612] to-[#FFD403] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 11</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2024</p>
-              <p className="block text-white">Circuit de Barcelona-Catalunya, Catalonia, Spain</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit de Barcelona-Catalunya, Catalonia, Spain</p>
               <p className="inline-block text-white mr-3">Jun 21 - 23</p>
               <CalendarEmblems f2 f3 f1a />
             </div>
@@ -142,8 +142,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-7 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 12</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024</p>
-              <p className="block text-white">Red Bull Ring, Styria, Austria</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Red Bull Ring, Styria, Austria</p>
               <p className="inline-block text-white mr-3">Jun 28 - 30</p>
               <CalendarEmblems sprint f2 f3 />
             </div>
@@ -153,8 +153,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-7 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#C7102E] to-[#032169] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 13</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2024</p>
-              <p className="block text-white">Silverstone Circuit, Northamptonshire, United Kingdom</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Silverstone Circuit, Northamptonshire, United Kingdom</p>
               <p className="inline-block text-white mr-3">Jul 5 - 7</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -164,8 +164,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-8 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E10813] to-[#2E8C2C] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 14</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 HUNGARIAN GRAND PRIX 2024</p>
-              <p className="block text-white">Hungaroring, Mogyoród, Hungary</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HUNGARIAN GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Hungaroring, Mogyoród, Hungary</p>
               <p className="inline-block text-white mr-3">Jul 19 - 21</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -175,8 +175,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-8 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#030301] to-[#EF343F] via-[#C7AB1C] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 15</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ROLEX BELGIAN GRAND PRIX 2024</p>
-              <p className="block text-white">Circuit de Spa-Francorchamps, Stavelot, Belgium</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ROLEX BELGIAN GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit de Spa-Francorchamps, Stavelot, Belgium</p>
               <p className="inline-block text-white mr-3">Jul 26 - 28</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -186,8 +186,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-9 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#F89629] to-[#04529A] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 16</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2024</p>
-              <p className="block text-white">Circuit Zandvoort, North Holland, Netherlands</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit Zandvoort, North Holland, Netherlands</p>
               <p className="inline-block text-white mr-3">Aug 23 - 25</p>
               <CalendarEmblems f1a />
             </div>
@@ -197,8 +197,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-9 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#048B46] to-[#CC222B] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 17</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 PIRELLI GRAN PREMIO D'ITALIA 2024</p>
-              <p className="block text-white">Autodromo Nazionale Monza, Monza, Italy</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI GRAN PREMIO D'ITALIA 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Autodromo Nazionale Monza, Monza, Italy</p>
               <p className="inline-block text-white mr-3">Aug 30 - Sep 1</p>
               <CalendarEmblems f2 f3 />
             </div>
@@ -208,8 +208,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-10 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#00B5E2] to-[#4F9F30] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 18</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024</p>
-              <p className="block text-white">Baku City Circuit, Baku, Azerbaijan (Street)</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Baku City Circuit, Baku, Azerbaijan (Street)</p>
               <p className="inline-block text-white mr-3">Sep 13 - 15</p>
               <CalendarEmblems f2 />
             </div>
@@ -219,8 +219,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-10 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#F02739] to-[#FEAFB5] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 19</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2024</p>
-              <p className="block text-white">Marina Bay Street Circuit, Singapore (Street)</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Marina Bay Street Circuit, Singapore (Street)</p>
               <p className="inline-block text-white mr-3">Sep 20 - 22</p>
               <CalendarEmblems f1a />
             </div>
@@ -230,8 +230,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-11 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#3F3B6E] to-[#B12234] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 20</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 PIRELLI UNITED STATES GRAND PRIX 2024</p>
-              <p className="block text-white">Circuit of The Americas, Texas, United States</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI UNITED STATES GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit of The Americas, Texas, United States</p>
               <p className="inline-block text-white mr-3">Oct 18 - 20</p>
               <CalendarEmblems sprint />
             </div>
@@ -241,8 +241,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-11 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#039542] to-[#E10813] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 21</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2024</p>
-              <p className="block text-white">Autódromo Hermanos Rodríguez, Mexico City, Mexico</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Autódromo Hermanos Rodríguez, Mexico City, Mexico</p>
               <p className="inline-block text-white mr-3">Oct 25 - 27</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Mexico%20carbon.png" />
@@ -251,8 +251,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-12 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#029739] to-[#FCDC00] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 22</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2024</p>
-              <p className="block text-white">Autódromo de Interlagos, São Paulo, Brazil</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Autódromo de Interlagos, São Paulo, Brazil</p>
               <p className="inline-block text-white mr-3">Nov 1 - 3</p>
               <CalendarEmblems sprint />
             </div>
@@ -262,8 +262,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-12 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#0198A3] via-[#22142B] via-65 to-[#571060] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 23</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024</p>
-              <p className="block text-white">Las Vegas Strip Circuit, Nevada, United States (Street)</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Las Vegas Strip Circuit, Nevada, United States (Street)</p>
               <p className="inline-block text-white mr-3">Nov 22 - 24</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677249931/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Las%20Vegas%20carbon.png" />
@@ -272,8 +272,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-13 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#8A1639] to-[#A29376] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 23</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2024</p>
-              <p className="block text-white">Lusail International Circuit, Lusail, Qatar</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Lusail International Circuit, Lusail, Qatar</p>
               <p className="inline-block text-white mr-3">Nov 29 - Dec 1</p>
               <CalendarEmblems sprint f2 f1a />
             </div>
@@ -283,8 +283,8 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-13 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#FD0002] to-[#01823F] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 24</p>
-              <p className="block text-white font-semibold text-lg leading-5">FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2024</p>
-              <p className="block text-white">Yas Marina Circuit, Abu Dhabi, United Arab Emirates</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2024</p>
+              <p className="block text-white truncate max-w-[calc(100%-135px)]">Yas Marina Circuit, Abu Dhabi, United Arab Emirates</p>
               <p className="inline-block text-white mr-3">Dec 6 - 8</p>
               <CalendarEmblems f2 f1a />
             </div>
