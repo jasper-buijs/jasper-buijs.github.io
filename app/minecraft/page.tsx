@@ -12,7 +12,8 @@ const MinecraftPage = () => {
   return (
     <>
       <NavBar activePage="minecraft" />
-      <Alert type="warning" text="The Minecraft server and admin page will be offline from Sunday February 11 (evening) until Monday February 12 (late afternoon), and again from Sunday February 18 (evening) until Monday February 19 (late afternoon)." />
+      <Alert type="danger" text="The Minecraft server and admin page are currently offline. They will return on Monday February 12 (late afternoon)." />
+      <Alert type="warning" text="The Minecraft server and admin page will be offline from Sunday February 18 (evening) until Monday February 19 (late afternoon), and again from Sunday February 25 (evening) until Monday February 26 (late afternoon)." />
       <div className="block w-max ml-auto mr-auto mt-8">
         <img src="/logo-mc.png" className="inline-block mr-8 h-64" />
         <a href="https://www.curseforge.com/minecraft/modpacks/minecolonies-dimensional-adventure" className="inline-block">
