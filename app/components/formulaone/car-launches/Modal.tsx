@@ -75,7 +75,7 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
     aston: {
       imgPath: "/formulaone/car-launches/AstonMartin24.png",
       title: "Aston Martin AMR24 Car Launch",
-      link: undefined,
+      link: "https://www.youtube.com/watch?v=vbg2IaCLXF4",
       date: "Monday February 12 2024",
       time: "09:00 CET",
       description: "Aston Martin Aramco has announced they will launch their 2024 car - the AMR24 - on Monday February 12 at 09:00 CET.",
