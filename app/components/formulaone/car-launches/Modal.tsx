@@ -93,10 +93,10 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
     mercedes: {
       imgPath: "/formulaone/car-launches/Mercedes24.png",
       title: "Mercedes W15 Car Launch",
-      link: undefined,
+      link: "https://www.youtube.com/watch?v=7xS5JgaGtHg",
       date: "Wednesday February 14 2024",
-      time: "The time of the event is yet to be announced.",
-      description: "Mercedes-AMG Petronas has announced they will launch their 2024 car - the W15 - on Wednesday February 14.",
+      time: "11:15 CET",
+      description: "Mercedes-AMG Petronas has announced they will launch their 2024 car - the W15 - on Wednesday February 14 at 11:15 CET.",
       eventUrl: "https://discord.com/events/585896430380777503/1190759009477730375",
     },
     mclaren: {
@@ -104,8 +104,8 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
       title: "McLaren 2024 Car Launch",
       link: undefined,
       date: "Wednesday February 14 2024",
-      time: "The time of the event is yet to be announced.",
-      description: "McLaren has announced they will launch their 2024 car on Wednesday February 14.",
+      time: "12:00 CET",
+      description: "McLaren has announced they will launch their 2024 car on Wednesday February 14 at 12:00 CET.",
       eventUrl: "https://discord.com/events/585896430380777503/1190759249064759397",
     },
     redbull: {
