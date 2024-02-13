@@ -84,10 +84,10 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
     ferrari: {
       imgPath: "/formulaone/car-launches/Ferrari24.png",
       title: "Ferrari 2024 Car Launch",
-      link: undefined,
+      link: "https://www.youtube.com/watch?v=04TsqI1lUV8",
       date: "Tuesday February 13 2024",
-      time: "The time of the event is yet to be announced.",
-      description: "Scuderia Ferrari has announced they will launch their 2024 car on Tuesday February 13.",
+      time: "12:00 CET",
+      description: "Scuderia Ferrari has announced they will launch their 2024 car on Tuesday February 13 at 12:00 CET.",
       eventUrl: "https://discord.com/events/585896430380777503/1190758782607839283",
     },
     mercedes: {
