@@ -111,10 +111,10 @@ const Modal = ({ activeModal, setModalFunction }: ModalProps) => {
     redbull: {
       imgPath: "/formulaone/car-launches/RedBull24.png",
       title: "Red Bull RB20 Car Launch",
-      link: undefined,
+      link: "https://www.youtube.com/watch?v=qq2bItiq2WI",
       date: "Thursday February 15 2024",
-      time: "The time of the event is yet to be announced.",
-      description: "Oracle Red Bull has announced they will launch their 2024 car - the RB20 - on Thursday February 15",
+      time: "20:30 CET",
+      description: "Oracle Red Bull has announced they will launch their 2024 car - the RB20 - on Thursday February 15 at 20:30 CET",
       eventUrl: "https://discord.com/events/585896430380777503/1197210064528883825",
     },
     none: {

@@ -25,8 +25,8 @@ const CarLaunchFormulaOnePage = () => {
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/RacingBulls24.png" setModalFunction={setModal} name="racingbulls" row={3} column={1} past />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/AstonMartin24.png" setModalFunction={setModal} name="aston" row={3} column={2} past />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Ferrari24.png" setModalFunction={setModal} name="ferrari" row={4} column={1} past />
-          <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Mercedes24.png" setModalFunction={setModal} name="mercedes" row={4} column={2} />
-          <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/McLaren24.png" setModalFunction={setModal} name="mclaren" row={5} column={1} />
+          <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/Mercedes24.png" setModalFunction={setModal} name="mercedes" row={4} column={2} past />
+          <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/McLaren24.png" setModalFunction={setModal} name="mclaren" row={5} column={1} past />
           <AnnouncementHeaderGridElement imagePath="/formulaone/car-launches/RedBull24.png" setModalFunction={setModal} name="redbull" row={5} column={2} />
         </AnnouncementHeaderGrid>
       </Paragraph>
