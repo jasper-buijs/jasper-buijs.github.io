@@ -16,14 +16,14 @@ const FormulaOnePage = () => {
       <Paragraph title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR" emoji="📅">
         <CalendarGrid>
           {/*PRE-SEASON TESTING*/}
-          <div className="w-full h-32 relative row-start-1 row-span-1 col-start-1 col-span-2">
+          <a href="/formulaone/races/pst" className="w-full h-32 relative row-start-1 row-span-1 col-start-1 col-span-2">
             <div className={`bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 pl-5 rounded-lg`}>
               <p className="block text-white font-semibold text-lg">FORMULA 1 ARAMCO PRE-SEASON TESTING 2024</p>
               <p className="block text-white">Bahrain International Circuit, Sakhir, Bahrain</p>
               <p className="inline-block text-white mr-3">Feb 21 - 23</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png" />
-          </div>
+          </a>
           {/*BAHRAIN GP*/}
           <div className="w-full h-32 relative row-start-2 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E40A18] to-[#FDC2C8] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
