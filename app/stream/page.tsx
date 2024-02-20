@@ -9,13 +9,13 @@ const LiveStreamMediaMTX = () => {
   redirect("/stream", false);
   const [frame, setFrame] = useState(<div className="text-[#1E1E1E] dark:text-[#FFFFFF] h-[75vh] leading-[75vh] text-center">The stream is loading...</div>);
   useEffect(() => {
-    fetch("https://heiligemaagden.com/stream/https-redirect?stream", { cache: "no-store" })
+    fetch("https://str.heiligemaagden.com/mystream/index.m3u8", { cache: "no-store" })
       .then((r) => {
         if (!r) setFrame(<div className="text-[#1E1E1E] dark:text-[#FFFFFF] h-[75vh] leading-[75vh] text-center">The stream is offline.</div>);
         else if (r.status != 200) setFrame(<div className="text-[#1E1E1E] dark:text-[#FFFFFF] h-[75vh] leading-[75vh] text-center">The stream is offline.</div>);
         else
           setFrame(
-            <iframe src="https://heiligemaagden.com/stream/https-redirect" allowFullScreen title="Live Stream" className="block h-[75vh] w-full border-none">
+            <iframe src="https://str.heiligemaagden.com/mystream/" allowFullScreen title="Live Stream" className="block h-[75vh] w-full border-none">
               The stream is currently offline.
             </iframe>,
           );
@@ -28,10 +28,12 @@ const LiveStreamMediaMTX = () => {
     <>
       <NavBar activePage="none" />
       <div className="bg-[#D6D6D6] dark:bg-transparent px-4 py-2 mx-12 my-4">
-        {/*<iframe src="http://str.heiligemaagden.com:8888/mystream/" allowFullScreen title="Live Stream" className="block h-[75vh] w-full border-none">
-          The stream is currently offline.
-        </iframe>*/}
-        {frame}
+        {
+          <iframe src="https://str.heiligemaagden.com/mystream/" allowFullScreen title="Live Stream" className="block h-[75vh] w-full border-none">
+            The stream is currently offline.
+          </iframe>
+        }
+        {/*frame*/}
       </div>
       <FooterBar />
     </>

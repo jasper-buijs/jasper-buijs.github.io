@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const getStatus = (setStreamStatus: Function) => {
   useEffect(() => {
-    fetch("https://heiligemaagden.com/stream/https-redirect?stream", { cache: "no-store" })
+    fetch("https://str.heiligemaagden.com/mystream/index.m3u8", { cache: "no-store" })
       .then((r) => {
         if (!r) setStreamStatus(false);
         else if (r.status != 200) setStreamStatus(false);
@@ -48,7 +48,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
             </a>
           )}
           {!streamStatus && (
-            <a href="/stream">
+            <a href="https://str.heiligemaagden.com/mystream">
               <div className="inline-block bg-gray-500 text-white p-1 rounded absolute top-4 bottom-4 right-4">⚪ offline</div>
             </a>
           )}
