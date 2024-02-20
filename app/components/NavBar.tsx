@@ -16,7 +16,7 @@ const getStatus = (setStreamStatus: Function) => {
 };
 
 interface NavBarProps {
-  activePage: string;
+  activePage: "home" | "wumpus" | "minecraft" | "formulaone" | "none";
 }
 const NavBar = ({ activePage }: NavBarProps) => {
   const [streamStatus, setStreamStatus] = useState(false);
