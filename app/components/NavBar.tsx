@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const getStatus = (setStreamStatus: Function) => {
   useEffect(() => {
-    fetch("http://live.heiligemaagden.com/mystream/index.m3u8", { cache: "no-store" })
+    fetch("https://str.heiligemaagden.com/mystream/index.m3u8", { cache: "no-store" })
       .then((r) => {
         if (!r) setStreamStatus(false);
         else if (r.status != 200) setStreamStatus(false);
