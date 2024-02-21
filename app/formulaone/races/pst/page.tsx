@@ -113,6 +113,10 @@ const Page = () => {
           </tbody>
         </table>
       </Paragraph>
+      <Paragraph title="Day 1 Results">
+        At the end of Day 1 of Pre-Season Testing, it's Verstappen at the top with a 1:31.344, keeping clear of Norris in second by over 1.1 seconds. Verstappen and Russell were the only two drivers to drive the entire day, with all other teams alternating drivers between the morning and afternoon sessions. So far we have seen no red flags. Even though the Williams of Alex Albon did stop on track with a fuel pump-related issue, marshals were able to clear it without needing more than a double-waved yellow flag. Other than that it would be a quiet session, without many incidents. Ocon would run wide and into the gravel traps in turn 4, and Sargeant would spin and also end up in the gravel when entering turn 10. As both Williams drivers had some trouble, Williams was the team completing the least amount of laps by far, with only 61 laps completed between both drivers. That's the same amount of laps Gasly managed to do in his afternoon session on his own. Pre-Season testing will be back tomorrow, same time, for day two.
+        <img src="/formulaone/races/pst/day1-results.png" className="m-auto p-4" />
+      </Paragraph>
       <FooterBar />
     </>
   );
