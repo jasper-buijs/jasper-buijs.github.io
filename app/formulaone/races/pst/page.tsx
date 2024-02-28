@@ -18,7 +18,7 @@ const Page = () => {
         <table className="w-max m-auto table-auto">
           <tbody>
             <tr>
-              <th className="pr-2 text-left">Wednesday February 21</th>
+              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Wednesday February 21</th>
               <th className="pr-2 text-left"></th>
             </tr>
             <tr>
@@ -33,7 +33,7 @@ const Page = () => {
               <td className="h-[2rem]"></td>
             </tr>
             <tr>
-              <th className="pr-2 text-left">Thursday February 22</th>
+              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Thursday February 22</th>
               <th className="pr-2 text-left"></th>
             </tr>
             <tr>
@@ -48,7 +48,7 @@ const Page = () => {
               <td className="h-[2rem]"></td>
             </tr>
             <tr>
-              <th className="pr-2 text-left">Friday February 23</th>
+              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Friday February 23</th>
               <th className="pr-2 text-left"></th>
             </tr>
             <tr>
@@ -65,6 +65,12 @@ const Page = () => {
       </Paragraph>
       <Paragraph title="Day 1 Results">
         <img src="/formulaone/races/pst/day1-results.png" className="m-auto p-4" />
+      </Paragraph>
+      <Paragraph title="Day 2 Results">
+        <img src="/formulaone/races/pst/day2-results.jpg" className="m-auto p-4" />
+      </Paragraph>
+      <Paragraph title="Day 3 Results">
+        <img src="/formulaone/races/pst/day3-results.jpg" className="m-auto p-4" />
       </Paragraph>
       <FooterBar />
     </>
