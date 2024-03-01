@@ -3,8 +3,10 @@
 import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
+import redirect from "@/app/components/redirect";
 
 const Page = () => {
+  redirect("/formulaone", false);
   const f1 = <img className="inline h-[0.5rem] mr-1" src="/formulaone/f1web.png" />;
   return (
     <>
