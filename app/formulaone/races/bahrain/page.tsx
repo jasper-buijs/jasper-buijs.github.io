@@ -48,7 +48,10 @@ const Page = () => {
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/bahrain/circuit.png" target="_blank">
-            <img src="/formulaone/races/bahrain/circuit.png" className="inline-block h-96" />
+            <img src="/formulaone/races/bahrain/circuit.png" className="inline-block h-96 m-2" />
+          </a>
+          <a href="/formulaone/races/bahrain/starting-grid.png" target="_blank">
+            <img src="/formulaone/races/bahrain/starting-grid.png" className="inline-block h-96 m-2" />
           </a>
         </div>
       </Paragraph>
@@ -150,6 +153,20 @@ const Page = () => {
           </tbody>
         </table>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
+      </Paragraph>
+      <Paragraph title="Formula 2">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/bahrain/f2-sprint.png" target="_blank">
+            <img src="/formulaone/races/bahrain/f2-sprint.png" className="inline-block h-96 m-2" />
+          </a>
+        </div>
+      </Paragraph>
+      <Paragraph title="Formula 3">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/bahrain/f3-sprint.png" target="_blank">
+            <img src="/formulaone/races/bahrain/f3-sprint.png" className="inline-block h-96 m-2" />
+          </a>
+        </div>
       </Paragraph>
       <FooterBar />
     </>
