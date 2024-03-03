@@ -40,7 +40,7 @@ const Page = () => {
   return (
     <>
       <NavBar activePage="formulaone" />
-      <div className="h-[500px] mx-12 bg-gradient-to-r from-[#E40A18] to-[#FDC2C8]">
+      <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#E40A18] to-[#FDC2C8]">
         <div className="h-full w-full relative">
           <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/bahrain-header-dated.png" />
         </div>

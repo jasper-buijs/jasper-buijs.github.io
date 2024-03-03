@@ -12,7 +12,7 @@ const FormulaOnePage = () => {
   return (
     <>
       <NavBar activePage="formulaone" />
-      <Alert type="info" text="This page is still work in progress. It will be updated with more information and additional pages before the start of the Formula 1 2024 season." />
+      <Alert type="info" text="Pages of races later in the season will be added as the season progresses." />
       <Paragraph title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR" emoji="📅">
         <CalendarGrid>
           {/*PRE-SEASON TESTING*/}
@@ -36,7 +36,7 @@ const FormulaOnePage = () => {
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png" />
           </a>
           {/*SAUDI ARABIA GP*/}
-          <div className="w-full h-32 relative row-start-2 row-span-1 col-start-2 col-span-1">
+          <a href="/formulaone/races/saudi-arabia" className="w-full h-32 relative row-start-2 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#016C36] to-[#66C698] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 2</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2024</p>
@@ -45,9 +45,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245030/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Saudi%20Arabia%20carbon.png" />
-          </div>
+          </a>
           {/*AUSTAILIA GP*/}
-          <div className="w-full h-32 relative row-start-3 row-span-1 col-start-1 col-span-1">
+          <a href="/formulaone/races/australia" className="w-full h-32 relative row-start-3 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#023874] to-[#7CAADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 3</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2024</p>
@@ -56,9 +56,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245032/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Australia%20carbon.png" />
-          </div>
+          </a>
           {/*JAPAN GP*/}
-          <div className="w-full h-32 relative row-start-3 row-span-1 col-start-2 col-span-1">
+          <a href="/formulaone/races/japan" className="w-full h-32 relative row-start-3 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#BD022F] to-[#FF5782] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 4</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2024</p>
@@ -66,7 +66,7 @@ const FormulaOnePage = () => {
               <p className="inline-block text-white mr-3">Apr 5 - 7</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Japan%20carbon.png" />
-          </div>
+          </a>
           {/*CHINESE GP*/}
           <div className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EE1C25] to-[#FFFF00] from-50% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
