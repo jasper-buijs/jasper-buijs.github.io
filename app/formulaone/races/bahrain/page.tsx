@@ -53,6 +53,9 @@ const Page = () => {
           <a href="/formulaone/races/bahrain/starting-grid.png" target="_blank">
             <img src="/formulaone/races/bahrain/starting-grid.png" className="inline-block h-96 m-2" />
           </a>
+          <a href="/formulaone/races/bahrain/race-result.png" target="_blank">
+            <img src="/formulaone/races/bahrain/race-result.png" className="inline-block h-96 m-2" />
+          </a>
         </div>
       </Paragraph>
       <Paragraph title="Schedule">
@@ -159,12 +162,18 @@ const Page = () => {
           <a href="/formulaone/races/bahrain/f2-sprint.png" target="_blank">
             <img src="/formulaone/races/bahrain/f2-sprint.png" className="inline-block h-96 m-2" />
           </a>
+          <a href="/formulaone/races/bahrain/f2-feature.png" target="_blank">
+            <img src="/formulaone/races/bahrain/f2-feature.png" className="inline-block h-96 m-2" />
+          </a>
         </div>
       </Paragraph>
       <Paragraph title="Formula 3">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/bahrain/f3-sprint.png" target="_blank">
             <img src="/formulaone/races/bahrain/f3-sprint.png" className="inline-block h-96 m-2" />
+          </a>
+          <a href="/formulaone/races/bahrain/f3-feature.png" target="_blank">
+            <img src="/formulaone/races/bahrain/f3-feature.png" className="inline-block h-96 m-2" />
           </a>
         </div>
       </Paragraph>
