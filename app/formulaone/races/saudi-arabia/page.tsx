@@ -107,7 +107,10 @@ const Page = () => {
               <td className="pr-2">{f1}Qualifying</td>
               <td className="pr-2">{[new Date("March 8, 2024 20:00:00 GMT+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 8, 2024 21:00:00 GMT+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">18' + 15' + 12'</td>
-              <td className="pr-2">{auvio}</td>
+              <td className="pr-2">
+                {hm}
+                {auvio}
+              </td>
             </tr>
             <tr>
               <td className="h-[2rem]"></td>
