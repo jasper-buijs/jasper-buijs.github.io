@@ -45,6 +45,19 @@ const Page = () => {
           <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/saudi-header-dated.png" />
         </div>
       </div>
+      <Paragraph title="Weekend Graphics">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/saudi-arabia/circuit.png" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/circuit.png" className="inline-block h-96 m-2" />
+          </a>
+          {/*<a href="/formulaone/races/saudi-arabia/starting-grid.png" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/starting-grid.png" className="inline-block h-96 m-2" />
+          </a>*/}
+          {/*<a href="/formulaone/races/saudi-arabia/race-result.png" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/race-result.png" className="inline-block h-96 m-2" />
+          </a>*/}
+        </div>
+      </Paragraph>
       <Paragraph title="Schedule">
         <table className="w-max m-auto table-auto">
           <tbody>
