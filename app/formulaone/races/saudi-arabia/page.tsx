@@ -51,9 +51,9 @@ const Page = () => {
           <a href="/formulaone/races/saudi-arabia/circuit.png" target="_blank">
             <img src="/formulaone/races/saudi-arabia/circuit.png" className="inline-block h-96 m-2" />
           </a>
-          {/*<a href="/formulaone/races/saudi-arabia/starting-grid.png" target="_blank">
+          <a href="/formulaone/races/saudi-arabia/starting-grid.png" target="_blank">
             <img src="/formulaone/races/saudi-arabia/starting-grid.png" className="inline-block h-96 m-2" />
-          </a>*/}
+          </a>
           {/*<a href="/formulaone/races/saudi-arabia/race-result.png" target="_blank">
             <img src="/formulaone/races/saudi-arabia/race-result.png" className="inline-block h-96 m-2" />
           </a>*/}
@@ -159,6 +159,26 @@ const Page = () => {
           </tbody>
         </table>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
+      </Paragraph>
+      <Paragraph title="Formula 2">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/saudi-arabia/f2-sprint.png" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f2-sprint.png" className="inline-block h-96 m-2" />
+          </a>
+          {/*<a href="/formulaone/races/bahrain/f2-feature.png" target="_blank">
+            <img src="/formulaone/races/bahrain/f2-feature.png" className="inline-block h-96 m-2" />
+          </a>*/}
+        </div>
+      </Paragraph>
+      <Paragraph title="F1 Academy">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/saudi-arabia/f1a-race1.png" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f1a-race1.png" className="inline-block h-80 m-2" />
+          </a>
+          {/*<a href="/formulaone/races/bahrain/f3-feature.png" target="_blank">
+            <img src="/formulaone/races/bahrain/f3-feature.png" className="inline-block h-96 m-2" />
+          </a>*/}
+        </div>
       </Paragraph>
       <FooterBar />
     </>
