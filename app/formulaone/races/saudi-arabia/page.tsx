@@ -169,6 +169,7 @@ const Page = () => {
             <img src="/formulaone/races/bahrain/f2-feature.png" className="inline-block h-96 m-2" />
           </a>*/}
         </div>
+        <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Richard Verschoor (Trident, P1) and Roman Stanek (Trident, P10) where disqualified from the Sprint Race for breaches of the Technical Regulations.</p>
       </Paragraph>
       <Paragraph title="F1 Academy">
         <div className="h-max w-max m-auto">
