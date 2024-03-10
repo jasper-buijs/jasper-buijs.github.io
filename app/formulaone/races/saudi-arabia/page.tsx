@@ -54,9 +54,9 @@ const Page = () => {
           <a href="/formulaone/races/saudi-arabia/starting-grid.png" target="_blank">
             <img src="/formulaone/races/saudi-arabia/starting-grid.png" className="inline-block h-96 m-2" />
           </a>
-          {/*<a href="/formulaone/races/saudi-arabia/race-result.png" target="_blank">
+          <a href="/formulaone/races/saudi-arabia/race-result.png" target="_blank">
             <img src="/formulaone/races/saudi-arabia/race-result.png" className="inline-block h-96 m-2" />
-          </a>*/}
+          </a>
         </div>
       </Paragraph>
       <Paragraph title="Schedule">
@@ -160,14 +160,46 @@ const Page = () => {
         </table>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
       </Paragraph>
+      <Paragraph title="Penalties">
+        <div className="h-max w-max m-auto">
+          <div className="font-semibold">Race Penalties:</div>
+          <ul className="list-disc">
+            <li>
+              <a className="text-blue-700 underline" href="https://www.fia.com/sites/default/files/decision-document/2024%20Saudi%20Arabian%20Grand%20Prix%20-%20Infringement%20-%20Car%2022%20-%20Unsafe%20release.pdf">
+                Tsunoda - 5 seconds (post-race) - Unsafe Release (Reconnaissance Laps)
+              </a>
+            </li>
+            <li>
+              <a className="text-blue-700 underline" href="https://www.fia.com/sites/default/files/decision-document/2024%20Saudi%20Arabian%20Grand%20Prix%20-%20Infringement%20-%20Car%2011%20-%20Unsafe%20release.pdf">
+                Perez - 5 seconds and 1 penalty point (in-race) - Unsafe Release
+              </a>
+            </li>
+            <li>
+              <a className="text-blue-700 underline" href="https://www.fia.com/sites/default/files/decision-document/2024%20Saudi%20Arabian%20Grand%20Prix%20-%20Infringement%20-%20Car%2020%20-%20Leaving%20the%20track%20and%20gaining%20an%20advantage.pdf">
+                Magnussen - 10 seconds (in-race) - Leaving the Track (overtake)
+              </a>
+            </li>
+            <li>
+              <a className="text-blue-700 underline" href="https://www.fia.com/sites/default/files/decision-document/2024%20Saudi%20Arabian%20Grand%20Prix%20-%20Infringement%20-%20Car%2020%20-%20Causing%20a%20Collision.pdf">
+                Magnussen - 10 seconds and 3 penalty points (in-race) - Causing a Collision
+              </a>
+            </li>
+            <li>
+              <a className="text-blue-700 underline" href="https://www.fia.com/sites/default/files/decision-document/2024%20Saudi%20Arabian%20Grand%20Prix%20-%20Decision%20-%20Car%204%20-%20Alleged%20false%20start.pdf">
+                Norris - No Further Action (in-race) - Alleged False Start
+              </a>
+            </li>
+          </ul>
+        </div>
+      </Paragraph>
       <Paragraph title="Formula 2">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/saudi-arabia/f2-sprint.png" target="_blank">
             <img src="/formulaone/races/saudi-arabia/f2-sprint.png" className="inline-block h-96 m-2" />
           </a>
-          {/*<a href="/formulaone/races/bahrain/f2-feature.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f2-feature.png" className="inline-block h-96 m-2" />
-          </a>*/}
+          <a href="/formulaone/races/saudi-arabia/f2-feature.png" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f2-feature.png" className="inline-block h-96 m-2" />
+          </a>
         </div>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Richard Verschoor (Trident, P1) and Roman Stanek (Trident, P10) where disqualified from the Sprint Race for breaches of the Technical Regulations.</p>
       </Paragraph>
@@ -176,10 +208,11 @@ const Page = () => {
           <a href="/formulaone/races/saudi-arabia/f1a-race1.png" target="_blank">
             <img src="/formulaone/races/saudi-arabia/f1a-race1.png" className="inline-block h-80 m-2" />
           </a>
-          {/*<a href="/formulaone/races/bahrain/f3-feature.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f3-feature.png" className="inline-block h-96 m-2" />
-          </a>*/}
+          <a href="/formulaone/races/saudi-arabia/f1a-race2.png" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f1a-race2.png" className="inline-block h-80 m-2" />
+          </a>
         </div>
+        <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Doriane Pin (Mercedes by Prema, P1) received a 20 second post-race penalty in Race 2 for taking the chequered flag twice.</p>
       </Paragraph>
       <FooterBar />
     </>
