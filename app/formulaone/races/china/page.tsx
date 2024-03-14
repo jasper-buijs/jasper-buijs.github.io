@@ -46,44 +46,48 @@ const Page = () => {
   return (
     <>
       <NavBar activePage="formulaone" />
-      <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#BD022F] to-[#FF5782]">
+      <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#EE1C25] to-[#FFFF00] from-50%">
         <div className="h-full w-full relative">
-          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/japan-header-dated.png" />
+          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/china-header-dated.png" />
         </div>
       </div>
       <Paragraph title="Schedule">
         <table className="w-max m-auto table-auto">
           <tbody>
             <tr>
-              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Friday April 5</th>
+              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Friday April 19</th>
               <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
             </tr>
             <tr>
               <td className="pr-2">{f1}Practice 1</td>
-              <td className="pr-2">{[new Date("April 5, 2024 11:30:00 UTC+09:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 5, 2024 12:30:00 UTC+09:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("April 19, 2024 11:30:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 19, 2024 12:30:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
-              <td className="pr-2">{f1}Practice 2</td>
-              <td className="pr-2">{[new Date("April 5, 2024 15:00:00 UTC+09:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 5, 2024 16:00:00 UTC+09:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{sprint}Shootout</td>
+              <td className="pr-2">{[new Date("April 19, 2024 15:30:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 19, 2024 16:14:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">12' + 10' + 8'</td>
+              <td className="pr-2">{auvio}</td>
             </tr>
             <tr>
               <td className="h-[2rem]"></td>
             </tr>
             <tr>
-              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Saturday April 6</th>
+              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Saturday April 20</th>
               <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
             </tr>
             <tr>
-              <td className="pr-2">{f1}Practice 3</td>
-              <td className="pr-2">{[new Date("April 6, 2024 11:30:00 UTC+09:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 6, 2024 12:30:00 UTC+09:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{sprint}</td>
+              <td className="pr-2">{[new Date("April 20, 2024 11:00:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 20, 2024 11:30:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">19L or 60'+1L</td>
+              <td className="pr-2">{auvio}</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Qualifying</td>
-              <td className="pr-2">{[new Date("April 6, 2024 15:00:00 UTC+09:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 6, 2024 16:00:00 UTC+09:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("April 20, 2024 15:00:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 20, 2024 16:00:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">18' + 15' + 12'</td>
               <td className="pr-2">{auvio}</td>
             </tr>
@@ -91,15 +95,15 @@ const Page = () => {
               <td className="h-[2rem]"></td>
             </tr>
             <tr>
-              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Sunday April 7</th>
+              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Sunday April 21</th>
               <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
             </tr>
             <tr>
               <td className="pr-2">{f1}Race</td>
-              <td className="pr-2">{[new Date("April 7, 2024 14:00:00 UTC+09:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 7, 2024 16:00:00 UTC+09:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">53L or 2h+1L</td>
+              <td className="pr-2">{[new Date("April 21, 2024 15:00:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 21, 2024 17:00:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">56L or 2h+1L</td>
               <td className="pr-2">{auvio}</td>
             </tr>
           </tbody>

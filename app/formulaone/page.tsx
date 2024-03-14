@@ -14,7 +14,7 @@ const FormulaOnePage = () => {
     <>
       <NavBar activePage="formulaone" />
       <Alert type="info" text="Pages of races later in the season will be added as the season progresses." />
-      <Paragraph title="FORMULA ONE WORLD DRIVERS' CHAMPIONSHIP">
+      <Paragraph title="FORMULA ONE WORLD DRIVERS' CHAMPIONSHIP" emoji="🏆">
         <Drivers />
       </Paragraph>
       <Paragraph title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR" emoji="📅">
@@ -72,7 +72,7 @@ const FormulaOnePage = () => {
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Japan%20carbon.png" />
           </a>
           {/*CHINESE GP*/}
-          <div className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-1">
+          <a href="/formulaone/races/china" className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EE1C25] to-[#FFFF00] from-50% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 5</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LENOVO CHINESE GRAND PRIX 2024</p>
@@ -81,7 +81,7 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/China%20carbon.png" />
-          </div>
+          </a>
           {/*MIAMI GP*/}
           <div className="w-full h-32 relative row-start-4 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>

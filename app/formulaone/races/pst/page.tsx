@@ -25,11 +25,11 @@ const Page = () => {
             </tr>
             <tr>
               <td className="pr-2">{f1}Morning Session</td>
-              <td className="pr-2">{[new Date("February 21, 2024 10:00:00 GMT+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 21, 2024 14:00:00 GMT+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("February 21, 2024 10:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 21, 2024 14:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Afternoon Session</td>
-              <td className="pr-2">{[new Date("February 21, 2024 15:00:00 GMT+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 21, 2024 19:00:00 GMT+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("February 21, 2024 15:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 21, 2024 19:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
               <td className="h-[2rem]"></td>
@@ -40,11 +40,11 @@ const Page = () => {
             </tr>
             <tr>
               <td className="pr-2">{f1}Morning Session</td>
-              <td className="pr-2">{[new Date("February 22, 2024 10:00:00 GMT+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 22, 2024 14:00:00 GMT+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("February 22, 2024 10:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 22, 2024 14:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Afternoon Session</td>
-              <td className="pr-2">{[new Date("February 22, 2024 15:00:00 GMT+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 22, 2024 19:00:00 GMT+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("February 22, 2024 15:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 22, 2024 19:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
               <td className="h-[2rem]"></td>
@@ -55,11 +55,11 @@ const Page = () => {
             </tr>
             <tr>
               <td className="pr-2">{f1}Morning Session</td>
-              <td className="pr-2">{[new Date("February 23, 2024 10:00:00 GMT+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 23, 2024 14:00:00 GMT+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("February 23, 2024 10:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 23, 2024 14:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Afternoon Session</td>
-              <td className="pr-2">{[new Date("February 23, 2024 15:00:00 GMT+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 23, 2024 19:00:00 GMT+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
+              <td className="pr-2">{[new Date("February 23, 2024 15:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("February 23, 2024 19:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
           </tbody>
         </table>
