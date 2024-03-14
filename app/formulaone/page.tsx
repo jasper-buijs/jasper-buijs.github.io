@@ -6,6 +6,7 @@ import Paragraph from "../components/Paragraph";
 import Alert from "../components/Alert";
 import redirect from "../components/redirect";
 import { CalendarGrid, CalendarEmblems } from "../components/formulaone/CalendarGrid";
+import Drivers from "../components/formulaone/standings/Drivers";
 
 const FormulaOnePage = () => {
   redirect("/formulaone", false);
@@ -13,6 +14,9 @@ const FormulaOnePage = () => {
     <>
       <NavBar activePage="formulaone" />
       <Alert type="info" text="Pages of races later in the season will be added as the season progresses." />
+      <Paragraph title="FORMULA ONE WORLD DRIVERS' CHAMPIONSHIP">
+        <Drivers />
+      </Paragraph>
       <Paragraph title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR" emoji="📅">
         <CalendarGrid>
           {/*PRE-SEASON TESTING*/}
