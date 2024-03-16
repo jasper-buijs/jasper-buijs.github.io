@@ -13,7 +13,6 @@ const FormulaOnePage = () => {
   return (
     <>
       <NavBar activePage="formulaone" />
-      <Alert type="info" text="Pages of races later in the season will be added as the season progresses." />
       <Paragraph title="FORMULA ONE WORLD DRIVERS' CHAMPIONSHIP" emoji="🏆">
         <Drivers />
       </Paragraph>
