@@ -111,7 +111,7 @@ const Page = () => {
               <td className="pr-2">{f1}Qualifying</td>
               <td className="pr-2">{[new Date("March 23, 2024 16:00:00 UTC+11:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 23, 2024 17:00:00 UTC+11:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">18' + 15' + 12'</td>
-              <td className="pr-2">{auvio}</td>
+              <td className="pr-2">{hm}{auvio}</td>
             </tr>
             <tr>
               <td className="h-[2rem]"></td>
@@ -136,7 +136,7 @@ const Page = () => {
               <td className="pr-2">{f1}Race</td>
               <td className="pr-2">{[new Date("March 24, 2024 15:00:00 UTC+11:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 24, 2024 17:00:00 UTC+11:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">58L or 2h+1L</td>
-              <td className="pr-2">{auvio}</td>
+              <td className="pr-2">{hm}{auvio}</td>
             </tr>
           </tbody>
         </table>
