@@ -51,6 +51,19 @@ const Page = () => {
           <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/australia-header-dated.png" />
         </div>
       </div>
+      <Paragraph title="Weekend Graphics">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/australia/circuit.png" target="_blank">
+            <img src="/formulaone/races/australia/circuit.png" className="inline-block h-96 m-2" alt="Albert Park Circuit. 4 DRS zones. 58 laps. 67% Safety Car chance. 1 minute 20.235 fastest historic race lap time."/>
+          </a>
+          {/*<a href="/formulaone/races/australia/starting-grid.png" target="_blank">
+            <img src="/formulaone/races/australia/starting-grid.png" className="inline-block h-96 m-2"/>
+          </a>
+          <a href="/formulaone/races/australia/race-result.png" target="_blank">
+            <img src="/formulaone/races/australia/race-result.png" className="inline-block h-96 m-2"/>
+          </a>*/}
+        </div>
+      </Paragraph>
       <Paragraph title="Schedule">
         <table className="w-max m-auto table-auto">
           <tbody>
