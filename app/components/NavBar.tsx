@@ -1,26 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { useState, useEffect } from "react";
-
-/*const getStatus = (setStreamStatus: Function) => {
-  useEffect(() => {
-    fetch("https://str.heiligemaagden.com/mystream/index.m3u8", { cache: "no-store" })
-      .then((r) => {
-        if (!r) setStreamStatus(false);
-        else if (r.status != 200) setStreamStatus(false);
-        else setStreamStatus(true);
-      })
-      .catch(() => {
-        setStreamStatus(false);
-      });
-  }, []);
-};*/
 
 interface NavBarProps {
   activePage: "home" | "wumpus" | "minecraft" | "formulaone" | "none";
 }
 const NavBar = ({ activePage }: NavBarProps) => {
-  /*const [streamStatus, setStreamStatus] = useState(false);
-  getStatus(setStreamStatus);*/
   const linkClassFilter = (page: string) => {
     return page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#1E1E1E] dark:text-[#FFFFFF]";
   };
@@ -47,16 +31,6 @@ const NavBar = ({ activePage }: NavBarProps) => {
               <div className="inline-block bg-red-600 text-white p-1 rounded absolute top-4 bottom-4 right-4">📡 Live Stream</div>
             </a>
           }
-          {/*streamStatus && (
-            <a href="/stream">
-              <div className="inline-block bg-red-600 text-white p-1 rounded absolute top-4 bottom-4 right-4">📡 online</div>
-            </a>
-          )*/}
-          {/*!streamStatus && (
-            <a href="http://live.heiligemaagden.com/mystream">
-              <div className="inline-block bg-gray-500 text-white p-1 rounded absolute top-4 bottom-4 right-4">⚪ offline</div>
-            </a>
-          )*/}
         </div>
       </div>
       {/*<!-- NavBar Spacer underneath -->*/}

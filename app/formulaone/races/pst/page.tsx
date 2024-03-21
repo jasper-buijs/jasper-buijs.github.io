@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import FooterBar from "@/app/components/FooterBar";
@@ -7,13 +8,13 @@ import redirect from "@/app/components/redirect";
 
 const Page = () => {
   redirect("/formulaone", false);
-  const f1 = <img className="inline h-[0.5rem] mr-1" src="/formulaone/f1web.png" />;
+  const f1 = <img className="inline h-[0.5rem] mr-1" src="/formulaone/f1web.png" alt={"Formula 1"} />;
   return (
     <>
       <NavBar activePage="formulaone" />
       <div className="h-[28vw] mx-12 bg-gray-600">
         <div className="h-full w-full relative">
-          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/preseason-header-dated.png" />
+          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/preseason-header-dated.png" alt={""} />
         </div>
       </div>
       <Paragraph title="Schedule">
@@ -66,13 +67,13 @@ const Page = () => {
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
       </Paragraph>
       <Paragraph title="Day 1 Results">
-        <img src="/formulaone/races/pst/day1-results.png" className="m-auto p-4" />
+        <img src="/formulaone/races/pst/day1-results.png" className="m-auto p-4" alt={"Day 1 results."} />
       </Paragraph>
       <Paragraph title="Day 2 Results">
-        <img src="/formulaone/races/pst/day2-results.jpg" className="m-auto p-4" />
+        <img src="/formulaone/races/pst/day2-results.jpg" className="m-auto p-4" alt={"Day 2 results."} />
       </Paragraph>
       <Paragraph title="Day 3 Results">
-        <img src="/formulaone/races/pst/day3-results.jpg" className="m-auto p-4" />
+        <img src="/formulaone/races/pst/day3-results.jpg" className="m-auto p-4" alt={"Day 3 results."} />
       </Paragraph>
       <FooterBar />
     </>

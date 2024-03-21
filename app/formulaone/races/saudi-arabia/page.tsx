@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import FooterBar from "@/app/components/FooterBar";
@@ -9,38 +10,27 @@ const Page = () => {
   redirect("/formulaone", false);
   const f1 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.png" />
+      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.png" alt={"Formula 1"} />
     </div>
   );
   const f2 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.png" />
-    </div>
-  );
-  const f3 = (
-    <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f3.png" />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.png" alt={"Formula 2"} />
     </div>
   );
   const fa = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1a.png" />
-    </div>
-  );
-  const sprint = (
-    <div className="inline-block w-20 relative h-[0.5rem]">
-      <img className="inline-block dark:hidden h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1-sprint-text-black.png" />
-      <img className="dark:inline-block hidden h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1-sprint-text-white.png" />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1a.png" alt={"Formula 3"} />
     </div>
   );
   const hm = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.png" />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.png" alt={"Streamed on heiligemaagden.com."} />
     </div>
   );
   const auvio = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.png" />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.png" alt={"Streamed on RTBF Auvio."} />
     </div>
   );
   return (
@@ -48,20 +38,20 @@ const Page = () => {
       <NavBar activePage="formulaone" />
       <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#016C36] to-[#66C698]">
         <div className="h-full w-full relative">
-          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/saudi-header-dated.png" />
+          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/saudi-header-dated.png" alt={""} />
         </div>
       </div>
       <Paragraph title="BREAKING: Sainz out with appendicitis, Ollie Bearman to take over">Ferrari driver Carlos Sainz has been diagnosed with appendicitis and requires immediate surgery, meaning he will be out of the car for the remainder of the Saudi Arabian GP weekend. Formula 2 pole-sitter Ollie Bearman, driving for Prema in the Ferrari driver academy, will take over for the remainder of the weekend. He will therefore forfeit his Formula 2 weekend and pole position. He will be in the car as of Practice 3 later today. Sainz already missed the second half of media day on Wednesday because he felt ill. He was back in the car for the first two Practice session, presumably on pain medication, but has now been transferred to hospital.</Paragraph>
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/saudi-arabia/circuit.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/circuit.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/saudi-arabia/circuit.png" className="inline-block h-96 m-2" alt={"Jeddah Corniche Circuit. 50 laps. 99% Safety Car chance. 1 minute 30.734 fastest historical lap time."} />
           </a>
           <a href="/formulaone/races/saudi-arabia/starting-grid.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/starting-grid.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/saudi-arabia/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Leclerc in second and Russell Perez."} />
           </a>
           <a href="/formulaone/races/saudi-arabia/race-result.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/race-result.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/saudi-arabia/race-result.png" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
           </a>
         </div>
       </Paragraph>
@@ -110,7 +100,7 @@ const Page = () => {
             <tr>
               <td className="pr-2">{fa}First Race</td>
               <td className="pr-2">{[new Date("March 8, 2024 15:10:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 8, 2024 15:45:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">13L or 30'+1L</td>
+              <td className="pr-2">13L or 30&apos;+1L</td>
               <td className="pr-2">{hm}</td>
             </tr>
             <tr>
@@ -120,13 +110,13 @@ const Page = () => {
             <tr>
               <td className="pr-2">{f2}Sprint Race</td>
               <td className="pr-2">{[new Date("March 8, 2024 18:10:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 8, 2024 19:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">20L or 45'+1L</td>
+              <td className="pr-2">20L or 45&apos;+1L</td>
               <td className="pr-2">{hm}</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Qualifying</td>
               <td className="pr-2">{[new Date("March 8, 2024 20:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 8, 2024 21:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">18' + 15' + 12'</td>
+              <td className="pr-2">18&apos; + 15&apos; + 12&apos;</td>
               <td className="pr-2">
                 {hm}
                 {auvio}
@@ -144,7 +134,7 @@ const Page = () => {
             <tr>
               <td className="pr-2">{fa}Second Race</td>
               <td className="pr-2">{[new Date("March 9, 2024 15:05:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 9, 2024 15:40:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">13L or 30'+1L</td>
+              <td className="pr-2">13L or 30&apos;+1L</td>
               <td className="pr-2">{hm}</td>
             </tr>
             <tr>
@@ -201,10 +191,10 @@ const Page = () => {
       <Paragraph title="Formula 2">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/saudi-arabia/f2-sprint.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f2-sprint.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/saudi-arabia/f2-sprint.png" className="inline-block h-96 m-2" alt={"Formula 2 Sprint results."} />
           </a>
           <a href="/formulaone/races/saudi-arabia/f2-feature.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f2-feature.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/saudi-arabia/f2-feature.png" className="inline-block h-96 m-2" alt={"Formula 2 Feature results."} />
           </a>
         </div>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Richard Verschoor (Trident, P1) and Roman Stanek (Trident, P10) where disqualified from the Sprint Race for breaches of the Technical Regulations.</p>
@@ -212,10 +202,10 @@ const Page = () => {
       <Paragraph title="F1 Academy">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/saudi-arabia/f1a-race1.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f1a-race1.png" className="inline-block h-80 m-2" />
+            <img src="/formulaone/races/saudi-arabia/f1a-race1.png" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
           </a>
           <a href="/formulaone/races/saudi-arabia/f1a-race2.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f1a-race2.png" className="inline-block h-80 m-2" />
+            <img src="/formulaone/races/saudi-arabia/f1a-race2.png" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
           </a>
         </div>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Doriane Pin (Mercedes by Prema, P1) received a 20 second post-race penalty in Race 2 for taking the chequered flag twice.</p>

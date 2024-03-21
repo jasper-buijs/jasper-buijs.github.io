@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <NavBar activePage="home" />
-      {/*<Alert type="info" text="As you can see, our website is back - sort of. In the mean time, feel free to browse through what's here already, or find us in Discord." />*/}
+      {/*<Alert type="info" text="As you can see, our website is back - sort of. In the meantime, feel free to browse through what's here already, or find us in Discord." />*/}
       <GridMenu>
         <GridMenuElement bgImage="/menu/minecraft.png" title="Minecraft" href="/minecraft" columns={[1, 1]} rows={[1, 1]} />
         <GridMenuElement bgImage="/menu/formulaone.jpg" title="Formula 1" href="/formulaone" columns={[2, 1]} rows={[1, 1]} />

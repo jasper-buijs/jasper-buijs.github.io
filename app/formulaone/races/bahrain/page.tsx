@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import FooterBar from "@/app/components/FooterBar";
@@ -9,38 +10,27 @@ const Page = () => {
   redirect("/formulaone", false);
   const f1 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.png" />
+      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.png" alt={"Formula 1"} />
     </div>
   );
   const f2 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.png" />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.png" alt={"Formula 2"} />
     </div>
   );
   const f3 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f3.png" />
-    </div>
-  );
-  const fa = (
-    <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1a.png" />
-    </div>
-  );
-  const sprint = (
-    <div className="inline-block w-20 relative h-[0.5rem]">
-      <img className="inline-block dark:hidden h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1-sprint-text-black.png" />
-      <img className="dark:inline-block hidden h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1-sprint-text-white.png" />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f3.png" alt={"Formula 3"} />
     </div>
   );
   const hm = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.png" />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.png" alt={"Streamed on heiligemaagden.com"} />
     </div>
   );
   const auvio = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.png" />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.png" alt={"Streamed on RTBF Auvio"} />
     </div>
   );
   return (
@@ -48,19 +38,19 @@ const Page = () => {
       <NavBar activePage="formulaone" />
       <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#E40A18] to-[#FDC2C8]">
         <div className="h-full w-full relative">
-          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/bahrain-header-dated.png" />
+          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/bahrain-header-dated.png" alt={""} />
         </div>
       </div>
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/bahrain/circuit.png" target="_blank">
-            <img src="/formulaone/races/bahrain/circuit.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/bahrain/circuit.png" className="inline-block h-96 m-2" alt={"Bahrain International Circuit. 57 laps. 63% Safety Car chance. 1 minute 31.447 fastest historic lap time."} />
           </a>
           <a href="/formulaone/races/bahrain/starting-grid.png" target="_blank">
-            <img src="/formulaone/races/bahrain/starting-grid.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/bahrain/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Russell in second and Perez third."} />
           </a>
           <a href="/formulaone/races/bahrain/race-result.png" target="_blank">
-            <img src="/formulaone/races/bahrain/race-result.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/bahrain/race-result.png" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
           </a>
         </div>
       </Paragraph>
@@ -109,7 +99,7 @@ const Page = () => {
             <tr>
               <td className="pr-2">{f3}Sprint Race</td>
               <td className="pr-2">{[new Date("March 1, 2024 13:15:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 1, 2024 14:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">19L or 40'+1L</td>
+              <td className="pr-2">19L or 40&apos;+1L</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Practice 3</td>
@@ -118,13 +108,13 @@ const Page = () => {
             <tr>
               <td className="pr-2">{f2}Sprint Race</td>
               <td className="pr-2">{[new Date("March 1, 2024 17:15:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 1, 2024 18:05:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">23L or 45'+1L</td>
+              <td className="pr-2">23L or 45&apos;+1L</td>
               <td className="pr-2">{hm}</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Qualifying</td>
               <td className="pr-2">{[new Date("March 1, 2024 19:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 1, 2024 20:00:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">18' + 15' + 12'</td>
+              <td className="pr-2">18&apos; + 15&apos; + 12&apos;</td>
               <td className="pr-2">
                 {hm}
                 {auvio}
@@ -142,7 +132,7 @@ const Page = () => {
             <tr>
               <td className="pr-2">{f3}Feature Race</td>
               <td className="pr-2">{[new Date("March 2, 2024 12:00:00 UTC+03:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("March 2, 2024 12:50:00 UTC+03:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">22L or 45'+1L</td>
+              <td className="pr-2">22L or 45&apos;+1L</td>
             </tr>
             <tr>
               <td className="pr-2">{f2}Feature Race</td>
@@ -166,20 +156,20 @@ const Page = () => {
       <Paragraph title="Formula 2">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/bahrain/f2-sprint.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f2-sprint.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/bahrain/f2-sprint.png" className="inline-block h-96 m-2" alt={"Formula 2 Sprint results."} />
           </a>
           <a href="/formulaone/races/bahrain/f2-feature.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f2-feature.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/bahrain/f2-feature.png" className="inline-block h-96 m-2" alt={"Formula 2 Feature results."} />
           </a>
         </div>
       </Paragraph>
       <Paragraph title="Formula 3">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/bahrain/f3-sprint.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f3-sprint.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/bahrain/f3-sprint.png" className="inline-block h-96 m-2" alt={"Formula 3 Sprint results."} />
           </a>
           <a href="/formulaone/races/bahrain/f3-feature.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f3-feature.png" className="inline-block h-96 m-2" />
+            <img src="/formulaone/races/bahrain/f3-feature.png" className="inline-block h-96 m-2" alt={"Formula 3 Feature results."} />
           </a>
         </div>
       </Paragraph>

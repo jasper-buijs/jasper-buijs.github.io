@@ -1,21 +1,22 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client"
 
 import { useState, useEffect } from "react";
 
-type WindowDimentions = {
+type WindowDimensions = {
   width: number | undefined;
   height: number | undefined;
 };
 
-const getWindowDimentions = (): WindowDimentions => {
-  const [windowDimentions, setWindowDimentions] = useState<WindowDimentions>({
+const getWindowDimensions = (): WindowDimensions => {
+  const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
     width: undefined,
     height: undefined,
   });
 
   useEffect(() => {
     function handleResize(): void {
-      setWindowDimentions({
+      setWindowDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
       });
@@ -25,7 +26,7 @@ const getWindowDimentions = (): WindowDimentions => {
     return (): void => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return windowDimentions;
+  return windowDimensions;
 }
 
-export default getWindowDimentions;
+export default getWindowDimensions;

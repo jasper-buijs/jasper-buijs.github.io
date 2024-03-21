@@ -39,16 +39,9 @@ const GridMenuElement = ({ bgImage, title, href, columns, rows }: GridMenuElemen
       return "text-[#1E1E1E] dark:text-[#FFFFFF]";
     }
   };
+
   const divStyle = { "--image-url": `url(${bgImage})` } as React.CSSProperties;
-  /*return (
-    <>
-      <a href={href} style={divStyle} className={`${bgClasses()} ${gridClasses(rows)} brightness-[80%] hover:brightness-[30%] transition-all !duration-[600]`}>
-      </a>
-      <div className={`${gridClasses(rows)} brightness-100`}>
-        {title}
-      </div>
-    </>
-  );*/
+
   return (
     <a href={href} className={`relative group ${gridClasses()}`}>
       <div style={divStyle} className={`absolute w-full h-full ${bgClasses()} group-hover:brightness-[30%] transition-all !duration-[600]`}></div>

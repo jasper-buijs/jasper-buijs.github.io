@@ -52,43 +52,24 @@ const Drivers = () => {
   }, []);
 
   if (isLoading) return <p>Loading...</p>;
-  if (!data) return <p>Error retreiving data...</p>;
+  if (!data) return <p>Error retrieving data...</p>;
 
   let teamColors = {
-    red_bull: "bg-[#3671C6]",
-    ferrari: "bg-[#E8002D]",
-    mercedes: "bg-[#27F4D2]",
-    mclaren: "bg-[#FF8000]",
-    aston_martin: "bg-[#229971]",
-    haas: "bg-[#B6BABD]",
-    williams: "bg-[#64C4FF]",
-    sauber: "bg-[#52E252]",
-    rb: "bg-[#6692FF]",
     alpine: "bg-[#FF87BC]",
+    aston_martin: "bg-[#229971]",
+    ferrari: "bg-[#E8002D]",
+    haas: "bg-[#B6BABD]",
+    mclaren: "bg-[#FF8000]",
+    mercedes: "bg-[#27F4D2]",
+    rb: "bg-[#6692FF]",
+    red_bull: "bg-[#3671C6]",
+    sauber: "bg-[#52E252]",
+    williams: "bg-[#64C4FF]",
   };
 
-  /*let tableRows = new Array();
-  for (let i = 0; i < data.MRData.StandingsTable.StandingsLists[0].DriverStandings.length; i++) {
-    tableRows.push(
-      <tr className={"border-separate " + teamColors[data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Constructors[0].constructorId]}>
-        <td className="rounded-l-md block">{data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].positionText}</td>
-        <td>{[data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Driver.givenName, data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Driver.familyName].join(" ")}</td>
-        <td>{data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Constructors[0].name}</td>
-        <td className="rounded-r-md block">{data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].points}</td>
-      </tr>,
-    );
-  }*/
-  let gridElements = new Array();
+  let gridElements = [];
   for (let i = 0; i < data.MRData.StandingsTable.StandingsLists[0].DriverStandings.length; i++) {
     const driverStandings = data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i];
-    /*gridElements.push(
-      <div className={"rounded-md block h-14 mb-2 relative min-w-96 " + teamColors[driverStandings.Constructors[0].constructorId]}>
-        <div className="absolute left-2 top-1 text-5xl font-semibold italic">{driverStandings.positionText + "."}</div>
-        <div className="absolute left-[5.5rem] top-1 text-2xl font-medium">{[driverStandings.Driver.givenName, driverStandings.Driver.familyName].join(" ")}</div>
-        <div className="absolute left-[5.5rem] top-7 text-base">{driverStandings.Constructors[0].name.replace("Red Bull", "Red Bull Racing").replace("Haas F1 Team", "Haas").replace("Sauber", "Kick Sauber").replace("RB F1 Team", "Racing Bulls").replace("Alpine F1 Team", "Alpine")}</div>
-        <div className="absolute right-4 top-[10px] text-3xl">{driverStandings.points}</div>
-      </div>,
-    );*/
     gridElements.push(
       <div className={"rounded-md block h-14 mb-2 relative min-w-96 snap-start " + teamColors[driverStandings.Constructors[0].constructorId]}>
         <div className="absolute left-2 top-1 h-[3rem] w-full">
@@ -108,17 +89,6 @@ const Drivers = () => {
   return (
     <>
       <div className="grid grid-flow-col auto-cols-max auto-rows-fr gap-4 overflow-scroll snap-x">{gridElements}</div>
-      {/*<table>
-        <tbody>
-          <tr>
-            <th>#</th>
-            <th>Driver</th>
-            <th>Team</th>
-            <th>Pts.</th>
-          </tr>
-          {tableRows}
-        </tbody>
-      </table>*/}
     </>
   );
 };
