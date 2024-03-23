@@ -44,12 +44,12 @@ const Page = () => {
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/australia/circuit.png" target="_blank">
-            <img src="/formulaone/races/australia/circuit.png" className="inline-block h-96 m-2" alt="Albert Park Circuit. 4 DRS zones. 58 laps. 67% Safety Car chance. 1 minute 20.235 fastest historic race lap time."/>
+            <img src="/formulaone/races/australia/circuit.png" className="inline-block h-96 m-2" alt="Albert Park Circuit. 4 DRS zones. 58 laps. 67% Safety Car chance. 1 minute 20.235 fastest historic race lap time." />
           </a>
-          {/*<a href="/formulaone/races/australia/starting-grid.png" target="_blank">
-            <img src="/formulaone/races/australia/starting-grid.png" className="inline-block h-96 m-2"/>
+          <a href="/formulaone/races/australia/starting-grid.png" target="_blank">
+            <img src="/formulaone/races/australia/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Sainz in second and Norris third."} />
           </a>
-          <a href="/formulaone/races/australia/race-result.png" target="_blank">
+          {/*<a href="/formulaone/races/australia/race-result.png" target="_blank">
             <img src="/formulaone/races/australia/race-result.png" className="inline-block h-96 m-2"/>
           </a>*/}
         </div>
@@ -145,7 +145,32 @@ const Page = () => {
         </table>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
       </Paragraph>
-      <FooterBar />
+      <Paragraph title={"Formula 2"}>
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/australia/f2-sprint.png" target="_blank">
+            <img src="/formulaone/races/australia/f2-sprint.png" className="inline-block h-96 m-2"
+                 alt={"Formula 2 Sprint results."}/>
+          </a>
+          {/*<a href="/formulaone/races/australia/f2-feature.png" target="_blank">
+            <img src="/formulaone/races/australia/f2-feature.png" className="inline-block h-96 m-2"
+                 alt={"Formula 2 Feature results."}/>
+          </a>*/}
+        </div>
+        <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Isack Hadjar received a 10-second post-race penalty for causing a collision.</p>
+      </Paragraph>
+      <Paragraph title={"Formula 3"}>
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/australia/f3-sprint.png" target="_blank">
+            <img src="/formulaone/races/australia/f3-sprint.png" className="inline-block h-96 m-2"
+                 alt={"Formula 3 Sprint results."} />
+          </a>
+          {/*<a href="/formulaone/races/australia/f3-feature.png" target="_blank">
+            <img src="/formulaone/races/australia/f3-feature.png" className="inline-block h-96 m-2"
+                 alt={"Formula 3 Feature results."} />
+          </a>*/}
+        </div>
+      </Paragraph>
+      <FooterBar/>
     </>
   );
 };
