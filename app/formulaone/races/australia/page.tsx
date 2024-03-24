@@ -49,9 +49,9 @@ const Page = () => {
           <a href="/formulaone/races/australia/starting-grid.png" target="_blank">
             <img src="/formulaone/races/australia/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Sainz in second and Norris third."} />
           </a>
-          {/*<a href="/formulaone/races/australia/race-result.png" target="_blank">
-            <img src="/formulaone/races/australia/race-result.png" className="inline-block h-96 m-2"/>
-          </a>*/}
+          <a href="/formulaone/races/australia/race-result.png" target="_blank">
+            <img src="/formulaone/races/australia/race-result.png" className="inline-block h-96 m-2" alt={"Race Results. Carlos Sainz won, Leclerc came second and Norris third."}/>
+          </a>
         </div>
       </Paragraph>
       <Paragraph title="Schedule">
@@ -151,12 +151,15 @@ const Page = () => {
             <img src="/formulaone/races/australia/f2-sprint.png" className="inline-block h-96 m-2"
                  alt={"Formula 2 Sprint results."}/>
           </a>
-          {/*<a href="/formulaone/races/australia/f2-feature.png" target="_blank">
+          <a href="/formulaone/races/australia/f2-feature.png" target="_blank">
             <img src="/formulaone/races/australia/f2-feature.png" className="inline-block h-96 m-2"
                  alt={"Formula 2 Feature results."}/>
-          </a>*/}
+          </a>
         </div>
-        <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Isack Hadjar received a 10-second post-race penalty for causing a collision.</p>
+        <p className="text-center font-normal text-sm italic mt-4">Note: Isack Hadjar received a 10-second
+          post-race penalty in the Sprint Race for causing a collision.</p>
+        <p className="text-center font-normal text-sm italic mb-2">Note: Franco Colapinto was disqualified from the
+          Feature Race for a breach of the technical regulations.</p>
       </Paragraph>
       <Paragraph title={"Formula 3"}>
         <div className="h-max w-max m-auto">
@@ -164,10 +167,10 @@ const Page = () => {
             <img src="/formulaone/races/australia/f3-sprint.png" className="inline-block h-96 m-2"
                  alt={"Formula 3 Sprint results."} />
           </a>
-          {/*<a href="/formulaone/races/australia/f3-feature.png" target="_blank">
+          <a href="/formulaone/races/australia/f3-feature.png" target="_blank">
             <img src="/formulaone/races/australia/f3-feature.png" className="inline-block h-96 m-2"
                  alt={"Formula 3 Feature results."} />
-          </a>*/}
+          </a>
         </div>
       </Paragraph>
       <FooterBar/>
