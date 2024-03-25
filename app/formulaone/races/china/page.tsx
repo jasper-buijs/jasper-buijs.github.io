@@ -51,7 +51,7 @@ const Page = () => {
               <td className="pr-2">{[new Date("April 19, 2024 11:30:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 19, 2024 12:30:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
-              <td className="pr-2">{sprint}Shootout</td>
+              <td className="pr-2">{sprint} Shootout</td>
               <td className="pr-2">{[new Date("April 19, 2024 15:30:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 19, 2024 16:14:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">12&apos; + 10&apos; + 8&apos;</td>
               <td className="pr-2">{auvio}</td>
@@ -68,7 +68,7 @@ const Page = () => {
             <tr>
               <td className="pr-2">{sprint}</td>
               <td className="pr-2">{[new Date("April 20, 2024 11:00:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 20, 2024 11:30:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
-              <td className="pr-2">19L or 60&apos;+1L</td>
+              <td className="pr-2">19L or 1h+1L</td>
               <td className="pr-2">{auvio}</td>
             </tr>
             <tr>
