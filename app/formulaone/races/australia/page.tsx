@@ -38,7 +38,7 @@ const Page = () => {
       <NavBar activePage="formulaone" />
       <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#023874] to-[#7CAADC]">
         <div className="h-full w-full relative">
-          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/australia-header-dated.png" alt="" />
+          <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/australia-header-dated.webp" alt="" />
         </div>
       </div>
       <Paragraph title="Weekend Graphics">

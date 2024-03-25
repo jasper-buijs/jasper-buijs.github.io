@@ -83,13 +83,13 @@ const FormulaOnePage = () => {
           </a>
           {/*MIAMI GP*/}
           <a href={"/formulaone/races/miami"} className="w-full h-32 relative row-start-4 row-span-1 col-start-2 col-span-1">
-            <a className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+            <div className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 6</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2024</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Miami International Autodrome, Florida, United States</p>
               <p className="inline-block text-white mr-3">May 3 - 5</p>
               <CalendarEmblems sprint f1a />
-            </a>
+            </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Miami%20carbon.png" />
           </a>
           {/*IMOLA GP*/}

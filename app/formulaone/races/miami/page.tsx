@@ -48,7 +48,7 @@ const Page = () => {
       <div className={ "h-[28vw] mx-12 bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3]" }>
         <div className={ "h-full w-full relative" }>
           <img className={ "absolute w-full h-auto top-1/2 translate-y-[-50%]" }
-               src={ "/formulaone/banners-dated/miami-header-dated.png" } alt={ "" }/>
+               src={ "/formulaone/banners-dated/miami-header-dated.webp" } alt={ "" }/>
         </div>
       </div>
       <Paragraph title={ "Schedule" }>
