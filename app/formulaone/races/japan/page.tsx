@@ -39,9 +39,9 @@ const Page = () => {
           <a href="/formulaone/races/japan/starting-grid.png" target="_blank">
             <img src="/formulaone/races/japan/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Norris third."} />
           </a>
-          {/*<a href="/formulaone/races/japan/race-result.png" target="_blank">
-            <img src="/formulaone/races/japan/race-result.png" className="inline-block h-96 m-2" alt={"Race Results."}/>
-          </a>*/}
+          <a href="/formulaone/races/japan/race-result.png" target="_blank">
+            <img src="/formulaone/races/japan/race-result.png" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
+          </a>
         </div>
       </Paragraph>
       <Paragraph title="Schedule">
