@@ -96,7 +96,7 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#37AC37] to-[#175C19] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 7</p>
-              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES GRAN PREMIO DELL'EMILIA-ROMAGNA 2024</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES GRAN PREMIO DELL&apos;EMILIA-ROMAGNA 2024</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Autodromo Enzo e Dino Ferrari, Emilia-Romagna, Italy</p>
               <p className="inline-block text-white mr-3">May 17 - 19</p>
               <CalendarEmblems f2 f3 />
@@ -194,7 +194,7 @@ const FormulaOnePage = () => {
           <div className="w-full h-32 relative row-start-9 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#048B46] to-[#CC222B] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 17</p>
-              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI GRAN PREMIO D'ITALIA 2024</p>
+              <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI GRAN PREMIO D&apos;ITALIA 2024</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Autodromo Nazionale Monza, Monza, Italy</p>
               <p className="inline-block text-white mr-3">Aug 30 - Sep 1</p>
               <CalendarEmblems f2 f3 />

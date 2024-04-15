@@ -10,17 +10,17 @@ const Page = () => {
   redirect("/formulaone", false);
   const f1 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.png" alt={"Formula 1"} />
+      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.webp" alt={"Formula 1"} />
     </div>
   );
   const hm = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.png" alt={"Streamed on heiligemaagden.com."} />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.webp" alt={"Streamed on heiligemaagden.com."} />
     </div>
   );
   const auvio = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.png" alt={"Streamed on RTBF Auvio."} />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.webp" alt={"Streamed on RTBF Auvio."} />
     </div>
   );
   return (
@@ -33,14 +33,14 @@ const Page = () => {
       </div>
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/japan/circuit.png" target="_blank">
-            <img src="/formulaone/races/japan/circuit.png" className="inline-block h-96 m-2" alt="Albert Park Circuit. 1 DRS zone. 53 laps. 67% Safety Car chance. 1 minute 30.983 fastest historic race lap time." />
+          <a href="/formulaone/races/japan/circuit.webp" target="_blank">
+            <img src="/formulaone/races/japan/circuit.webp" className="inline-block h-96 m-2" alt="Albert Park Circuit. 1 DRS zone. 53 laps. 67% Safety Car chance. 1 minute 30.983 fastest historic race lap time." />
           </a>
-          <a href="/formulaone/races/japan/starting-grid.png" target="_blank">
-            <img src="/formulaone/races/japan/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Norris third."} />
+          <a href="/formulaone/races/japan/starting-grid.webp" target="_blank">
+            <img src="/formulaone/races/japan/starting-grid.webp" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Norris third."} />
           </a>
-          <a href="/formulaone/races/japan/race-result.png" target="_blank">
-            <img src="/formulaone/races/japan/race-result.png" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
+          <a href="/formulaone/races/japan/race-result.webp" target="_blank">
+            <img src="/formulaone/races/japan/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
           </a>
         </div>
       </Paragraph>

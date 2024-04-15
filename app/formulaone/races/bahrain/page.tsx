@@ -10,27 +10,27 @@ const Page = () => {
   redirect("/formulaone", false);
   const f1 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.png" alt={"Formula 1"} />
+      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.webp" alt={"Formula 1"} />
     </div>
   );
   const f2 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.png" alt={"Formula 2"} />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.webp" alt={"Formula 2"} />
     </div>
   );
   const f3 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f3.png" alt={"Formula 3"} />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f3.webp" alt={"Formula 3"} />
     </div>
   );
   const hm = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.png" alt={"Streamed on heiligemaagden.com"} />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.webp" alt={"Streamed on heiligemaagden.com"} />
     </div>
   );
   const auvio = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.png" alt={"Streamed on RTBF Auvio"} />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.webp" alt={"Streamed on RTBF Auvio"} />
     </div>
   );
   return (
@@ -43,14 +43,14 @@ const Page = () => {
       </div>
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/bahrain/circuit.png" target="_blank">
-            <img src="/formulaone/races/bahrain/circuit.png" className="inline-block h-96 m-2" alt={"Bahrain International Circuit. 57 laps. 63% Safety Car chance. 1 minute 31.447 fastest historic lap time."} />
+          <a href="/formulaone/races/bahrain/circuit.webp" target="_blank">
+            <img src="/formulaone/races/bahrain/circuit.webp" className="inline-block h-96 m-2" alt={"Bahrain International Circuit. 57 laps. 63% Safety Car chance. 1 minute 31.447 fastest historic lap time."} />
           </a>
-          <a href="/formulaone/races/bahrain/starting-grid.png" target="_blank">
-            <img src="/formulaone/races/bahrain/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Russell in second and Perez third."} />
+          <a href="/formulaone/races/bahrain/starting-grid.webp" target="_blank">
+            <img src="/formulaone/races/bahrain/starting-grid.webp" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Russell in second and Perez third."} />
           </a>
-          <a href="/formulaone/races/bahrain/race-result.png" target="_blank">
-            <img src="/formulaone/races/bahrain/race-result.png" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
+          <a href="/formulaone/races/bahrain/race-result.webp" target="_blank">
+            <img src="/formulaone/races/bahrain/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
           </a>
         </div>
       </Paragraph>
@@ -155,21 +155,21 @@ const Page = () => {
       </Paragraph>
       <Paragraph title="Formula 2">
         <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/bahrain/f2-sprint.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f2-sprint.png" className="inline-block h-96 m-2" alt={"Formula 2 Sprint results."} />
+          <a href="/formulaone/races/bahrain/f2-sprint.webp" target="_blank">
+            <img src="/formulaone/races/bahrain/f2-sprint.webp" className="inline-block h-96 m-2" alt={"Formula 2 Sprint results."} />
           </a>
-          <a href="/formulaone/races/bahrain/f2-feature.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f2-feature.png" className="inline-block h-96 m-2" alt={"Formula 2 Feature results."} />
+          <a href="/formulaone/races/bahrain/f2-feature.webp" target="_blank">
+            <img src="/formulaone/races/bahrain/f2-feature.webp" className="inline-block h-96 m-2" alt={"Formula 2 Feature results."} />
           </a>
         </div>
       </Paragraph>
       <Paragraph title="Formula 3">
         <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/bahrain/f3-sprint.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f3-sprint.png" className="inline-block h-96 m-2" alt={"Formula 3 Sprint results."} />
+          <a href="/formulaone/races/bahrain/f3-sprint.webp" target="_blank">
+            <img src="/formulaone/races/bahrain/f3-sprint.webp" className="inline-block h-96 m-2" alt={"Formula 3 Sprint results."} />
           </a>
-          <a href="/formulaone/races/bahrain/f3-feature.png" target="_blank">
-            <img src="/formulaone/races/bahrain/f3-feature.png" className="inline-block h-96 m-2" alt={"Formula 3 Feature results."} />
+          <a href="/formulaone/races/bahrain/f3-feature.webp" target="_blank">
+            <img src="/formulaone/races/bahrain/f3-feature.webp" className="inline-block h-96 m-2" alt={"Formula 3 Feature results."} />
           </a>
         </div>
       </Paragraph>

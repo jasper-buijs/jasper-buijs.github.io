@@ -8,7 +8,7 @@ import redirect from "@/app/components/redirect";
 
 const Page = () => {
   redirect("/formulaone", false);
-  const f1 = <img className="inline h-[0.5rem] mr-1" src="/formulaone/f1web.png" alt={"Formula 1"} />;
+  const f1 = <img className="inline h-[0.5rem] mr-1" src="/formulaone/f1web.webp" alt={"Formula 1"} />;
   return (
     <>
       <NavBar activePage="formulaone" />
@@ -67,13 +67,13 @@ const Page = () => {
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
       </Paragraph>
       <Paragraph title="Day 1 Results">
-        <img src="/formulaone/races/pst/day1-results.png" className="m-auto p-4" alt={"Day 1 results."} />
+        <img src="/formulaone/races/pst/day1-results.webp" className="m-auto p-4" alt={"Day 1 results."} />
       </Paragraph>
       <Paragraph title="Day 2 Results">
-        <img src="/formulaone/races/pst/day2-results.jpg" className="m-auto p-4" alt={"Day 2 results."} />
+        <img src="/formulaone/races/pst/day2-results.webp" className="m-auto p-4" alt={"Day 2 results."} />
       </Paragraph>
       <Paragraph title="Day 3 Results">
-        <img src="/formulaone/races/pst/day3-results.jpg" className="m-auto p-4" alt={"Day 3 results."} />
+        <img src="/formulaone/races/pst/day3-results.webp" className="m-auto p-4" alt={"Day 3 results."} />
       </Paragraph>
       <FooterBar />
     </>

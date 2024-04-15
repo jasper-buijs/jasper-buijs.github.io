@@ -10,27 +10,27 @@ const Page = () => {
   redirect("/formulaone", false);
   const f1 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.png" alt={"Formula 1"} />
+      <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.webp" alt={"Formula 1"} />
     </div>
   );
   const f2 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.png" alt={"Formula 2"} />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f2.webp" alt={"Formula 2"} />
     </div>
   );
   const fa = (
     <div className="inline-block w-10 relative h-[0.5rem]">
-      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1a.png" alt={"Formula 3"} />
+      <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1a.webp" alt={"Formula 3"} />
     </div>
   );
   const hm = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.png" alt={"Streamed on heiligemaagden.com."} />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/heiligemaagden128x128.webp" alt={"Streamed on heiligemaagden.com."} />
     </div>
   );
   const auvio = (
     <div className="inline-block w-5 relative h-[1rem]">
-      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.png" alt={"Streamed on RTBF Auvio."} />
+      <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]" src="/formulaone/auvio_192x192.webp" alt={"Streamed on RTBF Auvio."} />
     </div>
   );
   return (
@@ -44,14 +44,14 @@ const Page = () => {
       <Paragraph title="BREAKING: Sainz out with appendicitis, Ollie Bearman to take over">Ferrari driver Carlos Sainz has been diagnosed with appendicitis and requires immediate surgery, meaning he will be out of the car for the remainder of the Saudi Arabian GP weekend. Formula 2 pole-sitter Ollie Bearman, driving for Prema in the Ferrari driver academy, will take over for the remainder of the weekend. He will therefore forfeit his Formula 2 weekend and pole position. He will be in the car as of Practice 3 later today. Sainz already missed the second half of media day on Wednesday because he felt ill. He was back in the car for the first two Practice session, presumably on pain medication, but has now been transferred to hospital.</Paragraph>
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/saudi-arabia/circuit.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/circuit.png" className="inline-block h-96 m-2" alt={"Jeddah Corniche Circuit. 50 laps. 99% Safety Car chance. 1 minute 30.734 fastest historical lap time."} />
+          <a href="/formulaone/races/saudi-arabia/circuit.webp" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/circuit.webp" className="inline-block h-96 m-2" alt={"Jeddah Corniche Circuit. 50 laps. 99% Safety Car chance. 1 minute 30.734 fastest historical lap time."} />
           </a>
-          <a href="/formulaone/races/saudi-arabia/starting-grid.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/starting-grid.png" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Leclerc in second and Russell Perez."} />
+          <a href="/formulaone/races/saudi-arabia/starting-grid.webp" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/starting-grid.webp" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Leclerc in second and Russell Perez."} />
           </a>
-          <a href="/formulaone/races/saudi-arabia/race-result.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/race-result.png" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
+          <a href="/formulaone/races/saudi-arabia/race-result.webp" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
           </a>
         </div>
       </Paragraph>
@@ -190,22 +190,22 @@ const Page = () => {
       </Paragraph>
       <Paragraph title="Formula 2">
         <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/saudi-arabia/f2-sprint.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f2-sprint.png" className="inline-block h-96 m-2" alt={"Formula 2 Sprint results."} />
+          <a href="/formulaone/races/saudi-arabia/f2-sprint.webp" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f2-sprint.webp" className="inline-block h-96 m-2" alt={"Formula 2 Sprint results."} />
           </a>
-          <a href="/formulaone/races/saudi-arabia/f2-feature.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f2-feature.png" className="inline-block h-96 m-2" alt={"Formula 2 Feature results."} />
+          <a href="/formulaone/races/saudi-arabia/f2-feature.webp" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f2-feature.webp" className="inline-block h-96 m-2" alt={"Formula 2 Feature results."} />
           </a>
         </div>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Richard Verschoor (Trident, P1) and Roman Stanek (Trident, P10) where disqualified from the Sprint Race for breaches of the Technical Regulations.</p>
       </Paragraph>
       <Paragraph title="F1 Academy">
         <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/saudi-arabia/f1a-race1.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f1a-race1.png" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
+          <a href="/formulaone/races/saudi-arabia/f1a-race1.webp" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f1a-race1.webp" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
           </a>
-          <a href="/formulaone/races/saudi-arabia/f1a-race2.png" target="_blank">
-            <img src="/formulaone/races/saudi-arabia/f1a-race2.png" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
+          <a href="/formulaone/races/saudi-arabia/f1a-race2.webp" target="_blank">
+            <img src="/formulaone/races/saudi-arabia/f1a-race2.webp" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
           </a>
         </div>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">Note: Doriane Pin (Mercedes by Prema, P1) received a 20 second post-race penalty in Race 2 for taking the chequered flag twice.</p>
