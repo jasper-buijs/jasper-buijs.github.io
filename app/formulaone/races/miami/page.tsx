@@ -116,7 +116,7 @@ const Page = () => {
           {/* SPRINT SHOOTOUT */ }
           <tr>
             <td className={ "pr-2" }>
-              { sprint } Shootout
+              { sprint } Qualifying
             </td>
             <td className={ "pr-2" }>
               {

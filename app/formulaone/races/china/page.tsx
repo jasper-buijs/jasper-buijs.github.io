@@ -37,6 +37,19 @@ const Page = () => {
           <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/china-header-dated.webp" alt={""} />
         </div>
       </div>
+      <Paragraph title="Weekend Graphics">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/china/circuit.webp" target="_blank">
+            <img src="/formulaone/races/china/circuit.webp" className="inline-block h-96 m-2" alt="Shanghai International Circuit. 2 DRS zones. 56 laps. 75% Safety Car chance. 1 minute 32.238 fastest historic race lap time." />
+          </a>
+          {/*<a href="/formulaone/races/china/starting-grid.webp" target="_blank">
+            <img src="/formulaone/races/china/starting-grid.webp" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Norris third."} />
+          </a>*/}
+          {/*<a href="/formulaone/races/china/race-result.webp" target="_blank">
+            <img src="/formulaone/races/china/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
+          </a>*/}
+        </div>
+      </Paragraph>
       <Paragraph title="Schedule">
         <table className="w-max m-auto table-auto">
           <tbody>
@@ -51,10 +64,10 @@ const Page = () => {
               <td className="pr-2">{[new Date("April 19, 2024 11:30:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 19, 2024 12:30:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
             </tr>
             <tr>
-              <td className="pr-2">{sprint} Shootout</td>
+              <td className="pr-2">{sprint} Qualifying</td>
               <td className="pr-2">{[new Date("April 19, 2024 15:30:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 19, 2024 16:14:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">12&apos; + 10&apos; + 8&apos;</td>
-              <td className="pr-2">{auvio}</td>
+              <td className="pr-2">{hm}{auvio}</td>
             </tr>
             <tr>
               <td className="h-[2rem]"></td>
@@ -69,13 +82,13 @@ const Page = () => {
               <td className="pr-2">{sprint}</td>
               <td className="pr-2">{[new Date("April 20, 2024 11:00:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 20, 2024 11:30:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">19L or 1h+1L</td>
-              <td className="pr-2">{auvio}</td>
+              <td className="pr-2">{hm}{auvio}</td>
             </tr>
             <tr>
               <td className="pr-2">{f1}Qualifying</td>
               <td className="pr-2">{[new Date("April 20, 2024 15:00:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 20, 2024 16:00:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">18&apos; + 15&apos; + 12&apos;</td>
-              <td className="pr-2">{auvio}</td>
+              <td className="pr-2">{hm}{auvio}</td>
             </tr>
             <tr>
               <td className="h-[2rem]"></td>
@@ -90,7 +103,7 @@ const Page = () => {
               <td className="pr-2">{f1}Race</td>
               <td className="pr-2">{[new Date("April 21, 2024 15:00:00 UTC+08:00").toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }), "-", new Date("April 21, 2024 17:00:00 UTC+08:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}</td>
               <td className="pr-2">56L or 2h+1L</td>
-              <td className="pr-2">{auvio}</td>
+              <td className="pr-2">{hm}{auvio}</td>
             </tr>
           </tbody>
         </table>
