@@ -40,22 +40,27 @@ const Page = () => {
       <Paragraph title="Weekend Graphics">
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/china/circuit.webp" target="_blank">
-            <img src="/formulaone/races/china/circuit.webp" className="inline-block h-96 m-2" alt="Shanghai International Circuit. 2 DRS zones. 56 laps. 75% Safety Car chance. 1 minute 32.238 fastest historic race lap time." />
+            <img src="/formulaone/races/china/circuit.webp" className="inline-block h-96 m-2"
+                 alt="Shanghai International Circuit. 2 DRS zones. 56 laps. 75% Safety Car chance. 1 minute 32.238 fastest historic race lap time."/>
+          </a>
+          <a href="/formulaone/races/china/sprint-starting-grid.webp" target="_blank">
+            <img src="/formulaone/races/china/sprint-starting-grid.webp" className="inline-block h-96 m-2"
+                 alt={ "Sprint Race Starting Grid. Lando Norris starts on pole, Hamilton in second and Alonso third." }/>
           </a>
           {/*<a href="/formulaone/races/china/starting-grid.webp" target="_blank">
             <img src="/formulaone/races/china/starting-grid.webp" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Norris third."} />
-          </a>*/}
+          </a>*/ }
           {/*<a href="/formulaone/races/china/race-result.webp" target="_blank">
             <img src="/formulaone/races/china/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
-          </a>*/}
+          </a>*/ }
         </div>
       </Paragraph>
       <Paragraph title="Schedule">
         <table className="w-max m-auto table-auto">
           <tbody>
-            <tr>
-              <th className="pr-2 text-left max-w-0 whitespace-nowrap">Friday April 19</th>
-              <th className="pr-2 text-left"></th>
+          <tr>
+            <th className="pr-2 text-left max-w-0 whitespace-nowrap">Friday April 19</th>
+            <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
               <th className="pr-2 text-left"></th>
             </tr>
