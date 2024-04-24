@@ -93,7 +93,7 @@ const FormulaOnePage = () => {
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Miami%20carbon.png" />
           </a>
           {/*IMOLA GP*/}
-          <div className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-1">
+          <a href={"/formulaone/races/emilia-romagna"} className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#37AC37] to-[#175C19] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 7</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES GRAN PREMIO DELL&apos;EMILIA-ROMAGNA 2024</p>
@@ -102,9 +102,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1684338005/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Emilia%20Romagna%20carbon.png" />
-          </div>
+          </a>
           {/*MONACO GP*/}
-          <div className="w-full h-32 relative row-start-5 row-span-1 col-start-2 col-span-1">
+          <a href={"/formulaone/races/monaco"} className="w-full h-32 relative row-start-5 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#E50915] to-[#FEDADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 8</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GRAND PRIX DE MONACO 2024</p>
@@ -113,7 +113,7 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245032/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Monte%20Carlo%20carbon.png" />
-          </div>
+          </a>
           {/*CANADA GP*/}
           <div className="w-full h-32 relative row-start-6 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EA2C36] to-[#010101] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
