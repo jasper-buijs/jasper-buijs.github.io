@@ -56,9 +56,9 @@ const Page = () => {
               <img src="/formulaone/races/china/starting-grid.webp" className="inline-block h-96 m-2"
                    alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Alonso third."} />
             </a>
-            {/*<a href="/formulaone/races/china/race-result.webp" target="_blank">
-              <img src="/formulaone/races/china/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
-            </a>*/ }
+            <a href="/formulaone/races/china/race-result.webp" target="_blank">
+              <img src="/formulaone/races/china/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Norris came second and Perez third."} />
+            </a>
           </div>
         </div>
       </Paragraph>
