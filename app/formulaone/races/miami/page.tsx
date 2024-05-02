@@ -133,7 +133,7 @@ const Page = () => {
               12&apos; + 10&apos; + 8&apos;
             </td>
             <td>
-              { auvio }
+              {hm}{ auvio }
             </td>
           </tr>
           <tr>
@@ -184,7 +184,7 @@ const Page = () => {
               19L or 1h+1L
             </td>
             <td>
-              { auvio }
+              {hm}{ auvio }
             </td>
           </tr>
           {/* FA RACE 1 */ }
@@ -204,7 +204,7 @@ const Page = () => {
               }
             </td>
             <td className={ "pr-2" }>
-              <i>TBC</i> or 30&apos;+1L
+              13L or 30&apos;+1L
             </td>
           </tr>
           {/* F1 QUALIFYING */ }
@@ -227,7 +227,7 @@ const Page = () => {
               18&apos; + 15&apos; + 12&apos;
             </td>
             <td className={ "pr-2" }>
-              { auvio }
+              {hm}{ auvio }
             </td>
           </tr>
           <tr>
@@ -258,7 +258,7 @@ const Page = () => {
               }
             </td>
             <td className={ "pr-2" }>
-              <i>TBC</i> or 30&apos;+1L
+              30L or 30&apos;+1L
             </td>
           </tr>
           {/* F1 RACE */ }
@@ -281,7 +281,7 @@ const Page = () => {
               57L or 2h+1L
             </td>
             <td className={ "pr-2" }>
-              { auvio }
+              {hm}{ auvio }
             </td>
           </tr>
           </tbody>
