@@ -51,6 +51,31 @@ const Page = () => {
                src={ "/formulaone/banners-dated/miami-header-dated.webp" } alt={ "" }/>
         </div>
       </div>
+      <Paragraph title="Weekend Graphics">
+        <div className="h-full w-full m-auto overflow-x-auto whitespace-nowrap">
+          <div className={"h-max w-max m-auto"}>
+            <a href="/formulaone/races/miami/circuit.webp" target="_blank">
+              <img src="/formulaone/races/miami/circuit.webp" className="inline-block h-96 m-2"
+                   alt="Miami International Autodrome. 3 DRS zones. 57 laps. 50% Safety Car chance. 1 minute 29.708 fastest historic race lap time."/>
+            </a>
+            <a href="/formulaone/races/miami/sprint-starting-grid.webp" target="_blank">
+              <img src="/formulaone/races/miami/sprint-starting-grid.webp" className="inline-block h-96 m-2"
+                   alt={ "Sprint Race Starting Grid. Max Verstappen starts on pole, Lerclerc in second and Perez third." }/>
+            </a>
+            {/*<a href="/formulaone/races/miami/sprint-race-result.webp" target="_blank">
+              <img src="/formulaone/races/miami/sprint-race-result.webp" className="inline-block h-96 m-2"
+                   alt={ "Race Results. Max Verstappen won, Hamilton came second and Perez third." }/>
+            </a>
+            <a href="/formulaone/races/miami/starting-grid.webp" target="_blank">
+              <img src="/formulaone/races/miami/starting-grid.webp" className="inline-block h-96 m-2"
+                   alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Alonso third."} />
+            </a>
+            <a href="/formulaone/races/miami/race-result.webp" target="_blank">
+              <img src="/formulaone/races/miami/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Norris came second and Perez third."} />
+            </a>*/}
+          </div>
+        </div>
+      </Paragraph>
       <Paragraph title={ "Schedule" }>
         <table className={ "w-max m-auto table-auto" }>
           <tbody>
