@@ -62,15 +62,15 @@ const Page = () => {
               <img src="/formulaone/races/miami/sprint-starting-grid.webp" className="inline-block h-96 m-2"
                    alt={ "Sprint Race Starting Grid. Max Verstappen starts on pole, Lerclerc in second and Perez third." }/>
             </a>
-            {/*<a href="/formulaone/races/miami/sprint-race-result.webp" target="_blank">
+            <a href="/formulaone/races/miami/sprint-race-result.webp" target="_blank">
               <img src="/formulaone/races/miami/sprint-race-result.webp" className="inline-block h-96 m-2"
-                   alt={ "Race Results. Max Verstappen won, Hamilton came second and Perez third." }/>
+                   alt={ "Race Results. Max Verstappen won, Leclerc came second and Perez third." }/>
             </a>
             <a href="/formulaone/races/miami/starting-grid.webp" target="_blank">
               <img src="/formulaone/races/miami/starting-grid.webp" className="inline-block h-96 m-2"
-                   alt={"Starting Grid. Max Verstappen starts on pole, Perez in second and Alonso third."} />
+                   alt={"Starting Grid. Max Verstappen starts on pole, Leclerc in second and Sainz third."} />
             </a>
-            <a href="/formulaone/races/miami/race-result.webp" target="_blank">
+            {/*<a href="/formulaone/races/miami/race-result.webp" target="_blank">
               <img src="/formulaone/races/miami/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Norris came second and Perez third."} />
             </a>*/}
           </div>
@@ -321,6 +321,16 @@ const Page = () => {
             ].join(" ")
           }
         </p>
+      </Paragraph>
+      <Paragraph title="F1 Academy">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/miami/f1a-race1.webp" target="_blank">
+            <img src="/formulaone/races/miami/f1a-race1.webp" className="inline-block h-80 m-2" alt={"F1 Academy Race 1 results."} />
+          </a>
+          {/*<a href="/formulaone/races/miami/f1a-race2.webp" target="_blank">
+            <img src="/formulaone/races/miami/f1a-race2.webp" className="inline-block h-80 m-2" alt={"F1 Academy Race 2 results."} />
+          </a>*/}
+        </div>
       </Paragraph>
       <FooterBar/>
     </>
