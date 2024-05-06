@@ -16,11 +16,42 @@ const FormulaOnePage = () => {
       <Paragraph title="FORMULA ONE WORLD DRIVERS' CHAMPIONSHIP" emoji="🏆">
         <Drivers />
       </Paragraph>
+      <Paragraph title={"Useful links and pages"} emoji={"🔗"}>
+        <div className={ "h-min mb-2" }>
+          <a
+            className={ "rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min mx-1 align-middle mb-1 justify-self-end" }
+            href={ "/formulaone/penalty-points" }>
+            Penalty Points
+          </a>
+          <a
+            className={ "rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min mx-1 align-middle mb-1 justify-self-end" }
+            href={ "/formulaone/regulations/F1-SR" }>
+            F1 Sporting Regulations
+          </a>
+          <a
+            className={ "rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min mx-1 align-middle mb-1 justify-self-end" }
+            href={ "/formulaone/regulations/F1-TR" }>
+            F1 Technical Regulations
+          </a>
+          <a
+            className={ "rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min mx-1 align-middle mb-1 justify-self-end" }
+            href={ "/formulaone/regulations/F1-FR" }>
+            F1 Financial Regulations
+          </a>
+          <a
+            className={ "rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min mx-1 align-middle mb-1 justify-self-end" }
+            href={ "https://www.fia.com/regulation/category/123" }
+            target={ "_blank" }>
+            FIA ISC and Appendices ↗
+          </a>
+        </div>
+      </Paragraph>
       <Paragraph title="2024 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR" emoji="📅">
         <CalendarGrid>
-          {/*PRE-SEASON TESTING*/}
-          <a href="/formulaone/races/pst" className="w-full h-32 relative row-start-1 row-span-1 col-start-1 col-span-2">
-            <div className={`bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 pl-5 rounded-lg`}>
+          {/*PRE-SEASON TESTING*/ }
+          <a href="/formulaone/races/pst"
+             className="w-full h-32 relative row-start-1 row-span-1 col-start-1 col-span-2">
+            <div className={ `bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 pl-5 rounded-lg`}>
               <p className="block text-white font-semibold text-lg">FORMULA 1 ARAMCO PRE-SEASON TESTING 2024</p>
               <p className="block text-white">Bahrain International Circuit, Sakhir, Bahrain</p>
               <p className="inline-block text-white mr-3">Feb 21 - 23</p>
