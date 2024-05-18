@@ -41,6 +41,23 @@ const Page = () => {
           <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/emilia-header-dated.webp" alt={""} />
         </div>
       </div>
+      <Paragraph title="Weekend Graphics">
+        <div className="h-full w-full m-auto overflow-x-auto whitespace-nowrap">
+          <div className={"h-max w-max m-auto"}>
+            <a href="/formulaone/races/emilia-romagna/circuit.webp" target="_blank">
+              <img src="/formulaone/races/emilia-romagna/circuit.webp" className="inline-block h-96 m-2"
+                   alt="Autodromo Enzo e Dino Ferrari. 1 DRS zone. 63 laps. 99% Safety Car chance. 1 minute 15.484 fastest historic race lap time."/>
+            </a>
+            <a href="/formulaone/races/emilia-romagna/starting-grid.webp" target="_blank">
+              <img src="/formulaone/races/emilia-romagna/starting-grid.webp" className="inline-block h-96 m-2"
+                   alt={"Starting Grid. Max Verstappen starts on pole, Norris in second and Leclerc third."} />
+            </a>
+            {/*<a href="/formulaone/races/emilia-romagna/race-result.webp" target="_blank">
+              <img src="/formulaone/races/emilia-romagna/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Lando Norris won, Verstappen came second and Leclerc third."} />
+            </a>*/}
+          </div>
+        </div>
+      </Paragraph>
       <Paragraph title="Schedule">
         <table className="w-max m-auto table-auto">
           <tbody>
@@ -170,6 +187,26 @@ const Page = () => {
           </tbody>
         </table>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
+      </Paragraph>
+      <Paragraph title="Formula 2">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/emilia-romagna/f2-sprint.webp" target="_blank">
+            <img src="/formulaone/races/emilia-romagna/f2-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 2 Sprint results."} />
+          </a>
+          {/*<a href="/formulaone/races/emilia-romagna/f2-feature.webp" target="_blank">
+            <img src="/formulaone/races/emilia-romagna/f2-feature.webp" className="inline-block h-80 m-2" alt={"Formula 2 Feature results."} />
+          </a>*/}
+        </div>
+      </Paragraph>
+      <Paragraph title="Formula 3">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/emilia-romagna/f3-sprint.webp" target="_blank">
+            <img src="/formulaone/races/emilia-romagna/f3-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
+          </a>
+          {/*<a href="/formulaone/races/emilia-romagna/f3-feature.webp" target="_blank">
+            <img src="/formulaone/races/emilia-romagna/f3-feature.webp" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
+          </a>*/}
+        </div>
       </Paragraph>
       <FooterBar />
     </>
