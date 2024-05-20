@@ -52,9 +52,9 @@ const Page = () => {
               <img src="/formulaone/races/emilia-romagna/starting-grid.webp" className="inline-block h-96 m-2"
                    alt={"Starting Grid. Max Verstappen starts on pole, Norris in second and Leclerc third."} />
             </a>
-            {/*<a href="/formulaone/races/emilia-romagna/race-result.webp" target="_blank">
-              <img src="/formulaone/races/emilia-romagna/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Lando Norris won, Verstappen came second and Leclerc third."} />
-            </a>*/}
+            <a href="/formulaone/races/emilia-romagna/race-result.webp" target="_blank">
+              <img src="/formulaone/races/emilia-romagna/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Norris came second and Leclerc third."} />
+            </a>
           </div>
         </div>
       </Paragraph>
@@ -148,7 +148,7 @@ const Page = () => {
                 new Date("May 18, 2024 17:00:00 UTC+02:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}
             </td>
             <td className="pr-2">18&apos; + 15&apos; + 12&apos;</td>
-            <td className="pr-2">{auvio}</td>
+            <td className="pr-2">{hm}{auvio}</td>
           </tr>
           <tr>
             <td className="h-[2rem]"></td>
@@ -182,7 +182,7 @@ const Page = () => {
                 new Date("May 19, 2024 17:00:00 UTC+02:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}
             </td>
             <td className="pr-2">63L or 2h+1L</td>
-            <td className="pr-2">{auvio}</td>
+            <td className="pr-2">{hm}{auvio}</td>
           </tr>
           </tbody>
         </table>
@@ -193,9 +193,9 @@ const Page = () => {
           <a href="/formulaone/races/emilia-romagna/f2-sprint.webp" target="_blank">
             <img src="/formulaone/races/emilia-romagna/f2-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 2 Sprint results."} />
           </a>
-          {/*<a href="/formulaone/races/emilia-romagna/f2-feature.webp" target="_blank">
+          <a href="/formulaone/races/emilia-romagna/f2-feature.webp" target="_blank">
             <img src="/formulaone/races/emilia-romagna/f2-feature.webp" className="inline-block h-80 m-2" alt={"Formula 2 Feature results."} />
-          </a>*/}
+          </a>
         </div>
       </Paragraph>
       <Paragraph title="Formula 3">
@@ -203,9 +203,9 @@ const Page = () => {
           <a href="/formulaone/races/emilia-romagna/f3-sprint.webp" target="_blank">
             <img src="/formulaone/races/emilia-romagna/f3-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
           </a>
-          {/*<a href="/formulaone/races/emilia-romagna/f3-feature.webp" target="_blank">
+          <a href="/formulaone/races/emilia-romagna/f3-feature.webp" target="_blank">
             <img src="/formulaone/races/emilia-romagna/f3-feature.webp" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
-          </a>*/}
+          </a>
         </div>
       </Paragraph>
       <FooterBar />
