@@ -41,6 +41,23 @@ const Page = () => {
           <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]" src="/formulaone/banners-dated/monaco-header-dated.webp" alt={""} />
         </div>
       </div>
+      <Paragraph title="Weekend Graphics">
+        <div className="h-full w-full m-auto overflow-x-auto whitespace-nowrap">
+          <div className={"h-max w-max m-auto"}>
+            <a href="/formulaone/races/monaco/circuit.webp" target="_blank">
+              <img src="/formulaone/races/monaco/circuit.webp" className="inline-block h-96 m-2"
+                   alt="Circuit de Monaco. 1 DRS zone. 78 laps. 57% Safety Car chance. 1 minute 12.909 fastest historic race lap time."/>
+            </a>
+            <a href="/formulaone/races/monaco/starting-grid.webp" target="_blank">
+              <img src="/formulaone/races/monaco/starting-grid.webp" className="inline-block h-96 m-2"
+                   alt={"Starting Grid. Charles Leclerc starts on pole, Piastri in second and Sainz third."} />
+            </a>
+            {/*<a href="/formulaone/races/monaco/race-result.webp" target="_blank">
+              <img src="/formulaone/races/monaco/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Lando Norris won, Verstappen came second and Leclerc third."} />
+            </a>*/}
+          </div>
+        </div>
+      </Paragraph>
       <Paragraph title="Schedule">
         <table className="w-max m-auto table-auto">
           <tbody>
@@ -180,6 +197,7 @@ const Page = () => {
                 new Date("May 26, 2024 10:45:00 UTC+02:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}
             </td>
             <td className="pr-2">42L or 1h+1L</td>
+            <td className={"pr-2"}>{hm}</td>
           </tr>
           <tr>
             <td className="pr-2">{f1}Race</td>
@@ -188,11 +206,31 @@ const Page = () => {
                 new Date("May 26, 2024 17:00:00 UTC+02:00").toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })].join(" ")}
             </td>
             <td className="pr-2">78L or 2h+1L</td>
-            <td className="pr-2">{auvio}</td>
+            <td className="pr-2">{hm}{auvio}</td>
           </tr>
           </tbody>
         </table>
         <p className="text-center font-normal text-sm italic mt-4 mb-2">{["Times displayed in ", new Date().toLocaleDateString(undefined, { day: "2-digit", timeZoneName: "shortGeneric" }).slice(4)].join(" ")}</p>
+      </Paragraph>
+      <Paragraph title="Formula 2">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/monaco/f2-sprint.webp" target="_blank">
+            <img src="/formulaone/races/monaco/f2-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 2 Sprint results."} />
+          </a>
+          {/*<a href="/formulaone/races/monaco/f2-feature.webp" target="_blank">
+            <img src="/formulaone/races/monaco/f2-feature.webp" className="inline-block h-80 m-2" alt={"Formula 2 Feature results."} />
+          </a>*/}
+        </div>
+      </Paragraph>
+      <Paragraph title="Formula 3">
+        <div className="h-max w-max m-auto">
+          <a href="/formulaone/races/monaco/f3-sprint.webp" target="_blank">
+            <img src="/formulaone/races/monaco/f3-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
+          </a>
+          {/*<a href="/formulaone/races/monaco/f3-feature.webp" target="_blank">
+            <img src="/formulaone/races/monaco/f3-feature.webp" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
+          </a>*/}
+        </div>
       </Paragraph>
       <FooterBar />
     </>
