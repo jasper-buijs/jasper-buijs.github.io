@@ -52,9 +52,9 @@ const Page = () => {
               <img src="/formulaone/races/monaco/starting-grid.webp" className="inline-block h-96 m-2"
                    alt={"Starting Grid. Charles Leclerc starts on pole, Piastri in second and Sainz third."} />
             </a>
-            {/*<a href="/formulaone/races/monaco/race-result.webp" target="_blank">
-              <img src="/formulaone/races/monaco/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Lando Norris won, Verstappen came second and Leclerc third."} />
-            </a>*/}
+            <a href="/formulaone/races/monaco/race-result.webp" target="_blank">
+              <img src="/formulaone/races/monaco/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Charles Leclerc won, Piastri came second and Sainz third."} />
+            </a>
           </div>
         </div>
       </Paragraph>
@@ -217,9 +217,9 @@ const Page = () => {
           <a href="/formulaone/races/monaco/f2-sprint.webp" target="_blank">
             <img src="/formulaone/races/monaco/f2-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 2 Sprint results."} />
           </a>
-          {/*<a href="/formulaone/races/monaco/f2-feature.webp" target="_blank">
+          <a href="/formulaone/races/monaco/f2-feature.webp" target="_blank">
             <img src="/formulaone/races/monaco/f2-feature.webp" className="inline-block h-80 m-2" alt={"Formula 2 Feature results."} />
-          </a>*/}
+          </a>
         </div>
       </Paragraph>
       <Paragraph title="Formula 3">
@@ -227,9 +227,9 @@ const Page = () => {
           <a href="/formulaone/races/monaco/f3-sprint.webp" target="_blank">
             <img src="/formulaone/races/monaco/f3-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
           </a>
-          {/*<a href="/formulaone/races/monaco/f3-feature.webp" target="_blank">
+          <a href="/formulaone/races/monaco/f3-feature.webp" target="_blank">
             <img src="/formulaone/races/monaco/f3-feature.webp" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
-          </a>*/}
+          </a>
         </div>
       </Paragraph>
       <FooterBar />

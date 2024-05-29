@@ -298,49 +298,6 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
           </div>
         </div>
 
-        { /* GEORGE RUSSELL */ }
-        <div
-          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#32d3b8]" }>
-          <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">63</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
-                  <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">George Russell
-                  </div>
-                  <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Mercedes
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={ "absolute right-4 top-[10px]" }>
-              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
-              <div className={ "text-3xl inline-block" }>4</div>
-              <div className={ "text-md inline-block mr-4" }>/12</div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "RUS" ? "hidden" : "inline-block") }
-                onClick={ () => setExpanded("RUS") }>▸
-              </div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "RUS" ? "inline-block" : "hidden") }
-                onClick={ () => setExpanded(null) }>▾
-              </div>
-            </div>
-          </div>
-          <div className={ "ml-12 h-max w-full " + (expanded == "RUS" ? "inline-block" : "hidden") }>
-            <b>Monaco GP 2023</b>
-            <ul className={ "list-disc" }>
-              <li>2 points until 28 May 2024 for Rejoining the Track in an Unsafe Manner.</li>
-            </ul>
-            <b>Las Vegas GP 2023</b>
-            <ul className={ "list-disc" }>
-              <li>2 points until 19 November 2024 for Causing a Collision.</li>
-            </ul>
-          </div>
-        </div>
-
         {/* YUKI TSUNODA */ }
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#6692FF]" }>
@@ -380,6 +337,49 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
             <b>Dutch GP 2023</b>
             <ul className={ "list-disc" }>
               <li>2 points until 27 August 2024 for Causing a Collision.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* ESTEBAN OCON */ }
+        <div
+          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF87BC]" }>
+          <div className={ "h-14 block" }>
+            <div className="absolute left-2 top-1 h-[3rem] w-full">
+              <div className="h-[3rem]">
+                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">31</div>
+                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+                  <div
+                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Esteban Ocon
+                  </div>
+                  <div
+                    className="absolute left-[0rem] top-6 text-base w-max">Alpine
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={ "absolute right-4 top-[10px]" }>
+              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
+              <div className={ "text-3xl inline-block" }>3</div>
+              <div className={ "text-md inline-block mr-4" }>/12</div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "OCO" ? "hidden" : "inline-block") }
+                onClick={ () => setExpanded("OCO") }>▸
+              </div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "OCO" ? "inline-block" : "hidden") }
+                onClick={ () => setExpanded(null) }>▾
+              </div>
+            </div>
+          </div>
+          <div className={ "ml-12 h-max w-full " + (expanded == "OCO" ? "inline-block" : "hidden") }>
+            <b>Miami GP 2024</b>
+            <ul className={ "list-disc" }>
+              <li>1 point until 4 May 2025 for an Unsafe Release.</li>
+            </ul>
+            <b>Monaco GP 2024</b>
+            <ul className={ "list-disc" }>
+              <li>2 points until 26 May 2025 for Causing a Collision.</li>
             </ul>
           </div>
         </div>
@@ -501,19 +501,19 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
           </div>
         </div>
 
-        {/* NICO HULKENBERG */ }
+        { /* GEORGE RUSSELL */ }
         <div
-          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#B6BABD]" }>
+          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#32d3b8]" }>
           <div className={ "h-14 block" }>
             <div className="absolute left-2 top-1 h-[3rem] w-full">
               <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">27</div>
+                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">63</div>
                 <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Nico Hulkenberg
+                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">George Russell
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Haas
+                    className="absolute left-[0rem] top-6 text-base w-max">Mercedes
                   </div>
                 </div>
               </div>
@@ -523,19 +523,19 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
               <div className={ "text-3xl inline-block" }>2</div>
               <div className={ "text-md inline-block mr-4" }>/12</div>
               <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "HUL" ? "hidden" : "inline-block") }
-                onClick={ () => setExpanded("HUL") }>▸
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "RUS" ? "hidden" : "inline-block") }
+                onClick={ () => setExpanded("RUS") }>▸
               </div>
               <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "HUL" ? "inline-block" : "hidden") }
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "RUS" ? "inline-block" : "hidden") }
                 onClick={ () => setExpanded(null) }>▾
               </div>
             </div>
           </div>
-          <div className={ "ml-12 h-max w-full " + (expanded == "HUL" ? "inline-block" : "hidden") }>
-            <b>Monaco GP 2023</b>
+          <div className={ "ml-12 h-max w-full " + (expanded == "RUS" ? "inline-block" : "hidden") }>
+            <b>Las Vegas GP 2023</b>
             <ul className={ "list-disc" }>
-              <li>2 points until 29 May 2024 for Causing a Collision.</li>
+              <li>2 points until 19 November 2024 for Causing a Collision.</li>
             </ul>
           </div>
         </div>
@@ -575,45 +575,6 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
             <b>Mexican GP 2023</b>
             <ul className={ "list-disc" }>
               <li>2 points until 29 October 2024 for Causing a Collision.</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* ESTEBAN OCON */ }
-        <div
-          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF87BC]" }>
-          <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">31</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
-                  <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Esteban Ocon
-                  </div>
-                  <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Alpine
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={ "absolute right-4 top-[10px]" }>
-              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
-              <div className={ "text-3xl inline-block" }>1</div>
-              <div className={ "text-md inline-block mr-4" }>/12</div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "OCO" ? "hidden" : "inline-block") }
-                onClick={ () => setExpanded("OCO") }>▸
-              </div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "OCO" ? "inline-block" : "hidden") }
-                onClick={ () => setExpanded(null) }>▾
-              </div>
-            </div>
-          </div>
-          <div className={ "ml-12 h-max w-full " + (expanded == "OCO" ? "inline-block" : "hidden") }>
-            <b>Miami GP 2024</b>
-            <ul className={ "list-disc" }>
-              <li>1 point until 4 May 2025 for an Unsafe Release.</li>
             </ul>
           </div>
         </div>
@@ -757,6 +718,31 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
           </div>
         </div>
 
+        {/* NICO HULKENBERG */ }
+        <div
+          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#B6BABD]" }>
+          <div className={ "h-14 block" }>
+            <div className="absolute left-2 top-1 h-[3rem] w-full">
+              <div className="h-[3rem]">
+                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">27</div>
+                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+                  <div
+                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Nico Hulkenberg
+                  </div>
+                  <div
+                    className="absolute left-[0rem] top-6 text-base w-max">Haas
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={ "absolute right-4 top-[10px]" }>
+              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
+              <div className={ "text-3xl inline-block" }>0</div>
+              <div className={ "text-md inline-block mr-8" }>/12</div>
+            </div>
+          </div>
+        </div>
+
         {/* OSCAR PIASTRI */ }
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF8000]" }>
@@ -782,8 +768,8 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
           </div>
         </div>
 
-        <p className={"italic mt-4"}>{"Last updated on " + new Date("May 6, 2024 15:00:00 UTC+02:00")
-          .toLocaleString(undefined, { dateStyle: "medium" }) + " after the Miami GP."}</p>
+        <p className={"italic mt-4"}>{"Last updated on " + new Date("May 29, 2024 21:00:00 UTC+02:00")
+          .toLocaleString(undefined, { dateStyle: "medium" }) + " after the Monaco GP."}</p>
 
       </Paragraph>
       <FooterBar/>
