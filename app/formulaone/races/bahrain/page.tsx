@@ -7,7 +7,7 @@ import Paragraph from "@/app/components/Paragraph";
 import redirect from "@/app/components/redirect";
 
 const Page = () => {
-  redirect("/formulaone", false);
+  redirect("/formulaone/races/bahrain", false);
   const f1 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
       <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.webp" alt={"Formula 1"} />
@@ -42,16 +42,24 @@ const Page = () => {
         </div>
       </div>
       <Paragraph title="Weekend Graphics">
-        <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/bahrain/circuit.webp" target="_blank">
-            <img src="/formulaone/races/bahrain/circuit.webp" className="inline-block h-96 m-2" alt={"Bahrain International Circuit. 57 laps. 63% Safety Car chance. 1 minute 31.447 fastest historic lap time."} />
-          </a>
-          <a href="/formulaone/races/bahrain/starting-grid.webp" target="_blank">
-            <img src="/formulaone/races/bahrain/starting-grid.webp" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Russell in second and Perez third."} />
-          </a>
-          <a href="/formulaone/races/bahrain/race-result.webp" target="_blank">
-            <img src="/formulaone/races/bahrain/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."} />
-          </a>
+        <div className="h-full w-full m-auto overflow-x-auto whitespace-nowrap">
+          <div className="h-max w-max m-auto">
+            <a href="/formulaone/races/bahrain/circuit.webp" target="_blank">
+              <img src="/formulaone/races/bahrain/circuit.webp" className="inline-block h-96 m-2"
+                alt={"Bahrain International Circuit. 57 laps. 63% Safety Car chance. 1 minute 31.447 fastest historic lap time."}
+              />
+            </a>
+            <a href="/formulaone/races/bahrain/starting-grid.webp" target="_blank">
+              <img src="/formulaone/races/bahrain/starting-grid.webp" className="inline-block h-96 m-2"
+                alt={"Starting Grid. Max Verstappen starts on pole, Russell in second and Perez third."}
+              />
+            </a>
+            <a href="/formulaone/races/bahrain/race-result.webp" target="_blank">
+              <img src="/formulaone/races/bahrain/race-result.webp" className="inline-block h-96 m-2"
+                alt={"Race Results. Max Verstappen won, Perez came second and Sainz third."}
+              />
+            </a>
+          </div>
         </div>
       </Paragraph>
       <Paragraph title="Schedule">

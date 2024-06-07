@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 import redirect from "../components/redirect";
 
 const WumpusReadmePage = () => {
-  redirect("/", false);
+  redirect("/wumpus", false);
   return (
     <>
       <NavBar activePage="wumpus" />
@@ -60,7 +60,7 @@ const WumpusReadmePage = () => {
             </svg>
             <div className="font-semibold inline">Note</div>
           </h3>
-          We are still in the process of rewriting this bot. As of now, there's not much to see here. We have a (private) roadmap of what we wish to do, but we are not setting any deadlines. We'll update this page as we progress and add features, specifically the{" "}
+          We are still in the process of rewriting this bot. As of now, there&apos;s not much to see here. We have a (private) roadmap of what we wish to do, but we are not setting any deadlines. We&apos;ll update this page as we progress and add features, specifically the{" "}
           <a className="text-blue-500 underline underline-offset-2" href="#features">
             Features
           </a>{" "}
@@ -82,7 +82,7 @@ const WumpusReadmePage = () => {
             Features
             <hr className="h-[2px] my-[4px] bg-[#30363d] border-none" />
           </h2>
-          It's still early days in our rewrite of this bot. You'll find more information on our features here soon!
+          It&apos;s still early days in our rewrite of this bot. You&apos;ll find more information on our features here soon!
         </div>
 
         <div>

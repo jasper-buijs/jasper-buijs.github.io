@@ -7,7 +7,7 @@ import Paragraph from "@/app/components/Paragraph";
 import redirect from "@/app/components/redirect";
 
 const Page = () => {
-  redirect("/formulaone", false);
+  redirect("/formulaone/races/pst", false);
   const f1 = <img className="inline h-[0.5rem] mr-1" src="/formulaone/f1web.webp" alt={"Formula 1"} />;
   return (
     <>

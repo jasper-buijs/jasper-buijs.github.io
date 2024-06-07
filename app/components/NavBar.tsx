@@ -40,3 +40,4 @@ const NavBar = ({ activePage }: NavBarProps) => {
 };
 
 export default NavBar;
+export type { NavBarProps };

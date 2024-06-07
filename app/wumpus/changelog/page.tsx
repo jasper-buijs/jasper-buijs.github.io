@@ -41,7 +41,7 @@ const WumpusChangelogPage = () => {
 
       <Paragraph title="Release 3.4.0">
         <ChangeIconGrid>
-          <ChangeIconGridElement type="added">Added a voice channel named "the abyss of awkwardness", joining it will auto-create a new temporary voice channel.</ChangeIconGridElement>
+          <ChangeIconGridElement type="added">Added a voice channel named &quot;the abyss of awkwardness&quot;, joining it will auto-create a new temporary voice channel.</ChangeIconGridElement>
           <ChangeIconGridElement type="fixed" command="/play">
             Fixed a bug that would cause the bot to crash at the start of songs.
           </ChangeIconGridElement>
@@ -76,7 +76,7 @@ const WumpusChangelogPage = () => {
       <Paragraph title="Release 3.2.1">
         <ChangeIconGrid>
           <ChangeIconGridElement type="fixed" command="/play">
-            Fixed an issue with the <CodeBlock>/play</CodeBlock> command that would make the bot sometimes randomly crash at the beginning of songs. (At least, this is an attempt, but I'm still monitoring closely to see how effective it is.)
+            Fixed an issue with the <CodeBlock>/play</CodeBlock> command that would make the bot sometimes randomly crash at the beginning of songs. (At least, this is an attempt, but I&apos;m still monitoring closely to see how effective it is.)
           </ChangeIconGridElement>
         </ChangeIconGrid>
       </Paragraph>
@@ -90,7 +90,7 @@ const WumpusChangelogPage = () => {
             Added support for songs up to 30 minutes, in stead of 15.
           </ChangeIconGridElement>
           <ChangeIconGridElement type="added" command="/play">
-            Added a "platform" selector that allows users to choose a source from which their music will be played (given it's not a URL). There is now access to five sources: YouTube, Spotify, Apple Music, SoundCloud, and regular audio files through direct URLs.
+            Added a &quot;platform&quot; selector that allows users to choose a source from which their music will be played (given it&apos;s not a URL). There is now access to five sources: YouTube, Spotify, Apple Music, SoundCloud, and regular audio files through direct URLs.
           </ChangeIconGridElement>
         </ChangeIconGrid>
       </Paragraph>

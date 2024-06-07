@@ -7,7 +7,7 @@ import Paragraph from "@/app/components/Paragraph";
 import FooterBar from "@/app/components/FooterBar";
 
 const Page = () => {
-  redirect("/formulaone", false);
+  redirect("/formulaone/races/miami", false);
 
   const f1 = (
     <div className={ "inline-block w-10 relative h-[0.5rem]" }>
@@ -99,8 +99,8 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 3, 2024 10:40:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
-                ].join("")
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
+                ].join(" ")
               }
             </td>
           </tr>
@@ -116,7 +116,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 3, 2024 13:30:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -133,7 +133,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 3, 2024 16:00:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -150,7 +150,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 3, 2024 17:14:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -184,7 +184,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 4, 2024 10:55:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -201,7 +201,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 4, 2024 12:30:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -224,7 +224,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 4, 2024 14:40:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -244,7 +244,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 4, 2024 17:00:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -278,7 +278,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 5, 2024 13:40:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>
@@ -298,7 +298,7 @@ const Page = () => {
                     .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" }),
                   "-",
                   new Date("May 5, 2024 18:00:00 UTC-04:00")
-                    .toLocaleString(undefined, { weekday: "long", hour: "2-digit", minute: "2-digit" })
+                    .toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" })
                 ].join(" ")
               }
             </td>

@@ -7,7 +7,7 @@ import Paragraph from "@/app/components/Paragraph";
 import redirect from "@/app/components/redirect";
 
 const Page = () => {
-  redirect("/formulaone", false);
+  redirect("/formulaone/races/australia", false);
   const f1 = (
     <div className="inline-block w-10 relative h-[0.5rem]">
       <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.webp" alt="Formula 1" />
@@ -42,16 +42,24 @@ const Page = () => {
         </div>
       </div>
       <Paragraph title="Weekend Graphics">
-        <div className="h-max w-max m-auto">
-          <a href="/formulaone/races/australia/circuit.webp" target="_blank">
-            <img src="/formulaone/races/australia/circuit.webp" className="inline-block h-96 m-2" alt="Albert Park Circuit. 4 DRS zones. 58 laps. 67% Safety Car chance. 1 minute 20.235 fastest historic race lap time." />
-          </a>
-          <a href="/formulaone/races/australia/starting-grid.webp" target="_blank">
-            <img src="/formulaone/races/australia/starting-grid.webp" className="inline-block h-96 m-2" alt={"Starting Grid. Max Verstappen starts on pole, Sainz in second and Norris third."} />
-          </a>
-          <a href="/formulaone/races/australia/race-result.webp" target="_blank">
-            <img src="/formulaone/races/australia/race-result.webp" className="inline-block h-96 m-2" alt={"Race Results. Carlos Sainz won, Leclerc came second and Norris third."}/>
-          </a>
+        <div className="h-full w-full m-auto overflow-x-auto whitespace-nowrap">
+          <div className="h-max w-max m-auto">
+            <a href="/formulaone/races/australia/circuit.webp" target="_blank">
+              <img src="/formulaone/races/australia/circuit.webp" className="inline-block h-96 m-2"
+                alt="Albert Park Circuit. 4 DRS zones. 58 laps. 67% Safety Car chance. 1 minute 20.235 fastest historic race lap time."
+              />
+            </a>
+            <a href="/formulaone/races/australia/starting-grid.webp" target="_blank">
+              <img src="/formulaone/races/australia/starting-grid.webp" className="inline-block h-96 m-2"
+                alt={"Starting Grid. Max Verstappen starts on pole, Sainz in second and Norris third."}
+              />
+            </a>
+            <a href="/formulaone/races/australia/race-result.webp" target="_blank">
+              <img src="/formulaone/races/australia/race-result.webp" className="inline-block h-96 m-2"
+                alt={"Race Results. Carlos Sainz won, Leclerc came second and Norris third."}
+              />
+            </a>
+          </div>
         </div>
       </Paragraph>
       <Paragraph title="Schedule">
@@ -156,10 +164,6 @@ const Page = () => {
                  alt={"Formula 2 Feature results."}/>
           </a>
         </div>
-        <p className="text-center font-normal text-sm italic mt-4">Note: Isack Hadjar received a 10-second
-          post-race penalty in the Sprint Race for causing a collision.</p>
-        <p className="text-center font-normal text-sm italic mb-2">Note: Franco Colapinto was disqualified from the
-          Feature Race for a breach of the technical regulations.</p>
       </Paragraph>
       <Paragraph title={"Formula 3"}>
         <div className="h-max w-max m-auto">
