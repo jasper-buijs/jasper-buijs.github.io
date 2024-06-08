@@ -118,14 +118,14 @@ const Home = () => {
           </a>
 
           {/*CANADA GP*/}
-          <div className="w-full h-28 relative row-start-10 row-span-1 col-start-1 col-span-1">
+          <a href={"/mobile/formulaone/races/canada"} className="w-full h-28 relative row-start-10 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EA2C36] to-[#010101] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 9</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-15px)]">CANADIAN GRAND PRIX</p>
               <p className="block text-white truncate max-w-[calc(100%-15px)]">Circuit Gilles-Villeneuve</p>
               <p className="inline-block text-white mr-3">Jun 7 - 9</p>
             </div>
-          </div>
+          </a>
 
           {/*SPAIN GP*/}
           <div className="w-full h-28 relative row-start-11 row-span-1 col-start-1 col-span-1">
