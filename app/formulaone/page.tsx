@@ -156,7 +156,7 @@ const FormulaOnePage = () => {
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Canada%20carbon.png" />
           </a>
           {/*SPAIN GP*/}
-          <div className="w-full h-32 relative row-start-6 row-span-1 col-start-2 col-span-1">
+          <a href="/formulaone/races/spain" className="w-full h-32 relative row-start-6 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#E20612] to-[#FFD403] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 10</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2024</p>
@@ -165,9 +165,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1680529432/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Spain%20carbon.png" />
-          </div>
+          </a>
           {/*AUSTRIA GP*/}
-          <div className="w-full h-32 relative row-start-7 row-span-1 col-start-1 col-span-1">
+          <a href="/formulaone/races/austria" className="w-full h-32 relative row-start-7 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 11</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024</p>
@@ -176,7 +176,7 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Austria%20carbon.png" />
-          </div>
+          </a>
           {/*UK GP*/}
           <div className="w-full h-32 relative row-start-7 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#C7102E] to-[#032169] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>

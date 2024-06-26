@@ -38,13 +38,14 @@ const Page = () => {
               <img src="/formulaone/races/canada/circuit.webp" className="inline-block h-48 m-2"
                    alt="Circuit Gilles-Villeneuve. 3 DRS zones. 70 laps. 67% Safety Car chance. 1 minute 13.078 fastest historic race lap time."/>
             </a>
-            {/*<a href="/formulaone/races/canada/starting-grid.webp" target="_blank">
+            <a href="/formulaone/races/canada/starting-grid.webp" target="_blank">
               <img src="/formulaone/races/canada/starting-grid.webp" className="inline-block h-48 m-2"
-                   alt={"Starting Grid. Charles Leclerc starts on pole, Piastri in second and Sainz third."} />
+                   alt={"Starting Grid. George Russell starts on pole, Verstappen in second and Norris third."} />
             </a>
             <a href="/formulaone/races/canada/race-result.webp" target="_blank">
-              <img src="/formulaone/races/canada/race-result.webp" className="inline-block h-48 m-2" alt={"Race Results. Charles Leclerc won, Piastri came second and Sainz third."} />
-            </a>*/ }
+              <img src="/formulaone/races/canada/race-result.webp" className="inline-block h-48 m-2"
+                alt={"Race Results. Max Verstappen won, Norris came second and Russell third."} />
+            </a>
           </div>
         </div>
       </Paragraph>

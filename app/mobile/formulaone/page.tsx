@@ -128,7 +128,7 @@ const Home = () => {
           </a>
 
           {/*SPAIN GP*/}
-          <div className="w-full h-28 relative row-start-11 row-span-1 col-start-1 col-span-1">
+          <a href="/mobile/formulaone/races/spain" className="w-full h-28 relative row-start-11 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E20612] to-[#FFD403] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 10</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-15px)]">SPANISH GRAND PRIX</p>
@@ -136,10 +136,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Jun 21 - 23</p>
               <CalendarEmblems f2 f3 f1a />
             </div>
-          </div>
+          </a>
 
           {/*AUSTRIA GP*/}
-          <div className="w-full h-28 relative row-start-12 row-span-1 col-start-1 col-span-1">
+          <a href="/mobile/formulaone/races/austria" className="w-full h-28 relative row-start-12 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 11</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-15px)]">AUSTRIAN GRAND PRIX</p>
@@ -147,7 +147,7 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Jun 28 - 30</p>
               <CalendarEmblems sprint f2 f3 />
             </div>
-          </div>
+          </a>
 
           {/*UK GP*/}
           <div className="w-full h-28 relative row-start-13 row-span-1 col-start-1 col-span-1">
