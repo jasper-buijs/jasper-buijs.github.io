@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import FooterBar from "../components/FooterBar";
 import NavBar from "../components/NavBar";
 import Paragraph from "../components/Paragraph";
-import Alert from "../components/Alert";
 import redirect from "../components/redirect";
 import { CalendarGrid, CalendarEmblems } from "../components/formulaone/CalendarGrid";
 import Drivers from "../components/formulaone/standings/Drivers";
