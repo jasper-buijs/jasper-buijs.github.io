@@ -178,7 +178,7 @@ const FormulaOnePage = () => {
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Austria%20carbon.png" />
           </a>
           {/*UK GP*/}
-          <div className="w-full h-32 relative row-start-7 row-span-1 col-start-2 col-span-1">
+          <a href="formulaone/races/britain" className="w-full h-32 relative row-start-7 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#C7102E] to-[#032169] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 12</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2024</p>
@@ -187,7 +187,7 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Great%20Britain%20carbon.png" />
-          </div>
+          </a>
           {/*HUNGARY GP*/}
           <div className="w-full h-32 relative row-start-8 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E10813] to-[#2E8C2C] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>

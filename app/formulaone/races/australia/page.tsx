@@ -156,11 +156,11 @@ const Page = () => {
       <Paragraph title={"Formula 2"}>
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/australia/f2-sprint.webp" target="_blank">
-            <img src="/formulaone/races/australia/f2-sprint.webp" className="inline-block h-96 m-2"
+            <img src="/formulaone/races/australia/f2-sprint.webp" className="inline-block h-80 m-2"
                  alt={"Formula 2 Sprint results."}/>
           </a>
           <a href="/formulaone/races/australia/f2-feature.webp" target="_blank">
-            <img src="/formulaone/races/australia/f2-feature.webp" className="inline-block h-96 m-2"
+            <img src="/formulaone/races/australia/f2-feature.webp" className="inline-block h-80 m-2"
                  alt={"Formula 2 Feature results."}/>
           </a>
         </div>
@@ -168,11 +168,11 @@ const Page = () => {
       <Paragraph title={"Formula 3"}>
         <div className="h-max w-max m-auto">
           <a href="/formulaone/races/australia/f3-sprint.webp" target="_blank">
-            <img src="/formulaone/races/australia/f3-sprint.webp" className="inline-block h-96 m-2"
+            <img src="/formulaone/races/australia/f3-sprint.webp" className="inline-block h-80 m-2"
                  alt={"Formula 3 Sprint results."} />
           </a>
           <a href="/formulaone/races/australia/f3-feature.webp" target="_blank">
-            <img src="/formulaone/races/australia/f3-feature.webp" className="inline-block h-96 m-2"
+            <img src="/formulaone/races/australia/f3-feature.webp" className="inline-block h-80 m-2"
                  alt={"Formula 3 Feature results."} />
           </a>
         </div>

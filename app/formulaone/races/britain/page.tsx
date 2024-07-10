@@ -7,7 +7,7 @@ import Paragraph from "@/app/components/Paragraph";
 import redirect from "@/app/components/redirect";
 
 const Page = () => {
-  redirect("/formulaone/races/austria", false);
+  redirect("/formulaone/races/britain", false);
   const f1 = (<div className="inline-block w-10 relative h-[0.5rem]">
     <img className="inline h-[0.5rem] absolute left-1/2 top-0 translate-x-[-50%]" src="/formulaone/f1web.webp"
       alt={"Formula 1"}
@@ -23,12 +23,6 @@ const Page = () => {
       <img className="inline-block h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f3.webp" alt={"Formula 3"} />
     </div>
   );
-  const sprint = (
-    <div className="inline-block w-20 relative h-[0.5rem]">
-      <img className="inline-block dark:hidden h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1-sprint-text-black.webp" alt={"F1 Sprint"} />
-      <img className="dark:inline-block hidden h-[0.5rem] absolute left-1/2 translate-x-[-50%]" src="/formulaone/f1-sprint-text-white.webp" alt={"F1 Sprint"} />
-    </div>
-  );
   const hm = (<div className="inline-block w-5 relative h-[1rem]">
     <img className="inline-block h-[1rem] absolute left-1/2 translate-x-[-50%] translate-y-[12.5%]"
       src="/formulaone/heiligemaagden128x128.webp" alt={"Streamed on heiligemaagden.com."}
@@ -41,39 +35,29 @@ const Page = () => {
   </div>);
   return (<>
     <NavBar activePage="formulaone" />
-    <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D]">
+    <div className="h-[28vw] mx-12 bg-gradient-to-r from-[#C7102E] to-[#032169]">
       <div className="h-full w-full relative">
         <img className="absolute w-full h-auto top-1/2 translate-y-[-50%]"
-          src="/formulaone/banners-dated/austria-header-dated.webp" alt={""}
+          src="/formulaone/banners-dated/britain-header-dated.webp" alt={""}
         />
       </div>
     </div>
     <Paragraph title="Weekend Graphics">
       <div className="h-full w-full m-auto overflow-x-auto whitespace-nowrap">
         <div className={"h-max w-max m-auto"}>
-          <a href="/formulaone/races/austria/circuit.webp" target="_blank">
-            <img src="/formulaone/races/austria/circuit.webp" className="inline-block h-96 m-2"
-              alt="Red Bull Ring. 3 DRS zones. 71 laps. 50% Safety Car chance. 1 minute 5.619 fastest historic race lap time."
+          <a href="/formulaone/races/britain/circuit.webp" target="_blank">
+            <img src="/formulaone/races/britain/circuit.webp" className="inline-block h-96 m-2"
+              alt="Silverstone Circuit. 2 DRS zones. 52 laps. 89% Safety Car chance. 1 minute 27.097 fastest historic race lap time."
             />
           </a>
-          <a href="/formulaone/races/austria/sprint-starting-grid.webp" target="_blank">
-            <img src="/formulaone/races/austria/sprint-starting-grid.webp" className="inline-block h-96 m-2"
-              alt={"Sprint Starting Grid. Max Verstappen starts on pole, Norris in second and Piastri third."}
+          <a href="/formulaone/races/britain/starting-grid.webp" target="_blank">
+            <img src="/formulaone/races/britain/starting-grid.webp" className="inline-block h-96 m-2"
+              alt={"Starting Grid. George Russell starts on pole, Hamilton in second and Norris third."}
             />
           </a>
-          <a href="/formulaone/races/austria/sprint-race-result.webp" target="_blank">
-            <img src="/formulaone/races/austria/sprint-race-result.webp" className="inline-block h-96 m-2"
-              alt={"Sprint Results. Max Verstappen won, Piastri came second and Norris third."}
-            />
-          </a>
-          <a href="/formulaone/races/austria/starting-grid.webp" target="_blank">
-            <img src="/formulaone/races/austria/starting-grid.webp" className="inline-block h-96 m-2"
-              alt={"Starting Grid. Max Verstappen starts on pole, Norris in second and Russell third."}
-            />
-          </a>
-          <a href="/formulaone/races/austria/race-result.webp" target="_blank">
-            <img src="/formulaone/races/austria/race-result.webp" className="inline-block h-96 m-2"
-              alt={"Race Results. George Russell won, Piastri came second and Sainz third."}
+          <a href="/formulaone/races/britain/race-result.webp" target="_blank">
+            <img src="/formulaone/races/britain/race-result.webp" className="inline-block h-96 m-2"
+              alt={"Race Results. Lewis Hamilton won, Verstappen came second and Norris third."}
             />
           </a>
         </div>
@@ -83,7 +67,7 @@ const Page = () => {
       <table className="w-max m-auto table-auto">
         <tbody>
         <tr>
-          <th className="pr-2 text-left max-w-0 whitespace-nowrap">Friday June 28</th>
+          <th className="pr-2 text-left max-w-0 whitespace-nowrap">Friday July 5</th>
           <th className="pr-2 text-left"></th>
           <th className="pr-2 text-left"></th>
           <th className="pr-2 text-left"></th>
@@ -91,9 +75,9 @@ const Page = () => {
         <tr>
           <td className="pr-2">{f3}Practice</td>
           <td className="pr-2">
-            {[new Date("June 28, 2024 08:55:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 5, 2024 08:40:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 28, 2024 09:40:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 5, 2024 09:25:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
@@ -101,9 +85,9 @@ const Page = () => {
         <tr>
           <td className="pr-2">{f2}Practice</td>
           <td className="pr-2">
-            {[new Date("June 28, 2024 10:05:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 5, 2024 10:00:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 28, 2024 10:50:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 5, 2024 10:45:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
@@ -111,9 +95,9 @@ const Page = () => {
         <tr>
           <td className="pr-2">{f1}Practice 1</td>
           <td className="pr-2">
-            {[new Date("June 28, 2024 12:30:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 5, 2024 12:30:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 28, 2024 13:30:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 5, 2024 13:30:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
@@ -121,9 +105,9 @@ const Page = () => {
         <tr>
           <td className="pr-2">{f3}Qualifying</td>
           <td className="pr-2">
-            {[new Date("June 28, 2024 14:00:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 5, 2024 14:05:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 28, 2024 14:30:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 5, 2024 14:35:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
@@ -131,74 +115,59 @@ const Page = () => {
         <tr>
           <td className="pr-2">{f2}Qualifying</td>
           <td className="pr-2">
-            {[new Date("June 28, 2024 14:55:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 5, 2024 15:05:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 28, 2024 15:25:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 5, 2024 15:35:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
         </tr>
         <tr>
-          <td className="pr-2">{sprint} Qualifying</td>
+          <td className="pr-2">{f1}Practice 2</td>
           <td className="pr-2">
-            {[new Date("June 28, 2024 16:30:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 5, 2024 16:00:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 28, 2024 17:00:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 5, 2024 17:00:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
-          <td className="pr-2">12&apos; + 10&apos; + 8&apos;</td>
-          <td className="pr-2">{auvio}</td>
         </tr>
         <tr>
           <td className="h-[2rem]"></td>
         </tr>
         <tr>
-          <th className="pr-2 text-left max-w-0 whitespace-nowrap">Saturday June 29</th>
+          <th className="pr-2 text-left max-w-0 whitespace-nowrap">Saturday July 6</th>
           <th className="pr-2 text-left"></th>
           <th className="pr-2 text-left"></th>
           <th className="pr-2 text-left"></th>
         </tr>
         <tr>
-          <td className="pr-2">{f3}Sprint Race</td>
+          <td className="pr-2">{f1}Practice 3</td>
           <td className="pr-2">
-            {[new Date("June 29, 2024 09:30:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 6, 2024 11:30:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 29, 2024 10:15:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 6, 2024 12:30:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
-          <td className="pr-2">21L or 40&apos;+1L</td>
-        </tr>
-        <tr>
-          <td className="pr-2">{sprint}</td>
-          <td className="pr-2">
-            {[new Date("June 29, 2024 12:00:00 UTC+02:00").toLocaleString(undefined, {
-              weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 29, 2024 12:30:00 UTC+02:00").toLocaleString(undefined, {
-              hour: "2-digit", minute: "2-digit",
-            })].join(" ")}
-          </td>
-          <td className="pr-2">24L or 1h+1L</td>
-          <td className="pr-2">{hm}{auvio}</td>
         </tr>
         <tr>
           <td className="pr-2">{f2}Sprint Race</td>
           <td className="pr-2">
-            {[new Date("June 29, 2024 13:30:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 6, 2024 13:15:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 29, 2024 14:20:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 6, 2024 14:05:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
-          <td className="pr-2">28L or 45&apos;+1L</td>
+          <td className="pr-2">21L or 45&apos;+1L</td>
         </tr>
         <tr>
           <td className="pr-2">{f1}Qualifying</td>
           <td className="pr-2">
-            {[new Date("June 29, 2024 16:00:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 6, 2024 15:00:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 29, 2024 17:00:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 6, 2024 16:00:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
@@ -206,10 +175,21 @@ const Page = () => {
           <td className="pr-2">{hm}{auvio}</td>
         </tr>
         <tr>
+          <td className="pr-2">{f3}Sprint Race</td>
+          <td className="pr-2">
+            {[new Date("July 6, 2024 18:10:00 UTC+01:00").toLocaleString(undefined, {
+              weekday: "long", hour: "2-digit", minute: "2-digit",
+            }), "-", new Date("July 6, 2024 18:55:00 UTC+01:00").toLocaleString(undefined, {
+              hour: "2-digit", minute: "2-digit",
+            })].join(" ")}
+          </td>
+          <td className="pr-2">18L or 40&apos;+1L</td>
+        </tr>
+        <tr>
           <td className="h-[2rem]"></td>
         </tr>
         <tr>
-          <th className="pr-2 text-left max-w-0 whitespace-nowrap">Sunday June 30</th>
+          <th className="pr-2 text-left max-w-0 whitespace-nowrap">Sunday July 7</th>
           <th className="pr-2 text-left"></th>
           <th className="pr-2 text-left"></th>
           <th className="pr-2 text-left"></th>
@@ -217,35 +197,35 @@ const Page = () => {
         <tr>
           <td className="pr-2">{f3}Feature Race</td>
           <td className="pr-2">
-            {[new Date("June 30, 2024 08:30:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 7, 2024 08:20:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 30, 2024 09:20:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 7, 2024 09:10:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
-          <td className="pr-2">26L or 45&apos;+1L</td>
+          <td className="pr-2">22L or 45&apos;+1L</td>
         </tr>
         <tr>
           <td className="pr-2">{f2}Feature Race</td>
           <td className="pr-2">
-            {[new Date("June 30, 2024 10:00:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 7, 2024 09:55:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 30, 2024 11:05:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 7, 2024 11:00:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
-          <td className="pr-2">40L or 1h+1L</td>
+          <td className="pr-2">29L or 1h+1L</td>
         </tr>
         <tr>
           <td className="pr-2">{f1}Race</td>
           <td className="pr-2">
-            {[new Date("June 30, 2024 15:00:00 UTC+02:00").toLocaleString(undefined, {
+            {[new Date("July 7, 2024 15:00:00 UTC+01:00").toLocaleString(undefined, {
               weekday: "long", hour: "2-digit", minute: "2-digit",
-            }), "-", new Date("June 30, 2024 17:00:00 UTC+02:00").toLocaleString(undefined, {
+            }), "-", new Date("July 7, 2024 17:00:00 UTC+01:00").toLocaleString(undefined, {
               hour: "2-digit", minute: "2-digit",
             })].join(" ")}
           </td>
-          <td className="pr-2">71L or 2h+1L</td>
+          <td className="pr-2">52L or 2h+1L</td>
           <td className="pr-2">{hm}{auvio}</td>
         </tr>
         </tbody>
@@ -258,21 +238,21 @@ const Page = () => {
     </Paragraph>
     <Paragraph title="Formula 2">
       <div className="h-max w-max m-auto">
-        <a href="/formulaone/races/austria/f2-sprint.webp" target="_blank">
-          <img src="/formulaone/races/austria/f2-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 2 Sprint results."} />
+        <a href="/formulaone/races/britain/f2-sprint.webp" target="_blank">
+          <img src="/formulaone/races/britain/f2-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 2 Sprint results."} />
         </a>
-        <a href="/formulaone/races/austria/f2-feature.webp" target="_blank">
-          <img src="/formulaone/races/austria/f2-feature.webp" className="inline-block h-80 m-2" alt={"Formula 2 Feature results."} />
+        <a href="/formulaone/races/britain/f2-feature.webp" target="_blank">
+          <img src="/formulaone/races/britain/f2-feature.webp" className="inline-block h-80 m-2" alt={"Formula 2 Feature results."} />
         </a>
       </div>
     </Paragraph>
     <Paragraph title="Formula 3">
       <div className="h-max w-max m-auto">
-        <a href="/formulaone/races/austria/f3-sprint.webp" target="_blank">
-          <img src="/formulaone/races/austria/f3-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
+        <a href="/formulaone/races/britain/f3-sprint.webp" target="_blank">
+          <img src="/formulaone/races/britain/f3-sprint.webp" className="inline-block h-80 m-2" alt={"Formula 3 Sprint results."} />
         </a>
-        <a href="/formulaone/races/austria/f3-feature.webp" target="_blank">
-          <img src="/formulaone/races/austria/f3-feature.webp" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
+        <a href="/formulaone/races/britain/f3-feature.webp" target="_blank">
+          <img src="/formulaone/races/britain/f3-feature.webp" className="inline-block h-80 m-2" alt={"Formula 3 Feature results."} />
         </a>
       </div>
     </Paragraph>
