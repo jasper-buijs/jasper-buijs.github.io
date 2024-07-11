@@ -94,7 +94,7 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
             </div>
           </div>
           <div className={ "ml-12 h-max w-full " + (expanded == "SAR" ? "inline-block" : "hidden") }>
-            <b>Italy GP 2023</b>
+            <b>Italian GP 2023</b>
             <ul className={ "list-disc" }>
               <li>2 points until 3 September 2024 for Causing a Collision.</li>
             </ul>
@@ -158,56 +158,9 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
             <ul className={ "list-disc" }>
               <li>2 points until 26 November 2024 for Causing a Collision.</li>
             </ul>
-            <b>Saudi Arabia GP 2024</b>
+            <b>Saudi Arabian GP 2024</b>
             <ul className={ "list-disc" }>
               <li>1 point until 9 March 2025 for an Unsafe Release.</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* LANCE STROLL */ }
-        <div
-          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#229971]" }>
-          <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">18</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
-                  <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Lance Stroll
-                  </div>
-                  <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Aston Martin
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={ "absolute right-4 top-[10px]" }>
-              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
-              <div className={ "text-3xl inline-block" }>7</div>
-              <div className={ "text-md inline-block mr-4" }>/12</div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "STR" ? "hidden" : "inline-block") }
-                onClick={ () => setExpanded("STR") }>▸
-              </div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "STR" ? "inline-block" : "hidden") }
-                onClick={ () => setExpanded(null) }>▾
-              </div>
-            </div>
-          </div>
-          <div className={ "ml-12 h-max w-full " + (expanded == "STR" ? "inline-block" : "hidden") }>
-            <b>British GP 2023</b>
-            <ul className={ "list-disc" }>
-              <li>2 points until 9 July 2024 for Causing a Collision.</li>
-            </ul>
-            <b>Las Vegas GP 2023</b>
-            <ul className={ "list-disc" }>
-              <li>3 points until 17 November 2024 for Overtaking under Yellow Flags.</li>
-            </ul>
-            <b>Chinese GP 2024</b>
-            <ul className={ "list-disc" }>
-              <li>2 points until 21 April 2025 for Causing a Collision.</li>
             </ul>
           </div>
         </div>
@@ -231,7 +184,7 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
             </div>
             <div className={ "absolute right-4 top-[10px]" }>
               <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
-              <div className={ "text-3xl inline-block" }>6</div>
+              <div className={ "text-3xl inline-block" }>8</div>
               <div className={ "text-md inline-block mr-4" }>/12</div>
               <div
                 className={ "text-3xl pb-[2px] align-bottom " + (expanded == "ALO" ? "hidden" : "inline-block") }
@@ -244,13 +197,103 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
             </div>
           </div>
           <div className={ "ml-12 h-max w-full " + (expanded == "ALO" ? "inline-block" : "hidden") }>
-            <b>Australia GP 2024</b>
+            <b>Australian GP 2024</b>
             <ul className={ "list-disc" }>
               <li>3 points until 24 March 2025 for Potentially Dangerous Driving.</li>
             </ul>
             <b>Chinese GP 2024</b>
             <ul className={ "list-disc" }>
               <li>3 points until 20 April 2025 for Causing a Collision.</li>
+            </ul>
+            <b>Austrian GP 2024</b>
+            <ul className="list-disc">
+              <li>2 points until 30 June 2025 for Causing a Collision.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* LANCE STROLL */ }
+        <div
+          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#229971]" }>
+          <div className={ "h-14 block" }>
+            <div className="absolute left-2 top-1 h-[3rem] w-full">
+              <div className="h-[3rem]">
+                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">18</div>
+                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+                  <div
+                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Lance Stroll
+                  </div>
+                  <div
+                    className="absolute left-[0rem] top-6 text-base w-max">Aston Martin
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={ "absolute right-4 top-[10px]" }>
+              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
+              <div className={ "text-3xl inline-block" }>5</div>
+              <div className={ "text-md inline-block mr-4" }>/12</div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "STR" ? "hidden" : "inline-block") }
+                onClick={ () => setExpanded("STR") }>▸
+              </div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "STR" ? "inline-block" : "hidden") }
+                onClick={ () => setExpanded(null) }>▾
+              </div>
+            </div>
+          </div>
+          <div className={ "ml-12 h-max w-full " + (expanded == "STR" ? "inline-block" : "hidden") }>
+            <b>Las Vegas GP 2023</b>
+            <ul className={ "list-disc" }>
+              <li>3 points until 17 November 2024 for Overtaking under Yellow Flags.</li>
+            </ul>
+            <b>Chinese GP 2024</b>
+            <ul className={ "list-disc" }>
+              <li>2 points until 21 April 2025 for Causing a Collision.</li>
+            </ul>
+          </div>
+        </div>
+
+        { /* MAX VERSTAPPEN */ }
+        <div
+          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#3671C6]" }>
+          <div className={ "h-14 block" }>
+            <div className="absolute left-2 top-1 h-[3rem] w-full">
+              <div className="h-[3rem]">
+                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">1</div>
+                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+                  <div
+                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Max Verstappen
+                  </div>
+                  <div
+                    className="absolute left-[0rem] top-6 text-base w-max">Red Bull Racing
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={ "absolute right-4 top-[10px]" }>
+              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
+              <div className={ "text-3xl inline-block" }>4</div>
+              <div className={ "text-md inline-block mr-4" }>/12</div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "VER" ? "hidden" : "inline-block") }
+                onClick={ () => setExpanded("VER") }>▸
+              </div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "VER" ? "inline-block" : "hidden") }
+                onClick={ () => setExpanded(null) }>▾
+              </div>
+            </div>
+          </div>
+          <div className={ "ml-12 h-max w-full " + (expanded == "VER" ? "inline-block" : "hidden") }>
+            <b>Las Vegas GP 2023</b>
+            <ul className={ "list-disc" }>
+              <li>2 points until 19 November 2024 for Forcing another Driver off the Track.</li>
+            </ul>
+            <b>Austrian GP 2024</b>
+            <ul className="list-disc">
+              <li>2 points until 30 June 2024 for Causing a Collision.</li>
             </ul>
           </div>
         </div>
@@ -298,49 +341,6 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
           </div>
         </div>
 
-        {/* YUKI TSUNODA */ }
-        <div
-          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#6692FF]" }>
-          <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">22</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
-                  <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Yuki Tsunoda
-                  </div>
-                  <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Racing Bulls
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={ "absolute right-4 top-[10px]" }>
-              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
-              <div className={ "text-3xl inline-block" }>3</div>
-              <div className={ "text-md inline-block mr-4" }>/12</div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "TSU" ? "hidden" : "inline-block") }
-                onClick={ () => setExpanded("TSU") }>▸
-              </div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "TSU" ? "inline-block" : "hidden") }
-                onClick={ () => setExpanded(null) }>▾
-              </div>
-            </div>
-          </div>
-          <div className={ "ml-12 h-max w-full " + (expanded == "TSU" ? "inline-block" : "hidden") }>
-            <b>Spanish GP 2023</b>
-            <ul className={ "list-disc" }>
-              <li>1 point until 4 July 2024 for Forcing another Driver of the Track.</li>
-            </ul>
-            <b>Dutch GP 2023</b>
-            <ul className={ "list-disc" }>
-              <li>2 points until 27 August 2024 for Causing a Collision.</li>
-            </ul>
-          </div>
-        </div>
-
         {/* ESTEBAN OCON */ }
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF87BC]" }>
@@ -384,45 +384,6 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
           </div>
         </div>
 
-        { /* MAX VERSTAPPEN */ }
-        <div
-          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#3671C6]" }>
-          <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">1</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
-                  <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Max Verstappen
-                  </div>
-                  <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Red Bull Racing
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={ "absolute right-4 top-[10px]" }>
-              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
-              <div className={ "text-3xl inline-block" }>2</div>
-              <div className={ "text-md inline-block mr-4" }>/12</div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "VER" ? "hidden" : "inline-block") }
-                onClick={ () => setExpanded("VER") }>▸
-              </div>
-              <div
-                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "VER" ? "inline-block" : "hidden") }
-                onClick={ () => setExpanded(null) }>▾
-              </div>
-            </div>
-          </div>
-          <div className={ "ml-12 h-max w-full " + (expanded == "VER" ? "inline-block" : "hidden") }>
-            <b>Las Vegas GP 2023</b>
-            <ul className={ "list-disc" }>
-              <li>2 points until 19 November 2024 for Forcing another Driver off the Track.</li>
-            </ul>
-          </div>
-        </div>
-
         {/* DANIEL RICCIARDO */ }
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#6692FF]" }>
@@ -458,6 +419,45 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
             <b>Chinese GP 2024</b>
             <ul className={ "list-disc" }>
               <li>2 points until 21 April 2025 for Overtaking under Safety Car.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* YUKI TSUNODA */ }
+        <div
+          className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#6692FF]" }>
+          <div className={ "h-14 block" }>
+            <div className="absolute left-2 top-1 h-[3rem] w-full">
+              <div className="h-[3rem]">
+                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">22</div>
+                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+                  <div
+                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Yuki Tsunoda
+                  </div>
+                  <div
+                    className="absolute left-[0rem] top-6 text-base w-max">Racing Bulls
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={ "absolute right-4 top-[10px]" }>
+              <div className={ "text-md mr-2 italic inline-block" }>penalty points:</div>
+              <div className={ "text-3xl inline-block" }>2</div>
+              <div className={ "text-md inline-block mr-4" }>/12</div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "TSU" ? "hidden" : "inline-block") }
+                onClick={ () => setExpanded("TSU") }>▸
+              </div>
+              <div
+                className={ "text-3xl pb-[2px] align-bottom " + (expanded == "TSU" ? "inline-block" : "hidden") }
+                onClick={ () => setExpanded(null) }>▾
+              </div>
+            </div>
+          </div>
+          <div className={ "ml-12 h-max w-full " + (expanded == "TSU" ? "inline-block" : "hidden") }>
+            <b>Dutch GP 2023</b>
+            <ul className={ "list-disc" }>
+              <li>2 points until 27 August 2024 for Causing a Collision.</li>
             </ul>
           </div>
         </div>
@@ -768,8 +768,8 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
           </div>
         </div>
 
-        <p className={"italic mt-4"}>{"Last updated on " + new Date("May 29, 2024 21:00:00 UTC+02:00")
-          .toLocaleString(undefined, { dateStyle: "medium" }) + " after the Monaco GP."}</p>
+        <p className={"italic mt-4"}>{"Last updated on " + new Date("July 11, 2024 9:00:00 UTC+02:00")
+          .toLocaleString(undefined, { dateStyle: "medium" }) + " after the British GP."}</p>
 
       </Paragraph>
       <FooterBar/>
