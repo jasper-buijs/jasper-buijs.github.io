@@ -161,7 +161,7 @@ const Home = () => {
           </a>
 
           {/*HUNGARY GP*/}
-          <div className="w-full h-28 relative row-start-14 row-span-1 col-start-1 col-span-1">
+          <a href="/mobile/formulaone/races/hungary" className="w-full h-28 relative row-start-14 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E10813] to-[#2E8C2C] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 13</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-15px)]">HUNGARIAN GRAND PRIX</p>
@@ -169,7 +169,7 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Jul 19 - 21</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </div>
+          </a>
 
           {/*BELGIUM GP*/}
           <div className="w-full h-28 relative row-start-15 row-span-1 col-start-1 col-span-1">
