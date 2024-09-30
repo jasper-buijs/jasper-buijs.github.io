@@ -14,7 +14,7 @@ const MinecraftPage = () => {
     <>
       <NavBar activePage="minecraft" />
       <Alert type="danger" text={`The server will be offline on ${new Date("2024-10-03T07:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})} from ${new Date("2024-10-03T07:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})} until around ${new Date("2024-10-03T18:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})}. Follow the Discord channel for more specific updates.`} />
-      <Alert type="info" text={`Whitlist will be enabled on our server on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long", timeStyle: "short"})}. You should log on at least once before then.`} />
+      <Alert type="info" text={`Whitelist will be enabled on our server on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long", timeStyle: "short"})}. You should log on at least once before then.`} />
       <div className="block w-max ml-auto mr-auto mt-8">
         <img src="/logo-mc.png" className="inline-block h-64" alt={"Heilige Maagden Minecraft Server logo."} />
       </div>
@@ -52,7 +52,7 @@ const MinecraftPage = () => {
         in order to play.
       </Paragraph>*/}
       <Paragraph emoji="🌐" title="Server Up-Time">
-        The server won&apos;t always be online. If you want to play when the server is offline, send us a message in Discord. You can check whether the server is online in Discord. We&apos;ll try to announce in advance on the website (at the top of this page), in the server MOTD when the server will be offline, though this is no guarantee.
+        The server won&apos;t always be online. If you want to play when the server is offline, send us a message in Discord. You can check whether the server is online in Discord. We&apos;ll try to announce in advance, on the website (at the top of this page) and in the server MOTD, when the server will be offline, though this is no guarantee.
       </Paragraph>
       <Paragraph emoji="🗺️" title="World Map">
         {`Like on our last server, a map of the server will be made ever so often and uploaded to this page. This map differs from the classical biome maps in that changes to the world (and thus the things you build) will also appear on it. A first version of the map will be uploaded on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})}.`}
