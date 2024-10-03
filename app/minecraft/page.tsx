@@ -13,7 +13,7 @@ const MinecraftPage = () => {
   return (
     <>
       <NavBar activePage="minecraft" />
-      <Alert type="danger" text={`The server will be offline on ${new Date("2024-10-03T07:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})} from ${new Date("2024-10-03T07:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})} until around ${new Date("2024-10-03T18:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})}. Follow the Discord channel for more specific updates.`} />
+      <Alert type="danger" text={`The server will be offline on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})} from ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})} for about two hours. Follow the Discord channel for more specific updates.`} />
       <Alert type="info" text={`Whitelist will be enabled on our server on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long", timeStyle: "short"})}. You should log on at least once before then.`} />
       <div className="block w-max ml-auto mr-auto mt-8">
         <img src="/logo-mc.png" className="inline-block h-64" alt={"Heilige Maagden Minecraft Server logo."} />
