@@ -13,8 +13,8 @@ const Home = () => {
     <>
       <NavBar activePage="minecraft" />
       <div className="fixed ml-2 mr-20 mb-6 z-50 mt-5">
-        <Alert type="danger" text={`The server will be offline on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})} from ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})} for about two hours. Follow the Discord channel for more specific updates.`} />
-        <Alert type="info" text={`Whitelist will be enabled on our server on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long", timeStyle: "short"})}. You should log on at least once before then.`} />
+        <Alert type="danger" text={`The server will be offline on ${new Date("2024-10-07T07:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})} from ${new Date("2024-10-07T07:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})} until around ${new Date("2024-10-07T14:00:00+0200").toLocaleString("en-us", {timeStyle: "short"})}. Follow the Discord channel for more specific updates.`} />
+        {/*<Alert type="info" text={`Whitelist will be enabled on our server on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long", timeStyle: "short"})}. You should log on at least once before then.`} />*/}
       </div>
       <div className="py-6 pl-2 pr-20">
         <div className="block w-max ml-auto mr-auto">
@@ -40,11 +40,12 @@ const Home = () => {
                 <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/modernfix">ModernFix</Link></li>
                 <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/noisium">Noisium</Link></li>
                 <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/packet-fixer">Packet Fixer</Link></li>
+                <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/disconnect-packet-fix">Disconnect Packet Fix</Link></li>
+                <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/plugin/chunky">Chunky</Link></li>
               </ul>
             </li>
             <li>We also have two data packs installed, invisible item frames and game-pause (when there are no players).</li>
             <li>We don&apos;t have any resource packs active.</li>
-            <li>{`We'll be adding some additional mods on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {day: "numeric", month: "short"})}.`}</li>
           </ul>
           <br />
           Our server runs on Minecraft 1.21.1 (Java Edition). When a newer version of the game is released, we plan to update after a couple of weeks.
@@ -53,7 +54,7 @@ const Home = () => {
           The server won&apos;t always be online. If you want to play when the server is offline, send a message in Discord. We&apos;ll try to announce on the website (at the top of this page) and in the server MOTD when the server will be offline.
         </Paragraph>
         <Paragraph emoji="🗺️" title="World Map">
-          {`Like on our last server, a map of the server will be made and uploaded to this page. A first version of the map will be uploaded on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {day: "numeric", month: "short"})}. The map will only be available on desktop.`}
+          {`The map of our world as it was on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {day: "numeric", month: "short"})} can be viewed on this page on desktop. Mobile is not (yet) supported. If you are on desktop, you should try making this window larger.`}
         </Paragraph>
       </div>
     </>
