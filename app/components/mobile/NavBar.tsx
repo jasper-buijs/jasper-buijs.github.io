@@ -24,9 +24,12 @@ const NavBar = ({ activePage }: NavBarProps) => {
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center align-middle"}>
-            <Link className={"text-4xl leading-[4rem]"} href={"/mobile/formulaone"}>
+            {/*<Link className={"text-4xl leading-[4rem]"} href={"/mobile/formulaone"}>
               🏎️
-            </Link>
+            </Link>*/}
+            <div className={"text-4xl leading[4rem] grayscale inline-block"}>
+              🏎️
+            </div>
           </div>
         </div>
       </div>

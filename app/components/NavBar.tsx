@@ -23,9 +23,12 @@ const NavBar = ({ activePage }: NavBarProps) => {
           <Link href="/minecraft" className={"m-4 " + linkClassFilter("minecraft")}>
             Minecraft
           </Link>
-          <Link href="/formulaone" className={"m-4 " + linkClassFilter("formulaone")}>
+          {/*<Link href="/formulaone" className={"m-4 " + linkClassFilter("formulaone")}>
             Formula 1
-          </Link>
+          </Link>*/}
+          <div className="inline-block m-4 text-gray-400 line-through">
+            Formula 1
+          </div>
           {
             <a href="http://live.heiligemaagden.com/mystream">
               <div className="inline-block bg-red-600 text-white p-1 rounded absolute top-4 bottom-4 right-4">📡 Live Stream</div>
