@@ -9,27 +9,27 @@ const NavBar = ({ activePage }: NavBarProps) => {
         <div className={"bg-[#D6D6D6] dark:bg-[#1E1E1E] relative h-full"}>
           <img src="/logo.png" alt="Heilige Maagden Logo" className="inline-block h-16 w-16 mr-8"/>
           <div className={"flex h-16 w-16 justify-center align-middle"}>
-            <Link className={"text-4xl leading-[4rem]"} href={"/mobile"}>
+            <Link className={"text-4xl leading-[4rem]"} href={"/"}>
               🏠
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center align-middle"}>
-            <Link className={"text-4xl leading-[4rem]"} href={"/mobile/wumpus"}>
+            <Link className={"text-4xl leading-[4rem]"} href={"/magmuth"}>
               🤖
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center align-middle"}>
-            <Link className={"text-4xl leading-[4rem]"} href={"/mobile/minecraft"}>
+            <Link className={"text-4xl leading-[4rem]"} href={"/minecraft"}>
               ⛏️
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center align-middle"}>
-            {/*<Link className={"text-4xl leading-[4rem]"} href={"/mobile/formulaone"}>
+            <Link className={"text-4xl leading-[4rem]"} href={"/formulaone"}>
               🏎️
-            </Link>*/}
-            <div className={"text-4xl leading[4rem] grayscale inline-block"}>
+            </Link>
+            {/*<div className={"text-4xl leading[4rem] grayscale inline-block"}>
               🏎️
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>

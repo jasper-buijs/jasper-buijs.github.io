@@ -3,10 +3,8 @@
 import NavBar from "@/app/components/NavBar";
 import FooterBar from "@/app/components/FooterBar";
 import Paragraph from "@/app/components/Paragraph";
-import redirect from "@/app/components/redirect";
 
 const PDFPage: React.FunctionComponent = () => {
-  redirect("/formulaone", false);
   return (
     <>
       <NavBar activePage={"formulaone"} />

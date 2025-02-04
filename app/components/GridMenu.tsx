@@ -27,7 +27,7 @@ const GridMenuElement = ({ bgImage, title, href, columns, rows }: GridMenuElemen
   };
   const bgClasses = () => {
     if (bgImage != undefined) {
-      return "bg-[image:var(--image-url)] bg-cover brightness-[70%]";
+      return "bg-[image:var(--image-url)] bg-cover bg-center brightness-[70%]";
     } else {
       return "bg-[#D6D6D6] dark:bg-[#1E1E1E]";
     }

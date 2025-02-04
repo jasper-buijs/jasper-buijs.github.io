@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 interface CalendarEmblemsProps {
   sprint?: boolean;
   f2?: boolean;

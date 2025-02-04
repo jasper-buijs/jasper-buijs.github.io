@@ -3,11 +3,9 @@
 import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
-import redirect from "@/app/components/redirect";
 import { useState } from "react";
 
 const PenaltyPointsPage: React.FunctionComponent = () => {
-  redirect("/formulaone", false);
   const [expanded, setExpanded] = useState<null | string>(null);
   return (
     <>
