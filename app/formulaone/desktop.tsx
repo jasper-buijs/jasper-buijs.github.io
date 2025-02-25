@@ -289,7 +289,7 @@ const FormulaOnePage = () => {
           </a>
         </CalendarGrid>
       </Paragraph>
-      <Paragraph title={"Useful links and pages"} emoji={"🔗"}>
+      {/*<Paragraph title={"Useful links and pages"} emoji={"🔗"}>
         <div className={"h-min mb-2"}>
           <a
             className={"rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min mx-1 align-middle mb-1 justify-self-end"}
@@ -323,7 +323,7 @@ const FormulaOnePage = () => {
             FIA ISC and Appendices ↗
           </a>
         </div>
-      </Paragraph>
+      </Paragraph>*/}
       <FooterBar />
     </>
   );

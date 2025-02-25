@@ -26,10 +26,23 @@ const Page = ({ raceId }: { raceId: string }) => {
     return(<div>Redirecting...</div>);
   }
 
+  if (raceId == "pst") {
+    return(
+        <>
+          <NavBar activePage="formulaone" />
+          <div className={"w-full text-center mt-4 mx-12 max-w-[calc(100%-6rem)]"}>
+            Our website won&apos;t be fully ready before Pre-Season Testing.
+            In the mean time, you can find the streams in the top-right corner of this page, and updates in <a className="text-blue-500 underline" href="https://discord.com/channels/585896430380777503/1343906840085397577">Discord</a>!
+          </div>
+          <FooterBar/>
+        </>
+      );
+  }
+
   return(
     <>
       <NavBar activePage="formulaone" />
-      <div className={"w-full text-center mt-4 mx-12"}>We&apos;re still working on the race pages for the 2025 season. Check back before Pre-Season Testing for more!</div>
+      <div className={"w-full text-center mt-4 mx-12"}>We&apos;re still working on the race pages for the 2025 season. Check back before Round 1 for more!</div>
       <FooterBar/>
     </>
   );
