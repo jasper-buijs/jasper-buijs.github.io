@@ -3,6 +3,7 @@
 
 import { CalendarEmblems } from "@/app/components/mobile/formulaone/CalendarEmblems";
 import NavBar from "@/app/components/mobile/NavBar";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -11,17 +12,17 @@ const Home = () => {
       <div className="py-6 pl-2 pr-20">
         <div className="grid grid-cols-1 auto-rows-fr w-full mb-2">
           {/*PRE-SEASON TESTING*/ }
-          <a href="/formulaone/races/pst"
+          <Link href="/formulaone/races/pst"
             className="w-full h-28 relative row-start-1 row-span-1 col-start-1 col-span-1">
             <div className={ `bg-gray-600 absolute brightness-[80%] right-1 bottom-2 left-1 top-3 py-2 pl-2 rounded-md`}>
               <p className="block text-white font-semibold text-lg">PRE-SEASON TESTING</p>
               <p className="block text-white">Bahrain International Circuit</p>
               <p className="inline-block text-white mr-3">Feb 26 - 28</p>
             </div>
-          </a>
+          </Link>
 
           {/*AUSTRALIA GP*/}
-          <a href="/formulaone/races/australia"
+          <Link href="/formulaone/races/australia"
             className="w-full h-28 relative row-start-2 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#023874] to-[#7CAADC] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 1</p>
@@ -30,10 +31,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Mar 14 - 16</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*CHINESE GP*/}
-          <a href="/formulaone/races/china"
+          <Link href="/formulaone/races/china"
             className="w-full h-28 relative row-start-3 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EE1C25] to-[#FFFF00] from-50% absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 2</p>
@@ -42,10 +43,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Mar 21 - 23</p>
               <CalendarEmblems sprint f1a />
             </div>
-          </a>
+          </Link>
 
           {/*JAPAN GP*/}
-          <a href="/formulaone/races/japan"
+          <Link href="/formulaone/races/japan"
             className="w-full h-28 relative row-start-4 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#BD022F] to-[#FF5782] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 3</p>
@@ -53,10 +54,10 @@ const Home = () => {
               <p className="block text-white truncate max-w-[calc(100%-15px)]">Suzuka International Racing Course</p>
               <p className="inline-block text-white mr-3">Apr 4 - 6</p>
             </div>
-          </a>
+          </Link>
 
           {/*BAHRAIN GP*/}
-          <a href="/formulaone/races/bahrain"
+          <Link href="/formulaone/races/bahrain"
             className="w-full h-28 relative row-start-5 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E40A18] from-50% to-[#FFFFFF] absolute brightness-[80%] right-1 bottom-2 left-1 top-0 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 4</p>
@@ -65,10 +66,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Apr 11 - 13</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*SAUDI ARABIA GP*/}
-          <a href="/formulaone/races/saudi-arabia"
+          <Link href="/formulaone/races/saudi-arabia"
             className="w-full h-28 relative row-start-6 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#016C36] to-[#66C698] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 5</p>
@@ -77,10 +78,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Apr 18 - 20</p>
               <CalendarEmblems f2 f1a />
             </div>
-          </a>
+          </Link>
 
           {/*MIAMI GP*/}
-          <a href={"/formulaone/races/miami"}
+          <Link href={"/formulaone/races/miami"}
             className="w-full h-28 relative row-start-7 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 6</p>
@@ -89,10 +90,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">May 2 - 4</p>
               <CalendarEmblems sprint f1a />
             </div>
-          </a>
+          </Link>
 
           {/*IMOLA GP*/}
-          <a href={"/formulaone/races/imola"}
+          <Link href={"/formulaone/races/imola"}
             className="w-full h-28 relative row-start-8 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#37AC37] to-[#175C19] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 7</p>
@@ -101,10 +102,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">May 16 - 18</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*MONACO GP*/}
-          <a href={"/formulaone/races/monaco"}
+          <Link href={"/formulaone/races/monaco"}
             className="w-full h-28 relative row-start-9 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E50915] to-[#FFFFFF] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 8</p>
@@ -113,10 +114,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">May 23 - 25</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*SPAIN GP*/}
-          <a href="/formulaone/races/spain"
+          <Link href="/formulaone/races/spain"
             className="w-full h-28 relative row-start-10 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E20612] from-50% to-85% to-[#FABD00] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 9</p>
@@ -125,10 +126,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">May 30 - Jun 1</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*CANADA GP*/}
-          <a href={"/formulaone/races/canada"}
+          <Link href={"/formulaone/races/canada"}
             className="w-full h-28 relative row-start-11 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EA2C36] from-50% to-90% to-[#FFFFFF] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 10</p>
@@ -137,10 +138,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Jun 13 - 15</p>
               <CalendarEmblems f1a />
             </div>
-          </a>
+          </Link>
 
           {/*AUSTRIA GP*/}
-          <a href="/formulaone/races/austria"
+          <Link href="/formulaone/races/austria"
             className="w-full h-28 relative row-start-12 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 11</p>
@@ -149,10 +150,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Jun 27 - 29</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*UK GP*/}
-          <a href="/formulaone/races/great-britain"
+          <Link href="/formulaone/races/great-britain"
             className="w-full h-28 relative row-start-13 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#C7102E] to-[#032169] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 12</p>
@@ -161,10 +162,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Jul 4 - 6</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*BELGIUM GP*/}
-          <a href="/formulaone/races/belgium"
+          <Link href="/formulaone/races/belgium"
             className="w-full h-28 relative row-start-14 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#030301] to-[#EB0917] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 13</p>
@@ -173,10 +174,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Jul 25 - 27</p>
               <CalendarEmblems sprint f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*HUNGARY GP*/}
-          <a href="/formulaone/races/hungary" className="w-full h-28 relative row-start-15 row-span-1 col-start-1 col-span-1">
+          <Link href="/formulaone/races/hungary" className="w-full h-28 relative row-start-15 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#EB0917] to-[#349D32] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 14</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-15px)]">HUNGARIAN GRAND PRIX</p>
@@ -184,10 +185,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Aug 1 - 3</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*NETHERLANDS GP*/}
-          <a href="/formulaone/races/netherlands"
+          <Link href="/formulaone/races/netherlands"
             className="w-full h-28 relative row-start-16 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#FF8113] to-[#04529A] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 15</p>
@@ -196,10 +197,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Aug 29 - 31</p>
               <CalendarEmblems f1a />
             </div>
-          </a>
+          </Link>
 
           {/*ITALY GP*/}
-          <a href="/formulaone/races/italy"
+          <Link href="/formulaone/races/italy"
             className="w-full h-28 relative row-start-17 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#048B46] to-[#CC222B] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 16</p>
@@ -208,10 +209,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Sep 5 - 7</p>
               <CalendarEmblems f2 f3 />
             </div>
-          </a>
+          </Link>
 
           {/*AZERBAIJAN GP*/}
-          <a href="/formulaone/races/azerbaijan"
+          <Link href="/formulaone/races/azerbaijan"
             className="w-full h-28 relative row-start-18 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#00B5E2] to-[#4F9F30] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 17</p>
@@ -220,10 +221,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Sep 19 - 21</p>
               <CalendarEmblems f2 />
             </div>
-          </a>
+          </Link>
 
           {/*SINGAPORE GP*/}
-          <a href="/formulaone/races/singapore"
+          <Link href="/formulaone/races/singapore"
             className="w-full h-28 relative row-start-19 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E10E0E] to-[#FFFFFF] from-65% absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 18</p>
@@ -232,10 +233,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Oct 3 - 5</p>
               <CalendarEmblems f1a />
             </div>
-          </a>
+          </Link>
 
           {/*USA GP*/}
-          <a href="/formulaone/races/united-states"
+          <Link href="/formulaone/races/united-states"
             className="w-full h-28 relative row-start-20 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#2112D9] to-[#DD0B26] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 19</p>
@@ -244,10 +245,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Oct 17 - 19</p>
               <CalendarEmblems sprint />
             </div>
-          </a>
+          </Link>
 
           {/*MEXICO GP*/}
-          <a href="/formulaone/races/mexico"
+          <Link href="/formulaone/races/mexico"
             className="w-full h-28 relative row-start-21 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#039542] to-[#E10813] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 20</p>
@@ -255,10 +256,10 @@ const Home = () => {
               <p className="block text-white truncate max-w-[calc(100%-15px)]">Autódromo Hermanos Rodríguez</p>
               <p className="inline-block text-white mr-3">Oct 24 - 26</p>
             </div>
-          </a>
+          </Link>
 
           {/*BRAZIL GP*/}
-          <a href="/formulaone/races/brazil"
+          <Link href="/formulaone/races/brazil"
             className="w-full h-28 relative row-start-22 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#029739] to-[#FCDC00] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 21</p>
@@ -267,10 +268,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Nov 7 - 9</p>
               <CalendarEmblems sprint />
             </div>
-          </a>
+          </Link>
 
           {/*VEGAS GP*/}
-          <a href="/formulaone/races/las-vegas"
+          <Link href="/formulaone/races/las-vegas"
             className="w-full h-28 relative row-start-23 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#0198A3] via-[#22142B] via-65 to-[#571060] absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 22</p>
@@ -279,10 +280,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Nov 20 - 22</p>
               <CalendarEmblems f1a />
             </div>
-          </a>
+          </Link>
 
           {/*QATAR GP*/}
-          <a href="/formulaone/races/qatar"
+          <Link href="/formulaone/races/qatar"
             className="w-full h-28 relative row-start-24 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#8A1639] to-[#FFFFFF] from-70% absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 23</p>
@@ -291,10 +292,10 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Nov 28 - 30</p>
               <CalendarEmblems sprint f2 />
             </div>
-          </a>
+          </Link>
 
           {/*UAE GP*/}
-          <a href="/formulaone/races/abu-dhabi"
+          <Link href="/formulaone/races/abu-dhabi"
             className="w-full h-28 relative row-start-25 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#FD0002] via-[#01823F] to-[#000000] from-20% via-60% absolute brightness-[80%] right-1 top-0 bottom-2 left-1 py-2 pl-2 rounded-md`}>
               <p className="block text-white text-sm italic">ROUND 24</p>
@@ -303,7 +304,7 @@ const Home = () => {
               <p className="inline-block text-white mr-3">Dec 5 - 7</p>
               <CalendarEmblems f2 />
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </>

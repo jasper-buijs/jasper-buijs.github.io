@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 
 import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
@@ -26,7 +27,7 @@ const Page = ({ raceId }: { raceId: string }) => {
     return(<div>Redirecting...</div>);
   }
 
-  if (raceId == "pst") {
+  {/*if (raceId == "pst") {
     return(
         <>
           <NavBar activePage="formulaone" />
@@ -37,12 +38,12 @@ const Page = ({ raceId }: { raceId: string }) => {
           <FooterBar/>
         </>
       );
-  }
+  }*/}
 
   return(
     <>
       <NavBar activePage="formulaone" />
-      <div className={"w-full text-center mt-4 mx-12"}>We&apos;re still working on the race pages for the 2025 season. Check back before Round 1 for more!</div>
+      <div className={"w-full text-center mt-4 mx-12"}>We&apos;re still working on the race pages for the 2025 season. Check back later for more!</div>
       <FooterBar/>
     </>
   );

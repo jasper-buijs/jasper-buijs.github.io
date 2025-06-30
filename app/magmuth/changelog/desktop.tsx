@@ -1,10 +1,9 @@
-"use client";
-
 import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
 import { ChangeIconGrid, ChangeIconGridElement } from "@/app/components/magmuth/changelog/ChangeIcon";
 import CodeBlock from "@/app/components/magmuth/changelog/CodeBlock";
+import { ExternalLink } from "lucide-react";
 
 const MagmuthChangelogPage = () => {
   return (
@@ -96,8 +95,9 @@ const MagmuthChangelogPage = () => {
 
       <div className="bg-[#D6D6D6] dark:bg-[#1E1E1E] text-[#1E1E1E] dark:text-inherit py-1 px-4 pt-2 mx-12 my-4 grid">
         <p className="row-start-1 row-span-1 col-start-1 col-span-1 align-middle py-2">Check out older releases and our code in our GitHub releases!</p>
-        <a href="https://github.com/jasper-buijs/discord-bot-js/releases" target="_blank" className="rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min row-start-1 row-span-1 col-start-2 col-span-1 mx-4 align-middle mb-1 justify-self-end">
-          GitHub ↗︎
+        <a href="https://github.com/jasper-buijs/discord-bot-js/releases" target="_blank" className="rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min row-start-1 row-span-1 col-start-2 col-span-1 mx-4 flex items-center mb-1 justify-self-end">
+          <p className={"inline-block pr-1"}>GitHub</p>
+          <ExternalLink size={16} className={"inline-block"} />
         </a>
       </div>
 
