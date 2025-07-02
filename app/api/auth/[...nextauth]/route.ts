@@ -1,6 +1,5 @@
 import NextAuth from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
-import { headers } from "next/headers";
 
 const handler = NextAuth({
   providers: [
