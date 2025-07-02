@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { Icon, Bot, House, Pickaxe, Copyright } from "lucide-react";
+import { Icon, Bot, House, Pickaxe, Copyright, CircleUserRound, UserRoundCheck } from "lucide-react";
 import { motorRacingHelmet } from "@lucide/lab";
+import { signIn, useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from 'next/link';
 import { NavBarProps } from "@/app/components/NavBar";
 
 const NavBar = ({ activePage }: NavBarProps) => {
   const activeLinkColor = (page: string) => page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#0F0F0F] dark:text-[#FFFFFF]";
+  const { data: session } = useSession();
   return (
     <>
       <div className={"w-16 py-6 h-full fixed z-50 right-0"}>
@@ -31,8 +34,43 @@ const NavBar = ({ activePage }: NavBarProps) => {
               <Icon iconNode={motorRacingHelmet} className={"m-[20px]"} />
             </Link>
           </div>
-          {/* Copyright popup */}
+          {/* Sign-in and Copyright popup */}
           <div className={"h-[calc(100%-(5*64px))] w-16 relative"}>
+            <div className={"flex h-16 w-16 justify-center items-center absolute bottom-16"}>
+              {
+                !session &&
+                <button
+                  className={"w-full h-full text-4xl leading-[4rem] text-[#BA9C0D] dark:text-[#CFB53B]"}
+                  onClick={() => signIn("discord")}
+                >
+                  <CircleUserRound className={"m-[20px]"} />
+                </button>
+              }
+              {
+                session && session.user?.image &&
+                <Link
+                  className={"w-full h-full text-4xl leading-[4rem]"}
+                  href="/api/auth/signout"
+                >
+                  <Image
+                    src={session.user.image}
+                    alt={session.user?.name || "Profile picture"}
+                    width={24}
+                    height={24}
+                    className={"rounded-[50%] m-[20px]"}
+                  />
+                </Link>
+              }
+              {
+                session && !session.user?.image &&
+                <Link
+                  className={"w-full h-full text-4xl leading-[4rem]"}
+                  href="/api/auth/signout"
+                >
+                  <UserRoundCheck className={"m-[20px]"} />
+                </Link>
+              }
+            </div>
             <div className={"flex h-16 w-16 justify-center items-center absolute bottom-0"}>
               <button
                 className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("NONE_COPYRIGHT")}`}
