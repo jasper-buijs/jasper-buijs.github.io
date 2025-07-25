@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { getServerSession } from "next-auth";
+import SessionProviderClient from "@/app/components/SessionProvider";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -10,10 +12,15 @@ export const metadata: Metadata = {
   robots: "noindex",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const session = await getServerSession();
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+        <SessionProviderClient session={session}>
+          {children}
+        </SessionProviderClient>
+        </body>
     </html>
   );
 }

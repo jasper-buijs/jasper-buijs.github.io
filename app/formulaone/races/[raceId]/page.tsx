@@ -9,7 +9,8 @@ export async function generateStaticParams () {
   return raceIds.map((raceId) => ({ raceId, }));
 }
 
-export default function Page({ params }: { params: { raceId: string } }) {
-    return <VersionSwitch raceId={params.raceId} />
-    //return isMobile ? <MobilePage raceId={params.raceId} /> : <DesktopPage raceId={params.raceId} />;
+export default async function Page(props: { params: Promise<{ raceId: string }> }) {
+  const params = await props.params;
+  return <VersionSwitch raceId={params.raceId} />
+  //return isMobile ? <MobilePage raceId={params.raceId} /> : <DesktopPage raceId={params.raceId} />;
 }

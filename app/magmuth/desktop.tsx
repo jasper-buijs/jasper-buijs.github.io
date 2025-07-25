@@ -1,5 +1,3 @@
-"use client";
-
 import FooterBar from "../components/FooterBar";
 import NavBar from "../components/NavBar";
 

@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
-
 import NavBar from "@/app/components/mobile/NavBar";
 import Paragraph from "@/app/components/mobile/Paragraph";
 import { ChangeIconGrid, ChangeIconGridElement } from "@/app/components/mobile/magmuth/changelog/ChangeIcon";

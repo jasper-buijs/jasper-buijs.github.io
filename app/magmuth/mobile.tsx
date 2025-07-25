@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
-
 import NavBar from "@/app/components/mobile/NavBar";
 
 const Home = () => {
