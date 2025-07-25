@@ -1,12 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
-import { Icon, Bot, House, Pickaxe, Copyright, CircleUserRound, UserRoundCheck } from "lucide-react";
+import {
+  Icon,
+  Bot,
+  House,
+  Pickaxe,
+  Copyright,
+  CircleUserRound,
+  UserRoundCheck,
+  MonitorOff,
+  MonitorPlay,
+} from "lucide-react";
 import { motorRacingHelmet } from "@lucide/lab";
 import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from 'next/link';
 import { NavBarProps } from "@/app/components/NavBar";
+import { useEffect, useState } from "react";
 
 const NavBar = ({ activePage }: NavBarProps) => {
+  const [ isStreamActive, setStreamActive ] = useState<boolean>(false);
+
+  useEffect(() => {
+    const room = "live-room";
+    fetch(`/api/activeStream?room=${room}`).then((r) => {
+      r.json().then((data) => {
+        setStreamActive(data.live);
+      });
+    }).catch((_e) => setStreamActive(false)); // &username=${name}
+  }, [isStreamActive]);
+
   const activeLinkColor = (page: string) => page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#0F0F0F] dark:text-[#FFFFFF]";
   const { data: session } = useSession();
   return (
@@ -34,8 +56,20 @@ const NavBar = ({ activePage }: NavBarProps) => {
               <Icon iconNode={motorRacingHelmet} className={"m-[20px]"} />
             </Link>
           </div>
+          <div className={"flex h-16 w-16 justify-center items-center"}>
+            { !isStreamActive &&
+              <Link className={`w-full h-full text-4xl leading-[4rem] text-[#0F0F0F] dark:text-[#FFFFFF]`} href={"/live"}>
+                <MonitorOff className={"m-[20px]"} />
+              </Link>
+            }
+            { isStreamActive &&
+              <Link className={`w-full h-full text-4xl leading-[4rem] text-red-600 dark:text-red-500`} href={"/live"}>
+                <MonitorPlay className={"m-[20px]"} />
+              </Link>
+            }
+          </div>
           {/* Sign-in and Copyright popup */}
-          <div className={"h-[calc(100%-(5*64px))] w-16 relative"}>
+          <div className={"h-[calc(100%-(6*64px))] w-16 relative"}>
             <div className={"flex h-16 w-16 justify-center items-center absolute bottom-16"}>
               {
                 !session &&

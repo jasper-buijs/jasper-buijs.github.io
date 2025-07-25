@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Alert from "@/app/components/Alert";
 import Link from "next/link";
 import FooterBar from "../components/FooterBar";
 import NavBar from "../components/NavBar";
@@ -14,10 +15,11 @@ const FormulaOnePage = () => {
       {/*<Paragraph title="FORMULA ONE WORLD DRIVERS' CHAMPIONSHIP" emoji="🏆">
         <Drivers />
       </Paragraph>*/}
+      <Alert type={"info"} text={"Because of technical challenges, it has been difficult to populate the formula 1 pages with meaningful data throughout the season. Some of these challenges have been fixed, with a system now in place to automatically add results data to the pages when posting them to Discord. However, as there is no way to retroactively add data from past grand prix, we won't be using this system until the start of the 2026 season. For now, you can use this page as a season calendar (which we don't actually have in discord), but for any additional information and results, check the #results channel in Discord."} />
       <Paragraph title="2025 FIA FORMULA ONE WORLD CHAMPIONSHIP™ RACE CALENDAR" emoji="📅">
         <CalendarGrid>
           {/*PRE-SEASON TESTING*/ }
-          <Link href="/formulaone/races/pst"
+          <div /*href="/formulaone/races/pst"*/
              className="w-full h-32 relative row-start-1 row-span-1 col-start-1 col-span-2">
             <div className={ `bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 pl-5 rounded-lg`}>
               <p className="block text-white font-semibold text-lg">FORMULA 1 ARAMCO PRE-SEASON TESTING 2025</p>
@@ -25,9 +27,9 @@ const FormulaOnePage = () => {
               <p className="inline-block text-white mr-3">Feb 26 - 28</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png" />
-          </Link>
+          </div>
           {/*AUSTRALIA GP*/}
-          <Link href="/formulaone/races/australia" className="w-full h-32 relative row-start-2 row-span-1 col-start-1 col-span-1">
+          <div /*href="/formulaone/races/australia"*/ className="w-full h-32 relative row-start-2 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#023874] to-[#7CAADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 1</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LOUIS VUITTON AUSTRALIAN GRAND PRIX 2025</p>
@@ -36,9 +38,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245032/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Australia%20carbon.png" />
-          </Link>
+          </div>
           {/*CHINESE GP*/}
-          <Link href="/formulaone/races/china" className="w-full h-32 relative row-start-2 row-span-1 col-start-2 col-span-1">
+          <div /*href="/formulaone/races/china"*/ className="w-full h-32 relative row-start-2 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#EE1C25] to-[#FFFF00] from-50% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 2</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2025</p>
@@ -47,9 +49,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/China%20carbon.png" />
-          </Link>
+          </div>
           {/*JAPAN GP*/}
-          <Link href="/formulaone/races/japan" className="w-full h-32 relative row-start-3 row-span-1 col-start-1 col-span-1">
+          <div /*href="/formulaone/races/japan"*/ className="w-full h-32 relative row-start-3 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#BD022F] to-[#FF5782] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 3</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LENOVO JAPANESE GRAND PRIX 2025</p>
@@ -57,9 +59,9 @@ const FormulaOnePage = () => {
               <p className="inline-block text-white mr-3">Apr 4 - 6</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Japan%20carbon.png" />
-          </Link>
+          </div>
           {/*BAHRAIN GP*/}
-          <Link href="/formulaone/races/bahrain" className="w-full h-32 relative row-start-3 row-span-1 col-start-2 col-span-1">
+          <div /*href="/formulaone/races/bahrain"*/ className="w-full h-32 relative row-start-3 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#E40A18] from-50% to-[#FFFFFF] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 4</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 BAHRAIN GRAND PRIX 2025</p>
@@ -68,9 +70,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png" />
-          </Link>
+          </div>
           {/*SAUDI ARABIA GP*/}
-          <Link href="/formulaone/races/saudi-arabia" className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-1">
+          <div /*href="/formulaone/races/saudi-arabia"*/ className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#016C36] to-[#66C698] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 5</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2025</p>
@@ -79,9 +81,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245030/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Saudi%20Arabia%20carbon.png" />
-          </Link>
+          </div>
           {/*MIAMI GP*/}
-          <Link href={"/formulaone/races/miami"} className="w-full h-32 relative row-start-4 row-span-1 col-start-2 col-span-1">
+          <div /*href={"/formulaone/races/miami"}*/ className="w-full h-32 relative row-start-4 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 6</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2025</p>
@@ -90,9 +92,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Miami%20carbon.png" />
-          </Link>
+          </div>
           {/*IMOLA GP*/}
-          <Link href={"/formulaone/races/imola"} className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-1">
+          <div /*href={"/formulaone/races/imola"}*/ className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#37AC37] to-[#175C19] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 7</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 AWS GRAN PREMIO DEL MADE IN ITALY E DELL&apos;EMILIA-ROMAGNA 2025</p>
@@ -101,9 +103,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1684338005/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Emilia%20Romagna%20carbon.png" />
-          </Link>
+          </div>
           {/*MONACO GP*/}
-          <Link href={"/formulaone/races/monaco"} className="w-full h-32 relative row-start-5 row-span-1 col-start-2 col-span-1">
+          <div /*href={"/formulaone/races/monaco"}*/ className="w-full h-32 relative row-start-5 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#E50915] to-[#FFFFFF] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 8</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GRAND PRIX DE MONACO 2025</p>
@@ -112,9 +114,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245032/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Monte%20Carlo%20carbon.png" />
-          </Link>
+          </div>
           {/*SPAIN GP*/}
-          <Link href="/formulaone/races/spain" className="w-full h-32 relative row-start-6 row-span-1 col-start-1 col-span-1">
+          <div /*href="/formulaone/races/spain"*/ className="w-full h-32 relative row-start-6 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#E20612] from-50% to-85% to-[#FABD00] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 9</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2025</p>
@@ -123,9 +125,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1680529432/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Spain%20carbon.png" />
-          </Link>
+          </div>
           {/*CANADA GP*/}
-          <Link href="/formulaone/races/canada" className="w-full h-32 relative row-start-6 row-span-1 col-start-2 col-span-1">
+          <div /*href="/formulaone/races/canada"*/ className="w-full h-32 relative row-start-6 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#EA2C36] from-50% to-85% to-[#FFFFFF] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 10</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI GRAND PRIX DU CANADA 2025</p>
@@ -134,9 +136,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Canada%20carbon.png" />
-          </Link>
+          </div>
           {/*AUSTRIA GP*/}
-          <Link href="/formulaone/races/austria" className="w-full h-32 relative row-start-7 row-span-1 col-start-1 col-span-1">
+          <div /*href="/formulaone/races/austria"*/ className="w-full h-32 relative row-start-7 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 11</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES AUSTRIAN GRAND PRIX 2025</p>
@@ -145,9 +147,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Austria%20carbon.png" />
-          </Link>
+          </div>
           {/*UK GP*/}
-          <Link href="formulaone/races/great-britain" className="w-full h-32 relative row-start-7 row-span-1 col-start-2 col-span-1">
+          <div /*href="formulaone/races/great-britain"*/ className="w-full h-32 relative row-start-7 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#C7102E] to-[#032169] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 12</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2025</p>
@@ -156,9 +158,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Great%20Britain%20carbon.png" />
-          </Link>
+          </div>
           {/*BELGIUM GP*/}
-          <Link href="formulaone/races/belgium" className="w-full h-32 relative row-start-8 row-span-1 col-start-1 col-span-1">
+          <div /*href="formulaone/races/belgium"*/ className="w-full h-32 relative row-start-8 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#030301] to-[#eb0917] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 13</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 BELGIAN GRAND PRIX 2025</p>
@@ -167,9 +169,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Belgium%20carbon.png" />
-          </Link>
+          </div>
           {/*HUNGARY GP*/}
-          <Link href="formulaone/races/hungary" className="w-full h-32 relative row-start-8 row-span-1 col-start-2 col-span-1">
+          <div /*href="formulaone/races/hungary"*/ className="w-full h-32 relative row-start-8 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#eb0917] to-[#349d32] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 14</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LENOVO HUNGARIAN GRAND PRIX 2025</p>
@@ -178,9 +180,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Hungar%20carbon.png" />
-          </Link>
+          </div>
           {/*NETHERLANDS GP*/}
-          <Link href="formulaone/races/netherlands" className="w-full h-32 relative row-start-9 row-span-1 col-start-1 col-span-1">
+          <div /*href="formulaone/races/netherlands"*/ className="w-full h-32 relative row-start-9 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#ff8113] to-[#04529A] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 15</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2025</p>
@@ -189,9 +191,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245033/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Netherlands%20carbon.png" />
-          </Link>
+          </div>
           {/*ITALY GP*/}
-          <Link href="formulaone/races/italy" className="w-full h-32 relative row-start-9 row-span-1 col-start-2 col-span-1">
+          <div /*href="formulaone/races/italy"*/ className="w-full h-32 relative row-start-9 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#048B46] to-[#CC222B] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 16</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI GRAN PREMIO D&apos;ITALIA 2025</p>
@@ -200,9 +202,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 f3 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Italy%20carbon.png" />
-          </Link>
+          </div>
           {/*AZERBAIJAN GP*/}
-          <Link href="formulaone/races/azerbaijan" className="w-full h-32 relative row-start-10 row-span-1 col-start-1 col-span-1">
+          <div /*href="formulaone/races/azerbaijan"*/ className="w-full h-32 relative row-start-10 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#00B5E2] to-[#4F9F30] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 17</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2025</p>
@@ -211,9 +213,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245030/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Azerbaijan%20carbon.png" />
-          </Link>
+          </div>
           {/*SINGAPORE GP*/}
-          <Link href="formulaone/races/singapore" className="w-full h-32 relative row-start-10 row-span-1 col-start-2 col-span-1">
+          <div /*href="formulaone/races/singapore"*/ className="w-full h-32 relative row-start-10 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#e10e0e] to-[#FFFFFF] from-65% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 18</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2025</p>
@@ -222,9 +224,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1683639275/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Singapore%20carbon.png" />
-          </Link>
+          </div>
           {/*USA GP*/}
-          <Link href="formulaone/races/united-states" className="w-full h-32 relative row-start-11 row-span-1 col-start-1 col-span-1">
+          <div /*href="formulaone/races/united-states"*/ className="w-full h-32 relative row-start-11 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#2112d9] to-[#dd0b26] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 19</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES UNITED STATES GRAND PRIX 2025</p>
@@ -233,9 +235,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/USA%20carbon.png" />
-          </Link>
+          </div>
           {/*MEXICO GP*/}
-          <Link href="formulaone/races/mexico" className="w-full h-32 relative row-start-11 row-span-1 col-start-2 col-span-1">
+          <div /*href="formulaone/races/mexico"*/ className="w-full h-32 relative row-start-11 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#039542] to-[#E10813] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 20</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2025</p>
@@ -243,9 +245,9 @@ const FormulaOnePage = () => {
               <p className="inline-block text-white mr-3">Oct 24 - 26</p>
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Mexico%20carbon.png" />
-          </Link>
+          </div>
           {/*BRAZIL GP*/}
-          <Link href="formulaone/races/brazil" className="w-full h-32 relative row-start-12 row-span-1 col-start-1 col-span-1">
+          <div /*href="formulaone/races/brazil"*/ className="w-full h-32 relative row-start-12 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#029739] to-[#FCDC00] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 21</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES GRANDE PRÊMIO DE SÃO PAULO 2025</p>
@@ -254,9 +256,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Brazil%20carbon.png" />
-          </Link>
+          </div>
           {/*VEGAS GP*/}
-          <Link href="formulaone/races/las-vegas" className="w-full h-32 relative row-start-12 row-span-1 col-start-2 col-span-1">
+          <div /*href="formulaone/races/las-vegas"*/ className="w-full h-32 relative row-start-12 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#0198A3] via-[#22142B] via-65 to-[#571060] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 22</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2025</p>
@@ -265,9 +267,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems f1a />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677249931/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Las%20Vegas%20carbon.png" />
-          </Link>
+          </div>
           {/*QATAR GP*/}
-          <Link href="formulaone/races/qatar" className="w-full h-32 relative row-start-13 row-span-1 col-start-1 col-span-1">
+          <div /*href="formulaone/races/qatar"*/ className="w-full h-32 relative row-start-13 row-span-1 col-start-1 col-span-1">
             <div className={`bg-gradient-to-r from-[#8A1639] to-[#FFFFFF] from-70% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 23</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2025</p>
@@ -276,9 +278,9 @@ const FormulaOnePage = () => {
               <CalendarEmblems sprint f2 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/f_auto/q_auto/v1677245031/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Qatar%20carbon.png" />
-          </Link>
+          </div>
           {/*UAE GP*/}
-          <Link href="formulaone/races/abu-dhabi" className="w-full h-32 relative row-start-13 row-span-1 col-start-2 col-span-1">
+          <div /*href="formulaone/races/abu-dhabi"*/ className="w-full h-32 relative row-start-13 row-span-1 col-start-2 col-span-1">
             <div className={`bg-gradient-to-r from-[#FD0002] via-[#01823F] to-[#000000] from-20% via-60% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 24</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2025</p>
@@ -287,7 +289,7 @@ const FormulaOnePage = () => {
               <CalendarEmblems f2 />
             </div>
             <img className="block absolute right-6 top-6 bottom-6 h-20 z-10" src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Abu%20Dhab%20carbon.png" />
-          </Link>
+          </div>
         </CalendarGrid>
       </Paragraph>
       {/*<Paragraph title={"Useful links and pages"} emoji={"🔗"}>
