@@ -22,7 +22,6 @@ const MobilePage = () => {
         const data = await resp.json();
         if (!mounted) return;
         if (data.token) {
-          console.log("Token: " + data.token);
           await roomInstance.connect((process.env.NEXT_PUBLIC_LIVEKIT_URL as string), data.token);
           setAccessToken(data.token);
         }
