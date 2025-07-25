@@ -1,3 +1,5 @@
+"use server";
+
 import { authOptions } from "@/auth";
 import {
   AccessToken,

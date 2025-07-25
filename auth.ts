@@ -10,7 +10,7 @@ export const authOptions: AuthOptions = {
       })
     ],
     theme: {
-      logo: "http://localhost:3000/logo.png",
+      logo: "https://heiligemaagden.com/logo.png",
       brandColor: "#CFB43B"
     },
     callbacks: {
