@@ -15,7 +15,10 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  if (session.user?.email != process.env.CREATE_INGRESS_EMAIL) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  //if (session.user?.email != process.env.CREATE_INGRESS_EMAIL) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!session.user?.guilds || !(session.user.guilds.length >= 1)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!session.user.guilds.some((g) => g.id == process.env.GUILD_ID))
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const client = new IngressClient(process.env.LIVEKIT_URL as string, process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET);
   const response = await client.createIngress(IngressInput.WHIP_INPUT, {
