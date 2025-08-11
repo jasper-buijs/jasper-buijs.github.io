@@ -107,7 +107,7 @@ const MinecraftPage = () => {
         </ul>
       </Paragraph>
       <Paragraph emoji="🗺️" title="World Map">
-        {`This is a map of our world as it was on ${new Date("2025-08-01T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})}.`}
+        {`This is a map of our world as it was on ${new Date("2025-08-10T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})}.`}
         <iframe className="w-full h-[calc(100vh-10rem)]" src="/minecraft-map-hmvanilla/index.html"></iframe>
       </Paragraph>
       <FooterBar />

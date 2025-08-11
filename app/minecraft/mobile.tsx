@@ -104,7 +104,7 @@ const Home = () => {
           </ul>
         </Paragraph>
         <Paragraph emoji="🗺️" title="World Map">
-          {`The map of our world as it was on ${new Date("2025-08-01T09:00:00+02:00").toLocaleString("en-us", {day: "numeric", month: "short"})} can be viewed on this page on desktop. Mobile is not (yet) supported. If you are on desktop, you should try making this window larger.`}
+          {`The map of our world as it was on ${new Date("2025-08-10T09:00:00+02:00").toLocaleString("en-us", {day: "numeric", month: "short"})} can be viewed on this page on desktop. Mobile is not (yet) supported. If you are on desktop, you should try making this window larger.`}
         </Paragraph>
       </div>
     </>
