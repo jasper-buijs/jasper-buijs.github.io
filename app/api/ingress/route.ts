@@ -20,13 +20,32 @@ export async function GET(req: NextRequest) {
   if (!session.user.guilds.some((g) => g.id == process.env.GUILD_ID))
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
+  if (req.nextUrl.searchParams.get('list')) {
+    const client = new IngressClient(process.env.LIVEKIT_URL as string, process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET);
+    const ingressList = await client.listIngress({ roomName: req.nextUrl.searchParams.get('room') || "live-room" });
+    return NextResponse.json(
+      { list: ingressList },
+      { status: 200 }
+    );
+  }
+
+  if (req.nextUrl.searchParams.get('delete')) {
+    const client = new IngressClient(process.env.LIVEKIT_URL as string, process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET);
+    const id = req.nextUrl.searchParams.get('id');
+    if (id) await client.deleteIngress(id);
+    return NextResponse.json({ status: 200 });
+  }
+
+  const protocol = req.nextUrl.searchParams.get('prot');
+  if (!req.nextUrl.searchParams.get('prot')) return NextResponse.json({ error: 'Missing "prot" query parameter' }, { status: 400 });
+
   const client = new IngressClient(process.env.LIVEKIT_URL as string, process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET);
-  const response = await client.createIngress(IngressInput.WHIP_INPUT, {
+  const response = await client.createIngress(protocol == "whip" ? IngressInput.WHIP_INPUT : IngressInput.RTMP_INPUT, {
     name: "OBS Streaming Ingress",
     roomName: req.nextUrl.searchParams.get('room') || "live-room",
     participantIdentity: "obs-ingress-participant",
     participantName: "OBS Stream",
-    enableTranscoding: false,
+    // enableTranscoding: false,
     video: new IngressVideoOptions({
       source: TrackSource.SCREEN_SHARE
     }),
@@ -34,6 +53,7 @@ export async function GET(req: NextRequest) {
       source: TrackSource.SCREEN_SHARE_AUDIO
     }),
   });
+
 
   const token = new AccessToken(process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET, {
     identity: "Test OBS",

@@ -8,10 +8,10 @@ export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
-  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  if (!session.user?.guilds || !(session.user.guilds.length >= 1)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!session) return NextResponse.json({ error: "Unauthorized: no authentication session" }, { status: 401 });
+  if (!session.user?.guilds || !(session.user.guilds.length >= 1)) return NextResponse.json({ error: "Problem: no guilds, waiting" }, { status: 209 });
   if (!session.user.guilds.some((g) => g.id == process.env.GUILD_ID))
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ error: "Unauthorized: incorrect guild collection" }, { status: 401 });
 
   const room = req.nextUrl.searchParams.get('room');
   if (!room) {
