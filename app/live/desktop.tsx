@@ -39,7 +39,7 @@ const RoomElement = () => {
   let [_accessToken, setAccessToken] = useState<string>();
 
   const [roomInstance] = useState(() => new Room({
-    adaptiveStream: true,
+    adaptiveStream: false,
     dynacast: true,
     disconnectOnPageLeave: true,
   }));
@@ -49,7 +49,8 @@ const RoomElement = () => {
       (async () => {
         try {
           const resp = await fetch(`/api/token?room=${room}`); // &username=${name}
-          if (resp.status == 401) return setState(State.UNAUTHORIZED);
+          //if (resp.status == 401) return setState(State.UNAUTHORIZED);
+          if ([209, 401].includes(resp.status)) return setState(State.UNAUTHORIZED);
           if ([400, 500].includes(resp.status)) return setState(State.ERROR);
           console.log(state, resp.status)
           const data = await resp.json();
@@ -90,17 +91,18 @@ const RoomElement = () => {
    }, []);
 
 
-  if (state == State.SUCCESS) {
-    return (
-        <>
-          <NavBar activePage={"none"} />
-          <RoomContext.Provider value={roomInstance}>
-            <StreamPlayer />
-          </RoomContext.Provider>
-          <FooterBar />
-        </>
-      );
-  } else if (state == State.LOADING_PAGE) {
+  //if (state == State.SUCCESS) {
+  //if (true) {
+  return (
+    <>
+      <NavBar activePage={"none"} />
+      <RoomContext.Provider value={roomInstance}>
+        <StreamPlayer state={state} />
+      </RoomContext.Provider>
+      <FooterBar />
+    </>
+  );
+  /*} else if (state == State.LOADING_PAGE) {
     return (
       <>
         <NavBar activePage={"none"} />
@@ -180,7 +182,8 @@ const RoomElement = () => {
         <FooterBar />
       </>
     );
-  }
+  }*/
 }
 
 export default RoomElement;
+export { State };

@@ -1,15 +1,12 @@
 "use client";
 
-import {
-  AudioTrack,
-  useParticipants, useStartAudio, useStartVideo,
-  useTracks,
-  VideoTrack,
-} from "@livekit/components-react";
+import { State } from "@/app/live/desktop";
+import { useParticipants, useTracks } from "@livekit/components-react";
 import { Track } from "livekit-client";
-import { CircleUserRound, Expand, Pause, Play, Volume2, VolumeOff } from "lucide-react";
+import { CircleUserRound } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { FidgetSpinner, TailSpin } from "react-loader-spinner";
 
 // Poster images (should be 16:9)
 /*const liveImages = [
@@ -26,7 +23,7 @@ import { useEffect, useRef, useState } from "react";
   "/bgs/live11.png",
 ] as `/bgs/live${number}.png`[]; */
 
-const liveBgs = [
+/*const liveBgs = [
   "bg-[url(/bgs/live1.png)]",
   "bg-[url(/bgs/live2.png)]",
   "bg-[url(/bgs/live3.png)]",
@@ -38,9 +35,9 @@ const liveBgs = [
   "bg-[url(/bgs/live9.png)]",
   "bg-[url(/bgs/live10.png)]",
   "bg-[url(/bgs/live11.png)]",
-] as `bg-[url(/bgs/live${number}.png)]`[];
+] as `bg-[url(/bgs/live${number}.png)]`[];*/
 
-const StreamPlayer = () => {
+/*const StreamPlayer = () => {
   // const { name: roomName, state: roomState } = useRoomContext();
   // const roomInstance = useRoomContext();
   const participants = useParticipants();
@@ -95,7 +92,7 @@ const StreamPlayer = () => {
                     className={`h-8 aspect-square !bg-gray-500 !rounded-md !p-1 !mr-2 inline-block align-middle justify-start`}
                   >
                     <Play />
-                  </StartMediaButton>*/}
+                  </StartMediaButton>*//*}
                   <button
                     className={`h-8 aspect-square !bg-gray-500 !rounded-md !p-1 !mr-2 inline-block align-middle justify-start`}
                     onClick= { mergedProps.onClick }
@@ -151,7 +148,7 @@ const StreamPlayer = () => {
           { init && remoteVideoTracks.length == 0 && !participants.some(p => p.identity.includes("ingress")) && (
             <>
               <div className={"flex-shrink-0 h-full max-w-full aspect-video"}>
-                {/*<div className={"block bg-white h-full w-full"} />*/}
+                {/*<div className={"block bg-white h-full w-full"} />*//*}
                 <div className={`w-full h-full ${bgImage} bg-cover bg-center text-white text-xl italic flex justify-center items-end pb-4`}>
                   The stream is offline.
                 </div>
@@ -184,7 +181,7 @@ const StreamPlayer = () => {
               )}
             </div>
             {/*<div className={"h-[20%] content-end"}>
-            </div>*/}
+            </div>*//*}
           </div>
         </div>
       </div>
@@ -200,6 +197,115 @@ const StreamPlayer = () => {
       ))}
     </>
   );
+}*/
+
+const stateMessages = {
+  0: "Fetching stream from host...", // LOADING_PAGE
+  1: "Loading stream...", // LOADING_STREAM
+  2: "Could not verify you are a member of Heilige Maagden. If you are, sign out and back in.", // UNAUTH
+  3: "An error occured. Reload, or try signing out and back in.", // ERROR
+  4: "Loading complete!", //SUCCESS
+  5: "Reconnecting..."
 }
+
+const Loader = () => {
+  const n = Math.floor(Math.random() * 70);
+  if (n == 67) return (
+    <FidgetSpinner
+      visible
+      height="80"
+      width="80"
+      backgroundColor="#CFB53B"
+    />
+  );
+  return(
+    <TailSpin
+      visible
+      height="80"
+      width="80"
+      color={"white"}
+      radius="1"
+    />
+  );
+};
+
+interface StreamPlayerProps {
+  state: State
+}
+const StreamPlayer = ({ state }: StreamPlayerProps) => {
+  const videoRef = useRef(null);
+
+  const videoSource = useTracks([Track.Source.ScreenShare])[0];
+  const audioSource = useTracks([Track.Source.ScreenShareAudio])[0];
+
+  const participants = useParticipants();
+
+  useEffect(() => {
+    const videoElement: any = videoRef.current;
+
+    const videoMediaStream = videoSource && videoSource.publication.track && videoSource.publication.track.mediaStream;
+    //if (videoSource && videoSource.publication.track && !isTrackReferencePlaceholder(videoSource))
+    //  videoMediaStream.addTrack(videoSource.publication.track.mediaStreamTrack);
+
+    const audioMediaStream = audioSource && audioSource.publication.track && audioSource.publication.track.mediaStream;
+    //if (audioSource && audioSource.publication.track && !isTrackReferencePlaceholder(audioSource))
+    //  audioMediaStream.addTrack(audioSource.publication.track.mediaStreamTrack);
+
+    const combinedStream = videoMediaStream && audioMediaStream && new MediaStream([
+      ...videoMediaStream?.getTracks(),
+      ...audioMediaStream?.getTracks(),
+    ]);
+
+    videoElement.srcObject = combinedStream;
+    videoElement.play();
+
+    /*return () => {
+      if (videoElement) {
+        videoElement.srcObject = null;
+      }
+    };*/
+  }, [videoSource, audioSource]);
+
+  return (
+    <div className={"fixed top-20 bottom-20 left-12 right-12 grid grid-cols-[1fr_minmax(64px,_128px)]"}>
+      <div className={"absolute top-0 bottom-0 left-0 !aspect-video col-start-1 z-10 flex-col items-center justify-center text-center " + (state == State.SUCCESS ? "hidden" : "flex")}>
+        <Loader />
+        <div className={"italic pt-2"}>{ stateMessages[state] }</div>
+      </div>
+      <div className={"absolute top-0 bottom-0 left-0 !aspect-video col-start-1"}>
+        <video ref={videoRef}
+          controls={state == State.SUCCESS}
+          className={`h-full w-full object-contain bg-black`}
+          width="1920"
+          height="1080"
+        />
+      </div>
+      <div className={"absolute top-0 bottom-0 right-0 left-16 col-start-2"}>
+        { participants.map((participant) =>
+          participant.identity && !participant.identity.includes("ingress") && participant.attributes.profilePicture != "no-image" ? (
+            <>
+              <Image
+                src={participant.attributes.profilePicture}
+                alt={participant.identity}
+                key={participant.identity + "img"}
+                height={128}
+                width={128}
+                className={"rounded-[50%] object-cover w-full !aspect-square"}
+              />
+            </>
+          ) : !participant.identity.includes("ingress") && (
+            <>
+              <CircleUserRound
+                size={128}
+                key={participants.indexOf(participant) + "img"}
+                className={"object-cover w-full h-fit !aspect-square"}
+              />
+            </>
+          )
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default StreamPlayer;
