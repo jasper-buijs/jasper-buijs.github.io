@@ -204,8 +204,9 @@ const stateMessages = {
   1: "Loading stream...", // LOADING_STREAM
   2: "Could not verify you are a member of Heilige Maagden. If you are, sign out and back in.", // UNAUTH
   3: "An error occured. Reload, or try signing out and back in.", // ERROR
-  4: "Loading complete!", //SUCCESS
-  5: "Reconnecting..."
+  4: "Loading complete!", // SUCCESS
+  5: "Reconnecting...", // RECONNECTING
+  6: "The stream is offline." // OFFLINE
 }
 
 const Loader = () => {
@@ -269,7 +270,7 @@ const StreamPlayer = ({ state }: StreamPlayerProps) => {
   return (
     <div className={"fixed top-20 bottom-20 left-12 right-12 grid grid-cols-[1fr_minmax(64px,_128px)]"}>
       <div className={"absolute top-0 bottom-0 left-0 !aspect-video col-start-1 z-10 flex-col items-center justify-center text-center " + (state == State.SUCCESS ? "hidden" : "flex")}>
-        <Loader />
+        {!(state == State.OFFLINE) && <Loader />}
         <div className={"italic pt-2"}>{ stateMessages[state] }</div>
       </div>
       <div className={"absolute top-0 bottom-0 left-0 !aspect-video col-start-1"}>

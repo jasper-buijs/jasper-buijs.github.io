@@ -16,7 +16,8 @@ enum State {
   UNAUTHORIZED,
   ERROR,
   SUCCESS,
-  RECONNECTING
+  RECONNECTING,
+  OFFLINE
 }
 
 const liveBgs = [
@@ -38,8 +39,18 @@ const RoomElement = () => {
   let [state, setState] = useState<State>(State.LOADING_PAGE);
   let [_accessToken, setAccessToken] = useState<string>();
 
+  const [ isStreamActive, setStreamActive ] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetch(`/api/activeStream?room=${room}`).then((r) => {
+      r.json().then((data) => {
+        setStreamActive(data.live);
+      });
+    }).catch((_e) => setStreamActive(false)); // &username=${name}
+  }, [isStreamActive]);
+
   const [roomInstance] = useState(() => new Room({
-    adaptiveStream: false,
+    adaptiveStream: true,
     dynacast: true,
     disconnectOnPageLeave: true,
   }));
@@ -72,7 +83,7 @@ const RoomElement = () => {
 
   useEffect(() => {
     switch (roomInstance.state) {
-      case ConnectionState.Connected: setState(State.SUCCESS); break;
+      case ConnectionState.Connected: setState(isStreamActive ? State.SUCCESS : State.OFFLINE); break;
       case ConnectionState.Connecting: setState(State.LOADING_STREAM); break;
       case ConnectionState.Reconnecting: setState(State.RECONNECTING); break;
       case ConnectionState.SignalReconnecting: setState(State.RECONNECTING); break;
@@ -80,7 +91,7 @@ const RoomElement = () => {
       default: setState(State.ERROR);
     }
     console.log(state, roomInstance.state);
-  }, [roomInstance.state]);
+  }, [roomInstance.state, isStreamActive]);
 
   const [ bgImage, setBgImage ] = useState<`bg-[url(/bgs/live${number}.png)]`>(); //liveBgs[Math.floor(Math.random() * liveBgs.length)]
    // const [ poster, setPoster ] = useState<`/bgs/live${number}.png`>();
