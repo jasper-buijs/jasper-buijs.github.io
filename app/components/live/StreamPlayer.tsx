@@ -243,22 +243,47 @@ const StreamPlayer = ({ state }: StreamPlayerProps) => {
 
   useEffect(() => {
     const videoElement: any = videoRef.current;
+    //videoElement.height = 1080;
+    //videoElement.width = 1920;
 
-    const videoMediaStream = videoSource && videoSource.publication.track && videoSource.publication.track.mediaStream;
+    const videoTrack = videoSource && videoSource.publication.track;
+    const videoMediaStream = videoTrack && videoTrack.mediaStream;
+    //const videoMediaStreamTrack = videoMediaStream?.getTracks();
     //if (videoSource && videoSource.publication.track && !isTrackReferencePlaceholder(videoSource))
     //  videoMediaStream.addTrack(videoSource.publication.track.mediaStreamTrack);
 
-    const audioMediaStream = audioSource && audioSource.publication.track && audioSource.publication.track.mediaStream;
+    const audioTrack = audioSource && audioSource.publication.track;
+    const audioMediaStream = audioTrack && audioTrack.mediaStream;
+    //const audioMediaStreamTrack = audioMediaStream?.getTracks();
     //if (audioSource && audioSource.publication.track && !isTrackReferencePlaceholder(audioSource))
     //  audioMediaStream.addTrack(audioSource.publication.track.mediaStreamTrack);
 
     const combinedStream = videoMediaStream && audioMediaStream && new MediaStream([
       ...videoMediaStream?.getTracks(),
       ...audioMediaStream?.getTracks(),
+      //...videoMediaStreamTrack,
+      //...audioMediaStreamTrack
+
     ]);
 
     videoElement.srcObject = combinedStream;
+    videoTrack?.attach(videoElement);
+    audioTrack?.attach(videoElement);
+    //if (videoMediaStreamTrack) videoMediaStreamTrack[0].enabled = true;
+    //if (audioMediaStreamTrack) audioMediaStreamTrack[0].enabled = true;
     videoElement.play();
+
+    /*const videoTrack = videoSource && videoSource.publication.track;
+    const audioTrack = audioSource && audioSource.publication.track;
+
+    console.log(videoTrack)
+
+    videoTrack?.attach(videoElement.current);
+    audioTrack?.attach(videoElement.current);
+
+    console.log(videoElement)
+
+    videoElement.play();*/
 
     /*return () => {
       if (videoElement) {
@@ -291,7 +316,7 @@ const StreamPlayer = ({ state }: StreamPlayerProps) => {
                 key={participant.identity + "img"}
                 height={128}
                 width={128}
-                className={"rounded-[50%] object-cover w-full !aspect-square"}
+                className={"rounded-[50%] object-cover w-full !aspect-square mb-2"}
               />
             </>
           ) : !participant.identity.includes("ingress") && (
@@ -299,7 +324,7 @@ const StreamPlayer = ({ state }: StreamPlayerProps) => {
               <CircleUserRound
                 size={128}
                 key={participants.indexOf(participant) + "img"}
-                className={"object-cover w-full h-fit !aspect-square"}
+                className={"object-cover w-full h-fit !aspect-square mb-2"}
               />
             </>
           )
