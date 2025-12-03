@@ -55,7 +55,7 @@ const Page = () => {
   const [ place, setPlace ] = useState<"rome" | "milan">("rome");
   return (
     <>
-      <NavBar activePage={"italy"} />
+      <NavBar activePage={"none"} />
       <MapsOverlay place={place} vis={isMapsOverlayVisible} setVis={setMapsOverlayVisibility} />
       <Paragraph title={"Quick Links"}>
         <div className={"grid grid-cols-3 w-full mb-4"}>

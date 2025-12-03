@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface NavBarProps {
-  activePage: "home" | "magmuth" | "minecraft" | "formulaone" | "italy" | "none";
+  activePage: "home" | "magmuth" | "minecraft" | "formulaone" | "study" | "none";
 }
 const NavBar = ({ activePage }: NavBarProps) => {
   const [ isStreamActive, setStreamActive ] = useState<boolean>(false);
@@ -42,8 +42,8 @@ const NavBar = ({ activePage }: NavBarProps) => {
           <Link href="/formulaone" className={"m-4 " + linkClassFilter("formulaone")}>
             Formula 1
           </Link>
-          <Link href="/italy" className={"m-4 " + linkClassFilter("italy")}>
-            Italy &apos;25
+          <Link href="/study" className={"m-4 " + linkClassFilter("study")}>
+            Study
           </Link>
           { !isStreamActive &&
             <Link href="/live">

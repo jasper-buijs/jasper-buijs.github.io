@@ -20,6 +20,7 @@ const MobilePage = () => {
       try {
         const resp = await fetch(`/api/token?room=${room}`); // &username=${name}
         const data = await resp.json();
+        if (resp.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
         if (!mounted) return;
         if (data.token) {
           await roomInstance.connect((process.env.NEXT_PUBLIC_LIVEKIT_URL as string), data.token);

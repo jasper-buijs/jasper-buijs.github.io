@@ -54,7 +54,7 @@ const Page = () => {
   const [ place, setPlace ] = useState<"rome" | "milan">("rome");
   return (
     <>
-      <NavBar activePage={"italy"} />
+      <NavBar activePage={"none"} />
       <MapsOverlay place={place} vis={isMapsOverlayVisible} setVis={setMapsOverlayVisibility} />
       <div className="py-6 pl-2 pr-20">
         <Paragraph title={"Quick Links"}>

@@ -18,8 +18,9 @@ const CreatePage = () => {
 
   async function fetchIngressList () {
     const res = await fetch(`/api/ingress?room=${room}&list=1`);
-    if (res.status != 200) return [] as IngressInfo[];
     const data = await res.json();
+    if (res.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
+    if (res.status != 200) return [] as IngressInfo[];
     return data.list as IngressInfo[];
   }
   const [ingressList, setIngressList] = useState<IngressInfo[]>();
@@ -33,7 +34,7 @@ const CreatePage = () => {
   }, [whipInfo, rtmpInfo, deleteUpdateCounter]);
 
   async function fetchDeleteIngress (ingress_id: string) {
-    const _res = await fetch(`/api/ingress?id=${ingress_id}&delete=1`);
+    await fetch(`/api/ingress?id=${ingress_id}&delete=1`);
     setDeleteUpdateCounter(deleteUpdateCounter + 1);
   }
 

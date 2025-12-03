@@ -24,7 +24,7 @@ const ProjectSection = ({ name, url, lightLogo, darkLogo, children }: ProjectSec
   );
 }
 
-const MobilePage = () => {
+const DesktopPage = () => {
   return (
     <>
       <NavBar activePage={"none"} />
@@ -48,6 +48,9 @@ const MobilePage = () => {
         <ProjectSection name={"uNmINeD"} url={"https://unmined.net"} lightLogo={"/logos/unmined.png"} darkLogo={"/logos/unmined.png"}>
           uNmINeD is an easy to use and fast Minecraft world viewer and mapper tool. It can read Minecraft Java and Bedrock Edition world files and renders a browseable 2D overview map that you can export as an image or a web page.
         </ProjectSection>
+        <ProjectSection name={"Prisma ORM"} url={"https://www.prisma.io/orm"} lightLogo={"/logos/prisma-light.svg"} darkLogo={"/logos/prisma-dark.svg"}>
+          Prisma ORM is an open-source next-generation ORM. It consists of the following parts: Prisma Client: Auto-generated and type-safe query builder for Node.js & TypeScript; Prisma Migrate: Migration system; Prisma Studio: GUI to view and edit data in your database.
+        </ProjectSection>
       </Paragraph>
       <Paragraph title={"Legal"}>
         <p>© Jasper Buijs, Heilige Maagden, 2025. All Rights Reserved.</p><br />
@@ -58,4 +61,4 @@ const MobilePage = () => {
   );
 }
 
-export default MobilePage
+export default DesktopPage

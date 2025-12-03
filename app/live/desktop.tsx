@@ -61,10 +61,13 @@ const RoomElement = () => {
         try {
           const resp = await fetch(`/api/token?room=${room}`); // &username=${name}
           //if (resp.status == 401) return setState(State.UNAUTHORIZED);
+          const data = await resp.json();
+          if (resp.status == 400 && data.redirect) {
+            window.location.assign(new URL(data.redirect, window.location.toString()));
+          }
           if ([209, 401].includes(resp.status)) return setState(State.UNAUTHORIZED);
           if ([400, 500].includes(resp.status)) return setState(State.ERROR);
           console.log(state, resp.status)
-          const data = await resp.json();
           if (!mounted) return;
           if (data.token) {
             await roomInstance.connect((process.env.NEXT_PUBLIC_LIVEKIT_URL as string), data.token);
@@ -93,13 +96,13 @@ const RoomElement = () => {
     console.log(state, roomInstance.state);
   }, [roomInstance.state, isStreamActive]);
 
-  const [ bgImage, setBgImage ] = useState<`bg-[url(/bgs/live${number}.png)]`>(); //liveBgs[Math.floor(Math.random() * liveBgs.length)]
+  /*const [ bgImage, setBgImage ] = useState<`bg-[url(/bgs/live${number}.png)]`>(); //liveBgs[Math.floor(Math.random() * liveBgs.length)]
    // const [ poster, setPoster ] = useState<`/bgs/live${number}.png`>();
    useEffect(() => {
      const imageNumber = Math.floor(Math.random() * liveBgs.length);
      setBgImage(liveBgs[imageNumber]);
      // setPoster(liveImages[imageNumber]);
-   }, []);
+   }, []);*/
 
 
   //if (state == State.SUCCESS) {

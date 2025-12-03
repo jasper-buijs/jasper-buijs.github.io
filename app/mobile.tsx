@@ -14,10 +14,10 @@ const Home = () => {
             Magmuth Patch Notes
           </div>
         </a>
-        <a href={"/formulaone"} className={"relative group row-start-2 row-span-1 col-start-1 col-span-1"}>
-          <div className={"bg-[url(/menu/formulaone.webp)] bg-cover absolute w-full h-full brightness-[70%] group-hover:brightness-[30%] transition-all !duration-[600]"} />
+        <a href={"/study"} className={"relative group row-start-2 row-span-1 col-start-1 col-span-1"}>
+          <div className={"bg-[url(/menu/library.webp)] bg-cover absolute w-full h-full brightness-[70%] group-hover:brightness-[30%] transition-all !duration-[600]"} />
           <div className={"absolute w-full brightness-100 text-[#FFFFFF] text-xl text-center top-[75%] group-hover:underline transition-all !duration-[600]"}>
-            Formula 1
+            Exams January 2025
           </div>
         </a>
       </div>

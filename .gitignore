@@ -41,3 +41,5 @@ next-env.d.ts
 # custom
 /livekitconfig/
 /public/italy-docs/*
+
+/app/generated/prisma

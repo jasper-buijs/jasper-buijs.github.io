@@ -8,7 +8,7 @@ import Link from "next/link";
 const Page = () => {
   return (
     <>
-      <NavBar activePage={"italy"} />
+      <NavBar activePage={"none"} />
       <div className={"absolute left-12 right-12 top-20 bottom-20 grid grid-cols-2"}>
         <Link href={"/italy/short"} className={"h-max w-max col-start-1 m-auto"}>
           <Image className={"w-[20vw] max-w-[40vh] aspect-square rounded-md"} width="512" height="512" src="/logo-italy.png" alt="Jesus logo over an intalian flag" />

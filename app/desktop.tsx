@@ -4,7 +4,6 @@ import Alert from "./components/Alert";
 import FooterBar from "./components/FooterBar";
 import NavBar from "./components/NavBar";
 import { GridMenu, GridMenuElement } from "./components/GridMenu";
-import Script from "next/script";
 
 const Home = () => {
 
@@ -14,7 +13,7 @@ const Home = () => {
       {/*<Alert type="info" text="As you can see, our website is back - sort of. In the meantime, feel free to browse through what's here already, or find us in Discord." />*/}
       <GridMenu>
        <GridMenuElement bgImage="/menu/magmuth.webp" title="Magmuth Patch Notes" href="/magmuth/changelog" columns={[1, 1]} rows={[1, 1]} />
-       <GridMenuElement bgImage="/menu/formulaone.webp" title="Formula 1" href="/formulaone" columns={[2, 1]} rows={[1, 1]} />
+       <GridMenuElement bgImage="/menu/library.webp" title="Exams January 2025" href="/study" columns={[2, 1]} rows={[1, 1]} />
       </GridMenu>
       {/*<div className={`fixed mx-12 mt-4 w-[calc(100vw-6rem)] h-[calc(100vh-10rem)] border-none z-0 bg-white`}>
         <iframe
