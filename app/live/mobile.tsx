@@ -2,9 +2,19 @@ import StreamPlayer from "@/app/components/mobile/live/StreamPlayer";
 import NavBar from "@/app/components/mobile/NavBar";
 import { RoomContext } from "@livekit/components-react";
 import { Room } from "livekit-client";
+import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const MobilePage = () => {
+  useEffect(() => {
+    fetch(`/api/checkGuild`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
+        else if (data.status != 200) window.location.assign(new URL("/", window.location.toString()));
+    });
+  }, []);
+
   const room = "live-room";
   let [_accessToken, setAccessToken] = useState<string>();
 

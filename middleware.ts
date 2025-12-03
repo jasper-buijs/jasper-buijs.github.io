@@ -1,8 +1,8 @@
-//export { default } from "next-auth/middleware";
+export { default } from "next-auth/middleware";
 
-//export const config = { matcher: ["/live/:path*"] };
+export const config = { matcher: ["/live/:path*", "/study/:path*"] };
 
-import { getToken } from "next-auth/jwt";
+/*import { getToken } from "next-auth/jwt";
 import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
 
@@ -17,7 +17,7 @@ export default withAuth(
     // Email can create ingress
     if (path.startsWith("/live/create")) {
       //console.log(`email check ${token.email} against ${process.env.CREATE_INGRESS_EMAIL}`);
-      const res = await fetch(new URL(`/api/checkEmail`, req.url), {
+      const res = await fetch(new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/checkEmail`), {
         headers: {
           Cookie: req.headers.get("cookie") ?? "",
         }
@@ -31,7 +31,7 @@ export default withAuth(
     // GuildMember in HM
     else if (path.startsWith("/live") || path.startsWith("/study")) {
       //console.log(`checking membership status`);
-      const res = await fetch(new URL(`/api/checkGuild`, req.url), {
+      const res = await fetch(new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/checkGuild`), {
         headers: {
           Cookie: req.headers.get("cookie") ?? "",
         }
@@ -53,4 +53,4 @@ export default withAuth(
   }
 );
 
-export const config = { matcher: ["/live/:path*", "/study/:path*"] };
+export const config = { matcher: ["/live/:path*", "/study/:path*"] };*/

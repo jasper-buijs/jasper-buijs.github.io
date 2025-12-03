@@ -8,6 +8,7 @@ import NavBar from "@/app/components/NavBar";
 import { RoomContext } from "@livekit/components-react";
 import { ConnectionState, Room } from "livekit-client";
 import "@livekit/components-styles";
+import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
 enum State {
@@ -35,6 +36,15 @@ enum State {
 ] as `bg-[url(/bgs/live${number}.png)]`[];*/
 
 const RoomElement = () => {
+  useEffect(() => {
+    fetch(`/api/checkGuild`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
+        else if (data.status != 200) window.location.assign(new URL("/", window.location.toString()));
+    });
+  }, []);
+
   const room = "live-room";
   let [state, setState] = useState<State>(State.LOADING_PAGE);
   let [_accessToken, setAccessToken] = useState<string>();

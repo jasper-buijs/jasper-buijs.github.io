@@ -4,9 +4,19 @@ import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
 import { IngressInfo } from "livekit-server-sdk";
+import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const CreatePage = () => {
+  useEffect(() => {
+    fetch(`/api/checkEmail`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
+        else if (data.status != 200) window.location.assign(new URL("/", window.location.toString()));
+    });
+  }, []);
+
   const room = "live-room"
   const [whipInfo, setWhipInfo] = useState<{ url: string, streamKey: string} | null>(null);
   const [rtmpInfo, setRtmpInfo] = useState<{ url: string, streamKey: string} | null>(null);

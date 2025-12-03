@@ -5,6 +5,7 @@ import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
 import type { Exam } from "@prisma/client";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
 
@@ -308,6 +309,15 @@ const InputForm = () => {
 }
 
 const StudyView = () => {
+  useEffect(() => {
+    fetch(`/api/checkGuild`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
+        else if (data.status != 200) window.location.assign(new URL("/", window.location.toString()));
+    });
+  }, []);
+
   const [exams, setExams] = useState<Exam[]>([]);
   const [groupedExams, setGroupedExams] = useState<GroupedExam[]>([]);
 
