@@ -22,7 +22,7 @@ export async function GET(_req: NextRequest) {
 
   // console.log(`Checking guild member status, currently ${user?.guildMember}`);
 
-  if (user.guildMember == true) {
+  if (user.email == process.env.CREATE_INGRESS_EMAIL) {
     // console.log(`was true so allowing`);
     return NextResponse.json({ status: 200 });
   }  else {

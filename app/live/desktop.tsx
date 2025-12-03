@@ -20,7 +20,7 @@ enum State {
   OFFLINE
 }
 
-const liveBgs = [
+/*const liveBgs = [
   "bg-[url(/bgs/live1.png)]",
   "bg-[url(/bgs/live2.png)]",
   "bg-[url(/bgs/live3.png)]",
@@ -32,7 +32,7 @@ const liveBgs = [
   "bg-[url(/bgs/live9.png)]",
   "bg-[url(/bgs/live10.png)]",
   "bg-[url(/bgs/live11.png)]",
-] as `bg-[url(/bgs/live${number}.png)]`[];
+] as `bg-[url(/bgs/live${number}.png)]`[];*/
 
 const RoomElement = () => {
   const room = "live-room";

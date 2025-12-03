@@ -20,10 +20,7 @@ export async function POST(req: NextRequest) {
 
   const user = await prisma.user.findUnique({
     where: {
-      identifier: {
-        username: session.user?.name as string,
-        email: session.user?.email as string,
-      }
+      username: session.user?.name as string,
     }
   });
 

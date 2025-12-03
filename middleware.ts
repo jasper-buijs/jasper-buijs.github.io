@@ -16,14 +16,21 @@ export default withAuth(
 
     // Email can create ingress
     if (path.startsWith("/live/create")) {
-      console.log(`email check ${token.email} against ${process.env.CREATE_INGRESS_EMAIL}`);
-      if (token.email != process.env.CREATE_INGRESS_EMAIL) return NextResponse.redirect(new URL("/live", req.url));
+      //console.log(`email check ${token.email} against ${process.env.CREATE_INGRESS_EMAIL}`);
+      const res = await fetch(new URL(`/api/checkEmail`, req.url), {
+        headers: {
+          Cookie: req.headers.get("cookie") ?? "",
+        }
+      });
+      const data = await res.json();
+      if (res.status == 400 && data.redirect) return NextResponse.redirect(new URL(data.redirect, req.url));
+      else if (res.status != 200) return NextResponse.redirect(new URL("/live", req.url));
       else return NextResponse.next();
     }
 
     // GuildMember in HM
     else if (path.startsWith("/live") || path.startsWith("/study")) {
-      console.log(`checking membership status`);
+      //console.log(`checking membership status`);
       const res = await fetch(new URL(`/api/checkGuild`, req.url), {
         headers: {
           Cookie: req.headers.get("cookie") ?? "",
