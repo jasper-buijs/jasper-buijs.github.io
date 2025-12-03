@@ -322,7 +322,7 @@ const StudyView = () => {
   const [groupedExams, setGroupedExams] = useState<GroupedExam[]>([]);
 
   useEffect(() => {
-    fetch(`/api/exams/currentExams`)
+    fetch(`/api/exams/allExams`)
       .then((r) => r.json())
       .then((data) => {
         setExams(data.exams.map((e: any) => {
@@ -338,7 +338,7 @@ const StudyView = () => {
     for (const obj of exams) {
       const dateStr = obj.startDate.toLocaleDateString("en", { dateStyle: "medium" });
       const date = obj.startDate;
-      date.setHours(8, 0, 0);
+      //date.setHours(8, 0, 0);
       if (!result[dateStr]) result[dateStr] = { date, exams: [] };
       result[dateStr].exams.push(obj);
     }
