@@ -5,7 +5,6 @@ import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
 import type { Exam } from "@prisma/client";
 import Image from "next/image";
-import { redirect } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
 
@@ -77,9 +76,14 @@ const KULeuvenInput = () => {
     });
     const data = await res.json();
     let name;
-    if (data.hits.hits.length == 0) name = "No results for course code.";
-    else if (String(data.hits.hits[0]["_source"].ectsCode).toUpperCase() != kulFormValues.OpoCode.toUpperCase()) name = "Course not found in API.";
-    else name = data.hits.hits[0]["_source"].moduleLanguageSet[0].moduleTitleSet[0].description || "Error fetching course name.";
+    //if (data.hits.hits.length == 0) name = "No results for course code.";
+    let i = 0;
+    for (i; i < data.hits.hits.length; i++) {
+      if (String(data.hits.hits[i]["_source"].ectsCode).toUpperCase() == kulFormValues.OpoCode.toUpperCase()) break;
+      else if (i == data.hits.hits.length - 1) i++;
+    }
+    if (i == data.hits.hits.length) name = "Course not found in API.";
+    else name = data.hits.hits[i]["_source"].moduleLanguageSet[0].moduleTitleSet[0].description || "Error fetching course name.";
     const newExam: QueuedKulExam = {
       name: name,
       courseCode: kulFormValues.OpoCode,
