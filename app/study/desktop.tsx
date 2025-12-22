@@ -4,9 +4,9 @@ import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
 import type { Exam } from "@prisma/client";
-import Image from "next/image";
 import { FormEvent, useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
+import Image from "next/image";
 
 interface QueuedExam {
   name: string,
@@ -96,13 +96,16 @@ const KULeuvenInput = () => {
     setQueuedExams(queuedExams.filter((qe) => qe != e));
     setQueuedExams(queuedExams => [...queuedExams].sort((a, b) => a.startDate.getTime() - b.startDate.getTime()));
   }
-  const onSubmitQueuedExams = async () => {
+  const onSubmitQueuedExams = async (reload=true) => {
     await fetch(`/api/exams/setExams`, {
       method: "POST",
       body: JSON.stringify(queuedExams),
     });
-    window.location.reload();
+    if (reload) window.location.reload();
   }
+  useEffect(() => {
+    if (queuedExams.length) onSubmitQueuedExams(false);
+  }, [queuedExams]);
   return (
     <>
       <form onSubmit={onKulSubmit}>
@@ -126,7 +129,7 @@ const KULeuvenInput = () => {
         )}
       </div>
       <div className={"w-full block"}>
-        <button onClick={onSubmitQueuedExams} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
+        <button onClick={() => onSubmitQueuedExams()} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
       </div>
     </>
   );
@@ -175,13 +178,16 @@ const VUBInput = () => {
     setQueuedExams(queuedExams.filter((qe) => qe != e));
     setQueuedExams(queuedExams => [...queuedExams].sort((a, b) => a.startDate.getTime() - b.startDate.getTime()));
   }
-  const onSubmitQueuedExams = async () => {
+  const onSubmitQueuedExams = async (reload = true) => {
     await fetch(`/api/exams/setExams`, {
       method: "POST",
       body: JSON.stringify(queuedExams),
     });
-    window.location.reload();
+    if (reload) window.location.reload();
   }
+  useEffect(() => {
+    if (queuedExams.length) onSubmitQueuedExams(false);
+  }, [queuedExams]);
   return (
     <>
       <form onSubmit={onVubSubmit}>
@@ -205,7 +211,7 @@ const VUBInput = () => {
         )}
       </div>
       <div className={"w-full block"}>
-        <button onClick={onSubmitQueuedExams} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
+        <button onClick={() => onSubmitQueuedExams()} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
       </div>
     </>
   );
@@ -244,13 +250,16 @@ const OtherInput = () => {
     setQueuedExams(queuedExams.filter((qe) => qe != e));
     setQueuedExams(queuedExams => [...queuedExams].sort((a, b) => a.startDate.getTime() - b.startDate.getTime()));
   }
-  const onSubmitQueuedExams = async () => {
+  const onSubmitQueuedExams = async (reload=true) => {
     await fetch(`/api/exams/setExams`, {
       method: "POST",
       body: JSON.stringify(queuedExams),
     });
-    window.location.reload();
+    if (reload) window.location.reload();
   }
+  useEffect(() => {
+    if (queuedExams.length) onSubmitQueuedExams(false);
+  }, [queuedExams]);
   return (
     <>
       <form onSubmit={onOtherSubmit}>
@@ -273,7 +282,7 @@ const OtherInput = () => {
         )}
       </div>
       <div className={"w-full block"}>
-        <button onClick={onSubmitQueuedExams} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
+        <button onClick={() => onSubmitQueuedExams()} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
       </div>
     </>
   );
@@ -362,7 +371,9 @@ const StudyView = () => {
 
     useEffect(() => {
       //console.log(`ID: ${id}`);
-      fetch(`/api/exams/getImageUrl?id=${id}`)
+      fetch(`/api/exams/getImageUrl?id=${id}`, {
+        cache: "force-cache",
+      })
         .then((data) => data.json())
         .then((data) => {
           try {

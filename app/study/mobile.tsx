@@ -4,7 +4,6 @@ import NavBar from "@/app/components/mobile/NavBar";
 import Paragraph from "@/app/components/mobile/Paragraph";
 import type { Exam } from "@prisma/client";
 import Image from "next/image";
-import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
 
@@ -74,7 +73,7 @@ const Home = () => {
     const [groupedExams, setGroupedExams] = useState<GroupedExam[]>([]);
 
     useEffect(() => {
-      fetch(`/api/exams/currentExams`)
+      fetch(`/api/exams/allExams`)
         .then((r) => r.json())
         .then((data) => {
           setExams(data.exams.map((e: any) => {
@@ -109,7 +108,9 @@ const Home = () => {
 
       useEffect(() => {
         //console.log(`ID: ${id}`);
-        fetch(`/api/exams/getImageUrl?id=${id}`)
+        fetch(`/api/exams/getImageUrl?id=${id}`, {
+          cache: "force-cache",
+        })
           .then((data) => data.json())
           .then((data) => {
             try {
