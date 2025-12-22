@@ -103,12 +103,12 @@ const KULeuvenInput = () => {
     });
     if (reload) window.location.reload();
   }
-  useEffect(() => {
-    if (queuedExams.length) onSubmitQueuedExams(false);
-  }, [queuedExams]);
   return (
     <>
-      <form onSubmit={onKulSubmit}>
+      <div className={"w-full block"}>
+        <button onClick={() => onSubmitQueuedExams()} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
+      </div>
+      <form onSubmit={onKulSubmit} className={"inline-block"}>
         <label htmlFor={"OpoCode"} className={"mr-2"}>OPO Code:</label>
         <input type={"text"} id={"OpoCode"} name={"OpoCode"} placeholder={"W0AE0A"} required value={kulFormValues.OpoCode} onChange={onKulInputChange} className={"mr-4 p-1 rounded-md h-8 dark:text-black"} />
         <label htmlFor={"KULDate"} className={"mr-2"}>Date:</label>
@@ -185,11 +185,11 @@ const VUBInput = () => {
     });
     if (reload) window.location.reload();
   }
-  useEffect(() => {
-    if (queuedExams.length) onSubmitQueuedExams(false);
-  }, [queuedExams]);
   return (
     <>
+      <div className={"w-full block"}>
+        <button onClick={() => onSubmitQueuedExams()} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
+      </div>
       <form onSubmit={onVubSubmit}>
         <label htmlFor={"OpoCode"} className={"mr-2"}>OPO Code:</label>
         <input type={"text"} id={"OpoCode"} name={"OpoCode"} placeholder={"012345"} required value={vubFormValues.OpoCode} onChange={onVubInputChange} className={"mr-4 p-1 rounded-md h-8 dark:text-black"} />
@@ -257,11 +257,11 @@ const OtherInput = () => {
     });
     if (reload) window.location.reload();
   }
-  useEffect(() => {
-    if (queuedExams.length) onSubmitQueuedExams(false);
-  }, [queuedExams]);
   return (
     <>
+      <div className={"w-full block"}>
+        <button onClick={() => onSubmitQueuedExams()} className={"block ml-auto mr-4 font-semibold bg-green-400 rounded-md p-1 my-2 dark:text-black"}>{"💾 SAVE"}</button>
+      </div>
       <form onSubmit={onOtherSubmit}>
         <label htmlFor={"name"} className={"mr-2"}>Course name:</label>
         <input type={"text"} id={"name"} name={"name"} placeholder={"Yoga 101"} required value={otherFormValues.name} onChange={onOtherInputChange} className={"mr-4 p-1 rounded-md h-8 dark:text-black"} />
