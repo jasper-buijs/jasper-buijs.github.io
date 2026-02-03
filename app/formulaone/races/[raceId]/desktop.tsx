@@ -64,7 +64,10 @@ const Page = ({ raceId }: { raceId: string }) => {
   }, []);
 
   useEffect(() => {
-    if (link) window.open(link);
+    if (link) {
+      window.open(link, "_blank", "noopener noreferrer");
+      //else window.open(link.replace("https://", "discord://"), "_blank", "noopener noreferrer");
+    };
   }, [link]);
 
   return(
@@ -77,7 +80,7 @@ const Page = ({ raceId }: { raceId: string }) => {
       <div className={`w-full text-center mt-2 mx-12 max-w-[calc(100%-6rem)] ${!link && "hidden"}`}>
         <div className={`mb-4`}>Linking you to discord... Be sure to allow pop-ups.</div>
         <a
-          href={link?.replace("https://", "discord://")}
+          href={link || undefined}
           target={"_blank"}
           className={`inline-block mr-2 rounded-md p-2 bg-[#5865F2] text-[#ffffff] w-max h-min`}
         >
@@ -95,7 +98,7 @@ const Page = ({ raceId }: { raceId: string }) => {
         <div className={"mb-1"}>The discord page with updates for this GP has not yet been created.</div>
         <div className={`inline-block mr-2`}>Check back later, or explore </div>
         <a
-          href={`discord://discord.com/channels/585896430380777503/1209621587217875034`}
+          href={`https://discord.com/channels/585896430380777503/1209621587217875034`}
           target={"_blank"}
           className={`inline-block rounded-md p-2 bg-[#5865F2] text-[#ffffff] w-max h-min`}
         >
@@ -104,7 +107,7 @@ const Page = ({ raceId }: { raceId: string }) => {
         </a>
         <div className={`inline-block mx-2`}>or</div>
         <a
-          href={`discord://discord.com/channels/585896430380777503/1189576541894611054`}
+          href={`https://discord.com/channels/585896430380777503/1189576541894611054`}
           target={"_blank"}
           className={`inline-block rounded-md p-2 bg-[#5865F2] text-[#ffffff] w-max h-min`}
         >
