@@ -9,7 +9,6 @@ import {
   UserRoundCheck,
   MonitorOff,
   MonitorPlay,
-  BookText,
 } from "lucide-react";
 import { motorRacingHelmet } from "@lucide/lab";
 import { signIn, useSession } from "next-auth/react";
@@ -57,11 +56,11 @@ const NavBar = ({ activePage }: NavBarProps) => {
               <Icon iconNode={motorRacingHelmet} className={"m-[20px]"} />
             </Link>
           </div>
-          <div className={"flex h-16 w-16 justify-center items-center"}>
+          {/*<div className={"flex h-16 w-16 justify-center items-center"}>
             <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("study")}`} href={"/study"}>
               <BookText className={"m-[20px]"} />
             </Link>
-          </div>
+          </div>*/}
           <div className={"flex h-16 w-16 justify-center items-center"}>
             { !isStreamActive &&
               <Link className={`w-full h-full text-4xl leading-[4rem] text-[#0F0F0F] dark:text-[#FFFFFF]`} href={"/live"}>
@@ -114,7 +113,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
             <div className={"flex h-16 w-16 justify-center items-center absolute bottom-0"}>
               <button
                 className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("NONE_COPYRIGHT")}`}
-                onClick={() => alert("© Jasper Buijs, Heilige Maagden, 2025")}
+                onClick={() => alert("© Jasper Buijs, Heilige Maagden, 2026")}
               >
                 <Copyright className={"m-[20px]"} />
               </button>

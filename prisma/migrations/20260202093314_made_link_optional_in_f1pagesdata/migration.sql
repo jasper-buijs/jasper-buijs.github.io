@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "F1PagesData" ALTER COLUMN "link" DROP NOT NULL;

@@ -33,3 +33,10 @@ model Exam {
   user       User     @relation(fields: [userId], references: [id])
   userId     Int
 }
+
+model F1PagesData {
+  id    Int     @id @default(autoincrement())
+  page  String
+  title String
+  link  String?
+}

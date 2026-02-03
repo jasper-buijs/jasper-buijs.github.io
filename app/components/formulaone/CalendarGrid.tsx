@@ -1,11 +1,3 @@
-import { ReactNode } from "react";
-
-interface CalendarGridProps {
-  children: ReactNode;
-}
-const CalendarGrid = ({ children }: CalendarGridProps) => {
-  return <div className="grid grid-cols-2 auto-rows-fr w-full m-2">{children}</div>;
-};
 
 interface CalendarEmblemsProps {
   sprint?: boolean;
@@ -24,4 +16,4 @@ const CalendarEmblems = ({ sprint, f2, f3, f1a }: CalendarEmblemsProps) => {
   );
 };
 
-export { CalendarGrid, CalendarEmblems };
+export { /*CalendarGrid,*/ CalendarEmblems };

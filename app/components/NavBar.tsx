@@ -42,9 +42,9 @@ const NavBar = ({ activePage }: NavBarProps) => {
           <Link href="/formulaone" className={"m-4 " + linkClassFilter("formulaone")}>
             Formula 1
           </Link>
-          <Link href="/study" className={"m-4 " + linkClassFilter("study")}>
+          {/*<Link href="/study" className={"m-4 " + linkClassFilter("study")}>
             Study
-          </Link>
+          </Link>*/}
           { !isStreamActive &&
             <Link href="/live">
               <div className="inline-block bg-gray-500 text-white px-2 pt-0.5 rounded absolute top-4 bottom-4 right-16">
