@@ -1,3 +1,4 @@
+import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import SessionProviderClient from "@/app/components/SessionProvider";
@@ -17,9 +18,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en">
         <body className={inter.className}>
-        <SessionProviderClient session={session}>
-          {children}
-        </SessionProviderClient>
+          <Theme
+            appearance="inherit"
+            radius="none"
+          >
+            <SessionProviderClient session={session}>
+              {children}
+            </SessionProviderClient>
+          </Theme>
         </body>
     </html>
   );
