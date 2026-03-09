@@ -1,8 +1,8 @@
-import { radixThemePreset } from "radix-themes-tw";
+//import { radixThemePreset } from "radix-themes-tw";
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
+//import colors from "tailwindcss/colors";
 
-const radixColors = radixThemePreset.theme?.colors ?? {};
+//const radixColors = radixThemePreset.theme?.colors ?? {};
 
 const config: Config = {
   content: [
@@ -17,10 +17,10 @@ const config: Config = {
     { pattern: /row-span-./ },
   ],
   theme: {
-    colors: {
+    /*colors: {
       ...colors,
       ...radixColors,
-    },
+    },*/
     extend: {
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
@@ -39,6 +39,6 @@ const config: Config = {
     },
   },
   plugins: [],
-  presets: [radixThemePreset]
+  //presets: [radixThemePreset]
 };
 export default config;

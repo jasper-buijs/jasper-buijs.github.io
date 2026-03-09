@@ -11,7 +11,7 @@ export default function DesktopPage() {
       <main className={"flex flex-col items-center gap-12 absolute top-20 bottom-20 left-12 right-12"}>
         <Container size="1">
           <Flex direction="column" align="center" gap="5">
-            <Text as="p">
+            <Text as="div" className={"text-white text-balance text-center"}>
               Welcome to our new Live platform. A lot has changed, and we are still
               working on some changes. If you find any bugs, send me a DM!
             </Text>

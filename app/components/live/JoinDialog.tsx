@@ -28,7 +28,7 @@ export function JoinDialog({
             <TextField.Root
               type="text"
               placeholder={"Stream name"}
-              value={"roomName"}
+              value={roomName}
               onChange={(e) => setRoomName(e.target.value)}
             />
           </label>
