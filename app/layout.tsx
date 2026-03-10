@@ -5,7 +5,6 @@ import { getServerSession } from "next-auth";
 import SessionProviderClient from "@/app/components/SessionProvider";
 import { Inter } from "next/font/google";
 
-// TODO bug in Nextjs, upgrade or use postcss-import
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import "./radix-colors.css";
