@@ -1,10 +1,14 @@
+/* eslint-disable sort-imports */
 import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import SessionProviderClient from "@/app/components/SessionProvider";
 import { Inter } from "next/font/google";
+
+// TODO bug in Nextjs, upgrade or use postcss-import
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
+import "./radix-colors.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +24,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en">
         <body className={inter.className}>
           <Theme
-            accentColor="amber"
+            accentColor="yellow"
             grayColor="gray"
             appearance="inherit"
             radius="large"

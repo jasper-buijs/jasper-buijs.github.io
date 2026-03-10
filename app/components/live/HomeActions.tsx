@@ -16,10 +16,10 @@ export function HomeActions() {
       <Text size="1" className={"text-white"}> - OR - </Text>
       <Flex gap="2">
         <BroadcastDialog>
-          <Button variant="soft" size="3" radius="small" color="red">Stream from browser</Button>
+          <Button variant="soft" size="3" radius="small" style={{ color: "black" }}>Stream from browser</Button>
         </BroadcastDialog>
         <IngressDialog>
-          <Button variant="soft" size="3" radius="small" color="red">Stream from OBS</Button>
+          <Button variant="soft" size="3" radius="small" style={{ color: "black" }}>Stream from OBS</Button>
         </IngressDialog>
       </Flex>
     </Flex>
