@@ -47,7 +47,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
           </Link>*/}
           { !isStreamActive &&
             <Link href="/live">
-              <div className="inline-block bg-gray-500 text-white px-2 pt-0.5 rounded absolute top-4 bottom-4 right-16">
+              <div className="inline-block bg-gray-500 text-white px-2 pt-0.5 rounded-xs absolute top-4 bottom-4 right-16">
                 <MonitorOff className={"inline-block align-middle mr-2"} />
                 <div className={"inline-block align-middle"}>Stream Offline</div>
               </div>
@@ -55,7 +55,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
           }
           { isStreamActive &&
             <Link href="/live">
-              <div className="inline-block bg-red-600 text-white px-2 pt-0.5 rounded absolute top-4 bottom-4 right-16">
+              <div className="inline-block bg-red-600 text-white px-2 pt-0.5 rounded-xs absolute top-4 bottom-4 right-16">
                 <SatelliteDish className={"inline-block align-middle mr-2"} />
                 <div className={"inline-block align-middle"}>Live Stream</div>
               </div>

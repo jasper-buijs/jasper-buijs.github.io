@@ -91,12 +91,12 @@ const StreamPlayerOLD = ({ state }: StreamPlayerProps) => {
   }, [videoSource, audioSource]);
 
   return (
-    <div className={"fixed top-20 bottom-20 left-12 right-12 grid grid-cols-[1fr_minmax(64px,_128px)]"}>
-      <div className={"absolute top-0 bottom-0 left-0 !aspect-video col-start-1 z-10 flex-col items-center justify-center text-center " + (state == State.SUCCESS ? "hidden" : "flex")}>
+    <div className={"fixed top-20 bottom-20 left-12 right-12 grid grid-cols-[1fr_minmax(64px,128px)]"}>
+      <div className={"absolute top-0 bottom-0 left-0 aspect-video! col-start-1 z-10 flex-col items-center justify-center text-center " + (state == State.SUCCESS ? "hidden" : "flex")}>
         {!(state == State.OFFLINE) && <Loader />}
         <div className={"italic pt-2"}>{ stateMessages[state] }</div>
       </div>
-      <div className={"absolute top-0 bottom-0 left-0 !aspect-video col-start-1"}>
+      <div className={"absolute top-0 bottom-0 left-0 aspect-video! col-start-1"}>
         <video ref={videoRef}
           controls={state == State.SUCCESS}
           className={`h-full w-full object-contain bg-black`}
@@ -114,7 +114,7 @@ const StreamPlayerOLD = ({ state }: StreamPlayerProps) => {
                 key={participant.identity + "img"}
                 height={128}
                 width={128}
-                className={"rounded-[50%] object-cover w-full !aspect-square mb-2"}
+                className={"rounded-[50%] object-cover w-full aspect-square! mb-2"}
               />
             </>
           ) : !participant.identity.includes("ingress") && (
@@ -122,7 +122,7 @@ const StreamPlayerOLD = ({ state }: StreamPlayerProps) => {
               <CircleUserRound
                 size={128}
                 key={participants.indexOf(participant) + "img"}
-                className={"object-cover w-full h-fit !aspect-square mb-2"}
+                className={"object-cover w-full h-fit aspect-square! mb-2"}
               />
             </>
           )

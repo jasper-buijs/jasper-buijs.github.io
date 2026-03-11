@@ -8,7 +8,7 @@ interface GridMenuProps {
 const GridMenu = ({ children, topSpacing }: GridMenuProps) => {
   const divStyle = topSpacing ? ({ top: `${topSpacing}` } as React.CSSProperties) : ({} as React.CSSProperties);
   return (
-    <div style={divStyle} className={`px-12 w-full ${topSpacing ? "" : "top-[5rem]"} bottom-[5rem] absolute grid auto-cols-fr auto-rows-fr gap-4 place-content-stretch`}>
+    <div style={divStyle} className={`px-12 w-full ${topSpacing ? "" : "top-20"} bottom-20 absolute grid auto-cols-fr auto-rows-fr gap-4 place-content-stretch`}>
       {children}
     </div>
   );
@@ -27,7 +27,7 @@ const GridMenuElement = ({ bgImage, title, href, columns, rows }: GridMenuElemen
   };
   const bgClasses = () => {
     if (bgImage != undefined) {
-      return "bg-[image:var(--image-url)] bg-cover bg-center brightness-[70%]";
+      return "bg-(image:--image-url) bg-cover bg-center brightness-70";
     } else {
       return "bg-[#D6D6D6] dark:bg-[#1E1E1E]";
     }
@@ -44,8 +44,8 @@ const GridMenuElement = ({ bgImage, title, href, columns, rows }: GridMenuElemen
 
   return (
     <a href={href} className={`relative group ${gridClasses()}`}>
-      <div style={divStyle} className={`absolute w-full h-full ${bgClasses()} group-hover:brightness-[30%] transition-all !duration-[600]`}></div>
-      <div className={`absolute w-full brightness-100 ${textClasses()} text-4xl text-center top-[75%] group-hover:underline transition-all !duration-[600]`}>{title}</div>
+      <div style={divStyle} className={`absolute w-full h-full ${bgClasses()} group-hover:brightness-30 transition-all duration-[600]!`}></div>
+      <div className={`absolute w-full brightness-100 ${textClasses()} text-4xl text-center top-[75%] group-hover:underline transition-all duration-[600]!`}>{title}</div>
     </a>
   );
 };

@@ -16,15 +16,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#B6BABD]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">20</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">20</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Kevin Magnussen
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Kevin Magnussen
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Haas
+                    className="absolute left-0 top-6 text-base w-max">Haas
                   </div>
                 </div>
               </div>
@@ -64,15 +64,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#64C4FF]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">2</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">2</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Logan Sargeant
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Logan Sargeant
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Williams
+                    className="absolute left-0 top-6 text-base w-max">Williams
                   </div>
                 </div>
               </div>
@@ -115,15 +115,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#3671C6]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">11</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">11</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Sergio Perez
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Sergio Perez
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Red Bull Racing
+                    className="absolute left-0 top-6 text-base w-max">Red Bull Racing
                   </div>
                 </div>
               </div>
@@ -167,15 +167,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#229971]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">14</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">14</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Fernando Alonso
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Fernando Alonso
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Aston Martin
+                    className="absolute left-0 top-6 text-base w-max">Aston Martin
                   </div>
                 </div>
               </div>
@@ -214,15 +214,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#229971]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">18</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">18</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Lance Stroll
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Lance Stroll
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Aston Martin
+                    className="absolute left-0 top-6 text-base w-max">Aston Martin
                   </div>
                 </div>
               </div>
@@ -257,15 +257,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#3671C6]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">1</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">1</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Max Verstappen
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Max Verstappen
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Red Bull Racing
+                    className="absolute left-0 top-6 text-base w-max">Red Bull Racing
                   </div>
                 </div>
               </div>
@@ -300,15 +300,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#32d3b8]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">44</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">44</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Lewis Hamilton
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Lewis Hamilton
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Mercedes
+                    className="absolute left-0 top-6 text-base w-max">Mercedes
                   </div>
                 </div>
               </div>
@@ -343,15 +343,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF87BC]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">31</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">31</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Esteban Ocon
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Esteban Ocon
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Alpine
+                    className="absolute left-0 top-6 text-base w-max">Alpine
                   </div>
                 </div>
               </div>
@@ -386,15 +386,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#6692FF]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">3</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">3</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Daniel Ricciardo
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Daniel Ricciardo
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Racing Bulls
+                    className="absolute left-0 top-6 text-base w-max">Racing Bulls
                   </div>
                 </div>
               </div>
@@ -425,15 +425,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#6692FF]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">22</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">22</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Yuki Tsunoda
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Yuki Tsunoda
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Racing Bulls
+                    className="absolute left-0 top-6 text-base w-max">Racing Bulls
                   </div>
                 </div>
               </div>
@@ -464,15 +464,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#52E252]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">24</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">24</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Guanyu Zhou
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Guanyu Zhou
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Kick Sauber
+                    className="absolute left-0 top-6 text-base w-max">Kick Sauber
                   </div>
                 </div>
               </div>
@@ -503,15 +503,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#32d3b8]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">63</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">63</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">George Russell
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">George Russell
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Mercedes
+                    className="absolute left-0 top-6 text-base w-max">Mercedes
                   </div>
                 </div>
               </div>
@@ -542,15 +542,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#52E252]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">77</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">77</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Valtteri Bottas
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Valtteri Bottas
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Kick Sauber
+                    className="absolute left-0 top-6 text-base w-max">Kick Sauber
                   </div>
                 </div>
               </div>
@@ -581,15 +581,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#E8002D]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">55</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">55</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Carlos Sainz
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Carlos Sainz
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Ferrari
+                    className="absolute left-0 top-6 text-base w-max">Ferrari
                   </div>
                 </div>
               </div>
@@ -620,15 +620,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF8000]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">4</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">4</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Lando Norris
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Lando Norris
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">McLaren
+                    className="absolute left-0 top-6 text-base w-max">McLaren
                   </div>
                 </div>
               </div>
@@ -645,15 +645,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF87BC]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">10</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">10</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Pierre Gasly
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Pierre Gasly
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Alpine
+                    className="absolute left-0 top-6 text-base w-max">Alpine
                   </div>
                 </div>
               </div>
@@ -670,15 +670,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#E8002D]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">16</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">16</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Charles Leclerc
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Charles Leclerc
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Ferrari
+                    className="absolute left-0 top-6 text-base w-max">Ferrari
                   </div>
                 </div>
               </div>
@@ -695,15 +695,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#64C4FF]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">23</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">23</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Alex Albon
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Alex Albon
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Williams
+                    className="absolute left-0 top-6 text-base w-max">Williams
                   </div>
                 </div>
               </div>
@@ -720,15 +720,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#B6BABD]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">27</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">27</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Nico Hulkenberg
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Nico Hulkenberg
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">Haas
+                    className="absolute left-0 top-6 text-base w-max">Haas
                   </div>
                 </div>
               </div>
@@ -745,15 +745,15 @@ const PenaltyPointsPage: React.FunctionComponent = () => {
         <div
           className={ "rounded-md block h-max mb-2 relative min-w-96 snap-start bg-[#FF8000]" }>
           <div className={ "h-14 block" }>
-            <div className="absolute left-2 top-1 h-[3rem] w-full">
-              <div className="h-[3rem]">
-                <div className="inline-block h-[3rem] text-5xl font-semibold ml-1 align-top">81</div>
-                <div className="inline-block relative h-[3rem] ml-2 overflow-visible align-top">
+            <div className="absolute left-2 top-1 h-12 w-full">
+              <div className="h-12">
+                <div className="inline-block h-12 text-5xl font-semibold ml-1 align-top">81</div>
+                <div className="inline-block relative h-12 ml-2 overflow-visible align-top">
                   <div
-                    className="absolute left-[0rem] top-0 text-2xl font-medium w-max">Oscar Piastri
+                    className="absolute left-0 top-0 text-2xl font-medium w-max">Oscar Piastri
                   </div>
                   <div
-                    className="absolute left-[0rem] top-6 text-base w-max">McLaren
+                    className="absolute left-0 top-6 text-base w-max">McLaren
                   </div>
                 </div>
               </div>

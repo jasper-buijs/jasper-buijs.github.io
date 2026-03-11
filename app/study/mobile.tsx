@@ -130,7 +130,7 @@ const Home = () => {
           {groupedExams.map((group) =>
             <div key={`group-${group.date.toISOString()}`} className={"mb-4"}>
               <div className={"uppercase font-semibold mb-1"}>{group.date.toLocaleString(undefined, {dateStyle: "medium"})}</div>
-              <div className={"grid grid-cols-[28px,_1fr]"}>
+              <div className={"grid grid-cols-[28px_1fr]"}>
                 {group.exams.map((exam) =>
                   <>
                     <ProfilePictureDisplay key={`pp-${exam.id}`} id={String(exam.userId)} />

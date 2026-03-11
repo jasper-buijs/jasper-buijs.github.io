@@ -76,7 +76,7 @@ const StreamPlayer = () => {
             >
               <VideoTrack
                 trackRef={track}
-                className={"!w-full !max-w-full object-cover bg-black"}
+                className={"w-full! max-w-full! object-cover bg-black"}
                 controls={true}
               />
             </div>
@@ -100,7 +100,7 @@ const StreamPlayer = () => {
             </>
           )}
           <div className={"mt-2 h-full"}>
-            <div className={"grid grid-cols-[repeat(auto-fit,_minmax(32px,_1fr))] gap-2 h-[80%] content-start"}>
+            <div className={"grid grid-cols-[repeat(auto-fit,minmax(32px,1fr))] gap-2 h-[80%] content-start"}>
               { participants.map((participant) =>
                 participant.identity && !participant.identity.includes("ingress") && participant.attributes.profilePicture != "no-image" ? (
                   <>

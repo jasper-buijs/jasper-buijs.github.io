@@ -37,38 +37,38 @@ const NavBar = ({ activePage }: NavBarProps) => {
         <div className={"bg-[#D6D6D6] dark:bg-[#1E1E1E] relative h-full"}>
           <img src="/logo.png" alt="Heilige Maagden Logo" className="inline-block h-16 w-16 mr-8"/>
           <div className={"flex h-16 w-16 justify-center items-center"}>
-            <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("home")}`} href={"/"}>
+            <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("home")}`} href={"/"}>
               <House className={"m-[20px]"} />
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
-            <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("magmuth")}`} href={"/magmuth"}>
+            <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("magmuth")}`} href={"/magmuth"}>
               <Bot className={"m-[20px]"} />
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
-            <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("minecraft")}`} href={"/minecraft"}>
+            <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("minecraft")}`} href={"/minecraft"}>
               <Pickaxe className={"m-[20px]"} />
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
-            <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("formulaone")}`} href={"/formulaone"}>
+            <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("formulaone")}`} href={"/formulaone"}>
               <Icon iconNode={motorRacingHelmet} className={"m-[20px]"} />
             </Link>
           </div>
           {/*<div className={"flex h-16 w-16 justify-center items-center"}>
-            <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("study")}`} href={"/study"}>
+            <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("study")}`} href={"/study"}>
               <BookText className={"m-[20px]"} />
             </Link>
           </div>*/}
           <div className={"flex h-16 w-16 justify-center items-center"}>
             { !isStreamActive &&
-              <Link className={`w-full h-full text-4xl leading-[4rem] text-[#0F0F0F] dark:text-[#FFFFFF]`} href={"/live"}>
+              <Link className={`w-full h-full text-4xl leading-16 text-[#0F0F0F] dark:text-[#FFFFFF]`} href={"/live"}>
                 <MonitorOff className={"m-[20px]"} />
               </Link>
             }
             { isStreamActive &&
-              <Link className={`w-full h-full text-4xl leading-[4rem] text-red-600 dark:text-red-500`} href={"/live"}>
+              <Link className={`w-full h-full text-4xl leading-16 text-red-600 dark:text-red-500`} href={"/live"}>
                 <MonitorPlay className={"m-[20px]"} />
               </Link>
             }
@@ -79,7 +79,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
               {
                 !session &&
                 <button
-                  className={"w-full h-full text-4xl leading-[4rem] text-[#BA9C0D] dark:text-[#CFB53B]"}
+                  className={"w-full h-full text-4xl leading-16 text-[#BA9C0D] dark:text-[#CFB53B]"}
                   onClick={() => signIn("discord")}
                 >
                   <CircleUserRound className={"m-[20px]"} />
@@ -88,7 +88,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
               {
                 session && session.user?.image &&
                 <Link
-                  className={"w-full h-full text-4xl leading-[4rem]"}
+                  className={"w-full h-full text-4xl leading-16"}
                   href="/api/auth/signout"
                 >
                   <Image
@@ -103,7 +103,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
               {
                 session && !session.user?.image &&
                 <Link
-                  className={"w-full h-full text-4xl leading-[4rem]"}
+                  className={"w-full h-full text-4xl leading-16"}
                   href="/api/auth/signout"
                 >
                   <UserRoundCheck className={"m-[20px]"} />
@@ -112,7 +112,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
             </div>
             <div className={"flex h-16 w-16 justify-center items-center absolute bottom-0"}>
               <button
-                className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("NONE_COPYRIGHT")}`}
+                className={`w-full h-full text-4xl leading-16 ${activeLinkColor("NONE_COPYRIGHT")}`}
                 onClick={() => alert("© Jasper Buijs, Heilige Maagden, 2026")}
               >
                 <Copyright className={"m-[20px]"} />

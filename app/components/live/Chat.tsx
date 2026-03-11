@@ -15,7 +15,7 @@ function ChatMessage({
   const { localParticipant } = useLocalParticipant();
   
   return (
-    <Flex gap="2" align="start" className={"break-words w-[220px]"}>
+    <Flex gap="2" align="start" className={"wrap-break-word w-[220px]"}>
       {
         // TODO Avatar add discord image
       }

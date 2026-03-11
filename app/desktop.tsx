@@ -19,14 +19,14 @@ const Home = () => {
         <iframe
           src='https://flo.uri.sh/story/2684611/embed'
           title='Interactive or visual content'
-          className={`flourish-embed-iframe w-full h-[calc(125vh-10rem)] border-none z-0 scale-75 translate-y-[-12%] outline-none`}
+          className={`flourish-embed-iframe w-full h-[calc(125vh-10rem)] border-none z-0 scale-75 translate-y-[-12%] outline-hidden`}
           // h-[800px]
           sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'
         >
         </iframe>
       </div>
       <a
-        className={`block fixed top-[6rem] right-[4rem] z-1 bg-[#cfb53b] text-black p-2 rounded-md`}
+        className={`block fixed top-24 right-16 z-1 bg-[#cfb53b] text-black p-2 rounded-md`}
         href="https://flo.uri.sh/story/2684611/embed"
       >
         Open in full-screen (recommended)

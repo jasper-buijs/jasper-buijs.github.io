@@ -118,7 +118,7 @@ const RoomElement = () => {
         <NavBar activePage={"none"} />
         <div className={"block fixed z-10 top-20 bottom-20 left-12 right-12 overflow-hidden"}>
           <div className={"h-full w-full flex items-center justify-left"}>
-            <div className={"flex-shrink-0 h-full max-w-full aspect-video"}>
+            <div className={"shrink-0 h-full max-w-full aspect-video"}>
               <div className={`w-full h-full ${bgImage} bg-cover bg-center text-white text-xl italic flex justify-center items-end pb-4`}>
                 Attempting to connect...
               </div>
@@ -134,7 +134,7 @@ const RoomElement = () => {
         <NavBar activePage={"none"} />
         <div className={"block fixed z-10 top-20 bottom-20 left-12 right-12 overflow-hidden"}>
           <div className={"h-full w-full flex items-center justify-left"}>
-            <div className={"flex-shrink-0 h-full max-w-full aspect-video"}>
+            <div className={"shrink-0 h-full max-w-full aspect-video"}>
               <div className={`w-full h-full ${bgImage} bg-cover bg-center text-white text-xl italic flex justify-center items-end pb-4`}>
                 Connecting...
               </div>
@@ -150,7 +150,7 @@ const RoomElement = () => {
         <NavBar activePage={"none"} />
         <div className={"block fixed z-10 top-20 bottom-20 left-12 right-12 overflow-hidden"}>
           <div className={"h-full w-full flex items-center justify-left"}>
-            <div className={"flex-shrink-0 h-full max-w-full aspect-video"}>
+            <div className={"shrink-0 h-full max-w-full aspect-video"}>
               <div className={`w-full h-full ${bgImage} bg-cover bg-center text-white text-xl italic flex justify-center items-end pb-4`}>
                 Trying to reconnect...
               </div>
@@ -166,7 +166,7 @@ const RoomElement = () => {
         <NavBar activePage={"none"} />
         <div className={"block fixed z-10 top-20 bottom-20 left-12 right-12 overflow-hidden"}>
           <div className={"h-full w-full flex items-center justify-left"}>
-            <div className={"flex-shrink-0 h-full max-w-full aspect-video"}>
+            <div className={"shrink-0 h-full max-w-full aspect-video"}>
               <div className={`w-full h-full ${bgImage} bg-cover bg-center text-white text-xl italic flex justify-center items-end pb-4`}>
                 You are not correctly authenticated. Try signing out and back in!
               </div>
@@ -182,7 +182,7 @@ const RoomElement = () => {
         <NavBar activePage={"none"} />
         <div className={"block fixed z-10 top-20 bottom-20 left-12 right-12 overflow-hidden"}>
           <div className={"h-full w-full flex items-center justify-left"}>
-            <div className={"flex-shrink-0 h-full max-w-full aspect-video"}>
+            <div className={"shrink-0 h-full max-w-full aspect-video"}>
               <div className={`w-full h-full ${bgImage} bg-cover bg-center text-white text-xl italic flex justify-center items-end pb-4`}>
                 An error occurred!
               </div>
