@@ -1,8 +1,7 @@
-"use client";
+"use server";
 
-import { useEffect, useState, use } from "react";
-import MobilePage from "./mobile";
-import DesktopPage from "./desktop";
+import MobileOrDesktop from "@/app/live/host/version-switch";
+import { redirect } from "next/navigation";
 
 interface PageProps {
   searchParams: Promise<{
@@ -10,20 +9,22 @@ interface PageProps {
     rt: string | undefined;
   }>;
 }
-export default function Page({
+export default async function Page({
   searchParams
 }: PageProps) {
-  const params = use(searchParams);
-  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+  //const params = use(searchParams);
+  const { at, rt } = await searchParams;
 
-  useEffect(() => {
-    const userAgent = navigator.userAgent || "";
-    setIsMobile(/android|iphone|ipad|ipod/i.test(userAgent));
-  }, []);
-
-  if (isMobile === null) {
-    return <h1>Loading...</h1>;
+  if (!at || !rt) {
+    redirect("/"); //TODO better error handling!
   }
 
-  return isMobile ? <MobilePage /> : <DesktopPage at={params.at} rt={params.rt} />;
+  const serverUrl = process.env
+    .LIVEKIT_WS_URL!
+    .replace("wss://", "https://")
+    .replace("ws://", "http://");
+
+  return <MobileOrDesktop at={at} rt={rt} serverUrl={serverUrl} />
+
+  //return isMobile ? <MobilePage /> : <DesktopPage at={params.at} rt={params.rt} />;
 }

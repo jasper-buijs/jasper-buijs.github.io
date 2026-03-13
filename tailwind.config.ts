@@ -10,12 +10,12 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [
+  /*safelist: [
     { pattern: /col-start-./ },
     { pattern: /col-span-./ },
     { pattern: /row-start-./ },
     { pattern: /row-span-./ },
-  ],
+  ],*/
   theme: {
     /*colors: {
       ...colors,
