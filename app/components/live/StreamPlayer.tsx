@@ -1,22 +1,12 @@
 import { ParticipantMetadata, RoomMetadata } from "@/app/components/live/lib/controller";
 import { useAuthToken } from "@/app/components/live/TokenContext";
-import {
-  AudioTrack,
-  StartAudio,
-  useDataChannel,
-  useLocalParticipant,
-  useMediaDeviceSelect,
-  useParticipants,
-  useRoomContext,
-  useTracks,
-  VideoTrack,
-} from "@livekit/components-react";
+import { AudioTrack, StartAudio, useDataChannel, useLocalParticipant, useMediaDeviceSelect, useParticipants, useRoomContext, useTracks, VideoTrack } from "@livekit/components-react";
 import { Avatar, Badge, Button, Flex, Grid, Text } from "@radix-ui/themes";
 import Confetti from "js-confetti";
 import { ConnectionState, createLocalTracks, LocalVideoTrack, Track } from "livekit-client";
 import { Copy, Eye, EyeOff } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { MediaDeviceSettings} from "@/app/components/live/MediaDeviceSettings";
+import { MediaDeviceSettings } from "@/app/components/live/MediaDeviceSettings";
 import { PresenceDialog } from "@/app/components/live/PresenceDialog";
 import { useCopyToClipboard } from "usehooks-ts";
 
@@ -25,7 +15,7 @@ function ConfettiCanvas() {
   const [decoder] = useState(() => new TextDecoder());
   const canvasEl = useRef<HTMLCanvasElement>(null);
   useDataChannel("reactions", (data) => {
-    const options: {emojis?: string[]; confettiNumber?: number} = {};
+    const options: { emojis?: string[]; confettiNumber?: number } = {};
 
     if (decoder.decode(data.payload) !== "🎉") {
       options.emojis = [decoder.decode(data.payload)];
@@ -36,7 +26,7 @@ function ConfettiCanvas() {
   });
 
   useEffect(() => {
-    setConfetti(new Confetti({canvas: canvasEl.current ?? undefined}));
+    setConfetti(new Confetti({ canvas: canvasEl.current ?? undefined }));
   }, []);
 
   return <canvas ref={canvasEl} className={"absolute h-full w-full"} />;
@@ -51,15 +41,15 @@ export function StreamPlayer({ isHost = false }) {
   const { metadata, name: roomName, state: roomState } = useRoomContext();
   const roomMetadata = (metadata && JSON.parse(metadata)) as RoomMetadata;
   const { localParticipant } = useLocalParticipant();
-  const localMetadata = (localParticipant.metadata && JSON.parse(localParticipant.metadata)) as ParticipantMetadata;
-  const canHost = isHost || (localMetadata.invited_to_stage && localMetadata.hand_raised); //TODO hier moet shit anders.
+  const localMetadata = localParticipant.metadata ? (JSON.parse(localParticipant.metadata) as ParticipantMetadata) : undefined;
+  const canHost = isHost || (localMetadata?.invited_to_stage && localMetadata?.hand_raised);
   const participants = useParticipants();
   const showNotification = isHost
     ? participants.some((p) => {
-      const metadata = (p.metadata && JSON.parse(p.metadata)) as ParticipantMetadata;
-      return metadata.hand_raised && !metadata.invited_to_stage;
-    })
-    : localMetadata.invited_to_stage && !localMetadata.hand_raised;
+        const metadata = p.metadata ? (JSON.parse(p.metadata) as ParticipantMetadata) : undefined;
+        return metadata?.hand_raised && !metadata?.invited_to_stage;
+      })
+    : localMetadata?.invited_to_stage && !localMetadata?.hand_raised;
 
   useEffect(() => {
     if (canHost) {
@@ -81,10 +71,8 @@ export function StreamPlayer({ isHost = false }) {
     if (localVideoTrack) void localVideoTrack.setDeviceId(activeCameraDeviceId);
   }, [localVideoTrack, activeCameraDeviceId]);
 
-  const remoteVideoTracks = useTracks([Track.Source.Camera])
-    .filter((t) => t.participant.identity != localParticipant.identity);
-  const remoteAudioTracks = useTracks([Track.Source.Microphone])
-    .filter((t) => t.participant.identity != localParticipant.identity);
+  const remoteVideoTracks = useTracks([Track.Source.Camera]).filter((t) => t.participant.identity != localParticipant.identity);
+  const remoteAudioTracks = useTracks([Track.Source.Microphone]).filter((t) => t.participant.identity != localParticipant.identity);
 
   const authToken = useAuthToken();
   const onLeaveStage = async () => {
@@ -95,7 +83,7 @@ export function StreamPlayer({ isHost = false }) {
         Authorization: `Token ${authToken}`,
       },
       body: JSON.stringify({
-        identity: localParticipant.identity
+        identity: localParticipant.identity,
       }),
     });
   };
@@ -105,30 +93,15 @@ export function StreamPlayer({ isHost = false }) {
       <Grid className={"w-full h-full absolute"} gap="2">
         {canHost && (
           <div className={"relative"}>
-            <Flex
-              className={"absolute w-full h-full"}
-              align="center"
-              justify="center"
-            >
+            <Flex className={"absolute w-full h-full"} align="center" justify="center">
               {
                 //TODO Add 'src' to Avatar
               }
-              <Avatar
-                size="9"
-                fallback={localParticipant.identity[0] ?? "?"}
-                radius="full"
-              />
+              <Avatar size="9" fallback={localParticipant.identity[0] ?? "?"} radius="full" />
             </Flex>
-            <video
-              ref={localVideoEl}
-              className={"absolute w-full h-full object-contain -scale-x-100 bg-transparent"}
-            />
+            <video ref={localVideoEl} className={"absolute w-full h-full object-contain -scale-x-100 bg-transparent"} />
             <div className={"absolute w-full h-full"}>
-              <Badge
-                variant="outline"
-                color="gray"
-                className={"absolute bottom-2 right-2"}
-              >
+              <Badge variant="outline" color="gray" className={"absolute bottom-2 right-2"}>
                 {localParticipant.identity} (you)
               </Badge>
             </div>
@@ -136,27 +109,12 @@ export function StreamPlayer({ isHost = false }) {
         )}
         {remoteVideoTracks.map((t) => (
           <div key={t.participant.identity} className={"relative"}>
-            <Flex
-              className={"absolute w-full h-full"}
-              align="center"
-              justify="center"
-            >
-              <Avatar
-                size="9"
-                fallback={t.participant.identity[0] ?? "?"}
-                radius="full"
-              />
+            <Flex className={"absolute w-full h-full"} align="center" justify="center">
+              <Avatar size="9" fallback={t.participant.identity[0] ?? "?"} radius="full" />
             </Flex>
-            <VideoTrack
-              trackRef={t}
-              className={"absolute w-full h-full bg-transparent"}
-            />
+            <VideoTrack trackRef={t} className={"absolute w-full h-full bg-transparent"} />
             <div className={"absolute w-full h-full"}>
-              <Badge
-                variant="outline"
-                color="gray"
-                className={"absolute bottom-2 right-2"}
-              >
+              <Badge variant="outline" color="gray" className={"absolute bottom-2 right-2"}>
                 {t.participant.identity}
               </Badge>
             </div>
@@ -167,19 +125,11 @@ export function StreamPlayer({ isHost = false }) {
         <AudioTrack trackRef={t} key={t.participant.identity} />
       ))}
       <ConfettiCanvas />
-      <StartAudio
-        label={"Click to allow audio playback"}
-        className={"absolute top-0 h-full w-full bg-gray-2/50 text-white"}
-      />
+      <StartAudio label={"Click to allow audio playback"} className={"absolute top-0 h-full w-full bg-gray-2/50 text-white"} />
       <div className={"absolute top-0 w-full p-2"}>
         <Flex justify="between" align="end">
           <Flex gap="2" justify="center" align="center">
-            <Button
-              size="1"
-              variant="soft"
-              disabled={!Boolean(roomName)}
-              onClick={() => copy(`https://heiligemaagden.com/live/${roomName}`)}
-            >
+            <Button size="1" variant="soft" disabled={!Boolean(roomName)} onClick={() => copy(`https://heiligemaagden.com/live/${roomName}`)}>
               {roomState == ConnectionState.Connected ? (
                 <>
                   {roomName} <Copy />
@@ -192,10 +142,7 @@ export function StreamPlayer({ isHost = false }) {
               <Flex gap="2">
                 <MediaDeviceSettings />
                 {roomMetadata.creator_identity !== localParticipant.identity && (
-                  <Button
-                    size="1"
-                    onClick={onLeaveStage}
-                  >
+                  <Button size="1" onClick={onLeaveStage}>
                     Leave stage
                   </Button>
                 )}
@@ -206,10 +153,7 @@ export function StreamPlayer({ isHost = false }) {
             {roomState == ConnectionState.Connected && (
               <Flex gap="1" align="center">
                 <div className={"rounded-6 bg-red-9 w-2 h-2 animate-pulse"} />
-                <Text
-                  size="1"
-                  className={"uppercase text-accent-11"}
-                >
+                <Text size="1" className={"uppercase text-accent-11"}>
                   Live
                 </Text>
               </Flex>
@@ -222,20 +166,9 @@ export function StreamPlayer({ isHost = false }) {
                     <span className={"relative inline-flex rounded-6 h-3 w-3 bg-accent-11"} />
                   </div>
                 )}
-                <Button
-                  size="1"
-                  variant="soft"
-                  disabled={roomState !== ConnectionState.Connected}
-                >
-                  {roomState == ConnectionState.Connected ? (
-                    <Eye />
-                  ) : (
-                    <EyeOff />
-                  )}
-                  {roomState == ConnectionState.Connected
-                    ? participants.length
-                    : ""
-                  }
+                <Button size="1" variant="soft" disabled={roomState !== ConnectionState.Connected}>
+                  {roomState == ConnectionState.Connected ? <Eye /> : <EyeOff />}
+                  {roomState == ConnectionState.Connected ? participants.length : ""}
                 </Button>
               </div>
             </PresenceDialog>
