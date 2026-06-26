@@ -1,12 +1,11 @@
 import { ParticipantMetadata, RoomMetadata } from "@/app/components/live/lib/controller";
 import { useAuthToken } from "@/app/components/live/TokenContext";
-import { AudioTrack, StartAudio, useDataChannel, useLocalParticipant, useMediaDeviceSelect, useParticipants, useRoomContext, useTracks, VideoTrack } from "@livekit/components-react";
+import { AudioTrack, StartAudio, useDataChannel, useLocalParticipant, useParticipants, useRoomContext, useTracks, VideoTrack } from "@livekit/components-react";
 import { Avatar, Badge, Button, Flex, Grid, Text } from "@radix-ui/themes";
 import Confetti from "js-confetti";
-import { ConnectionState, createLocalTracks, LocalVideoTrack, Track } from "livekit-client";
-import { Copy, Eye, EyeOff } from "lucide-react";
+import { ConnectionState, createLocalScreenTracks, LocalVideoTrack, Track, TrackEvent } from "livekit-client";
+import { Copy, Eye, EyeOff, MonitorCheck, MonitorUp } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { MediaDeviceSettings } from "@/app/components/live/MediaDeviceSettings";
 import { PresenceDialog } from "@/app/components/live/PresenceDialog";
 import { useCopyToClipboard } from "usehooks-ts";
 
@@ -36,6 +35,7 @@ export function StreamPlayer({ isHost = false }) {
   const [_, copy] = useCopyToClipboard();
 
   const [localVideoTrack, setLocalVideoTrack] = useState<LocalVideoTrack>();
+  const [screenShareActive, setScreenShareActive] = useState(false);
   const localVideoEl = useRef<HTMLVideoElement>(null);
 
   const { metadata, name: roomName, state: roomState } = useRoomContext();
@@ -51,28 +51,21 @@ export function StreamPlayer({ isHost = false }) {
       })
     : localMetadata?.invited_to_stage && !localMetadata?.hand_raised;
 
-  useEffect(() => {
-    if (canHost) {
-      const createTracks = async () => {
-        const tracks = await createLocalTracks({ audio: true, video: true });
-        const camTrack = tracks.find((t) => t.kind == Track.Kind.Video);
-        if (camTrack && localVideoEl.current) camTrack.attach(localVideoEl.current);
-        setLocalVideoTrack(camTrack as LocalVideoTrack);
-      };
-      void createTracks();
+  const startScreenShare = async () => {
+    try {
+      const tracks = await createLocalScreenTracks({ audio: true, systemAudio: "include", surfaceSwitching: "include", resolution: { width: 1080, height: 720 } });
+      const screenTrack = tracks.find((t) => t.source == Track.Source.ScreenShare);
+      if (screenTrack && localVideoEl.current) screenTrack.attach(localVideoEl.current);
+      screenTrack?.on(TrackEvent.Ended, () => setScreenShareActive(false));
+      setLocalVideoTrack(screenTrack as LocalVideoTrack);
+      setScreenShareActive(true);
+    } catch (e) {
+      console.error("Failed to start screen share:", e);
     }
-  }, [canHost]);
+  };
 
-  const { activeDeviceId: activeCameraDeviceId } = useMediaDeviceSelect({
-    kind: "videoinput",
-  });
-
-  useEffect(() => {
-    if (localVideoTrack) void localVideoTrack.setDeviceId(activeCameraDeviceId);
-  }, [localVideoTrack, activeCameraDeviceId]);
-
-  const remoteVideoTracks = useTracks([Track.Source.Camera]).filter((t) => t.participant.identity != localParticipant.identity);
-  const remoteAudioTracks = useTracks([Track.Source.Microphone]).filter((t) => t.participant.identity != localParticipant.identity);
+  const remoteVideoTracks = useTracks([Track.Source.ScreenShare]).filter((t) => t.participant.identity != localParticipant.identity);
+  const remoteAudioTracks = useTracks([Track.Source.ScreenShareAudio]).filter((t) => t.participant.identity != localParticipant.identity);
 
   const authToken = useAuthToken();
   const onLeaveStage = async () => {
@@ -99,7 +92,7 @@ export function StreamPlayer({ isHost = false }) {
               }
               <Avatar size="9" fallback={localParticipant.identity[0] ?? "?"} radius="full" />
             </Flex>
-            <video ref={localVideoEl} className={"absolute w-full h-full object-contain -scale-x-100 bg-transparent"} />
+            <video ref={localVideoEl} className={"absolute w-full h-full object-contain bg-transparent"} />
             <div className={"absolute w-full h-full"}>
               <Badge variant="outline" color="gray" className={"absolute bottom-2 right-2"}>
                 {localParticipant.identity} (you)
@@ -140,7 +133,16 @@ export function StreamPlayer({ isHost = false }) {
             </Button>
             {roomName && canHost && (
               <Flex gap="2">
-                <MediaDeviceSettings />
+                {!screenShareActive ? (
+                  <Button size="1" onClick={startScreenShare}>
+                    <MonitorUp /> Start streaming
+                  </Button>
+                ) : (
+                  <Button size="1" variant="soft" disabled>
+                    <MonitorCheck /> Streaming
+                  </Button>
+                )}
+                {/*<MediaDeviceSettings />*/}
                 {roomMetadata.creator_identity !== localParticipant.identity && (
                   <Button size="1" onClick={onLeaveStage}>
                     Leave stage
