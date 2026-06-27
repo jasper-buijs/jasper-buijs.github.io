@@ -8,7 +8,7 @@ import {
   CircleUserRound,
   UserRoundCheck,
   MonitorOff,
-  MonitorPlay,
+  MonitorPlay, TicketsPlane,
 } from "lucide-react";
 import { motorRacingHelmet } from "@lucide/lab";
 import { signIn, useSession } from "next-auth/react";
@@ -52,10 +52,15 @@ const NavBar = ({ activePage }: NavBarProps) => {
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
+            <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("pt26")}`} href={"/pt26"}>
+              <TicketsPlane className={"m-[20px]"} />
+            </Link>
+          </div>
+          {/*<div className={"flex h-16 w-16 justify-center items-center"}>
             <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("formulaone")}`} href={"/formulaone"}>
               <Icon iconNode={motorRacingHelmet} className={"m-[20px]"} />
             </Link>
-          </div>
+          </div>*/}
           {/*<div className={"flex h-16 w-16 justify-center items-center"}>
             <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("study")}`} href={"/study"}>
               <BookText className={"m-[20px]"} />

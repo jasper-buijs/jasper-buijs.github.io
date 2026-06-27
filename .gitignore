@@ -43,3 +43,7 @@ next-env.d.ts
 /public/italy-docs/*
 
 /app/generated/prisma
+
+# Portugal
+/public/pt*
+/public/bills/*
