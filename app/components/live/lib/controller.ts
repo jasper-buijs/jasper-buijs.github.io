@@ -190,7 +190,9 @@ export class Controller {
       room_name,
       metadata.creator_identity
     );
-
+    console.log(typeof ingress, typeof authToken, typeof process.env.LIVEKIT_WS_URL!);
+    console.log(at);
+    console.log(await at.toJwt());
     return {
       ingress,
       auth_token: authToken,

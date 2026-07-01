@@ -67,7 +67,7 @@ export function BroadcastDialog({ children }: { children: React.ReactNode }) {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              disabled={name != ""}
+              disabled={name == session?.user?.name}
             >
               <TextField.Slot>
                 <Avatar

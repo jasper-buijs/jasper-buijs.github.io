@@ -3,8 +3,9 @@
 import { AllowParticipationInfo } from "@/app/components/live/AllowParticipationInfo";
 import { CreateIngressResponse } from "@/app/components/live/lib/controller";
 import { Spinner } from "@/app/components/live/Spinner";
-import { Button, Code, Dialog, Flex, RadioGroup, Switch, Text, TextField } from "@radix-ui/themes";
+import { Avatar, Button, Code, Dialog, Flex, RadioGroup, Switch, Text, TextField } from "@radix-ui/themes";
 import { MonitorPlay } from "lucide-react";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -15,9 +16,10 @@ export function IngressDialog({
   children
 }: IngressDialogProps) {
   const router = useRouter();
+  const { data: session } = useSession();
   const [loading, setLoading] = useState<boolean>(false);
   const [roomName, setRoomName] = useState<string>("");
-  const [name, setName] = useState<string>(""); // TODO set name to Discord name
+  const [name, setName] = useState<string>(session?.user?.name || "");
   const [type, setType] = useState<"whip"|"rtmp">("rtmp");
   const [enableChat, setEnableChat] = useState<boolean>(true);
   const [allowParticipation, setAllowParticipation] = useState<boolean>(true);
@@ -81,7 +83,7 @@ export function IngressDialog({
                   <Button
                     onClick={() =>
                       // TODO This looks wrong!! Won't work, page doesn't really exist.
-                      router.push(`/live/watch?at=${ingressResponse.auth_token}&rt=${ingressResponse.connection_details.token}`)
+                      router.push(`/live/watch/${roomName}?at=${ingressResponse.auth_token}&rt=${ingressResponse.connection_details.token}`)
                     }
                   >
                     Join as viewer <MonitorPlay className={"animate-wiggle"} />
@@ -103,6 +105,27 @@ export function IngressDialog({
                     value={roomName}
                     onChange={(e) => setRoomName(e.target.value)}
                   />
+                </label>
+                <label>
+                  <Text as="div" size="2" mb="1" weight="bold">
+                    Streaming as
+                  </Text>
+                  <TextField.Root
+                    placeholder="Your name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    disabled={name == session?.user?.name}
+                  >
+                    <TextField.Slot>
+                      <Avatar
+                        size="1"
+                        src={session?.user?.image || undefined}
+                        fallback={name ? name[0] : "?"}
+                        radius="full"
+                      />
+                    </TextField.Slot>
+                  </TextField.Root>
                 </label>
                 <label>
                   <Text as="div" size="2" mb="1" weight="bold">

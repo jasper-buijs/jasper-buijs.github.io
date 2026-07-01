@@ -10,6 +10,7 @@ import { TokenContext } from "@/app/components/live/TokenContext";
 import { LiveKitRoom } from "@livekit/components-react";
 import { Avatar, Box, Button, Card, Flex, Heading, Text, TextField } from "@radix-ui/themes";
 import { MonitorPlay } from "lucide-react";
+import { useSession } from "next-auth/react";
 import { useState } from "react";
 
 interface DesktopPageProps {
@@ -20,7 +21,9 @@ export default  function DesktopPage({
   roomName,
   serverUrl,
 }: DesktopPageProps) {
-  const [name, setName] = useState<string>(""); // TODO set name from Discord.
+  const { data: session } = useSession();
+
+  const [name, setName] = useState<string>(session?.user?.name || ""); // TODO set name from Discord.
   const [authToken, setAuthToken] = useState<string>("");
   const [roomToken, setRoomToken] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -62,11 +65,12 @@ export default  function DesktopPage({
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              disabled
+              disabled={name == session?.user?.name}
             >
               <TextField.Slot>
                 <Avatar
                   size="1"
+                  src={session?.user?.image || undefined}
                   fallback={name ? name[0] : "?"}
                   radius="full"
                 />
