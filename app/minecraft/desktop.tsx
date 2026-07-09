@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Alert from "../components/Alert";
 import FooterBar from "../components/FooterBar";
@@ -8,45 +9,23 @@ import Link from "next/link";
 import Paragraph from "../components/Paragraph";
 
 const MinecraftPage = () => {
+  const [username, setUsername] = useState<string>("");
+  const [loading, setLoading] = useState(false);
+
+  async function onAddToWhitelist() {
+    setLoading(true);
+    const res = await fetch(`/api/minecraft/addWhitelist`, {
+      method: "POST",
+      body: JSON.stringify(username),
+    });
+    setLoading(false);
+    alert("Trying to add you to the whitelist. This can take up to 30 seconds. If you still can't join, check for typos or DM me ;)");
+  }
+
   const downTimes = [
     {
       date: "2025-08-02",
       start: "15:35:00.000",
-      end: "18:00:00.000"
-    },
-    {
-      date: "2025-08-03",
-      start: "14:15:00.000",
-      end: "18:00:00.000"
-    },
-    {
-      date: "2025-08-11",
-      start: "06:00:00.000",
-      end: "18:00:00.000"
-    },
-    {
-      date: "2025-08-14",
-      start: "06:00:00.000",
-      end: "14:00:00.000"
-    },
-    {
-      date: "2025-08-25",
-      start: "06:00:00.000",
-      end: "14:00:00.000"
-    },
-    {
-      date: "2025-08-30",
-      start: "14:35:00.000",
-      end: "17:00:00.000"
-    },
-    {
-      date: "2025-08-31",
-      start: "14:15:00.000",
-      end: "18:00:00.000"
-    },
-    {
-      date: "2025-09-01",
-      start: "06:00:00.000",
       end: "18:00:00.000"
     }
   ]
@@ -72,12 +51,21 @@ const MinecraftPage = () => {
       <Link href="" onClick={() => navigator.clipboard.writeText("minecraft.heiligemaagden.com")} className=" block text-center text-lg text-[#cfb53b] underline">
         minecraft.heiligemaagden.com
       </Link>
+      <Paragraph emoji="✅" title="Whitelist">
+        We have a whitelist enabled and enforced. This means you have to register your username with our server in order to be able to join. We do this to prevent uninvited players or &apos;server scrapers&apos; from being able to connect. You can add yourself by adding your username below and clicking &apos;Add to whitelist&apos;.
+        <div className={"my-2 w-fit mx-auto"}>
+          <input className={"h-8 rounded-md mr-2 px-2"} placeholder={"Username"} value={username} onChange={(e) => setUsername(e.target.value)} type={"text"}/>
+          <button disabled={loading} onClick={() => onAddToWhitelist()} className={"h-8 py-auto px-2 rounded-md bg-[#cfb53b]"}>{loading ? "Loading..." : "Add to whitelist"}</button>
+        </div>
+      </Paragraph>
       <Paragraph emoji="ℹ️" title="General Info">
         Our server is back yet again, with a new iteration of our vanilla survival multiplayer. Our server is very vanilla-ish, though we have made some small modifications:
         <ul className="list-disc pl-4">
           <li>We run some Fabric mods to add structures, and reduce lag and improve server performance (especially when loading and generating chunks). The mods we currently have running are:
             <ul className="list-disc pl-8">
+{/*
               <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/dungeons-and-taverns">Dungeons and Taverns</Link></li>
+*/}
               <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/fabric-api">Fabric API</Link></li>
               <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/c2me-fabric">Concurrent Chunk Management Engine (C2ME)</Link></li>
               <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/ferrite-core">FerriteCore</Link></li>
@@ -85,12 +73,14 @@ const MinecraftPage = () => {
               <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/packet-fixer">Packet Fixer</Link></li>
               <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/disconnect-packet-fix">Disconnect Packet Fix</Link></li>
               <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/plugin/chunky">Chunky</Link></li>
+              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/modernfix-mvus">ModernFix-mVUS</Link></li>
+              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/noisiumforked">NoisiumForked</Link></li>
             </ul>
           </li>
-          <li>We currently don&apos;t have any data or resource packs active.</li>
+          <li>We have two datapacks active: one to pause the game time when no players are online, and one to make item frames craftable into invisible item frames.</li>
         </ul>
         <br />
-        Our server runs on Minecraft: Java Edition version 1.21.8 (the most recent at the time of writing). When a newer version of the game is released, we plan to update after a couple of weeks. You don&apos;t need any client-side mods to be able to play.
+        Our server runs on Minecraft: Java Edition version 26.2 (the most recent at the time of writing). When a newer version of the game is released, we plan to update after a couple of weeks. You don&apos;t need any client-side mods to be able to play.
       </Paragraph>
       {/*<Paragraph emoji="🛟" title="Mods Recuired To Play">
         In order to play, you&apos;ll also need to install the modpack clientsided. You can do this using the Curseforge App or the Prism Launcher. There, download and install{" "}
@@ -99,13 +89,13 @@ const MinecraftPage = () => {
         </a>{" "}
         in order to play.
       </Paragraph>*/}
-      <Paragraph emoji="🌐" title="Server Up-Time">
+      {/*<Paragraph emoji="🌐" title="Server Up-Time">
         The server won&apos;t always be online, but we try to keep uptime as big as possible. You can check whether the server is online <Link className={"text-[#cfb53b] underline hover:text-inherit"} href={"https://admin.minecraft.heiligemaagden.com/status"}>here</Link> (check for &quot;Vanilla 25-2&quot;). We&apos;ll try to announce in advance, on this page and in the server MOTD, when the server will be offline, though this is no guarantee. Expected downtime in August:
         <ul className={"list-disc list-inside"}>
-          {/*<li>{new Date("2025-08-02T15:35:00.000+02:00").toLocaleString()} – {new Date("2025-08-02T18:00:00.000+02:00").toLocaleTimeString()}</li>*/}
+          <li>{new Date("2025-08-02T15:35:00.000+02:00").toLocaleString()} – {new Date("2025-08-02T18:00:00.000+02:00").toLocaleTimeString()}</li>
           {downTimes.map((t) => <li key={t.date}>{new Date(`${t.date}T${t.start}+02:00`).toLocaleString("nl-be", {dateStyle: "short", timeStyle: "short"})} – {new Date(`${t.date}T${t.end}+02:00`).toLocaleTimeString("nl-be", {timeStyle: "short"})}</li>)}
         </ul>
-      </Paragraph>
+      </Paragraph>*/}
       <Paragraph emoji="🗺️" title="World Map">
         {`This is a map of our world as it was on ${new Date("2025-08-10T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})}.`}
         <iframe className="w-full h-[calc(100vh-10rem)]" src="/minecraft-map-hmvanilla/index.html"></iframe>

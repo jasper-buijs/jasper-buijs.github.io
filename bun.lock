@@ -9,6 +9,7 @@
         "@livekit/components-react": "^2.9.19",
         "@livekit/components-styles": "^1.2.0",
         "@lucide/lab": "^0.1.2",
+        "@minecraft-js/rcon": "^1.1.0",
         "@prisma/client": "^6.19.2",
         "@tailwindcss/postcss": "^4.3.1",
         "@types/bun": "^1.3.8",
@@ -153,6 +154,12 @@
     "@livekit/protocol": ["@livekit/protocol@1.42.2", "", { "dependencies": { "@bufbuild/protobuf": "^1.10.0" } }, "sha512-0jeCwoMJKcwsZICg5S6RZM4xhJoF78qMvQELjACJQn6/VB+jmiySQKOSELTXvPBVafHfEbMlqxUw2UR1jTXs2g=="],
 
     "@lucide/lab": ["@lucide/lab@0.1.2", "", {}, "sha512-VprF2BJa7ZuTGOhUd5cf8tHJXyL63wdxcGieAiVVoR9hO0YmPsnZO0AGqDiX2/br+/MC6n8BoJcmPilltOXIJA=="],
+
+    "@minecraft-js/bufwrapper": ["@minecraft-js/bufwrapper@1.4.6", "", { "dependencies": { "@minecraft-js/uuid": "^1.0.3", "varint": "^6.0.0" } }, "sha512-+VD3Zq2S3q4EHsHNCFmNJKJbVSNBFROxMKEmwnC43GP2/AI+kb/gDro4UOq3lup4EGK0xNPTejUe1Qjq/sXt3Q=="],
+
+    "@minecraft-js/rcon": ["@minecraft-js/rcon@1.1.0", "", { "dependencies": { "@minecraft-js/bufwrapper": "^1.4.3" } }, "sha512-U3X88Ju3WENHZzqMVDs4tEMKZ++DUPO4uqSO8WCsOnmFLG5bT7sxQff3/gfpKFejVJM6KV50UtF6ISJgdEINSw=="],
+
+    "@minecraft-js/uuid": ["@minecraft-js/uuid@1.0.3", "", {}, "sha512-IOomvwaBUGctcSreU2QFLwlQoFyJItBrsEt9sMFylg7+cyuS7IwoMFvbbfeC3uFrfmudQQqD8/TUOG4zcbHGVg=="],
 
     "@next/env": ["@next/env@15.5.11", "", {}, "sha512-g9s5SS9gC7GJCEOR3OV3zqs7C5VddqxP9X+/6BpMbdXRkqsWfFf2CJPBZNvNEtAkKTNuRgRXAgNxSAXzfLdaTg=="],
 
@@ -1193,6 +1200,8 @@
     "util-deprecate": ["util-deprecate@1.0.2", "", {}, "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw=="],
 
     "uuid": ["uuid@8.3.2", "", { "bin": { "uuid": "dist/bin/uuid" } }, "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="],
+
+    "varint": ["varint@6.0.0", "", {}, "sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg=="],
 
     "verror": ["verror@1.10.0", "", { "dependencies": { "assert-plus": "^1.0.0", "core-util-is": "1.0.2", "extsprintf": "^1.2.0" } }, "sha512-ZZKSmDAEFOijERBLkmYfJ+vmk3w+7hOLYDNkRCuRuMJGEmqYNCNLyBBFwWKVMhfwaEF3WOd0Zlw86U/WC/+nYw=="],
 
