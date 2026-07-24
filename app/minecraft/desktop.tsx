@@ -19,7 +19,8 @@ const MinecraftPage = () => {
       body: JSON.stringify(username),
     });
     setLoading(false);
-    alert("Trying to add you to the whitelist. This can take up to 30 seconds. If you still can't join, check for typos or DM me ;)");
+    if (res.status == 200) alert("Trying to add you to the whitelist. This can take up to 30 seconds. If you still can't join, check for typos or DM me ;)");
+    else alert("Something went wrong. Check for spelling mistakes. If it still doesn't work, DM me and I'll add you manually as soon as possible.")
   }
 
   const downTimes = [
