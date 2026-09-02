@@ -54,10 +54,10 @@ const PortugalPage = () => {
 
       <Paragraph title={"General Information"}>
         <div className={"flex flex-row w-full h-fit min-h-10 my-2"}>
-          <div className={"text-balance my-auto"}>
+          <div className={"text-balance my-auto pr-4"}>
             You can find all general information in this document.
-            Read at least the <div className={"inline bg-green-300 rounded-sm p-0.5 leading-none"}>green</div> marked text as soon as possible.
-            Do not download this document but rather read it online, as it will be updated in the coming months.
+            Read at least the text marked in <div className={"inline bg-green-300 rounded-sm p-0.5 leading-none"}>green</div> (about EZVZ) and <div className={"inline bg-cyan-300 rounded-sm p-0.5 leading-none"}>blue</div> (all info for departure) as soon as possible.
+            Do not download this document but rather read it online, as it will be updated repeatedly.
           </div>
 
           <button
