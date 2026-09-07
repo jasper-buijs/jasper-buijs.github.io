@@ -90,7 +90,6 @@ const Home = () => {
           <div className={"font-semibold text-lg"}>Spliit Debt Tracking</div>
           <div className={"text-balance"}>Link to our Spliit-groop. Spliit is a free alternative for Splitwise, to track expenses between each other during our trip. Spliit is available online (desktop or mobile) and in the Apple App Store for iOS.</div>
           <button
-            disabled
             onClick={() => window.open("https://spliit.app/groups/dJPtHhqvpN0L0aouoE5jA/expenses?ref=share")}
             className={`bg-[#CFB53B] text-black rounded-md p-2 mx-auto mt-4`}
           >
