@@ -3,14 +3,16 @@
 import { CreateStreamResponse } from "@/app/components/live/lib/controller";
 import { Spinner } from "@/app/components/live/Spinner";
 import { Avatar, Button, Dialog, Flex, Switch, Text, TextField } from "@radix-ui/themes";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react"; // next-auth -> better-auth
+import { authClient } from "@/auth-client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { AllowParticipationInfo } from "./AllowParticipationInfo";
 
 export function BroadcastDialog({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const { data: session } = useSession();
+  // const { data: session } = useSession(); // next-auth -> better-auth
+  const { data: session } = authClient.useSession();
 
   const [ loading, setLoading ] = useState<boolean>(false);
   const [ roomName, setRoomName ] = useState<string>("");

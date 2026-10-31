@@ -42,4 +42,4 @@ next-env.d.ts
 /livekitconfig/
 /public/italy-docs/*
 
-/app/generated/prisma
+/prisma/generated/prisma

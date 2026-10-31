@@ -1,4 +1,17 @@
-export { default as proxy } from "next-auth/middleware";
+import { auth } from "@/auth";
+import { getSessionCookie } from "better-auth/cookies";
+import { NextRequest, NextResponse } from "next/server";
+
+// export { default as proxy } from "next-auth/middleware"; // next-auth -> better-auth
+
+export async function proxy(req: NextRequest) {
+  const sessionCookie = getSessionCookie(req);
+
+  // This will not check access, it's only an optimistic redirect in case there is no session cookie!
+  if (!sessionCookie) return NextResponse.redirect(new URL("/", req.url));
+
+  return NextResponse.next();
+};
 
 export const config = { matcher: ["/live/:path*", "/study/:path*"] };
 

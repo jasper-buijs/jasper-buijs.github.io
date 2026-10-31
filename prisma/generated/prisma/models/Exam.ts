@@ -28,12 +28,10 @@ export type AggregateExam = {
 
 export type ExamAvgAggregateOutputType = {
   id: number | null
-  userId: number | null
 }
 
 export type ExamSumAggregateOutputType = {
   id: number | null
-  userId: number | null
 }
 
 export type ExamMinAggregateOutputType = {
@@ -41,7 +39,7 @@ export type ExamMinAggregateOutputType = {
   name: string | null
   courseCode: string | null
   startDate: Date | null
-  userId: number | null
+  userId: string | null
 }
 
 export type ExamMaxAggregateOutputType = {
@@ -49,7 +47,7 @@ export type ExamMaxAggregateOutputType = {
   name: string | null
   courseCode: string | null
   startDate: Date | null
-  userId: number | null
+  userId: string | null
 }
 
 export type ExamCountAggregateOutputType = {
@@ -64,12 +62,10 @@ export type ExamCountAggregateOutputType = {
 
 export type ExamAvgAggregateInputType = {
   id?: true
-  userId?: true
 }
 
 export type ExamSumAggregateInputType = {
   id?: true
-  userId?: true
 }
 
 export type ExamMinAggregateInputType = {
@@ -188,7 +184,7 @@ export type ExamGroupByOutputType = {
   name: string
   courseCode: string | null
   startDate: Date
-  userId: number
+  userId: string
   _count: ExamCountAggregateOutputType | null
   _avg: ExamAvgAggregateOutputType | null
   _sum: ExamSumAggregateOutputType | null
@@ -196,7 +192,7 @@ export type ExamGroupByOutputType = {
   _max: ExamMaxAggregateOutputType | null
 }
 
-type GetExamGroupByPayload<T extends ExamGroupByArgs> = Prisma.PrismaPromise<
+export type GetExamGroupByPayload<T extends ExamGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<ExamGroupByOutputType, T['by']> &
       {
@@ -219,7 +215,7 @@ export type ExamWhereInput = {
   name?: Prisma.StringFilter<"Exam"> | string
   courseCode?: Prisma.StringNullableFilter<"Exam"> | string | null
   startDate?: Prisma.DateTimeFilter<"Exam"> | Date | string
-  userId?: Prisma.IntFilter<"Exam"> | number
+  userId?: Prisma.StringFilter<"Exam"> | string
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }
 
@@ -240,7 +236,7 @@ export type ExamWhereUniqueInput = Prisma.AtLeast<{
   name?: Prisma.StringFilter<"Exam"> | string
   courseCode?: Prisma.StringNullableFilter<"Exam"> | string | null
   startDate?: Prisma.DateTimeFilter<"Exam"> | Date | string
-  userId?: Prisma.IntFilter<"Exam"> | number
+  userId?: Prisma.StringFilter<"Exam"> | string
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }, "id">
 
@@ -265,7 +261,7 @@ export type ExamScalarWhereWithAggregatesInput = {
   name?: Prisma.StringWithAggregatesFilter<"Exam"> | string
   courseCode?: Prisma.StringNullableWithAggregatesFilter<"Exam"> | string | null
   startDate?: Prisma.DateTimeWithAggregatesFilter<"Exam"> | Date | string
-  userId?: Prisma.IntWithAggregatesFilter<"Exam"> | number
+  userId?: Prisma.StringWithAggregatesFilter<"Exam"> | string
 }
 
 export type ExamCreateInput = {
@@ -280,7 +276,7 @@ export type ExamUncheckedCreateInput = {
   name: string
   courseCode?: string | null
   startDate: Date | string
-  userId: number
+  userId: string
 }
 
 export type ExamUpdateInput = {
@@ -295,7 +291,7 @@ export type ExamUncheckedUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   courseCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   startDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  userId?: Prisma.IntFieldUpdateOperationsInput | number
+  userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ExamCreateManyInput = {
@@ -303,7 +299,7 @@ export type ExamCreateManyInput = {
   name: string
   courseCode?: string | null
   startDate: Date | string
-  userId: number
+  userId: string
 }
 
 export type ExamUpdateManyMutationInput = {
@@ -317,7 +313,7 @@ export type ExamUncheckedUpdateManyInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   courseCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   startDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  userId?: Prisma.IntFieldUpdateOperationsInput | number
+  userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ExamListRelationFilter = {
@@ -340,7 +336,6 @@ export type ExamCountOrderByAggregateInput = {
 
 export type ExamAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
 }
 
 export type ExamMaxOrderByAggregateInput = {
@@ -361,7 +356,6 @@ export type ExamMinOrderByAggregateInput = {
 
 export type ExamSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
 }
 
 export type ExamCreateNestedManyWithoutUserInput = {
@@ -406,8 +400,12 @@ export type ExamUncheckedUpdateManyWithoutUserNestedInput = {
   deleteMany?: Prisma.ExamScalarWhereInput | Prisma.ExamScalarWhereInput[]
 }
 
-export type NullableStringFieldUpdateOperationsInput = {
-  set?: string | null
+export type IntFieldUpdateOperationsInput = {
+  set?: number
+  increment?: number
+  decrement?: number
+  multiply?: number
+  divide?: number
 }
 
 export type ExamCreateWithoutUserInput = {
@@ -457,7 +455,7 @@ export type ExamScalarWhereInput = {
   name?: Prisma.StringFilter<"Exam"> | string
   courseCode?: Prisma.StringNullableFilter<"Exam"> | string | null
   startDate?: Prisma.DateTimeFilter<"Exam"> | Date | string
-  userId?: Prisma.IntFilter<"Exam"> | number
+  userId?: Prisma.StringFilter<"Exam"> | string
 }
 
 export type ExamCreateManyUserInput = {
@@ -545,7 +543,7 @@ export type $ExamPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     name: string
     courseCode: string | null
     startDate: Date
-    userId: number
+    userId: string
   }, ExtArgs["result"]["exam"]>
   composites: {}
 }
@@ -974,7 +972,7 @@ export interface ExamFieldRefs {
   readonly name: Prisma.FieldRef<"Exam", 'String'>
   readonly courseCode: Prisma.FieldRef<"Exam", 'String'>
   readonly startDate: Prisma.FieldRef<"Exam", 'DateTime'>
-  readonly userId: Prisma.FieldRef<"Exam", 'Int'>
+  readonly userId: Prisma.FieldRef<"Exam", 'String'>
 }
     
 

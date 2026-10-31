@@ -11,7 +11,8 @@ import {
   MonitorPlay,
 } from "lucide-react";
 import { motorRacingHelmet } from "@lucide/lab";
-import { signIn, useSession } from "next-auth/react";
+// import { signIn, useSession } from "next-auth/react";
+import { authClient } from "@/auth-client";
 import Image from "next/image";
 import Link from 'next/link';
 import { NavBarProps } from "@/app/components/NavBar";
@@ -30,7 +31,8 @@ const NavBar = ({ activePage }: NavBarProps) => {
   }, [isStreamActive]);
 
   const activeLinkColor = (page: string) => page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#0F0F0F] dark:text-[#FFFFFF]";
-  const { data: session } = useSession();
+  const { data: session } = authClient.useSession();
+  // const { data: session } = useSession(); // next-auth -> better-auth
   return (
     <>
       <div className={"w-16 py-6 h-full fixed z-50 right-0"}>
@@ -80,16 +82,20 @@ const NavBar = ({ activePage }: NavBarProps) => {
                 !session &&
                 <button
                   className={"w-full h-full text-4xl leading-16 text-[#BA9C0D] dark:text-[#CFB53B]"}
-                  onClick={() => signIn("discord")}
+                  // onClick={() => signIn("discord")} // next-auth -> better-auth
+                  onClick={() => authClient.signIn.social({
+                    provider: "discord",
+                  })}
                 >
                   <CircleUserRound className={"m-[20px]"} />
                 </button>
               }
               {
                 session && session.user?.image &&
-                <Link
+                <button
                   className={"w-full h-full text-4xl leading-16"}
-                  href="/api/auth/signout"
+                  onClick={() => authClient.signOut()}
+                  // href="/api/auth/signout" // next-auth -> better-auth
                 >
                   <Image
                     src={session.user.image}
@@ -98,16 +104,17 @@ const NavBar = ({ activePage }: NavBarProps) => {
                     height={24}
                     className={"rounded-[50%] m-[20px]"}
                   />
-                </Link>
+                </button>
               }
               {
                 session && !session.user?.image &&
-                <Link
+                <button
                   className={"w-full h-full text-4xl leading-16"}
-                  href="/api/auth/signout"
+                  onClick={() => authClient.signOut()}
+                  // href="/api/auth/signout" // next-auth -> better-auth
                 >
                   <UserRoundCheck className={"m-[20px]"} />
-                </Link>
+                </button>
               }
             </div>
             <div className={"flex h-16 w-16 justify-center items-center absolute bottom-0"}>

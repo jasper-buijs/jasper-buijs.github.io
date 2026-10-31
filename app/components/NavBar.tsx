@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { CircleUserRound, MonitorOff, SatelliteDish, UserRoundCheck } from "lucide-react";
-import { signIn, useSession } from "next-auth/react";
+// import { signIn, useSession } from "next-auth/react";
+import { authClient } from "@/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -23,7 +24,8 @@ const NavBar = ({ activePage }: NavBarProps) => {
   const linkClassFilter = (page: string) => {
     return page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#1E1E1E] dark:text-[#FFFFFF]";
   };
-  const { data: session } = useSession();
+  const { data: session } = authClient.useSession();
+  // const { data: session } = useSession(); // next-auth -> better-auth
   return (
     <>
       {/*<!-- Actual NavBar -->*/}
@@ -65,16 +67,20 @@ const NavBar = ({ activePage }: NavBarProps) => {
             !session &&
             <button
               className={"inline-block absolute top-4 bottom-4 right-4 text-[#BA9C0D] dark:text-[#CFB53B]"}
-              onClick={() => signIn("discord")}
+              onClick={() => authClient.signIn.social({
+                provider: "discord",
+              })}
+              // onClick={() => signIn("discord")} // next-auth -> better-auth
             >
               <CircleUserRound size={32} />
             </button>
           }
           {
             session && session.user?.image &&
-            <Link
+            <button
               className={"inline-block absolute top-4 bottom-4 right-4"}
-              href="/api/auth/signout"
+              onClick={() => authClient.signOut()}
+              // href="/api/auth/signout" // next-auth -> better-auth
             >
               <Image
                 src={session.user.image}
@@ -83,16 +89,17 @@ const NavBar = ({ activePage }: NavBarProps) => {
                 height={32}
                 className={"rounded-[50%]"}
               />
-            </Link>
+            </button>
           }
           {
             session && !session.user?.image &&
-            <Link
+            <button
               className={"inline-block absolute top-4 bottom-4 right-4 text-[#BA9C0D] dark:text-[#CFB53B]"}
-              href="/api/auth/signout"
+              onClick={() => authClient.signOut()}
+              // href="/api/auth/signout" // next-auth -> better-auth
             >
               <UserRoundCheck size={32} />
-            </Link>
+            </button>
           }
         </div>
       </div>

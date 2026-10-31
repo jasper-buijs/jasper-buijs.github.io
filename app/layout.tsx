@@ -1,8 +1,6 @@
 /* eslint-disable sort-imports */
 import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
-import { getServerSession } from "next-auth";
-import SessionProviderClient from "@/app/components/SessionProvider";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
@@ -18,7 +16,6 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const session = await getServerSession();
   return (
     <html lang="en">
         <body className={inter.className}>
@@ -28,9 +25,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             appearance="inherit"
             radius="large"
           >
-            <SessionProviderClient session={session}>
-              {children}
-            </SessionProviderClient>
+            {children}
           </Theme>
         </body>
     </html>

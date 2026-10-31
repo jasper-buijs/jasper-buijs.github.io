@@ -10,7 +10,8 @@ import { TokenContext } from "@/app/components/live/TokenContext";
 import { LiveKitRoom } from "@livekit/components-react";
 import { Avatar, Box, Button, Card, Flex, Heading, Text, TextField } from "@radix-ui/themes";
 import { MonitorPlay } from "lucide-react";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react"; // next-auth -> better-auth
+import { authClient } from "@/auth-client";
 import { useState } from "react";
 
 interface DesktopPageProps {
@@ -21,7 +22,8 @@ export default  function DesktopPage({
   roomName,
   serverUrl,
 }: DesktopPageProps) {
-  const { data: session } = useSession();
+  // const { data: session } = useSession(); // next-auth -> better-auth
+  const { data: session } = authClient.useSession();
 
   const [name, setName] = useState<string>(session?.user?.name || ""); // TODO set name from Discord.
   const [authToken, setAuthToken] = useState<string>("");

@@ -1,5 +1,6 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/auth";
+// import { getServerSession } from "next-auth"; // next-auth -> better-auth
+import { headers } from "next/headers";
+import { auth } from "@/auth";
 import { NextRequest, NextResponse } from "next/server";
 import { AccessToken } from "livekit-server-sdk";
 import prisma from "@/db";
@@ -8,10 +9,15 @@ import prisma from "@/db";
 export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
-  const session = await getServerSession(authOptions);
+  // const session = await getServerSession(authOptions); // next-auth -> better-auth
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
   if (!session) return NextResponse.json({ error: "Unauthorized: no authentication session" }, { status: 401 });
 
-  const user = await prisma.user.findUnique({
+  if (!session.user.guildMember) return NextResponse.json({ error: "Unauthorized, not in guild" }, { status: 401 });
+
+  /*const user = await prisma.user.findUnique({
     where: {
       username: session.user?.name as string,
     }
@@ -22,7 +28,7 @@ export async function GET(req: NextRequest) {
   //if (!session.user?.guilds || !(session.user.guilds.length >= 1)) return NextResponse.json({ error: "Problem: no guilds, waiting" }, { status: 209 });
   //if (!session.user.guilds.some((g) => g.id == process.env.GUILD_ID))
   //  return NextResponse.json({ error: "Unauthorized: incorrect guild collection" }, { status: 401 });
-  if (!user.guildMember) return NextResponse.json({ error: "Unauthorized: not in guild" }, { status: 401 });
+  if (!user.guildMember) return NextResponse.json({ error: "Unauthorized: not in guild" }, { status: 401 });*/
 
   const room = req.nextUrl.searchParams.get('room');
   if (!room) {
@@ -36,8 +42,8 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Server misconfigured' }, { status: 500 });
   }
 
-  //const accessToken = new AccessToken(apiKey, apiSecret, { identity: session.user.name || "Viewer", attributes: { profilePicture: session.user.image || "no-image" } });
-  const accessToken = new AccessToken(apiKey, apiSecret, { identity: user.username || "Viewer", attributes: { profilePicture: user.image || "no-image" } });
+  // const accessToken = new AccessToken(apiKey, apiSecret, { identity: user.username || "Viewer", attributes: { profilePicture: user.image || "no-image" } }); // next-auth -> better-auth
+  const accessToken = new AccessToken(apiKey, apiSecret, { identity: session.user.name || "Viewer", attributes: { profilePicture: session.user.image || "no-image" } });
   accessToken.addGrant({ room, roomJoin: true, canPublish: false, canSubscribe: true });
 
   return NextResponse.json(

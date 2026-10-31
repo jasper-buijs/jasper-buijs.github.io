@@ -5,7 +5,8 @@ import { CreateIngressResponse } from "@/app/components/live/lib/controller";
 import { Spinner } from "@/app/components/live/Spinner";
 import { Avatar, Button, Code, Dialog, Flex, RadioGroup, Switch, Text, TextField } from "@radix-ui/themes";
 import { MonitorPlay } from "lucide-react";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react"; // next-auth -> better-auth
+import { authClient } from "@/auth-client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -16,7 +17,8 @@ export function IngressDialog({
   children
 }: IngressDialogProps) {
   const router = useRouter();
-  const { data: session } = useSession();
+  // const { data: session } = useSession(); // next-auth -> better-auth
+  const { data: session } = authClient.useSession();
   const [loading, setLoading] = useState<boolean>(false);
   const [roomName, setRoomName] = useState<string>("");
   const [name, setName] = useState<string>(session?.user?.name || "");

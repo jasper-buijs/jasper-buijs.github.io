@@ -185,7 +185,7 @@ export type F1PagesDataGroupByOutputType = {
   _max: F1PagesDataMaxAggregateOutputType | null
 }
 
-type GetF1PagesDataGroupByPayload<T extends F1PagesDataGroupByArgs> = Prisma.PrismaPromise<
+export type GetF1PagesDataGroupByPayload<T extends F1PagesDataGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<F1PagesDataGroupByOutputType, T['by']> &
       {
