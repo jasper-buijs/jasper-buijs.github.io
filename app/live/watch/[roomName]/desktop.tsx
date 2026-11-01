@@ -12,13 +12,13 @@ import { Avatar, Box, Button, Card, Flex, Heading, Text, TextField } from "@radi
 import { MonitorPlay } from "lucide-react";
 // import { useSession } from "next-auth/react"; // next-auth -> better-auth
 import { authClient } from "@/auth-client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface DesktopPageProps {
   roomName: string;
   serverUrl: string;
 }
-export default  function DesktopPage({
+export default function DesktopPage({
   roomName,
   serverUrl,
 }: DesktopPageProps) {
@@ -29,6 +29,10 @@ export default  function DesktopPage({
   const [authToken, setAuthToken] = useState<string>("");
   const [roomToken, setRoomToken] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (session && session.user) setName(session.user.name);
+  }, [session]);
 
   const onJoin = async () => {
     setLoading(true);
@@ -53,8 +57,8 @@ export default  function DesktopPage({
 
   if (!authToken || !roomToken) {
     return (
-      <Flex align="center" justify="center" className={"h-full"}>
-        <Card className={"p-3 w-[380px]"}>
+      <Flex align="center" justify="center" className={"absolute top-0 bottom-0 left-0 right-0"}>
+        <Card className={"p-3 w-95"}>
           <Heading size="4" mb="4">
             Entering {decodeURI(roomName)}
           </Heading>
@@ -102,7 +106,7 @@ export default  function DesktopPage({
   return (
     <TokenContext.Provider value={authToken}>
       <LiveKitRoom serverUrl={serverUrl} token={roomToken}>
-        <Flex className={"w-full h-full"}>
+        <Flex className={"w-screen h-screen"}>
           <Flex direction="column" className={"flex-1"}>
             <Box className={"flex-1 bg-gray-1"}>
               <StreamPlayer />

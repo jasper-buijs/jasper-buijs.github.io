@@ -48,7 +48,7 @@ export function JoinDialog({
             disabled={!roomName || loading}
             onClick={() => {
               setLoading(true);
-              router.push(`/watch/${roomName}`);
+              router.push(`/live/watch/${roomName}`);
             }}
           >
             {loading ? (

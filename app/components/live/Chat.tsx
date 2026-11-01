@@ -16,11 +16,9 @@ function ChatMessage({
   
   return (
     <Flex gap="2" align="start" className={"wrap-break-word w-[220px]"}>
-      {
-        // TODO Avatar add discord image
-      }
       <Avatar
         size="1"
+        src={message.from?.attributes.profilePicture === "no-image" ? undefined : message.from?.attributes.profilePicture}
         fallback={message.from?.identity[0] ?? "?"}
         radius="full"
       />
@@ -68,7 +66,7 @@ export function Chat() {
   return (
     <Flex direction="column" className={"h-full"}>
       <Box className={"text-center p-2 border-b border-accent-5"}>
-        <Text size="2" className={"font-mono text-accent-11"}>
+        <Text size="2" className={"text-accent-11"}>
           Chat
         </Text>
       </Box>
@@ -94,7 +92,7 @@ export function Chat() {
             />
           </Box>
           <IconButton onClick={onSend} disabled={!draft.trim().length}>
-            <Send />
+            <Send size="18" />
           </IconButton>
         </Flex>
       </Box>

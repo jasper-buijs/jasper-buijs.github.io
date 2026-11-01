@@ -1,4 +1,8 @@
+@layer theme, base, radix-themes, components, utilities;
+
 @import 'tailwindcss';
+@import '@radix-ui/themes/styles.css' layer(radix-themes);
+@import 'radix-themes-tw/theme.css';
 
 @config '../tailwind.config.ts';
 
@@ -23,7 +27,7 @@
   }
 }
 
-:root {
+/*:root {
   --foreground-primary: 255, 255, 255;
   --background-primary: 34, 34, 34;
 }
@@ -42,4 +46,4 @@ body {
 
 :root, .light, .light-theme, .radix-themes {
   --color-background: #222222;
-}
+}*/

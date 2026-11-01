@@ -14,12 +14,12 @@ const NavBar = ({ activePage }: NavBarProps) => {
 
   useEffect(() => {
     const room = "live-room";
-    fetch(`/api/activeStream?room=${room}`).then((r) => {
-      r.json().then((data) => {
+    fetch(`/api/live/checkActiveStream`).then((r) => {
+      r.json().then((data: { live: boolean }) => {
         setStreamActive(data.live);
       });
     }).catch((_e) => setStreamActive(false)); // &username=${name}
-  }, [isStreamActive]);
+  }, []);
 
   const linkClassFilter = (page: string) => {
     return page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#1E1E1E] dark:text-[#FFFFFF]";

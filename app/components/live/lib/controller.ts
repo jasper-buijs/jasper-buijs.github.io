@@ -2,11 +2,13 @@ import jwt from "jsonwebtoken";
 import {
   AccessToken,
   CreateIngressOptions,
-  IngressAudioEncodingPreset, IngressAudioOptions,
+  IngressAudioEncodingPreset,
+  IngressAudioOptions,
   IngressClient,
   IngressInfo,
   IngressInput,
-  IngressVideoEncodingPreset, IngressVideoOptions,
+  IngressVideoEncodingPreset,
+  IngressVideoOptions,
   ParticipantInfo,
   ParticipantPermission,
   RoomServiceClient,
@@ -18,6 +20,7 @@ export type RoomMetadata = {
   creator_identity: string;
   enable_chat: boolean;
   allow_participation: boolean;
+  enable_confetti?: boolean;
 };
 
 export type ParticipantMetadata = {
@@ -46,6 +49,7 @@ export type CreateIngressParams = {
   room_name?: string;
   ingress_type: string;
   metadata: RoomMetadata;
+  avatar_image?: string;
 };
 
 export type CreateIngressResponse = {
@@ -57,6 +61,7 @@ export type CreateIngressResponse = {
 export type CreateStreamParams = {
   room_name?: string;
   metadata: RoomMetadata;
+  avatar_image?: string;
 };
 
 export type CreateStreamResponse = {
@@ -67,6 +72,7 @@ export type CreateStreamResponse = {
 export type JoinStreamParams = {
   room_name: string;
   identity: string;
+  avatar_image?: string;
 };
 
 export type JoinStreamResponse = {
@@ -120,6 +126,7 @@ export class Controller {
     metadata,
     room_name,
     ingress_type = "rtmp",
+    avatar_image,
   }: CreateIngressParams): Promise<CreateIngressResponse> {
     if (!room_name) {
       room_name = generateRoomId();
@@ -142,9 +149,16 @@ export class Controller {
     if (ingress_type === "whip") {
       // https://docs.livekit.io/egress-ingress/ingress/overview/#bypass-transcoding-for-whip-sessions
       options.enableTranscoding = false;
+      options.video = {
+        source: TrackSource.SCREEN_SHARE,
+      } as IngressVideoOptions;
+      options.audio = {
+        source: TrackSource.SCREEN_SHARE_AUDIO,
+      } as IngressAudioOptions;
     } else {
       options.video = {
-        source: TrackSource.CAMERA,
+        // source: TrackSource.CAMERA,
+        source: TrackSource.SCREEN_SHARE,
         //preset: IngressVideoEncodingPreset.H264_1080P_30FPS_3_LAYERS,
         encodingOptions: {
           case: "preset",
@@ -152,7 +166,8 @@ export class Controller {
         }
       } as IngressVideoOptions;
       options.audio = {
-        source: TrackSource.MICROPHONE,
+        // source: TrackSource.MICROPHONE,
+        source: TrackSource.SCREEN_SHARE_AUDIO,
         //preset: IngressAudioEncodingPreset.OPUS_STEREO_96KBPS,
         encodingOptions: {
           case: "preset",
@@ -175,6 +190,7 @@ export class Controller {
       process.env.LIVEKIT_API_SECRET!,
       {
         identity: metadata.creator_identity,
+        attributes: { profilePicture: avatar_image || "no-image" },
       }
     );
 
@@ -206,12 +222,14 @@ export class Controller {
   async createStream({
     metadata,
     room_name: roomName,
+    avatar_image,
   }: CreateStreamParams): Promise<CreateStreamResponse> {
     const at = new AccessToken(
       process.env.LIVEKIT_API_KEY!,
       process.env.LIVEKIT_API_SECRET!,
       {
         identity: metadata.creator_identity,
+        attributes: { profilePicture: avatar_image || "no-image" },
       }
     );
 
@@ -265,6 +283,7 @@ export class Controller {
   async joinStream({
     identity,
     room_name,
+    avatar_image,
   }: JoinStreamParams): Promise<JoinStreamResponse> {
     // Check for existing participant with same identity
     let exists = false;
@@ -282,6 +301,7 @@ export class Controller {
       process.env.LIVEKIT_API_SECRET!,
       {
         identity,
+        attributes: { profilePicture: avatar_image || "no-image" },
       }
     );
 

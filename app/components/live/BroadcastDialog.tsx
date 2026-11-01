@@ -6,8 +6,7 @@ import { Avatar, Button, Dialog, Flex, Switch, Text, TextField } from "@radix-ui
 // import { useSession } from "next-auth/react"; // next-auth -> better-auth
 import { authClient } from "@/auth-client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { AllowParticipationInfo } from "./AllowParticipationInfo";
+import { useEffect, useState } from "react";
 
 export function BroadcastDialog({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -18,7 +17,11 @@ export function BroadcastDialog({ children }: { children: React.ReactNode }) {
   const [ roomName, setRoomName ] = useState<string>("");
   const [ name, setName ] = useState<string>(session?.user?.name || "");
   const [ enableChat, setEnableChat ] = useState<boolean>(true);
-  const [ allowParticipation, setAllowParticipation ] = useState<boolean>(true);
+  const [enableConfetti, setEnableConfetti] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (session && session.user) setName(session.user.name);
+  }, [session]);
 
   const onGoLive = async () => {
     setLoading(true);
@@ -30,7 +33,8 @@ export function BroadcastDialog({ children }: { children: React.ReactNode }) {
         metadata: {
           creator_identity: name,
           enable_chat: enableChat,
-          allow_participation: allowParticipation,
+          allow_participation: false,
+          enable_confetti: enableConfetti,
         },
       }),
     });
@@ -90,18 +94,19 @@ export function BroadcastDialog({ children }: { children: React.ReactNode }) {
               <Switch
                 checked={enableChat}
                 onCheckedChange={(e) => setEnableChat(e)}
+                radius="large"
               />
             </Flex>
             <Flex justify="between">
               <Flex align="center" gap="2">
                 <Text as="div" size="2" weight="medium">
-                  Viewers can participate
+                  Enable confetti for everyone
                 </Text>
-                <AllowParticipationInfo />
               </Flex>
               <Switch
-                checked={allowParticipation}
-                onCheckedChange={(e) => setAllowParticipation(e)}
+                checked={enableConfetti}
+                onCheckedChange={setEnableConfetti}
+                radius="large"
               />
             </Flex>
           </Flex>
@@ -115,7 +120,7 @@ export function BroadcastDialog({ children }: { children: React.ReactNode }) {
               onClick={() => {
                 setRoomName("");
                 setEnableChat(true);
-                setAllowParticipation(true);
+                setEnableConfetti(true);
               }}
             >
               Cancel

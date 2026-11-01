@@ -1,6 +1,5 @@
 "use client";
 
-import { AllowParticipationInfo } from "@/app/components/live/AllowParticipationInfo";
 import { CreateIngressResponse } from "@/app/components/live/lib/controller";
 import { Spinner } from "@/app/components/live/Spinner";
 import { Avatar, Button, Code, Dialog, Flex, RadioGroup, Switch, Text, TextField } from "@radix-ui/themes";
@@ -8,7 +7,7 @@ import { MonitorPlay } from "lucide-react";
 // import { useSession } from "next-auth/react"; // next-auth -> better-auth
 import { authClient } from "@/auth-client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface IngressDialogProps {
   children: React.ReactNode;
@@ -24,8 +23,12 @@ export function IngressDialog({
   const [name, setName] = useState<string>(session?.user?.name || "");
   const [type, setType] = useState<"whip"|"rtmp">("rtmp");
   const [enableChat, setEnableChat] = useState<boolean>(true);
-  const [allowParticipation, setAllowParticipation] = useState<boolean>(true);
+  const [enableConfetti, setEnableConfetti] = useState<boolean>(true);
   const [ingressResponse, setIngressResponse] = useState<CreateIngressResponse>();
+
+  useEffect(() => {
+    if (session && session.user) setName(session.user.name);
+  }, [session]);
 
   const onCreateIngress = async () => {
     setLoading(true);
@@ -40,7 +43,9 @@ export function IngressDialog({
         metadata: {
           creator_identity: name,
           enable_chat: enableChat,
-          allow_participation: allowParticipation
+          // allow_participation: allowParticipation,
+          allow_participation: false,
+          enable_confetti: enableConfetti,
         },
       }),
     });
@@ -166,18 +171,19 @@ export function IngressDialog({
                     <Switch
                       checked={enableChat}
                       onCheckedChange={(e) => setEnableChat(e)}
+                      radius="large"
                     />
                   </Flex>
                   <Flex justify="between">
                     <Flex align="center" gap="2">
                       <Text as="div" size="2" weight="bold">
-                        Viewers can participate
+                        Enable confetti for everyone
                       </Text>
-                      <AllowParticipationInfo />
                     </Flex>
                     <Switch
-                      checked={allowParticipation}
-                      onCheckedChange={(e) => setAllowParticipation(e)}
+                      checked={enableConfetti}
+                      onCheckedChange={setEnableConfetti}
+                      radius="large"
                     />
                   </Flex>
                 </Flex>
@@ -192,7 +198,7 @@ export function IngressDialog({
                       setRoomName("");
                       setType("rtmp");
                       setEnableChat(true);
-                      setAllowParticipation(true);
+                      setEnableConfetti(true);
                     }}
                   >
                     Cancel

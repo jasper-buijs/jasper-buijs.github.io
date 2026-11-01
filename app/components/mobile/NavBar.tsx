@@ -23,12 +23,12 @@ const NavBar = ({ activePage }: NavBarProps) => {
 
   useEffect(() => {
     const room = "live-room";
-    fetch(`/api/activeStream?room=${room}`).then((r) => {
-      r.json().then((data) => {
+    fetch(`/api/live/checkActiveStream`).then((r) => {
+      r.json().then((data: { live: boolean }) => {
         setStreamActive(data.live);
       });
     }).catch((_e) => setStreamActive(false)); // &username=${name}
-  }, [isStreamActive]);
+  }, []);
 
   const activeLinkColor = (page: string) => page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#0F0F0F] dark:text-[#FFFFFF]";
   const { data: session } = authClient.useSession();
