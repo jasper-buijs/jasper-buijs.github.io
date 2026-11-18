@@ -43,3 +43,6 @@ next-env.d.ts
 /public/italy-docs/*
 
 /prisma/generated/prisma
+/public/minecraft-map-hmvanilla
+/public/bills
+public/pt-info.pdf
