@@ -41,9 +41,11 @@ next-env.d.ts
 # custom
 /livekitconfig/
 /public/italy-docs/*
-/public/minecraft-map-hmvanilla/*
 
-/app/generated/prisma
+/prisma/generated/prisma
+/public/minecraft-map-hmvanilla
+/public/bills
+public/pt-info.pdf
 
 # Portugal
 /public/pt*

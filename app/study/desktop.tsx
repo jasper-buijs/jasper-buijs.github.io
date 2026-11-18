@@ -117,7 +117,7 @@ const KULeuvenInput = () => {
         <input type={"time"} id={"KULTime"} name={"KULTime"} required value={kulFormValues.KULTime} onChange={onKulInputChange} className={"mr-4 p-1 rounded-md h-8 dark:text-black"} />
         <input type={"submit"} value={"➕ ADD"} className={"font-semibold bg-green-400 rounded-md p-1 dark:text-black"} />
       </form>
-      <div className={"w-full grid grid-cols-[15%,_55%,_15%,_10%,_5%] pt-4"}>
+      <div className={"w-full grid grid-cols-[15%_55%_15%_10%_5%] pt-4"}>
         {queuedExams.map((e) =>
           <>
             <div key={`OpoCode-${queuedExams.indexOf(e)}`} className={"col-start-1"}>{e.courseCode}</div>
@@ -199,7 +199,7 @@ const VUBInput = () => {
         <input type={"time"} id={"VUBTime"} name={"VUBTime"} required value={vubFormValues.VUBTime} onChange={onVubInputChange} className={"mr-4 p-1 rounded-md h-8 dark:text-black"} />
         <input type={"submit"} value={"➕ ADD"} className={"font-semibold bg-green-400 rounded-md p-1 dark:text-black"} />
       </form>
-      <div className={"w-full grid grid-cols-[15%,_55%,_15%,_10%,_5%] pt-4"}>
+      <div className={"w-full grid grid-cols-[15%_55%_15%_10%_5%] pt-4"}>
         {queuedExams.map((e) =>
           <>
             <div key={`OpoCode-${queuedExams.indexOf(e)}`} className={"col-start-1"}>{e.courseCode}</div>
@@ -271,7 +271,7 @@ const OtherInput = () => {
         <input type={"time"} id={"KULTime"} name={"OtherTime"} required value={otherFormValues.OtherTime} onChange={onOtherInputChange} className={"mr-4 p-1 rounded-md h-8 dark:text-black"} />
         <input type={"submit"} value={"➕ ADD"} className={"font-semibold bg-green-400 rounded-md p-1 dark:text-black"} />
       </form>
-      <div className={"w-full grid grid-cols-[70%,_15%,_10%,_5%] pt-4"}>
+      <div className={"w-full grid grid-cols-[70%_15%_10%_5%] pt-4"}>
         {queuedExams.map((e) =>
           <>
             <div key={`Name-${queuedExams.indexOf(e)}`} className={"col-start-1"}>{e.name}</div>
@@ -393,7 +393,7 @@ const StudyView = () => {
         {groupedExams.map((group) =>
           <div key={`group-${group.date.toISOString()}`} className={"mb-4"}>
             <div className={"uppercase font-semibold mb-1"}>{group.date.toLocaleString(undefined, {dateStyle: "full"})}</div>
-            <div className={"grid grid-cols-[28px,_1fr]"}>
+            <div className={"grid grid-cols-[28px_1fr]"}>
               {group.exams.map((exam) =>
                 <>
                   <ProfilePictureDisplay key={`pp-${exam.id}`} id={String(exam.userId)} />

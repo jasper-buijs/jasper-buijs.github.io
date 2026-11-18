@@ -20,7 +20,7 @@ const FormulaOnePage = () => {
           {/* PRE-SEASON TESTING 1*/ }
           <Link href="/formulaone/races/pst1"
              className="w-full h-32 relative row-start-1 row-span-1 col-start-1 col-span-2">
-            <div className={ `bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 px-5 rounded-lg`}>
+            <div className={ `bg-gray-600 absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-4 px-5 rounded-lg`}>
               <p className="block text-white font-semibold text-lg truncate">BARCELONA PRIVATE PRE-SEASON TEST</p>
               <p className="block text-white truncate">Circuit de Barcelona-Catalunya, Catalonia, Spain</p>
               <p className="inline-block text-white mr-3">Jan 26 - 30</p>
@@ -30,7 +30,7 @@ const FormulaOnePage = () => {
           { /* PRE-SEASON TESTING 2 */}
           <Link href="/formulaone/races/pst2"
              className="w-full h-32 relative row-start-1 row-span-1 col-start-3 col-span-2">
-            <div className={ `bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 px-5 rounded-lg`}>
+            <div className={ `bg-gray-600 absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-4 px-5 rounded-lg`}>
               <p className="block text-white font-semibold text-lg truncate">FORMULA 1 ARAMCO PRE-SEASON TESTING 2026</p>
               <p className="block text-white truncate">Bahrain International Circuit, Sakhir, Bahrain</p>
               <p className="inline-block text-white mr-3">Feb 11 - 13</p>
@@ -40,7 +40,7 @@ const FormulaOnePage = () => {
           { /* PRE-SEASON TESTING 3 */}
           <Link href="/formulaone/races/pst3"
              className="w-full h-32 relative row-start-1 row-span-1 col-start-5 col-span-2">
-            <div className={ `bg-gray-600 absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-4 px-5 rounded-lg`}>
+            <div className={ `bg-gray-600 absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-4 px-5 rounded-lg`}>
               <p className="block text-white font-semibold text-lg truncate">FORMULA 1 ARAMCO PRE-SEASON TESTING 2026</p>
               <p className="block text-white truncate">Bahrain International Circuit, Sakhir, Bahrain</p>
               <p className="inline-block text-white mr-3">Feb 18 - 20</p>
@@ -50,7 +50,7 @@ const FormulaOnePage = () => {
           {/*AUSTRALIA GP*/}
           <Link href="/formulaone/races/australia"
             className="w-full h-32 relative row-start-2 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#023874] to-[#7CAADC] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#023874] to-[#7CAADC] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 1</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS AUSTRALIAN GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Albert Park Circuit, Melbourne, Australia</p>
@@ -62,7 +62,7 @@ const FormulaOnePage = () => {
           {/*CHINESE GP*/}
           <Link href="/formulaone/races/china"
             className="w-full h-32 relative row-start-2 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#EE1C25] to-[#FFE700] from-50% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#EE1C25] to-[#FFE700] from-50% absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 2</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Shanghai International Circuit, Shanghai, China</p>
@@ -74,7 +74,7 @@ const FormulaOnePage = () => {
           {/*JAPAN GP*/}
           <Link href="/formulaone/races/japan"
             className="w-full h-32 relative row-start-3 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#BD022F] to-[#FF5782] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#BD022F] to-[#FF5782] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 3</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ARAMCO JAPANESE GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Suzuka International Racing Course, Suzuka, Japan</p>
@@ -85,7 +85,7 @@ const FormulaOnePage = () => {
           {/*BAHRAIN GP*/}
           <Link href="/formulaone/races/bahrain"
             className="w-full h-32 relative row-start-3 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#E40A18] from-50% to-[#FFFFFF] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#E40A18] from-50% to-[#FFFFFF] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 pl-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 4</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Bahrain International Circuit, Sakhir, Bahrain</p>
@@ -97,7 +97,7 @@ const FormulaOnePage = () => {
           {/*SAUDI ARABIA GP*/}
           <Link href="/formulaone/races/saudi-arabia"
             className="w-full h-32 relative row-start-4 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#016C36] to-[#66C698] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#016C36] to-[#66C698] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 5</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Jeddah Corniche Circuit, Jeddah, Saudi Arabia</p>
@@ -109,7 +109,7 @@ const FormulaOnePage = () => {
           {/*MIAMI GP*/}
           <Link href={"/formulaone/races/miami"}
             className="w-full h-32 relative row-start-4 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#03ABAC] to-[#F5BFB3] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 6</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Miami International Autodrome, Florida, United States</p>
@@ -121,7 +121,7 @@ const FormulaOnePage = () => {
           {/*CANADA GP*/}
           <Link href="/formulaone/races/canada"
             className="w-full h-32 relative row-start-5 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#EA2C36] from-50% to-85% to-[#FFFFFF] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#EA2C36] from-50% to-85% to-[#FFFFFF] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 7</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit Gilles-Villeneuve, Montreal, Canada</p>
@@ -133,7 +133,7 @@ const FormulaOnePage = () => {
           {/*MONACO GP*/}
           <Link href={"/formulaone/races/monaco"}
             className="w-full h-32 relative row-start-5 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#E50915] to-[#FFFFFF] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#E50915] to-[#FFFFFF] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 8</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit de Monaco, Monte-Carlo, Monaco</p>
@@ -145,7 +145,7 @@ const FormulaOnePage = () => {
           {/*BARCELONA GP*/}
           <Link href="/formulaone/races/barcelona"
             className="w-full h-32 relative row-start-6 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#FABD00] from-60% to-[#E20612]  absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#FABD00] from-60% to-[#E20612]  absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 9</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES GRAN PREMIO DE BARCELONA-CATALUNYA 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit de Barcelona-Catalunya, Catalonia, Spain</p>
@@ -157,7 +157,7 @@ const FormulaOnePage = () => {
           {/*AUSTRIA GP*/}
           <Link href="/formulaone/races/austria"
             className="w-full h-32 relative row-start-6 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#C80F2E] to-[#FF3E5D] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 10</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 LENOVO AUSTRIAN GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Red Bull Ring, Styria, Austria</p>
@@ -169,7 +169,7 @@ const FormulaOnePage = () => {
           {/*UK GP*/}
           <Link href="/formulaone/races/great-britain"
             className="w-full h-32 relative row-start-7 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#C7102E] to-[#032169] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#C7102E] to-[#032169] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 11</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI BRITISH GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Silverstone Circuit, Northamptonshire, United Kingdom</p>
@@ -181,7 +181,7 @@ const FormulaOnePage = () => {
           {/*BELGIUM GP*/}
           <Link href="/formulaone/races/belgium"
             className="w-full h-32 relative row-start-7 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#030301] to-[#eb0917] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#030301] to-[#eb0917] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 12</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 BELGIAN GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit de Spa-Francorchamps, Stavelot, Belgium</p>
@@ -193,7 +193,7 @@ const FormulaOnePage = () => {
           {/*HUNGARY GP*/}
           <Link href="/formulaone/races/hungary"
             className="w-full h-32 relative row-start-8 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#eb0917] to-[#349d32] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#eb0917] to-[#349d32] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 13</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 AWS HUNGARIAN GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Hungaroring, Mogyoród, Hungary</p>
@@ -205,7 +205,7 @@ const FormulaOnePage = () => {
           {/*NETHERLANDS GP*/}
           <Link href="/formulaone/races/netherlands"
             className="w-full h-32 relative row-start-8 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#ff8113] to-[#04529A] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#ff8113] to-[#04529A] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 14</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit Zandvoort, North Holland, Netherlands</p>
@@ -217,7 +217,7 @@ const FormulaOnePage = () => {
           {/*ITALY GP*/}
           <Link href="/formulaone/races/italy"
             className="w-full h-32 relative row-start-9 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#048B46] to-[#CC222B] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#048B46] to-[#CC222B] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 15</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 PIRELLI GRAN PREMIO D&apos;ITALIA 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Autodromo Nazionale Monza, Monza, Italy</p>
@@ -229,7 +229,7 @@ const FormulaOnePage = () => {
           {/*SPAIN GP*/}
           <Link href="/formulaone/races/spain"
             className="w-full h-32 relative row-start-9 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#E20612] from-50% to-85% to-[#FABD00] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#E20612] from-50% to-85% to-[#FABD00] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 16</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 TAG HEUER GRAN PREMIO DE ESPAÑA 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuito de Madring, Madrid, Spain</p>
@@ -241,7 +241,7 @@ const FormulaOnePage = () => {
           {/*AZERBAIJAN GP*/}
           <Link href="/formulaone/races/azerbaijan"
             className="w-full h-32 relative row-start-10 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#00B5E2] to-[#4F9F30] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#00B5E2] to-[#4F9F30] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 17</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Baku City Circuit, Baku, Azerbaijan</p>
@@ -253,7 +253,7 @@ const FormulaOnePage = () => {
           {/*SINGAPORE GP*/}
           <Link href="/formulaone/races/singapore"
             className="w-full h-32 relative row-start-10 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#e10e0e] to-[#FFFFFF] from-65% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#e10e0e] to-[#FFFFFF] from-65% absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 18</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Marina Bay Street Circuit, Singapore</p>
@@ -265,7 +265,7 @@ const FormulaOnePage = () => {
           {/*USA GP*/}
           <Link href="/formulaone/races/united-states"
             className="w-full h-32 relative row-start-11 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#2112d9] to-[#dd0b26] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#2112d9] to-[#dd0b26] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 19</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES UNITED STATES GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Circuit of The Americas, Texas, United States</p>
@@ -277,7 +277,7 @@ const FormulaOnePage = () => {
           {/*MEXICO GP*/}
           <Link href="/formulaone/races/mexico"
             className="w-full h-32 relative row-start-11 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#039542] to-[#E10813] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#039542] to-[#E10813] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 20</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Autódromo Hermanos Rodríguez, Mexico City, Mexico</p>
@@ -288,7 +288,7 @@ const FormulaOnePage = () => {
           {/*BRAZIL GP*/}
           <Link href="/formulaone/races/brazil"
             className="w-full h-32 relative row-start-12 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#029739] to-[#FCDC00] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#029739] to-[#FCDC00] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 21</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 MSC CRUISES GRANDE PRÊMIO DE SÃO PAULO 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Autódromo de Interlagos, São Paulo, Brazil</p>
@@ -299,7 +299,7 @@ const FormulaOnePage = () => {
           {/*VEGAS GP*/}
           <Link href="/formulaone/races/las-vegas"
             className="w-full h-32 relative row-start-12 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#0198A3] via-[#22142B] via-65 to-[#571060] absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#0198A3] via-[#22142B] via-65 to-[#571060] absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 22</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Las Vegas Strip Circuit, Nevada, United States</p>
@@ -311,7 +311,7 @@ const FormulaOnePage = () => {
           {/*QATAR GP*/}
           <Link href="/formulaone/races/qatar"
             className="w-full h-32 relative row-start-13 row-span-1 col-start-1 col-span-3">
-            <div className={`bg-gradient-to-r from-[#8A1639] to-[#FFFFFF] from-70% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#8A1639] to-[#FFFFFF] from-70% absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 23</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Lusail International Circuit, Lusail, Qatar</p>
@@ -323,7 +323,7 @@ const FormulaOnePage = () => {
           {/*UAE GP*/}
           <Link href="/formulaone/races/abu-dhabi"
             className="w-full h-32 relative row-start-13 row-span-1 col-start-4 col-span-3">
-            <div className={`bg-gradient-to-r from-[#FD0002] via-[#01823F] to-[#000000] from-20% via-60% absolute brightness-[80%] right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
+            <div className={`bg-linear-to-r from-[#FD0002] via-[#01823F] to-[#000000] from-20% via-60% absolute brightness-80 right-2 top-2 bottom-2 left-2 pt-3 px-5 rounded-lg`}>
               <p className="block text-white text-sm italic">ROUND 24</p>
               <p className="block text-white font-semibold text-lg leading-5 truncate max-w-[calc(100%-135px)]">FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2026</p>
               <p className="block text-white truncate max-w-[calc(100%-135px)]">Yas Marina Circuit, Abu Dhabi, United Arab Emirates</p>

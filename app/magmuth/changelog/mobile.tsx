@@ -2,13 +2,15 @@
 import NavBar from "@/app/components/mobile/NavBar";
 import Paragraph from "@/app/components/mobile/Paragraph";
 import { ChangeIconGrid, ChangeIconGridElement } from "@/app/components/mobile/magmuth/changelog/ChangeIcon";
-import CodeBlock from "@/app/components/magmuth/changelog/CodeBlock";
+// import CodeBlock from "@/app/components/magmuth/changelog/CodeBlock";
 
 const Home = () => {
   return (
     <>
       <NavBar activePage="magmuth" />
+
       <div className="pl-2 pr-20 py-6">
+
         <Paragraph title="Release 4.0.0">
           <ChangeIconGrid>
             <ChangeIconGridElement type="updated" label="update">

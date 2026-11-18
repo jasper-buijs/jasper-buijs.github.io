@@ -44,7 +44,7 @@ const Alert = ({ type, hideIcon, text }: AlertProps) => {
   let [close, setClose] = useState<boolean>(false);
   const closeAlert = () => setClose(true);
   return (
-    <div className={`p-4 mt-1 l-0 r-0 h-fit relative ${backgroundColors[type]} ${textColors[type]} border-l-4 ${broderColor[type]} border-solid ${close && "!hidden"}`}>
+    <div className={`p-4 mt-1 l-0 r-0 h-fit relative ${backgroundColors[type]} ${textColors[type]} border-l-4 ${broderColor[type]} border-solid ${close && "hidden!"}`}>
       {!hideIcon && icons[type]}
       <b className={"inline-block align-middle"}>{(type == "danger" || type == "warning") ? "IMPORTANT" : "INFO"}</b><br />
       {text}

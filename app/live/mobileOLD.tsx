@@ -1,0 +1,60 @@
+import StreamPlayerOLD from "@/app/components/mobile/live/StreamPlayerOLD";
+import NavBar from "@/app/components/mobile/NavBar";
+import { RoomContext } from "@livekit/components-react";
+import { Room } from "livekit-client";
+import { useEffect, useState } from "react";
+
+const MobilePage = () => {
+  useEffect(() => {
+    fetch(`/api/checkGuild`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
+        else if (data.status != 200) window.location.assign(new URL("/", window.location.toString()));
+    });
+  }, []);
+
+  const room = "live-room";
+  let [_accessToken, setAccessToken] = useState<string>();
+
+  const [roomInstance] = useState(() => new Room({
+    adaptiveStream: true,
+    dynacast: true,
+    disconnectOnPageLeave: true,
+  }));
+
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const resp = await fetch(`/api/token?room=${room}`); // &username=${name}
+        const data = await resp.json();
+        if (resp.status == 400 && data.redirect) window.location.assign(new URL(data.redirect, window.location.toString()));
+        if (!mounted) return;
+        if (data.token) {
+          await roomInstance.connect((process.env.NEXT_PUBLIC_LIVEKIT_URL as string), data.token);
+          setAccessToken(data.token);
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+
+    return () => {
+      mounted = false;
+      roomInstance.disconnect();
+    }
+  }, [roomInstance]);
+
+  return (
+    <>
+      <NavBar activePage="none" />
+
+      <RoomContext.Provider value={roomInstance}>
+        <StreamPlayerOLD />
+      </RoomContext.Provider>
+    </>
+  );
+}
+
+export default MobilePage

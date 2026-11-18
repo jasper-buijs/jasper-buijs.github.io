@@ -1,16 +1,25 @@
 "use server"
 
-import { authOptions } from "@/auth";
-import { getServerSession } from "next-auth";
+import { auth } from "@/auth";
+// import { getServerSession } from "next-auth"; // next-auth -> better-auth
+import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/db"
 
 export async function GET(_req: NextRequest) {
-  const session = await getServerSession(authOptions);
-  // console.log(`session found for ${session?.user?.name}`);
+  // const session = await getServerSession(authOptions); // next-authb -> better-auth
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  const user = await prisma.user.findUnique({
+  if (session.user.guildMember) {
+    return NextResponse.json({ status: 200 });
+  } else {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  /*const user = await prisma.user.findUnique({
     where: {
       username: session.user?.name as string,
     }
@@ -28,5 +37,5 @@ export async function GET(_req: NextRequest) {
   }  else {
     // console.log(`was false so rerouting home`);
     return NextResponse.json({error: "Unauthorized"}, { status: 401 });
-  }
+  }*/
 }

@@ -35,13 +35,13 @@ const MapsOverlay = ({ place, vis, setVis }: MapsOverlayProps) => {
           </button>
           <div className={"absolute z-0 top-0 bottom-0 left-0 right-0 grid grid-cols-3"}>
             <a href={links[place]["apple"]} className={"col-start-1 m-auto p-8"}>
-              <Image src={"/logos/maps/Apple_Maps_Logo_3D.png"} alt={"Apple Maps"} width={400} height={400} className={"!aspect-square"} />
+              <Image src={"/logos/maps/Apple_Maps_Logo_3D.png"} alt={"Apple Maps"} width={400} height={400} className={"aspect-square!"} />
             </a>
             <a href={links[place]["google"]} className={"col-start-2 m-auto p-8"}>
-              <Image src={"/logos/maps/Google_Maps_icon_(2020).svg"} alt={"Google Maps"} width={400} height={400} className={"!aspect-square"} />
+              <Image src={"/logos/maps/Google_Maps_icon_(2020).svg"} alt={"Google Maps"} width={400} height={400} className={"aspect-square!"} />
             </a>
             <button onClick={() => navigator.clipboard.writeText(links[place]["copy"])} className={"col-start-3 m-auto p-8"}>
-              <ClipboardCopy size={256} className={"!aspect-square text-black max-w-full"} />
+              <ClipboardCopy size={256} className={"aspect-square! text-black max-w-full"} />
             </button>
           </div>
         </div>
@@ -64,7 +64,7 @@ const Page = () => {
             <div className={"w-60 text-center font-semibold text-4xl -mt-4"}>Spliit</div>
           </a>
           <button onClick={() => {setMapsOverlayVisibility(true); setPlace("rome");}} className={"col-start-2 m-auto"}>
-            <Image src={"/thiings/airbnb-1.png"} className={"h-60 w-96 px-[4.5rem]"} alt={"AirBnB Rome"} width={1024} height={1024} />
+            <Image src={"/thiings/airbnb-1.png"} className={"h-60 w-96 px-18"} alt={"AirBnB Rome"} width={1024} height={1024} />
             <div className={"w-96 text-center font-semibold text-4xl -mt-4"}>AirBnB Rome</div>
             <div className={"w-96 text-center mt-1"}>Via Carlo Piaggia 3, Lido di Ostia, Rome, Italy</div>
           </button>

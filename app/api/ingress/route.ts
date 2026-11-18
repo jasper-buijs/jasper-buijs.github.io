@@ -1,6 +1,6 @@
 "use server";
 
-import { authOptions } from "@/auth";
+import { auth } from "@/auth";
 import {
   AccessToken,
   IngressAudioOptions,
@@ -9,15 +9,22 @@ import {
   IngressVideoOptions,
   TrackSource,
 } from "livekit-server-sdk";
-import { getServerSession } from "next-auth";
+// import { getServerSession } from "next-auth"; // next-auth -> better-auth
+import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/db";
 
 export async function GET(req: NextRequest) {
-  const session = await getServerSession(authOptions);
+  // const session = await getServerSession(authOptions); // next-auth -> better-auth
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  const user = await prisma.user.findUnique({
+  if (!session.user.emailVerified) return NextResponse.json({ error: "Unauthorized, email not verified" }, { status: 401 });
+  if (session.user.email != process.env.CREATE_INGRESS_EMAIL) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  /*const user = await prisma.user.findUnique({
     where: {
       username: session.user?.name as string,
     }
@@ -29,7 +36,7 @@ export async function GET(req: NextRequest) {
   //if (!session.user?.guilds || !(session.user.guilds.length >= 1)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   //if (!session.user.guilds.some((g) => g.id == process.env.GUILD_ID))
   //  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  if (user.email != process.env.CREATE_INGRESS_EMAIL) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (user.email != process.env.CREATE_INGRESS_EMAIL) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });*/
 
   if (req.nextUrl.searchParams.get('list')) {
     const client = new IngressClient(process.env.LIVEKIT_URL as string, process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET);

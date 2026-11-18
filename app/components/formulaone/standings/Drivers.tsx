@@ -72,12 +72,12 @@ const Drivers = () => {
     const driverStandings = data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i];
     gridElements.push(
       <div className={"rounded-md block h-14 mb-2 relative min-w-96 snap-start " + teamColors[driverStandings.Constructors[0].constructorId]}>
-        <div className="absolute left-2 top-1 h-[3rem] w-full">
-          <div className="h-[3rem]">
-            <div className="inline-block h-[3rem] text-5xl font-semibold italic align-top">{driverStandings.positionText}</div>
-            <div className="inline-block relative h-[3rem] ml-3 overflow-visible align-top">
-              <div className="absolute left-[0rem] top-0 text-2xl font-medium w-max">{[driverStandings.Driver.givenName, driverStandings.Driver.familyName].join(" ")}</div>
-              <div className="absolute left-[0rem] top-6 text-base w-max">{driverStandings.Constructors[0].name.replace("Red Bull", "Red Bull Racing").replace("Haas F1 Team", "Haas").replace("Sauber", "Kick Sauber").replace("RB F1 Team", "Racing Bulls").replace("Alpine F1 Team", "Alpine")}</div>
+        <div className="absolute left-2 top-1 h-12 w-full">
+          <div className="h-12">
+            <div className="inline-block h-12 text-5xl font-semibold italic align-top">{driverStandings.positionText}</div>
+            <div className="inline-block relative h-12 ml-3 overflow-visible align-top">
+              <div className="absolute left-0 top-0 text-2xl font-medium w-max">{[driverStandings.Driver.givenName, driverStandings.Driver.familyName].join(" ")}</div>
+              <div className="absolute left-0 top-6 text-base w-max">{driverStandings.Constructors[0].name.replace("Red Bull", "Red Bull Racing").replace("Haas F1 Team", "Haas").replace("Sauber", "Kick Sauber").replace("RB F1 Team", "Racing Bulls").replace("Alpine F1 Team", "Alpine")}</div>
             </div>
           </div>
         </div>
