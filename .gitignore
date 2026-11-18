@@ -46,3 +46,7 @@ next-env.d.ts
 /public/minecraft-map-hmvanilla
 /public/bills
 public/pt-info.pdf
+
+# Portugal
+/public/pt*
+/public/bills/*

@@ -16,17 +16,18 @@ datasource db {
 }
 
 model User {
-  id            String    @id
-  name          String
-  email         String    @unique
-  emailVerified Boolean   @default(false)
-  image         String?
-  guildMember   Boolean   @default(false)
-  exams         Exam[]
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  sessions      Session[]
-  accounts      Account[]
+  id               String             @id
+  name             String
+  email            String             @unique
+  emailVerified    Boolean            @default(false)
+  image            String?
+  guildMember      Boolean            @default(false)
+  exams            Exam[]
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  sessions         Session[]
+  accounts         Account[]
+  portugalPayments PortugalPayments[]
 
   @@unique([name, email], name: "identifier")
   @@map("user")
@@ -78,6 +79,14 @@ model Verification {
 
   @@index([identifier])
   @@map("verification")
+}
+
+model PortugalPayments {
+  id          Int     @id @default(autoincrement())
+  payed       Boolean @default(false)
+  documentUrl String
+  user        User    @relation(fields: [userId], references: [id])
+  userId      Int
 }
 
 model Exam {

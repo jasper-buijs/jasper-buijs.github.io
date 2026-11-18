@@ -10,7 +10,7 @@ const nunito = Nunito({
 });
 
 interface NavBarProps {
-  activePage: "home" | "magmuth" | "minecraft" | "formulaone" | "study" | "none";
+  activePage: "home" | "magmuth" | "minecraft" | "formulaone" | "study" | "pt26" |  "none";
 }
 const NavBar = ({ activePage }: NavBarProps) => {
   const [ isStreamActive, setStreamActive ] = useState<boolean>(false);
@@ -43,9 +43,12 @@ const NavBar = ({ activePage }: NavBarProps) => {
           <Link href="/minecraft" className={"m-4 " + linkClassFilter("minecraft")}>
             Minecraft
           </Link>
-          <Link href="/formulaone" className={"m-4 " + linkClassFilter("formulaone")}>
-            Formula 1
+          <Link href="/pt26" className={"m-4 " + linkClassFilter("pt26")}>
+            Lisboa–Porto &apos;26
           </Link>
+          {/*<Link href="/formulaone" className={"m-4 " + linkClassFilter("formulaone")}>
+            Formula 1
+          </Link>*/}
           {/*<Link href="/study" className={"m-4 " + linkClassFilter("study")}>
             Study
           </Link>*/}
