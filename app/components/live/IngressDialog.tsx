@@ -20,6 +20,7 @@ export function IngressDialog({
   const { data: session } = authClient.useSession();
   const [loading, setLoading] = useState<boolean>(false);
   const [roomName, setRoomName] = useState<string>("");
+  const [validName, setValidName] = useState<boolean>(true);
   const [name, setName] = useState<string>(session?.user?.name || "");
   const [type, setType] = useState<"whip"|"rtmp">("rtmp");
   const [enableChat, setEnableChat] = useState<boolean>(true);
@@ -29,6 +30,13 @@ export function IngressDialog({
   useEffect(() => {
     if (session && session.user) setName(session.user.name);
   }, [session]);
+
+  useEffect(() => {
+    const pattern = /^[a-zA-Z0-9-]*$/gm;
+
+    if (pattern.test(roomName)) setValidName(true);
+    else setValidName(false);
+  }, [roomName]);
 
   const onCreateIngress = async () => {
     setLoading(true);
@@ -100,7 +108,7 @@ export function IngressDialog({
             </>
           ) : (
             <>
-              <Dialog.Title>Setup ingress endpoint</Dialog.Title>
+              <Dialog.Title>Setup OBS ingress</Dialog.Title>
               <Flex direction="column" gap="4" mt="4">
                 <label>
                   <Text as="div" size="2" mb="1" weight="bold">
@@ -108,10 +116,14 @@ export function IngressDialog({
                   </Text>
                   <TextField.Root
                     type="text"
-                    placeholder="My super cool stream"
+                    placeholder="My-super-cool-stream"
                     value={roomName}
+                    color={validName ? "yellow" : "red"}
                     onChange={(e) => setRoomName(e.target.value)}
                   />
+                  <Text as="div" size="1" mt="1" color="red" hidden={validName}>
+                    Only use letters, numbers and dashes, no spaces!
+                  </Text>
                 </label>
                 <label>
                   <Text as="div" size="2" mb="1" weight="bold">

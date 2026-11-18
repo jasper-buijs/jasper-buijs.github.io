@@ -12,6 +12,7 @@ import { Avatar, Box, Button, Card, Flex, Heading, Text, TextField } from "@radi
 import { MonitorPlay } from "lucide-react";
 // import { useSession } from "next-auth/react"; // next-auth -> better-auth
 import { authClient } from "@/auth-client";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface DesktopPageProps {
@@ -24,8 +25,8 @@ export default function DesktopPage({
 }: DesktopPageProps) {
   // const { data: session } = useSession(); // next-auth -> better-auth
   const { data: session } = authClient.useSession();
-
-  const [name, setName] = useState<string>(session?.user?.name || ""); // TODO set name from Discord.
+  const router = useRouter();
+  const [name, setName] = useState<string>(session?.user?.name || "");
   const [authToken, setAuthToken] = useState<string>("");
   const [roomToken, setRoomToken] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -60,7 +61,7 @@ export default function DesktopPage({
       <Flex align="center" justify="center" className={"absolute top-0 bottom-0 left-0 right-0"}>
         <Card className={"p-3 w-95"}>
           <Heading size="4" mb="4">
-            Entering {decodeURI(roomName)}
+            Joining {decodeURI(roomName)}
           </Heading>
           <label>
             <Text as="div" size="2" mb="1" weight="bold">
@@ -84,6 +85,9 @@ export default function DesktopPage({
             </TextField.Root>
           </label>
           <Flex gap="3" mt="6" justify="end">
+            <Button color="gray" variant="soft" onClick={() => router.push("/live")}>
+              Cancel
+            </Button>
             <Button disabled={!name || loading} onClick={onJoin}>
               {loading ? (
                 <Flex gap="2" align="center">
@@ -93,7 +97,7 @@ export default function DesktopPage({
               ) : (
                 <>
                   Join as viewer{" "}
-                  <MonitorPlay className={cn(name && "animate-wiggle")} />
+                  <MonitorPlay className={cn(name)} />
                 </>
               )}
             </Button>
@@ -113,7 +117,7 @@ export default function DesktopPage({
             </Box>
             <ReactionBar />
           </Flex>
-          <Box className={"bg-accent-2 min-w-[280px] border-l border-accent-5"}>
+          <Box className={"bg-accent-2 min-w-70 border-l border-accent-5"}>
             <Chat />
           </Box>
         </Flex>

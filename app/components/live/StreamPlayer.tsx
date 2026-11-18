@@ -24,37 +24,52 @@ import {
   MonitorCheck,
   MonitorUp,
   Play,
-  Square,
+  Square, SquareArrowLeftExit,
   Volume, Volume1,
   Volume2, VolumeOff, VolumeX,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useCopyToClipboard } from "usehooks-ts";
 
 function ConfettiCanvas() {
   const [confetti, setConfetti] = useState<Confetti>();
   const [decoder] = useState(() => new TextDecoder());
   const canvasEl = useRef<HTMLCanvasElement>(null);
-  useDataChannel("reactions", (data) => {
+  const displayReaction = useCallback((emoji: string) => {
     const options: { emojis?: string[]; confettiNumber?: number } = {};
 
-    if (decoder.decode(data.payload) !== "🎉") {
-      options.emojis = [decoder.decode(data.payload)];
+    if (emoji !== "🎉") {
+      options.emojis = [emoji];
       options.confettiNumber = 12;
     }
 
     confetti?.addConfetti(options);
-  });
+  }, [confetti]);
+
+  useDataChannel("reactions", (data) => displayReaction(decoder.decode(data.payload)));
 
   useEffect(() => {
     setConfetti(new Confetti({ canvas: canvasEl.current ?? undefined }));
   }, []);
+
+  useEffect(() => {
+    const handleLocalReaction = (event: Event) => {
+      const emoji = (event as CustomEvent<unknown>).detail;
+      if (typeof emoji === "string") displayReaction(emoji);
+    };
+
+    window.addEventListener("live-reaction", handleLocalReaction);
+    return () => window.removeEventListener("live-reaction", handleLocalReaction);
+  }, [displayReaction]);
 
   return <canvas ref={canvasEl} className={"absolute h-full w-full pointer-events-none"} />;
 }
 
 export function StreamPlayer({ isHost = false }) {
   const [_, copy] = useCopyToClipboard();
+
+  const router = useRouter();
 
   const [localVideoTrack, setLocalVideoTrack] = useState<LocalVideoTrack>();
   const [screenShareActive, setScreenShareActive] = useState(false);
@@ -168,7 +183,20 @@ export function StreamPlayer({ isHost = false }) {
               <div className={"transition-opacity ease-in-out duration-200 opacity-0 group-hover:opacity-100 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[min(100cqw,177.78cqh)] max-h-full max-w-full aspect-video!"}>
                 { /* TL */ }
                 <Flex direction="row" align="start" justify="start" gapX="3" className={"absolute top-2 left-2"}>
-                  <Button className={"[&:active_.copy-icon]:opacity-0! [&:active_.check-icon]:opacity-100! [&:active_.check-icon]:delay-0 [&:active_.copy-icon]:delay-0"} size="1" variant="soft" disabled={!Boolean(roomName)} onClick={() => copy(`https://heiligemaagden.com/live/watch/${roomName}`)}>
+                  <Button
+                    size="1"
+                    variant="soft"
+                    onClick={() => router.push("/live")}
+                  >
+                    <SquareArrowLeftExit size="16" />
+                  </Button>
+                  <Button
+                    className={"[&:active_.copy-icon]:opacity-0! [&:active_.check-icon]:opacity-100! [&:active_.check-icon]:delay-0 [&:active_.copy-icon]:delay-0"}
+                    size="1"
+                    variant="soft"
+                    disabled={!Boolean(roomName)}
+                    onClick={() => copy(`https://heiligemaagden.com/live/watch/${roomName}`)}
+                  >
                     {roomState == ConnectionState.Connected ? (
                       <>
                         {roomName}
@@ -213,7 +241,7 @@ export function StreamPlayer({ isHost = false }) {
                       )}
                       <Button size="1" variant="soft" disabled={roomState !== ConnectionState.Connected}>
                         {roomState == ConnectionState.Connected ? <Eye /> : <EyeOff />}
-                        {roomState == ConnectionState.Connected ? participants.length : ""}
+                        {roomState == ConnectionState.Connected ? participants.filter((p) => !p.identity.endsWith("(via OBS)")).length : ""}
                       </Button>
                     </div>
                   </PresenceDialog>
@@ -261,6 +289,13 @@ export function StreamPlayer({ isHost = false }) {
               <div className={"transition-opacity ease-in-out duration-200 opacity-0 group-hover:opacity-100 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[min(100cqw,177.78cqh)] max-h-full max-w-full aspect-video!"}>
                 { /* TL */ }
                 <Flex direction="row" align="start" justify="start" gapX="3" className={"absolute top-2 left-2"}>
+                  <Button
+                    size="1"
+                    variant="soft"
+                    onClick={() => router.push("/live")}
+                  >
+                    <SquareArrowLeftExit size="16" />
+                  </Button>
                   <Button className={"[&:active_.copy-icon]:opacity-0! [&:active_.check-icon]:opacity-100! [&:active_.check-icon]:delay-0 [&:active_.copy-icon]:delay-0"} size="1" variant="soft" disabled={!Boolean(roomName)} onClick={() => copy(`https://heiligemaagden.com/live/watch/${roomName}`)}>
                     {roomState == ConnectionState.Connected ? (
                       <>
@@ -306,7 +341,7 @@ export function StreamPlayer({ isHost = false }) {
                       )}
                       <Button size="1" variant="soft" disabled={roomState !== ConnectionState.Connected}>
                         {roomState == ConnectionState.Connected ? <Eye /> : <EyeOff />}
-                        {roomState == ConnectionState.Connected ? participants.length : ""}
+                        {roomState == ConnectionState.Connected ? participants.filter((p) => !p.identity.endsWith("(via OBS)")).length : ""}
                       </Button>
                     </div>
                   </PresenceDialog>

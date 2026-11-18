@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Image from "next/image";
 import NavBar from "../components/NavBar";
 import Alert from "../components/Alert";
 import FooterBar from "../components/FooterBar";
@@ -66,10 +67,10 @@ const MinecraftPage = () => {
       }
       {/*<Alert type="info" text={`Whitelist will be enabled on our server on ${new Date("2024-10-05T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long", timeStyle: "short"})}. You should log on at least once before then.`} />*/}
       <div className="block w-max ml-auto mr-auto mt-8">
-        <img src="/logo-mc.png" className="inline-block h-64" alt={"Heilige Maagden Minecraft Server logo."} />
+        <Image height={256} width={256} src="/logo-mc.png" className="inline-block h-64" alt={"Heilige Maagden Minecraft Server logo."} />
       </div>
-      <h1 className="text-center text-3xl mt-4">HM Vanilla Server</h1>
-      <Link href="" onClick={() => navigator.clipboard.writeText("minecraft.heiligemaagden.com")} className=" block text-center text-lg text-[#cfb53b] underline">
+      <h1 className="text-center text-[#eeeef0] text-3xl mt-4">HM Vanilla Server</h1>
+      <Link href="" onClick={() => navigator.clipboard.writeText("minecraft.heiligemaagden.com")} className=" block text-center text-lg text-yellow-9 underline">
         minecraft.heiligemaagden.com
       </Link>
       <Paragraph emoji="ℹ️" title="General Info">
@@ -77,14 +78,14 @@ const MinecraftPage = () => {
         <ul className="list-disc pl-4">
           <li>We run some Fabric mods to add structures, and reduce lag and improve server performance (especially when loading and generating chunks). The mods we currently have running are:
             <ul className="list-disc pl-8">
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/dungeons-and-taverns">Dungeons and Taverns</Link></li>
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/fabric-api">Fabric API</Link></li>
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/c2me-fabric">Concurrent Chunk Management Engine (C2ME)</Link></li>
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/ferrite-core">FerriteCore</Link></li>
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/lithium">Lithium</Link></li>
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/packet-fixer">Packet Fixer</Link></li>
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/mod/disconnect-packet-fix">Disconnect Packet Fix</Link></li>
-              <li><Link className="text-[#cfb53b] underline hover:text-inherit" href="https://modrinth.com/plugin/chunky">Chunky</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/mod/dungeons-and-taverns">Dungeons and Taverns</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/mod/fabric-api">Fabric API</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/mod/c2me-fabric">Concurrent Chunk Management Engine (C2ME)</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/mod/ferrite-core">FerriteCore</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/mod/lithium">Lithium</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/mod/packet-fixer">Packet Fixer</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/mod/disconnect-packet-fix">Disconnect Packet Fix</Link></li>
+              <li><Link className="text-yellow-10 underline hover:text-inherit" href="https://modrinth.com/plugin/chunky">Chunky</Link></li>
             </ul>
           </li>
           <li>We currently don&apos;t have any data or resource packs active.</li>
@@ -99,13 +100,12 @@ const MinecraftPage = () => {
         </a>{" "}
         in order to play.
       </Paragraph>*/}
-      <Paragraph emoji="🌐" title="Server Up-Time">
-        The server won&apos;t always be online, but we try to keep uptime as big as possible. You can check whether the server is online <Link className={"text-[#cfb53b] underline hover:text-inherit"} href={"https://admin.minecraft.heiligemaagden.com/status"}>here</Link> (check for &quot;Vanilla 25-2&quot;). We&apos;ll try to announce in advance, on this page and in the server MOTD, when the server will be offline, though this is no guarantee. Expected downtime in August:
+      {/*<Paragraph emoji="🌐" title="Server Up-Time">
+        The server won&apos;t always be online, but we try to keep uptime as big as possible. You can check whether the server is online <Link className={"text-yellow-10 underline hover:text-inherit"} href={"https://admin.minecraft.heiligemaagden.com/status"}>here</Link> (check for &quot;Vanilla 25-2&quot;). We&apos;ll try to announce in advance, on this page and in the server MOTD, when the server will be offline, though this is no guarantee. Expected downtime in August:
         <ul className={"list-disc list-inside"}>
-          {/*<li>{new Date("2025-08-02T15:35:00.000+02:00").toLocaleString()} – {new Date("2025-08-02T18:00:00.000+02:00").toLocaleTimeString()}</li>*/}
           {downTimes.map((t) => <li key={t.date}>{new Date(`${t.date}T${t.start}+02:00`).toLocaleString("nl-be", {dateStyle: "short", timeStyle: "short"})} – {new Date(`${t.date}T${t.end}+02:00`).toLocaleTimeString("nl-be", {timeStyle: "short"})}</li>)}
         </ul>
-      </Paragraph>
+      </Paragraph>*/}
       <Paragraph emoji="🗺️" title="World Map">
         {`This is a map of our world as it was on ${new Date("2025-08-10T09:00:00+0200").toLocaleString("en-us", {dateStyle: "long"})}.`}
         <iframe className="w-full h-[calc(100vh-10rem)]" src="/minecraft-map-hmvanilla/index.html"></iframe>

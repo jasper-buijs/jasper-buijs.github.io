@@ -27,6 +27,11 @@
   }
 }
 
+/*noinspection CssUnresolvedCustomProperty*/
+.radix-themes {
+  --default-font-family: var(--font-nunito-sans);
+}
+
 /*:root {
   --foreground-primary: 255, 255, 255;
   --background-primary: 34, 34, 34;

@@ -1,3 +1,5 @@
+import { Button } from "@radix-ui/themes";
+import Image from "next/image";
 import FooterBar from "../components/FooterBar";
 import NavBar from "../components/NavBar";
 
@@ -6,18 +8,20 @@ const MagmuthReadmePage = () => {
     <>
       <NavBar activePage="magmuth" />
 
-      <div className="bg-[#D6D6D6] dark:bg-[#1E1E1E] text-[#1E1E1E] dark:text-inherit py-1 px-4 pt-2 mx-12 my-4 grid">
+      <div className="bg-background text-gray-12 py-1 px-4 pt-2 mx-12 my-4 grid">
         <p className="row-start-1 row-span-1 col-start-1 col-span-1 align-middle py-2">Magmuth is now on version v4.0.0. Check out the change log for more info!</p>
-        <a href="/magmuth/changelog" className="rounded-md p-2 bg-[#cfb53b] text-[#ffffff] w-max h-min row-start-1 row-span-1 col-start-2 col-span-1 mx-4 align-middle mb-1 justify-self-end">
-          Change Log
+        <a href="/magmuth/changelog" className="row-start-1 row-span-1 col-start-2 col-span-1 mx-4 align-middle mb-1 justify-self-end">
+          <Button size="3" variant="solid">
+            Change Log
+          </Button>
         </a>
       </div>
 
-      <div id="README" className="px-12">
+      <div id="README" className="px-12 text-[#eeeef0]">
         <h1 className="text-center text-3xl font-semibold my-4">
           <br />
           Magmuth Bot
-          <hr className="h-[2px] my-[4px] bg-[#30363d] border-none" />
+          <hr className="h-0.5 my-1 bg-[#797b86] border-none" />
         </h1>
 
         <p className="text-center font-semibold mb-4">A private-use multi-purpose Discord bot based on discord.js.</p>
@@ -31,7 +35,7 @@ const MagmuthReadmePage = () => {
           </a>
         </p>
 
-        <hr className="h-1 bg-[#30363d] border-none" />
+        <hr className="h-1 bg-[#797b86] border-none" />
 
         <p className="text-center my-6">
           <a href="#features" className="text-blue-500 underline underline-offset-2">
@@ -47,7 +51,7 @@ const MagmuthReadmePage = () => {
           </a>
         </p>
 
-        <hr className="h-1 bg-[#30363d] border-none" />
+        <hr className="h-1 bg-[#797b86] border-none" />
 
         <div className="border-l-4 border-purple-600 px-4 py-2 mt-6">
           <h3 className="text-purple-600 mb-4">
@@ -64,7 +68,7 @@ const MagmuthReadmePage = () => {
         <div>
           <h2 id="features" className="text-2xl font-semibold my-4">
             Features
-            <hr className="h-[2px] my-[4px] bg-[#30363d] border-none" />
+            <hr className="h-0.5 my-1 bg-[#797b86] border-none" />
           </h2>
 
           <div className="border-l-4 border-blue-600 px-4 py-2 mt-6">
@@ -85,7 +89,7 @@ const MagmuthReadmePage = () => {
         <div>
           <h2 id="resources" className="text-2xl font-semibold my-4">
             Resources
-            <hr className="h-[2px] my-[4px] bg-[#30363d] border-none" />
+            <hr className="h-0.5 my-1 bg-[#797b86] border-none" />
           </h2>
           This project is written in JavaScript using Bun (a high-performance alternative for Node.js) and discord.js. You can find more info about these and any other third-party software we use via the links down below.
         </div>
@@ -126,7 +130,7 @@ const MagmuthReadmePage = () => {
         <div className="mb-6">
           <h2 id="licensing" className="text-2xl font-semibold my-4">
             Licensing
-            <hr className="h-[2px] my-[4px] bg-[#30363d] border-none" />
+            <hr className="h-0.5 my-1 bg-[#797b86] border-none" />
           </h2>
           This project is not licensed and is provided without any permissions or grants of use. You are not allowed to use, modify, or distribute this code without explicit permission from the author and contributers, except for what is legally required by the GitHub Terms of Service (specifically{" "}
           <a className="text-blue-500 underline underline-offset-2" href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#5-license-grant-to-other-users">
@@ -142,7 +146,7 @@ const MagmuthReadmePage = () => {
           section.
         </div>
         <hr className="h-1 bg-[#30363d] border-none mb-8" />
-        <img src="/menu/magmuth.webp" />
+        <Image alt={"Magmuth mascot"} height={1080} width={1920} className={"w-full h-auto"} src="/menu/magmuth.webp" />
       </div>
 
 

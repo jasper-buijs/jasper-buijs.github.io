@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { Avatar, Badge } from "@radix-ui/themes";
 import {
   Icon,
   Bot,
@@ -6,14 +7,11 @@ import {
   Pickaxe,
   Copyright,
   CircleUserRound,
-  UserRoundCheck,
   MonitorOff,
   MonitorPlay,
 } from "lucide-react";
 import { motorRacingHelmet } from "@lucide/lab";
-// import { signIn, useSession } from "next-auth/react";
 import { authClient } from "@/auth-client";
-import Image from "next/image";
 import Link from 'next/link';
 import { NavBarProps } from "@/app/components/NavBar";
 import { useEffect, useState } from "react";
@@ -22,7 +20,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
   const [ isStreamActive, setStreamActive ] = useState<boolean>(false);
 
   useEffect(() => {
-    const room = "live-room";
+    // const room = "live-room";
     fetch(`/api/live/checkActiveStream`).then((r) => {
       r.json().then((data: { live: boolean }) => {
         setStreamActive(data.live);
@@ -30,32 +28,33 @@ const NavBar = ({ activePage }: NavBarProps) => {
     }).catch((_e) => setStreamActive(false)); // &username=${name}
   }, []);
 
-  const activeLinkColor = (page: string) => page == activePage ? "text-[#BA9C0D] dark:text-[#CFB53B]" : "text-[#0F0F0F] dark:text-[#FFFFFF]";
+  const activeLinkColor = (page: string) =>
+    page == activePage ? "text-yellow-10" : "text-gray-12";
   const { data: session } = authClient.useSession();
   // const { data: session } = useSession(); // next-auth -> better-auth
   return (
     <>
       <div className={"w-16 py-6 h-full fixed z-50 right-0"}>
-        <div className={"bg-[#D6D6D6] dark:bg-[#1E1E1E] relative h-full"}>
+        <div className={"bg-background relative h-full"}>
           <img src="/logo.png" alt="Heilige Maagden Logo" className="inline-block h-16 w-16 mr-8"/>
           <div className={"flex h-16 w-16 justify-center items-center"}>
             <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("home")}`} href={"/"}>
-              <House className={"m-[20px]"} />
+              <House className={"m-5"} />
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
             <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("magmuth")}`} href={"/magmuth"}>
-              <Bot className={"m-[20px]"} />
+              <Bot className={"m-5"} />
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
             <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("minecraft")}`} href={"/minecraft"}>
-              <Pickaxe className={"m-[20px]"} />
+              <Pickaxe className={"m-5"} />
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
             <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("formulaone")}`} href={"/formulaone"}>
-              <Icon iconNode={motorRacingHelmet} className={"m-[20px]"} />
+              <Icon iconNode={motorRacingHelmet} className={"m-5"} />
             </Link>
           </div>
           {/*<div className={"flex h-16 w-16 justify-center items-center"}>
@@ -64,15 +63,23 @@ const NavBar = ({ activePage }: NavBarProps) => {
             </Link>
           </div>*/}
           <div className={"flex h-16 w-16 justify-center items-center"}>
-            { !isStreamActive &&
+            { /*!isStreamActive &&
               <Link className={`w-full h-full text-4xl leading-16 text-[#0F0F0F] dark:text-[#FFFFFF]`} href={"/live"}>
                 <MonitorOff className={"m-[20px]"} />
-              </Link>
+              </Link>*/
             }
-            { isStreamActive &&
-              <Link className={`w-full h-full text-4xl leading-16 text-red-600 dark:text-red-500`} href={"/live"}>
-                <MonitorPlay className={"m-[20px]"} />
-              </Link>
+            { isStreamActive ?
+              <>
+                <Link className={`w-min h-min text-4xl leading-16`} href={"/live"}>
+                  <Badge size="1" variant="soft" color="red" radius="large" className={"m-4"}>
+                    <MonitorPlay className={"m-1"} />
+                  </Badge>
+                </Link>
+              </> : <>
+                <Link className={`w-full h-full text-4xl leading-16 text-gray-12`} href={"/live"}>
+                  <MonitorOff className={"m-5"} />
+                </Link>
+              </>
             }
           </div>
           {/* Sign-in and Copyright popup */}
@@ -81,48 +88,44 @@ const NavBar = ({ activePage }: NavBarProps) => {
               {
                 !session &&
                 <button
-                  className={"w-full h-full text-4xl leading-16 text-[#BA9C0D] dark:text-[#CFB53B]"}
+                  className={"w-full h-full text-4xl leading-16 text-yellow-9"}
                   // onClick={() => signIn("discord")} // next-auth -> better-auth
                   onClick={() => authClient.signIn.social({
                     provider: "discord",
                   })}
                 >
-                  <CircleUserRound className={"m-[20px]"} />
+                  <CircleUserRound className={"m-5"} />
                 </button>
               }
               {
-                session && session.user?.image &&
+                session &&
                 <button
-                  className={"w-full h-full text-4xl leading-16"}
+                  className={"w-full h-full"}
                   onClick={() => authClient.signOut()}
                   // href="/api/auth/signout" // next-auth -> better-auth
                 >
-                  <Image
+                  {/*<Image
                     src={session.user.image}
                     alt={session.user?.name || "Profile picture"}
                     width={24}
                     height={24}
                     className={"rounded-[50%] m-[20px]"}
+                  />*/}
+                  <Avatar
+                    src={session.user.image || undefined}
+                    fallback={session.user.name[0] || "?"}
+                    size="2"
+                    radius="full"
                   />
-                </button>
-              }
-              {
-                session && !session.user?.image &&
-                <button
-                  className={"w-full h-full text-4xl leading-16"}
-                  onClick={() => authClient.signOut()}
-                  // href="/api/auth/signout" // next-auth -> better-auth
-                >
-                  <UserRoundCheck className={"m-[20px]"} />
                 </button>
               }
             </div>
             <div className={"flex h-16 w-16 justify-center items-center absolute bottom-0"}>
               <button
-                className={`w-full h-full text-4xl leading-16 ${activeLinkColor("NONE_COPYRIGHT")}`}
+                className={`w-full h-full text-4xl leading-16 text-gray-12`}
                 onClick={() => alert("© Jasper Buijs, Heilige Maagden, 2026")}
               >
-                <Copyright className={"m-[20px]"} />
+                <Copyright className={"m-5"} />
               </button>
             </div>
           </div>

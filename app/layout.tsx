@@ -2,12 +2,15 @@
 import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Inter } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 
 import "./globals.css";
 import "./radix-colors.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  variable: "--font-nunito-sans",
+});
 
 export const metadata: Metadata = {
   title: "Heilige Maagden",
@@ -17,8 +20,8 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-        <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning className={nunitoSans.variable}>
+        <body>
           <ThemeProvider attribute="class">
             <Theme
               accentColor="yellow"

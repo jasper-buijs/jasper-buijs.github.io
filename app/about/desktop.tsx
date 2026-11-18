@@ -17,7 +17,7 @@ const ProjectSection = ({ name, url, lightLogo, darkLogo, children }: ProjectSec
       <Image src={lightLogo} alt={name} width={64} height={64} className={"inline-block dark:hidden mr-4 align-middle max-h-16 max-w-16 object-contain"} />
       <Image src={darkLogo} alt={name} width={64} height={64} className={"hidden dark:inline-block mr-4 align-middle max-h-16 max-w-16 object-contain"} />
       <div className={"inline-block align-middle max-w-[calc(100%-80px)]"}>
-        <Link href={url} className={"font-semibold"}>{name}</Link>
+        <Link href={url} className={"text-yellow-10 font-semibold"}>{name}</Link>
         <div className={"text-wrap"}>{children}</div>
       </div>
     </div>
@@ -56,9 +56,9 @@ const DesktopPage = () => {
         </ProjectSection>
       </Paragraph>
       <Paragraph title={"Legal"}>
-        <p>© Jasper Buijs, Heilige Maagden, 2025. All Rights Reserved.</p><br />
+        <p>© Jasper Buijs, Heilige Maagden, 2026. All Rights Reserved.</p><br />
         <p>This website (heiligemaagden.com) is unofficial and is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.</p><br />
-        <p>Contact: <Link className={"text-[#ba9c0d] dark:text-[#cfb53b] underline"} href={"mailto:info@heiligemaagden.com"}>info@heiligemaagden.com</Link>.</p>
+        <p>Contact: <Link className={"text-yellow-10 underline"} href={"mailto:info@heiligemaagden.com"}>info@heiligemaagden.com</Link>.</p>
       </Paragraph>
     </>
   );
