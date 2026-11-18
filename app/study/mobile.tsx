@@ -2,6 +2,7 @@
 
 import NavBar from "@/app/components/mobile/NavBar";
 import Paragraph from "@/app/components/mobile/Paragraph";
+//@ts-ignore
 import type { Exam } from "@prisma/client";
 import Image from "next/image";
 import { useEffect, useState } from "react";

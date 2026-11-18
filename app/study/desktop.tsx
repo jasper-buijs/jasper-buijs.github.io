@@ -3,6 +3,7 @@
 import FooterBar from "@/app/components/FooterBar";
 import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
+// @ts-ignore
 import type { Exam } from "@prisma/client";
 import { FormEvent, useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
