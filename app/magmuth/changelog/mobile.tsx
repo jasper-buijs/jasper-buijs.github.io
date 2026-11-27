@@ -11,7 +11,19 @@ const Home = () => {
 
       <div className="pl-2 pr-20 py-6">
 
-        <Paragraph title="Release 4.0.0">
+        <Paragraph title={"Website 2.5"}>
+          <ChangeIconGrid>
+            <ChangeIconGridElement type="added">Added new exam schedule page, allowing you to register your exams to share with the others.</ChangeIconGridElement>
+          </ChangeIconGrid>
+        </Paragraph>
+
+        <Paragraph title={"Website 2.4"}>
+          <ChangeIconGrid>
+            <ChangeIconGridElement type="added">Added the new live streaming platform with support for multiple stream rooms, chat, confetti and OBS streaming by all users.</ChangeIconGridElement>
+          </ChangeIconGrid>
+        </Paragraph>
+
+        <Paragraph title="Magmuth 4.0.0">
           <ChangeIconGrid>
             <ChangeIconGridElement type="updated" label="update">
               We&apos;ve rewritten the bot from scratch, meaning all previous functionality has been removed and will be re-added in coming updates.

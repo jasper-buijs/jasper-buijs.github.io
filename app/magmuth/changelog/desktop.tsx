@@ -3,7 +3,7 @@ import NavBar from "@/app/components/NavBar";
 import Paragraph from "@/app/components/Paragraph";
 import { ChangeIconGrid, ChangeIconGridElement } from "@/app/components/magmuth/changelog/ChangeIcon";
 // import CodeBlock from "@/app/components/magmuth/changelog/CodeBlock";
-import { Button } from "@radix-ui/themes";
+import { Button, Flex } from "@radix-ui/themes";
 import { ExternalLink } from "lucide-react";
 
 const MagmuthChangelogPage = () => {
@@ -11,7 +11,19 @@ const MagmuthChangelogPage = () => {
     <>
       <NavBar activePage="magmuth" />
       
-      <Paragraph title={"Release 4.0.0"}>
+      <Paragraph title={"Website 2.5"}>
+        <ChangeIconGrid>
+          <ChangeIconGridElement type="added">Added new exam schedule page, allowing you to register your exams to share with the others.</ChangeIconGridElement>
+        </ChangeIconGrid>
+      </Paragraph>
+      
+      <Paragraph title={"Website 2.4"}>
+        <ChangeIconGrid>
+          <ChangeIconGridElement type="added">Added the new live streaming platform with support for multiple stream rooms, chat, confetti and OBS streaming by all users.</ChangeIconGridElement>
+        </ChangeIconGrid>
+      </Paragraph>
+      
+      <Paragraph title={"Magmuth 4.0.0"}>
         <ChangeIconGrid>
           <ChangeIconGridElement type="updated" label="update">We&apos;ve rewritten the bot from scratch, meaning all previous functionality has been removed and will be re-added in coming updates.</ChangeIconGridElement>
           <ChangeIconGridElement type="updated" label="update">The bot has been rebranded to &quot;Magmuth&quot;, as the name &quot;Wumpus&quot; has been banned by Discord.</ChangeIconGridElement>
@@ -94,14 +106,18 @@ const MagmuthChangelogPage = () => {
         </ChangeIconGrid>
       </Paragraph>*/}
 
-      <div className="bg-background text-gray-12 py-1 px-4 pt-2 mx-12 my-4 grid">
-        <p className="row-start-1 row-span-1 col-start-1 col-span-1 align-middle py-2">Check out older releases and our code in our GitHub releases!</p>
-        <a href="https://github.com/jasper-buijs/discord-bot-js/releases" target="_blank" className="row-start-1 row-span-1 col-start-2 col-span-1 mx-4 mb-1 justify-self-end">
-          <Button variant="solid" size="3">
-            GitHub
+      <div className="bg-background text-gray-12 py-2 px-4 mx-12 my-4">
+        <Flex direction="row" gap="3">
+          <p className="flex-1 align-middle py-2">Check out older releases and our code in our GitHub releases!</p>
+          <Button onClick={() => window.open("https://github.com/jasper-buijs/discord-bot-js/releases", "_blank")} variant="solid" size="3">
+            Magmuth
             <ExternalLink size={16} />
           </Button>
-        </a>
+          <Button onClick={() => window.open("https://github.com/jasper-buijs/jasper-buijs.github.io/releases", "_blank")} variant="solid" size="3">
+            Website
+            <ExternalLink size={16} />
+          </Button>
+        </Flex>
       </div>
 
       <FooterBar />

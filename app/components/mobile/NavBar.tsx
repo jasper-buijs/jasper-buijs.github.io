@@ -91,7 +91,7 @@ const NavBar = ({ activePage }: NavBarProps) => {
             }
           </div>
           {/* Sign-in and Copyright popup */}
-          <div className={"h-[calc(100%-(6*64px))] w-16 relative"}>
+          <div className={"h-[calc(100%-(7*64px))] w-16 relative"}>
             <div className={"flex h-16 w-16 justify-center items-center absolute bottom-16"}>
               {
                 !session &&
