@@ -7,14 +7,20 @@ const Home = () => {
   return (
     <>
       <NavBar activePage={"home"} />
-      <div className={"absolute grid left-2 right-20 h-full py-6 grid-cols-1 grid-rows-2 gap-4"}>
-        <a href={"/magmuth/changelog"} className={"relative group row-start-1 row-span-1 col-start-1 col-span-1"}>
+      <div className={"absolute grid left-2 right-20 h-full py-6 grid-cols-1 grid-rows-3 gap-4"}>
+        <a href={"/exams"} className={"relative group row-start-1 row-span-1 col-start-1 col-span-1"}>
+          <div className={"bg-[url(/menu/library.webp)] bg-cover absolute w-full h-full brightness-70 group-hover:brightness-30 transition-all duration-[600]!"} />
+          <div className={"absolute w-full brightness-100 text-[#FFFFFF] text-xl text-center top-[75%] group-hover:underline transition-all duration-[600]!"}>
+            Exam Schedule
+          </div>
+        </a>
+        <a href={"/magmuth/changelog"} className={"relative group row-start-2 row-span-1 col-start-1 col-span-1"}>
           <div className={"bg-[url(/menu/magmuth.webp)] bg-cover absolute w-full h-full brightness-70 group-hover:brightness-30 transition-all duration-[600]!"} />
           <div className={"absolute w-full brightness-100 text-[#FFFFFF] text-xl text-center top-[75%] group-hover:underline transition-all duration-[600]!"}>
             Magmuth Patch Notes
           </div>
         </a>
-        <a href={"/pt26"} className={"relative group row-start-2 row-span-1 col-start-1 col-span-1"}>
+        <a href={"https://spliit.app/groups/dJPtHhqvpN0L0aouoE5jA/expenses?ref=share"} className={"relative group row-start-3 row-span-1 col-start-1 col-span-1"}>
           <div className={"bg-[url(/menu/pt.webp)] bg-cover absolute w-full h-full brightness-70 group-hover:brightness-30 transition-all duration-[600]!"} />
           <div className={"absolute w-full brightness-100 text-[#FFFFFF] text-xl text-center top-[75%] group-hover:underline transition-all duration-[600]!"}>
             Lisboa–Porto &apos;26

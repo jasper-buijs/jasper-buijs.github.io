@@ -5,6 +5,7 @@
 @import 'radix-themes-tw/theme.css';
 
 @config '../tailwind.config.ts';
+@source inline("{row-start-,row-span-,col-start-,col-span-}{1..4}");
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,

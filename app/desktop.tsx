@@ -1,6 +1,5 @@
 "use client";
 
-import Alert from "./components/Alert";
 import FooterBar from "./components/FooterBar";
 import NavBar from "./components/NavBar";
 import { GridMenu, GridMenuElement } from "./components/GridMenu";
@@ -12,8 +11,9 @@ const Home = () => {
       <NavBar activePage="home" />
       {/*<Alert type="info" text="As you can see, our website is back - sort of. In the meantime, feel free to browse through what's here already, or find us in Discord." />*/}
       <GridMenu>
-       <GridMenuElement bgImage="/menu/magmuth.webp" title="Magmuth Patch Notes" href="/magmuth/changelog" columns={[1, 1]} rows={[1, 1]} />
-       <GridMenuElement bgImage="/menu/pt.webp" title="Lisboa–Porto '26" href="/pt26" columns={[2, 1]} rows={[1, 1]} />
+       <GridMenuElement bgImage="/menu/library.webp" title="Exam Schedule" href="/exams" columns={[1, 1]} rows={[1, 2]} />
+       <GridMenuElement bgImage="/menu/magmuth.webp" title="Magmuth Patch Notes" href="/magmuth/changelog" columns={[2, 1]} rows={[1, 1]} />
+       <GridMenuElement bgImage="/menu/pt.webp" title="Lisboa–Porto '26" href="https://spliit.app/groups/dJPtHhqvpN0L0aouoE5jA/expenses?ref=share" columns={[2, 1]} rows={[2, 1]} />
       </GridMenu>
       {/*<div className={`fixed mx-12 mt-4 w-[calc(100vw-6rem)] h-[calc(100vh-10rem)] border-none z-0 bg-white`}>
         <iframe

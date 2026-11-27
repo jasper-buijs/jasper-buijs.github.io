@@ -1,16 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import { Avatar, Badge } from "@radix-ui/themes";
 import {
-  Icon,
   Bot,
   House,
   Pickaxe,
   Copyright,
   CircleUserRound,
   MonitorOff,
-  MonitorPlay, TicketsPlane,
+  MonitorPlay, TicketsPlane, GraduationCap,
 } from "lucide-react";
-import { motorRacingHelmet } from "@lucide/lab";
 import { authClient } from "@/auth-client";
 import Link from 'next/link';
 import { NavBarProps } from "@/app/components/NavBar";
@@ -53,8 +51,13 @@ const NavBar = ({ activePage }: NavBarProps) => {
             </Link>
           </div>
           <div className={"flex h-16 w-16 justify-center items-center"}>
-            <Link className={`w-full h-full text-4xl leading-[4rem] ${activeLinkColor("pt26")}`} href={"/pt26"}>
-              <TicketsPlane className={"m-[20px]"} />
+            <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("exams")}`} href={"/exams"}>
+              <GraduationCap className={"m-5"} />
+            </Link>
+          </div>
+          <div className={"flex h-16 w-16 justify-center items-center"}>
+            <Link className={`w-full h-full text-4xl leading-16 ${activeLinkColor("pt26")}`} href={"https://spliit.app/groups/dJPtHhqvpN0L0aouoE5jA/expenses?ref=share"}>
+              <TicketsPlane className={"m-5"} />
             </Link>
           </div>
           {/*<div className={"flex h-16 w-16 justify-center items-center"}>
