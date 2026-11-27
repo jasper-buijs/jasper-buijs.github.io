@@ -14,7 +14,7 @@ export async function POST(
     body: JSON.stringify({
       query: {
         query_string: {
-          query: data.id.toUpperCase()
+          query: `(ectsCode: ${data.id.toUpperCase()}) OR ${data.id.toUpperCase()}`
         }
       }
     }),
